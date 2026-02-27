@@ -28,7 +28,7 @@ export function SiteFooter() {
                             </div>
                             <div>
                                 <span className="block text-lg font-bold font-serif leading-tight">
-                                    DUBHE MERAK
+                                    DUBHE RICHUS
                                 </span>
                                 <span className="block text-[10px] font-medium uppercase tracking-[0.2em] text-white/50">
                                     Pvt Ltd
@@ -112,7 +112,7 @@ export function SiteFooter() {
 
                 <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
                     <p className="text-xs text-white/40">
-                        &copy; {new Date().getFullYear()} Dubhe Merak Pvt Ltd. All rights
+                        &copy; {new Date().getFullYear()} Dubhe Richus Pvt Ltd. All rights
                         reserved.
                     </p>
                     <div className="flex gap-6">

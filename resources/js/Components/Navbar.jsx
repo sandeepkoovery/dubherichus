@@ -26,8 +26,8 @@ export function Navbar() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-                    ? "bg-card/95 backdrop-blur-md shadow-lg border-b border-border"
-                    : "bg-transparent"
+                ? "bg-card/95 backdrop-blur-md shadow-lg border-b border-border"
+                : "bg-transparent"
                 }`}
         >
             <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -35,8 +35,8 @@ export function Navbar() {
                     <div className="flex items-center gap-1.5">
                         <div
                             className={`flex h-9 w-9 items-center justify-center rounded-lg font-serif text-sm font-bold ${isScrolled
-                                    ? "bg-primary text-primary-foreground"
-                                    : "bg-white/20 text-white backdrop-blur-sm"
+                                ? "bg-primary text-primary-foreground"
+                                : "bg-white/20 text-white backdrop-blur-sm"
                                 }`}
                         >
                             DM
@@ -46,7 +46,7 @@ export function Navbar() {
                                 className={`block text-lg font-bold font-serif leading-tight tracking-tight ${isScrolled ? "text-foreground" : "text-white"
                                     }`}
                             >
-                                DUBHE MERAK
+                                DUBHE RICHUS
                             </span>
                             <span
                                 className={`block text-[10px] font-medium uppercase tracking-[0.2em] ${isScrolled ? "text-muted-foreground" : "text-white/70"

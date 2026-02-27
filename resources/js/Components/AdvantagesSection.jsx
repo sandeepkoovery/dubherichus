@@ -49,7 +49,7 @@ export function AdvantagesSection() {
                     </p>
                     <h2 className="mb-4 font-serif text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl">
                         <span className="text-balance">
-                            Why Dubhe Merak Stands Apart
+                            Why Dubhe Richus Stands Apart
                         </span>
                     </h2>
                     <p className="mx-auto max-w-2xl text-muted-foreground">

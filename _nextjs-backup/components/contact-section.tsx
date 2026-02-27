@@ -68,7 +68,7 @@ export function ContactSection() {
                     Email
                   </p>
                   <p className="mt-0.5 text-base font-semibold text-foreground">
-                    info@dubhemerak.com
+                    info@dubherichus.com
                   </p>
                 </div>
               </div>

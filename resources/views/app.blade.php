@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#1a56db">
     <meta name="asset-url" content="{{ rtrim(asset(''), '/') }}">
 
-    <title inertia>{{ config('app.name', 'Dubhe Merak') }}</title>
+    <title inertia>{{ config('app.name', 'Dubhe Richus') }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

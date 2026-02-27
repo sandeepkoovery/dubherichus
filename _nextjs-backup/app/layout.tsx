@@ -14,9 +14,9 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Dubhe Merak Pvt Ltd | Water Treatment Solutions Since 1991',
+  title: 'Dubhe Richus Pvt Ltd | Water Treatment Solutions Since 1991',
   description:
-    'Dubhe Merak specializes in manufacturing high-performance, fully automated Water Treatment Plants (WTP), Effluent Treatment Plants (ETP), and Sewage Treatment Plants (STP). 33+ years of trusted water solutions.',
+    'Dubhe Richus specializes in manufacturing high-performance, fully automated Water Treatment Plants (WTP), Effluent Treatment Plants (ETP), and Sewage Treatment Plants (STP). 33+ years of trusted water solutions.',
   keywords: [
     'water treatment plant',
     'WTP',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'effluent treatment',
     'sewage treatment',
     'water purification',
-    'Dubhe Merak',
+    'Dubhe Richus',
   ],
   icons: {
     icon: [

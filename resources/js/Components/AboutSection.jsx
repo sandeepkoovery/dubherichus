@@ -51,7 +51,7 @@ export function AboutSection() {
                             </span>
                         </h2>
                         <p className="mb-10 max-w-lg leading-relaxed text-muted-foreground">
-                            At Dubhe Merak, we combine over three decades of expertise with
+                            At Dubhe Richus, we combine over three decades of expertise with
                             cutting-edge technology to deliver water treatment solutions that
                             are innovative, sustainable, and built to exceed expectations.
                         </p>
@@ -79,7 +79,7 @@ export function AboutSection() {
                         <div className="overflow-hidden rounded-2xl">
                             <img
                                 src={asset('/images/about-bg.jpg')}
-                                alt="Dubhe Merak water treatment facility aerial view"
+                                alt="Dubhe Richus water treatment facility aerial view"
                                 className="h-[500px] w-full object-cover lg:h-[640px]"
                             />
                         </div>

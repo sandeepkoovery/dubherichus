@@ -19,7 +19,7 @@ const clientLogos = [
 const testimonials = [
   {
     quote:
-      "Dubhe Merak installed our WTP system 5 years ago and it has been running flawlessly. The water quality is exceptional and maintenance has been virtually zero.",
+      "Dubhe Richus installed our WTP system 5 years ago and it has been running flawlessly. The water quality is exceptional and maintenance has been virtually zero.",
     name: "Rajesh Kumar",
     role: "Plant Manager, Industrial Corp",
     rating: 5,
@@ -33,7 +33,7 @@ const testimonials = [
   },
   {
     quote:
-      "The best decision we made for our residential complex was choosing Dubhe Merak. Clean, safe water for over 200 families without any chemicals.",
+      "The best decision we made for our residential complex was choosing Dubhe Richus. Clean, safe water for over 200 families without any chemicals.",
     name: "Anil Gupta",
     role: "Chairman, Sunrise Residences",
     rating: 5,

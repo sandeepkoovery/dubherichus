@@ -51,7 +51,7 @@ export function Navbar() {
                   isScrolled ? "text-foreground" : "text-white"
                 }`}
               >
-                DUBHE MERAK
+                Dubhe Richus
               </span>
               <span
                 className={`block text-[10px] font-medium uppercase tracking-[0.2em] ${
