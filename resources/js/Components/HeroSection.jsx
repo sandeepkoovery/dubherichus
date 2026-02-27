@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Button } from "@/Components/ui/button";
 import { ArrowDown, Droplets, MapPin, Users } from "lucide-react";
 import { useAsset } from "@/hooks/useAsset";
+import { Link } from "@inertiajs/react";
 
 const stats = [
     { icon: MapPin, value: "7+", label: "States" },
@@ -60,7 +61,7 @@ export function HeroSection() {
                             size="lg"
                             className="bg-primary px-8 text-primary-foreground hover:bg-primary/90"
                         >
-                            <a href="#products">Explore Products</a>
+                            <Link href="/products">Explore Products</Link>
                         </Button>
                         <Button
                             asChild
@@ -68,7 +69,7 @@ export function HeroSection() {
                             size="lg"
                             className="border-white/30 bg-white/10 px-8 text-white backdrop-blur-sm hover:bg-white/20 hover:text-white"
                         >
-                            <a href="#contact">Request a Quote</a>
+                            <Link href="/contact">Request a Quote</Link>
                         </Button>
                     </div>
                 </div>

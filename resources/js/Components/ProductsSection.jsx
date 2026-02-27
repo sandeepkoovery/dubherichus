@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/Components/ui/button";
 import { useAsset } from "@/hooks/useAsset";
+import { Link } from "@inertiajs/react";
 
 const products = [
     {
@@ -85,60 +86,59 @@ export function ProductsSection() {
                 </div>
             </div>
 
-            <section id="products" className="bg-background py-24 md:py-32">
+            <section id="products" className="bg-background py-24 md:py-32 border-t border-border">
                 <div className="mx-auto max-w-7xl px-6">
-                    <div className="flex flex-col gap-20">
-                        {products.map((product, idx) => (
+                    <div className="text-center mb-16">
+                        <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-primary">
+                            Our Solutions
+                        </p>
+                        <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl lg:text-5xl mb-4">
+                            Expert Water Treatment
+                        </h2>
+                        <p className="text-muted-foreground max-w-xl mx-auto">
+                            High-performance systems for residential and industrial needs.
+                        </p>
+                    </div>
+
+                    <div className="grid gap-8 md:grid-cols-3">
+                        {products.map((product) => (
                             <div
                                 key={product.title}
-                                className={`grid items-center gap-12 lg:grid-cols-2 ${idx % 2 !== 0 ? "lg:direction-rtl" : ""
-                                    }`}
-                                style={{
-                                    direction: idx % 2 !== 0 ? "rtl" : "ltr",
-                                }}
+                                className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden shadow-sm transition-all hover:shadow-md"
                             >
-                                <div
-                                    className="overflow-hidden rounded-2xl"
-                                    style={{ direction: "ltr" }}
-                                >
+                                <div className="h-48 overflow-hidden">
                                     <img
                                         src={asset(product.image)}
                                         alt={product.title}
-                                        className="h-80 w-full object-cover transition-transform duration-700 hover:scale-105 lg:h-96"
+                                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
                                 </div>
-                                <div style={{ direction: "ltr" }}>
-                                    <h3 className="mb-4 font-serif text-2xl font-bold text-foreground md:text-3xl">
+                                <div className="p-6 flex flex-col flex-1">
+                                    <h3 className="mb-2 text-lg font-bold text-foreground">
                                         {product.title}
                                     </h3>
-                                    <p className="mb-6 leading-relaxed text-muted-foreground">
+                                    <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
                                         {product.description}
                                     </p>
-                                    <div className="mb-8 grid grid-cols-2 gap-3">
-                                        {product.features.map((feature) => (
-                                            <div
-                                                key={feature}
-                                                className="flex items-center gap-2 rounded-lg bg-muted px-3 py-2"
-                                            >
-                                                <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                                                <span className="text-sm font-medium text-foreground">
-                                                    {feature}
-                                                </span>
-                                            </div>
-                                        ))}
+                                    <div className="mt-auto">
+                                        <Link
+                                            href="/products"
+                                            className="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all"
+                                        >
+                                            View Details <ArrowRight className="h-4 w-4" />
+                                        </Link>
                                     </div>
-                                    <Button
-                                        asChild
-                                        variant="outline"
-                                        className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                                    >
-                                        <a href="#contact">
-                                            Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                                        </a>
-                                    </Button>
                                 </div>
                             </div>
                         ))}
+                    </div>
+
+                    <div className="mt-16 text-center">
+                        <Button asChild size="lg">
+                            <Link href="/products">
+                                View Full Product Catalog
+                            </Link>
+                        </Button>
                     </div>
                 </div>
             </section>

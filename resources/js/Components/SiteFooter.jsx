@@ -1,19 +1,16 @@
 import { Droplets } from "lucide-react";
+import { Link } from "@inertiajs/react";
 
 const productLinks = [
-    "Water Treatment Plant",
-    "Effluent Treatment Plant",
-    "Sewage Treatment Plant",
-    "AMC Services",
-    "Spare Parts",
+    { label: "Water Treatment Plant", href: "/products" },
+    { label: "Effluent Treatment Plant", href: "/products" },
+    { label: "Sewage Treatment Plant", href: "/products" },
 ];
 
 const companyLinks = [
-    "About Us",
-    "Our History",
-    "Careers",
-    "Media Coverage",
-    "Contact Us",
+    { label: "About Us", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Contact Us", href: "/contact" },
 ];
 
 export function SiteFooter() {
@@ -22,7 +19,7 @@ export function SiteFooter() {
             <div className="mx-auto max-w-7xl px-6 py-16">
                 <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
                     <div className="lg:col-span-1">
-                        <div className="mb-6 flex items-center gap-2">
+                        <Link href="/" className="mb-6 flex items-center gap-2 cursor-pointer">
                             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 font-serif text-sm font-bold text-white">
                                 DM
                             </div>
@@ -34,7 +31,7 @@ export function SiteFooter() {
                                     Pvt Ltd
                                 </span>
                             </div>
-                        </div>
+                        </Link>
                         <p className="mb-6 text-sm leading-relaxed text-white/60">
                             Mastering Natural Water Filtration for Over 33 Years. India&apos;s
                             trusted manufacturer of WTP, ETP &amp; STP systems.
@@ -53,13 +50,13 @@ export function SiteFooter() {
                         </h4>
                         <ul className="flex flex-col gap-3">
                             {productLinks.map((link) => (
-                                <li key={link}>
-                                    <a
-                                        href="#products"
+                                <li key={link.label}>
+                                    <Link
+                                        href={link.href}
                                         className="text-sm text-white/50 transition-colors hover:text-white"
                                     >
-                                        {link}
-                                    </a>
+                                        {link.label}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -71,13 +68,13 @@ export function SiteFooter() {
                         </h4>
                         <ul className="flex flex-col gap-3">
                             {companyLinks.map((link) => (
-                                <li key={link}>
-                                    <a
-                                        href="#about"
+                                <li key={link.label}>
+                                    <Link
+                                        href={link.href}
                                         className="text-sm text-white/50 transition-colors hover:text-white"
                                     >
-                                        {link}
-                                    </a>
+                                        {link.label}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

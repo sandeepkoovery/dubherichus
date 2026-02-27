@@ -1,41 +1,25 @@
-import { Wrench, Droplets, FlaskConical, Zap, Shield, Recycle } from "lucide-react";
+import { Wrench, Droplets, FlaskConical, Zap, Shield, Recycle, ArrowRight } from "lucide-react";
+import { Link } from "@inertiajs/react";
+import { Button } from "@/Components/ui/button";
 
 const advantages = [
     {
         icon: Wrench,
         title: "Maintenance Free",
         description:
-            "Our systems are designed for minimal maintenance with self-cleaning mechanisms and durable components that last for decades.",
-    },
-    {
-        icon: Droplets,
-        title: "Removes Impurities",
-        description:
-            "Advanced multi-stage natural filtration that effectively removes all types of impurities, sediments, and contaminants from water.",
+            "Self-cleaning mechanisms designed for minimal intervention and long-term durability.",
     },
     {
         icon: FlaskConical,
         title: "Chemical Free",
         description:
-            "100% natural water treatment process that purifies water without using any harmful chemicals, ensuring safe drinking water.",
+            "100% natural water treatment process that purifies water without any harmful additives.",
     },
     {
         icon: Zap,
         title: "Energy Efficient",
         description:
-            "Low power consumption systems that reduce operational costs while delivering high-performance water treatment results.",
-    },
-    {
-        icon: Shield,
-        title: "Built to Last",
-        description:
-            "Premium quality materials and robust construction ensure our plants deliver reliable performance for over 25 years.",
-    },
-    {
-        icon: Recycle,
-        title: "Eco Friendly",
-        description:
-            "Sustainable manufacturing practices and green technology that minimize environmental impact at every stage.",
+            "High-performance systems optimized for low power consumption and reduced operational costs.",
     },
 ];
 
@@ -53,17 +37,15 @@ export function AdvantagesSection() {
                         </span>
                     </h2>
                     <p className="mx-auto max-w-2xl text-muted-foreground">
-                        Dubhe is a true Integrated Water Technology company built on strong
-                        R&D foundations and decades of field experience.
+                        Built on strong R&D foundations and decades of field experience, our systems deliver uncompromising purity.
                     </p>
                 </div>
 
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {advantages.map((adv, idx) => (
+                <div className="grid gap-6 md:grid-cols-3">
+                    {advantages.map((adv) => (
                         <div
                             key={adv.title}
-                            className={`group relative overflow-hidden rounded-xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${idx === 0 ? "md:col-span-2 lg:col-span-1" : ""
-                                }`}
+                            className="group relative overflow-hidden rounded-xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                         >
                             <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/20">
                                 <adv.icon className="h-6 w-6 text-primary" />
@@ -76,6 +58,15 @@ export function AdvantagesSection() {
                             </p>
                         </div>
                     ))}
+                </div>
+
+                <div className="mt-16 text-center">
+                    <Button asChild className="group">
+                        <Link href="/services">
+                            Explore Detailed Services
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </Link>
+                    </Button>
                 </div>
             </div>
         </section>
