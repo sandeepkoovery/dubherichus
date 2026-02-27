@@ -66,8 +66,6 @@ export default function About() {
                             <div className="relative">
                                 <div className="aspect-square overflow-hidden rounded-2xl shadow-2xl">
                                     <img
-                                        src={asset('/images/about_mission_vision_1772184018468.png')} // Fallback if move failed, but using the new one is better
-                                        // But I moved it to public/images/about-mission.png
                                         src={asset('/images/about-mission.png')}
                                         alt="Vision for the future"
                                         className="h-full w-full object-cover"
