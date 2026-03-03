@@ -12,6 +12,7 @@ const stats = [
 
 export function HeroSection() {
     const asset = useAsset();
+    const appBase = asset('');
     const parallaxRef = useRef(null);
 
     useEffect(() => {
@@ -41,18 +42,15 @@ export function HeroSection() {
             <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
                 <div className="mx-auto max-w-4xl">
                     <p className="mb-4 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white/80 backdrop-blur-sm">
-                        Established 1991
+                        Manufacturer of Iron removal water treatment Plant in kerala
                     </p>
                     <h1 className="mb-6 font-serif text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
                         <span className="text-balance">
-                            Mastering Natural Water Filtration for{" "}
-                            <span className="text-[#4da3ff]">Over 33 Years</span>
+                            India's No.1 <span className="text-[#4da3ff]">Advanced Water</span> Treatment Plants
                         </span>
                     </h1>
-                    <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
-                        India&apos;s No.1 Advanced Water Treatment Plant for your Home,
-                        Office &amp; Industry. Fully automated, chemical-free, and built to
-                        last.
+                    <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl italic">
+                        "Quality experience in every review. Legacy of Trusted Water Solutions."
                     </p>
 
                     <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -61,7 +59,7 @@ export function HeroSection() {
                             size="lg"
                             className="bg-primary px-8 text-primary-foreground hover:bg-primary/90"
                         >
-                            <Link href="/products">Explore Products</Link>
+                            <Link href={appBase + "/products/standard"}>Explore Products</Link>
                         </Button>
                         <Button
                             asChild
@@ -69,7 +67,7 @@ export function HeroSection() {
                             size="lg"
                             className="border-white/30 bg-white/10 px-8 text-white backdrop-blur-sm hover:bg-white/20 hover:text-white"
                         >
-                            <Link href="/contact">Request a Quote</Link>
+                            <Link href={appBase + "/contact"}>Request a Quote</Link>
                         </Button>
                     </div>
                 </div>

@@ -10,7 +10,7 @@ const faqs = [
         a: "Our fully automated systems require minimal intervention. We recommend a professional check-up once every 6 months to ensure all valves and sensors are calibrated correctly."
     },
     {
-        q: "Do you provide services outside of Kerala?",
+        q: "Do you provide solutions outside of Kerala?",
         a: "Yes, we have completed projects in over 7 states across India. Our team is equipped to handle installations and consultations nationwide."
     },
     {
@@ -51,7 +51,7 @@ export default function Contact() {
                             <h2 className="font-serif text-3xl font-bold text-foreground mb-4 flex items-center justify-center gap-3">
                                 <HelpCircle className="h-8 w-8 text-primary" /> Frequently Asked Questions
                             </h2>
-                            <p className="text-muted-foreground">Quick answers to common inquiries about our systems and services.</p>
+                            <p className="text-muted-foreground">Quick answers to common inquiries about our systems and projects.</p>
                         </div>
 
                         <div className="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">

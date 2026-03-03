@@ -6,45 +6,34 @@ import { Link } from "@inertiajs/react";
 
 const products = [
     {
-        title: "Water Treatment Plant (WTP)",
+        title: "Medium Range",
         description:
-            "Fully automated water treatment systems designed for residential, commercial, and industrial applications. Our WTP systems remove impurities through natural filtration processes without chemicals.",
+            "Individual household maintenance-free solutions to remove iron, turbidity, and bad odors naturally.",
         image: "/images/product-wtp.jpg",
-        features: [
-            "Fully Automated Operation",
-            "Chemical-Free Process",
-            "Low Maintenance",
-            "Energy Efficient",
-        ],
+        features: ["Active Oxygen Technology", "33+ Years Experience"],
+        href: "/products/medium",
     },
     {
-        title: "Effluent Treatment Plant (ETP)",
+        title: "Standard Series",
         description:
-            "Advanced effluent treatment solutions for industries. Our ETP systems effectively treat industrial wastewater to meet environmental discharge standards while minimizing operational costs.",
-        image: "/images/product-etp.jpg",
-        features: [
-            "Industrial Grade",
-            "Meets CPCB Standards",
-            "Automated Monitoring",
-            "Cost Effective",
-        ],
+            "High-performance filtration for large families and small businesses. Superior quality and design.",
+        image: "/images/product-wtp.jpg",
+        features: ["Enhanced Flow Rate", "Timeless Design"],
+        href: "/products/standard",
     },
     {
-        title: "Sewage Treatment Plant (STP)",
+        title: "Bayaweaver Model",
         description:
-            "State-of-the-art sewage treatment plants designed for municipalities, residential complexes, and commercial establishments. Eco-friendly and built for reliable long-term performance.",
+            "Our signature integrated technology for a premium water purifying experience. Patent protected.",
         image: "/images/product-stp.jpg",
-        features: [
-            "Bio-Treatment Process",
-            "Compact Design",
-            "Odor Free Operation",
-            "Recyclable Output",
-        ],
+        features: ["Integrated Technology", "First-Class Design"],
+        href: "/products/bayaweaver",
     },
 ];
 
 export function ProductsSection() {
     const asset = useAsset();
+    const appBase = asset('');
     const parallaxRef = useRef(null);
 
     useEffect(() => {
@@ -73,15 +62,15 @@ export function ProductsSection() {
                 <div className="absolute inset-0 bg-[#0a1628]/70" />
                 <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
                     <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-[#4da3ff]">
-                        Our Solutions
+                        Our Range of Products
                     </p>
-                    <h2 className="font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+                    <h2 className="font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl italic">
                         <span className="text-balance">
-                            Customized Water Treatment Solutions
+                            "Innovation in Every Drop"
                         </span>
                     </h2>
                     <p className="mt-3 max-w-xl text-white/60">
-                        for Every Commercial Need
+                        Household and Industrial Solutions
                     </p>
                 </div>
             </div>
@@ -90,13 +79,13 @@ export function ProductsSection() {
                 <div className="mx-auto max-w-7xl px-6">
                     <div className="text-center mb-16">
                         <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-primary">
-                            Our Solutions
+                            Product Gallery
                         </p>
-                        <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl lg:text-5xl mb-4">
-                            Expert Water Treatment
+                        <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl lg:text-5xl mb-4 italic">
+                            "PureFlow Insights"
                         </h2>
                         <p className="text-muted-foreground max-w-xl mx-auto">
-                            High-performance systems for residential and industrial needs.
+                            Discover the perfect balance of technology and nature.
                         </p>
                     </div>
 
@@ -122,7 +111,7 @@ export function ProductsSection() {
                                     </p>
                                     <div className="mt-auto">
                                         <Link
-                                            href="/products"
+                                            href={appBase + product.href}
                                             className="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all"
                                         >
                                             View Details <ArrowRight className="h-4 w-4" />
@@ -135,7 +124,7 @@ export function ProductsSection() {
 
                     <div className="mt-16 text-center">
                         <Button asChild size="lg">
-                            <Link href="/products">
+                            <Link href={appBase + "/products/standard"}>
                                 View Full Product Catalog
                             </Link>
                         </Button>

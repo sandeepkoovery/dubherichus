@@ -2,7 +2,13 @@ import { Head } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
 import { useAsset } from "@/hooks/useAsset";
-import { Shield, Target, Award, Clock } from "lucide-react";
+import { Shield, Target, Award, Clock, FlaskConical, PenTool, Users } from "lucide-react";
+
+const teamMembers = [
+    { name: "Stanley Jacob", role: "Founder", icon: Users },
+    { name: "Jacob Richard", role: "Managing Director", icon: Users },
+    { name: "Jacob Shalu", role: "Chief Technical Director", icon: Users },
+];
 
 export default function About() {
     const asset = useAsset();
@@ -12,101 +18,90 @@ export default function About() {
             <Head title="About Us - Dubhe Richus" />
             <Navbar />
             <main className="pt-20">
-                {/* Hero section for About Page */}
-                <section className="relative h-[400px] w-full overflow-hidden">
-                    <img
-                        src={asset('/images/about-mission.png')}
-                        alt="Our Mission"
-                        className="h-full w-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-[#0a1628]/60 flex items-center justify-center">
-                        <div className="text-center px-6">
-                            <h1 className="font-serif text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-                                Our Legacy of Purity
-                            </h1>
-                            <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
-                                Since 1991, we have been at the forefront of natural water treatment technology in India.
-                            </p>
-                        </div>
+                {/* Hero Section */}
+                <section className="bg-[#0a1628] py-24 text-white">
+                    <div className="mx-auto max-w-7xl px-6 text-center">
+                        <h1 className="font-serif text-4xl font-bold md:text-6xl">About Us</h1>
+                        <p className="mt-6 text-lg text-white/70 max-w-2xl mx-auto italic">
+                            "Innovators Driving Clean Water Solutions Forward"
+                        </p>
                     </div>
                 </section>
 
-                <section className="py-24 bg-background">
+                {/* Our Vision */}
+                <section className="py-24 bg-background border-b border-border">
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
                             <div>
-                                <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary">
-                                    Our Story
+                                <h2 className="mb-6 font-serif text-3xl font-bold text-foreground md:text-4xl italic">Our Vision</h2>
+                                <p className="text-lg leading-relaxed text-muted-foreground">
+                                    Dubhe Richus aims to contribute towards the development of a better social Infrastructure by providing reliable technologies and solutions with superior value with expertise in the field of water/ waste water treatment.
                                 </p>
-                                <h2 className="mb-6 font-serif text-3xl font-bold text-foreground md:text-4xl">
-                                    33+ Years of Excellence in Water Technology
-                                </h2>
-                                <div className="space-y-6 text-muted-foreground leading-relaxed">
-                                    <p>
-                                        Dubhe Richus was founded with a single vision: to provide clean, safe water through natural and sustainable processes. Over the last three decades, we have transformed from a local manufacturer into a national leader in Integrated Water Technology.
-                                    </p>
-                                    <p>
-                                        Our commitment to Research and Development has allowed us to develop chemical-free filtration systems that are not only effective but also environmentally responsible. We believe that technology should work in harmony with nature, not against it.
-                                    </p>
-                                </div>
-
-                                <div className="mt-10 grid grid-cols-2 gap-6">
-                                    <div className="p-4 border border-border rounded-xl bg-muted/30">
-                                        <Clock className="h-6 w-6 text-primary mb-2" />
-                                        <h4 className="font-bold text-foreground">Established</h4>
-                                        <p className="text-sm">1991, Kerala, India</p>
-                                    </div>
-                                    <div className="p-4 border border-border rounded-xl bg-muted/30">
-                                        <Award className="h-6 w-6 text-primary mb-2" />
-                                        <h4 className="font-bold text-foreground">Projects</h4>
-                                        <p className="text-sm">1000+ Completed</p>
-                                    </div>
-                                </div>
                             </div>
-                            <div className="relative">
-                                <div className="aspect-square overflow-hidden rounded-2xl shadow-2xl">
-                                    <img
-                                        src={asset('/images/about-mission.png')}
-                                        alt="Vision for the future"
-                                        className="h-full w-full object-cover"
-                                    />
-                                </div>
-                                <div className="absolute -bottom-6 -left-6 bg-primary p-8 rounded-2xl hidden md:block">
-                                    <p className="text-4xl font-bold text-primary-foreground">33</p>
-                                    <p className="text-sm text-primary-foreground/80 lowercase">Years of Trust</p>
-                                </div>
+                            <div className="bg-primary/5 p-12 rounded-2xl border border-primary/10">
+                                <Target className="h-12 w-12 text-primary mb-6" />
+                                <h3 className="text-xl font-bold mb-4">Focus on Reliability</h3>
+                                <p className="text-muted-foreground italic">"Perfection in every detail."</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
+                {/* R&D and Design */}
                 <section className="py-24 bg-muted">
                     <div className="mx-auto max-w-7xl px-6">
-                        <div className="text-center mb-16">
-                            <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
-                                Mission & Vision
-                            </h2>
-                        </div>
-                        <div className="grid gap-8 md:grid-cols-2">
+                        <div className="grid gap-12 md:grid-cols-2">
                             <div className="bg-card p-10 rounded-2xl border border-border shadow-sm">
-                                <div className="h-12 w-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                                    <Target className="h-6 w-6 text-primary" />
-                                </div>
-                                <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+                                <FlaskConical className="h-10 w-10 text-primary mb-6" />
+                                <h2 className="mb-4 font-serif text-2xl font-bold">Research and Development</h2>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    To engineer and deliver the world's most sustainable, efficient, and natural water treatment solutions that empower communities and industries to thrive without compromising environmental integrity.
+                                    Our research and development team is dedicated to the development and upgradation of water treatment sector through grassroots action, research, and education. We look forward to keep the sustainability of the local natural environment in the development process.
                                 </p>
                             </div>
                             <div className="bg-card p-10 rounded-2xl border border-border shadow-sm">
-                                <div className="h-12 w-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                                    <Shield className="h-6 w-6 text-primary" />
-                                </div>
-                                <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+                                <PenTool className="h-10 w-10 text-primary mb-6" />
+                                <h2 className="mb-4 font-serif text-2xl font-bold">Design and Technology</h2>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    To set the global standard for chemical-free water purification, ensuring that future generations have access to clean, safe, and natural water as a fundamental right.
+                                    Dubhe Richus integrated technology for a peaceful water purifying experience. (Completely patent protected). Perfection in every detail, our cylindrical vertical type of water treatment heavy machineries stands out from the crowd with superior quality, results and first-class design.
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </section>
+
+                {/* Team Section */}
+                <section className="py-24 bg-background">
+                    <div className="mx-auto max-w-7xl px-6 text-center">
+                        <h2 className="mb-16 font-serif text-3xl font-bold text-foreground md:text-4xl">Meet Our Leadership Team</h2>
+                        <div className="grid gap-8 md:grid-cols-3">
+                            {teamMembers.map((member) => (
+                                <div key={member.name} className="p-10 rounded-2xl border border-border bg-card transition-all hover:shadow-lg">
+                                    <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
+                                        <member.icon className="h-10 w-10 text-primary" />
+                                    </div>
+                                    <h3 className="text-xl font-bold">{member.name}</h3>
+                                    <p className="text-primary font-medium tracking-wider uppercase text-xs mt-2">{member.role}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Dubhe Merak Sister Concern */}
+                <section className="py-24 bg-[#0a1628] text-white">
+                    <div className="mx-auto max-w-4xl px-6 text-center">
+                        <h2 className="mb-8 font-serif text-2xl font-bold md:text-3xl">Our Technical Partnership</h2>
+                        <p className="text-lg text-white/70 leading-relaxed mb-10">
+                            Dubhe Merak specializes in the research, development, and manufacturing of advanced water treatment solutions. We focus on fully automatic water treatment plants (WTP) and heavy-duty systems for Sewage Water Treatment (SWT) and Effluent Treatment Plants (ETP).
+                        </p>
+                        <a
+                            href="https://dubhemerak.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-3 font-bold transition-colors hover:bg-white/10"
+                        >
+                            Visit Dubhe Merak
+                        </a>
                     </div>
                 </section>
             </main>

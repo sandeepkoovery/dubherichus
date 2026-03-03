@@ -1,25 +1,29 @@
 import { Droplets } from "lucide-react";
 import { Link } from "@inertiajs/react";
+import { useAsset } from "@/hooks/useAsset";
 
 const productLinks = [
-    { label: "Water Treatment Plant", href: "/products" },
-    { label: "Effluent Treatment Plant", href: "/products" },
-    { label: "Sewage Treatment Plant", href: "/products" },
+    { label: "Medium", href: "/products/medium" },
+    { label: "Standard", href: "/products/standard" },
+    { label: "Commercial", href: "/products/commercial" },
+    { label: "Bayaweaver", href: "/products/bayaweaver" },
 ];
 
 const companyLinks = [
     { label: "About Us", href: "/about" },
-    { label: "Services", href: "/services" },
+    { label: "Projects", href: "/projects" },
     { label: "Contact Us", href: "/contact" },
 ];
 
 export function SiteFooter() {
+    const asset = useAsset();
+    const appBase = asset('');
     return (
         <footer className="border-t border-border bg-[#0a1628] text-white">
             <div className="mx-auto max-w-7xl px-6 py-16">
                 <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
                     <div className="lg:col-span-1">
-                        <Link href="/" className="mb-6 flex items-center gap-2 cursor-pointer">
+                        <Link href={appBase + "/"} className="mb-6 flex items-center gap-2 cursor-pointer">
                             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 font-serif text-sm font-bold text-white">
                                 DM
                             </div>
@@ -52,7 +56,7 @@ export function SiteFooter() {
                             {productLinks.map((link) => (
                                 <li key={link.label}>
                                     <Link
-                                        href={link.href}
+                                        href={appBase + link.href}
                                         className="text-sm text-white/50 transition-colors hover:text-white"
                                     >
                                         {link.label}
@@ -70,7 +74,7 @@ export function SiteFooter() {
                             {companyLinks.map((link) => (
                                 <li key={link.label}>
                                     <Link
-                                        href={link.href}
+                                        href={appBase + link.href}
                                         className="text-sm text-white/50 transition-colors hover:text-white"
                                     >
                                         {link.label}
