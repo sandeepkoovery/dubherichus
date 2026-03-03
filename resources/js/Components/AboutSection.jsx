@@ -22,23 +22,26 @@ export function AboutSection() {
                                 Smarter Than <br /> You Think
                             </span>
                         </h2>
-                        <p className="mb-10 max-w-lg text-lg font-light leading-relaxed text-muted-foreground/80">
-                            At Dubhe Richus, we don't just treat water; we master it.
-                            Our journey is defined by <span className="text-foreground font-medium underline underline-offset-4 decoration-primary/30">reliable technologies</span> and
-                            bespoke solutions that deliver superior value across India's social infrastructure.
+                        <p className="mb-10 max-w-xl text-lg font-light leading-relaxed text-muted-foreground/80 text-balance">
+                            At Dubhe Richus, our vision is to provide sustainable, chemical-free water treatment solutions that last for decades. Our systems, powered by <span className="text-foreground font-medium underline underline-offset-4 decoration-primary/30">innovative Super Jet Technology</span>, are designed to efficiently purify water for homes and large-scale commercial applications. We continuously invest in research and development to enhance our filtration methods, ensuring cleaner, safer water for all. Our goal is to revolutionize water treatment by offering customizable, long-lasting systems that meet the specific needs of industries like hospitals, hotels, and institutions, while promoting environmentally friendly solutions for a healthier planet.
                         </p>
 
-                        <ul className="mb-12 space-y-5">
+                        <ul className="mb-12 space-y-6">
                             {[
-                                "33+ Years of Technical Excellence",
-                                "Sustainable, Chemical-Free Processes",
-                                "Zero-Maintenance Integrated Systems"
+                                { title: "Innovative Technology", desc: "We utilize Super Jet Technology for efficient, chemical-free water filtration, ensuring long-lasting, eco-friendly solutions." },
+                                { title: "Custom Designs", desc: "Tailored water treatment systems for both residential and commercial applications, including hospitals, hotels, and institutions." },
+                                { title: "Sustainability", desc: "Our systems operate without electricity and can be used for over 25 years without replacing filter media." }
                             ].map((item) => (
-                                <li key={item} className="flex items-center gap-4 text-[13px] font-bold uppercase tracking-wider text-foreground/70 group/item">
-                                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover/item:bg-primary group-hover/item:text-white">
-                                        <CheckCircle2 className="h-3.5 w-3.5" />
+                                <li key={item.title} className="group/item">
+                                    <div className="flex items-start gap-4">
+                                        <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover/item:bg-primary group-hover/item:text-white mt-1">
+                                            <CheckCircle2 className="h-3.5 w-3.5" />
+                                        </div>
+                                        <div>
+                                            <p className="text-[13px] font-bold uppercase tracking-wider text-foreground/90">{item.title}</p>
+                                            <p className="text-sm font-light text-muted-foreground/70">{item.desc}</p>
+                                        </div>
                                     </div>
-                                    {item}
                                 </li>
                             ))}
                         </ul>
