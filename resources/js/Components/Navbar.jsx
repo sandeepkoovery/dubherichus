@@ -45,9 +45,9 @@ export function Navbar() {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isDarkTheme
-                ? "bg-transparent"
-                : "bg-card/95 backdrop-blur-md shadow-lg border-b border-border"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out ${isDarkTheme
+                ? "bg-transparent py-2"
+                : "bg-background/80 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] border-b border-white/10 py-0"
                 }`}
         >
             <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -63,37 +63,37 @@ export function Navbar() {
                         </div>
                         <div>
                             <span
-                                className={`block text-lg font-bold font-serif leading-tight tracking-tight ${isDarkTheme ? "text-white" : "text-foreground"
+                                className={`block text-xl font-bold font-serif leading-tight tracking-tight ${isDarkTheme ? "text-white" : "text-foreground"
                                     }`}
                             >
                                 DUBHE RICHUS
                             </span>
                             <span
-                                className={`block text-[10px] font-medium uppercase tracking-[0.2em] ${isDarkTheme ? "text-white/70" : "text-muted-foreground"
+                                className={`block text-[9px] font-semibold uppercase tracking-[0.3em] opacity-80 ${isDarkTheme ? "text-white/70" : "text-primary"
                                     }`}
                             >
-                                Pvt Ltd
+                                Innovations for Life
                             </span>
                         </div>
                     </div>
                 </Link>
 
-                <div className="hidden items-center gap-8 lg:flex">
+                <div className="hidden items-center gap-10 lg:flex">
                     {navLinks.map((link) => (
                         <div key={link.label} className="relative group">
                             {link.subLinks ? (
                                 <>
-                                    <button className={`flex items-center gap-1 text-sm font-medium transition-colors duration-300 hover:text-primary ${isDarkTheme ? "text-white/90 hover:text-white" : "text-foreground"}`}>
+                                    <button className={`flex items-center gap-1.5 text-[13px] font-semibold uppercase tracking-wider transition-all duration-300 hover:text-primary ${isDarkTheme ? "text-white/90 hover:text-white" : "text-foreground/80"}`}>
                                         {link.label}
-                                        <svg className="h-4 w-4 transition-transform group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m6 9 6 6 6-6" /></svg>
+                                        <svg className="h-3.5 w-3.5 transition-transform duration-500 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="m6 9 6 6 6-6" /></svg>
                                     </button>
-                                    <div className="absolute left-0 top-full hidden w-56 pt-2 group-hover:block transition-all duration-300">
-                                        <div className="rounded-xl border border-border bg-card p-2 shadow-xl backdrop-blur-md">
+                                    <div className="absolute left-1/2 -translate-x-1/2 top-full invisible opacity-0 translate-y-2 w-64 pt-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+                                        <div className="rounded-2xl border border-white/20 bg-background/95 p-3 shadow-[0_20px_50px_rgba(0,0,0,0.1)] backdrop-blur-2xl">
                                             {link.subLinks.map((sub) => (
                                                 <Link
                                                     key={sub.href}
                                                     href={appBase + sub.href}
-                                                    className="block rounded-lg px-4 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-primary"
+                                                    className="block rounded-xl px-5 py-3 text-[13px] font-medium text-muted-foreground transition-all duration-300 hover:bg-primary/5 hover:text-primary hover:translate-x-1"
                                                 >
                                                     {sub.label}
                                                 </Link>
@@ -104,10 +104,11 @@ export function Navbar() {
                             ) : (
                                 <Link
                                     href={appBase + link.href}
-                                    className={`text-sm font-medium transition-colors duration-300 hover:text-primary ${isDarkTheme ? "text-white/90 hover:text-white" : "text-foreground"
+                                    className={`relative text-[13px] font-semibold uppercase tracking-wider transition-all duration-300 hover:text-primary ${isDarkTheme ? "text-white/90 hover:text-white" : "text-foreground/80"
                                         }`}
                                 >
                                     {link.label}
+                                    <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
                                 </Link>
                             )}
                         </div>

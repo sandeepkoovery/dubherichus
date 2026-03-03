@@ -23,42 +23,43 @@ export function SiteFooter() {
             <div className="mx-auto max-w-7xl px-6 py-16">
                 <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
                     <div className="lg:col-span-1">
-                        <Link href={appBase + "/"} className="mb-6 flex items-center gap-2 cursor-pointer">
-                            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 font-serif text-sm font-bold text-white">
-                                DM
+                        <Link href={appBase + "/"} className="mb-10 flex items-center gap-4 cursor-pointer group">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-[#020617] transition-transform duration-500 group-hover:rotate-[360deg] group-hover:scale-110">
+                                <Droplets className="h-6 w-6 text-blue-600" />
                             </div>
                             <div>
-                                <span className="block text-lg font-bold font-serif leading-tight">
+                                <span className="block text-2xl font-bold font-serif leading-tight tracking-tight text-white group-hover:text-blue-400 transition-colors">
                                     DUBHE RICHUS
                                 </span>
-                                <span className="block text-[10px] font-medium uppercase tracking-[0.2em] text-white/50">
-                                    Pvt Ltd
+                                <span className="block text-[10px] font-bold uppercase tracking-[0.4em] text-blue-400 opacity-80">
+                                    Innovations for Life
                                 </span>
                             </div>
                         </Link>
-                        <p className="mb-6 text-sm leading-relaxed text-white/60">
-                            Mastering Natural Water Filtration for Over 33 Years. India&apos;s
-                            trusted manufacturer of WTP, ETP &amp; STP systems.
+                        <p className="mb-10 text-[15px] font-light leading-relaxed text-white/50 max-w-sm">
+                            Mastering the art of <span className="text-white font-normal underline underline-offset-8 decoration-blue-500/30">natural water filtration</span> for over 33 years.
+                            India's premier manufacturer of advanced treatment systems.
                         </p>
-                        <div className="flex items-center gap-2">
-                            <Droplets className="h-4 w-4 text-[#4da3ff]" />
-                            <span className="text-xs text-white/40">
-                                Clean Water, Healthy Future
+                        <div className="flex items-center gap-3 group">
+                            <div className="h-1.5 w-1.5 rounded-full bg-blue-400 group-hover:animate-ping" />
+                            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30">
+                                Engineering Purity Since 1991
                             </span>
                         </div>
                     </div>
 
                     <div>
-                        <h4 className="mb-6 text-sm font-semibold uppercase tracking-wider text-white/80">
-                            Products
+                        <h4 className="mb-10 text-[10px] font-bold uppercase tracking-[0.4em] text-white/30">
+                            Portfolio
                         </h4>
-                        <ul className="flex flex-col gap-3">
+                        <ul className="flex flex-col gap-4">
                             {productLinks.map((link) => (
                                 <li key={link.label}>
                                     <Link
                                         href={appBase + link.href}
-                                        className="text-sm text-white/50 transition-colors hover:text-white"
+                                        className="group flex items-center gap-2 text-[14px] font-light text-white/50 transition-all hover:text-white"
                                     >
+                                        <span className="h-px w-0 bg-blue-500 transition-all duration-300 group-hover:w-4" />
                                         {link.label}
                                     </Link>
                                 </li>
@@ -85,27 +86,27 @@ export function SiteFooter() {
                     </div>
 
                     <div>
-                        <h4 className="mb-6 text-sm font-semibold uppercase tracking-wider text-white/80">
+                        <h4 className="mb-10 text-[10px] font-bold uppercase tracking-[0.4em] text-white/30">
                             Newsletter
                         </h4>
-                        <p className="mb-4 text-sm text-white/50">
+                        <p className="mb-8 text-[14px] font-light leading-relaxed text-white/50">
                             Stay updated with our latest water treatment solutions and
                             industry insights.
                         </p>
                         <form
-                            className="flex gap-2"
+                            className="relative flex flex-col gap-4"
                             onSubmit={(e) => e.preventDefault()}
                         >
                             <input
                                 type="email"
                                 placeholder="Your email"
-                                className="flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/30 focus:border-[#4da3ff] focus:outline-none"
+                                className="w-full rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-sm text-white placeholder:text-white/20 transition-all focus:border-blue-500 focus:bg-white/[0.08] focus:outline-none"
                             />
                             <button
                                 type="submit"
-                                className="rounded-lg bg-[#4da3ff] px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#4da3ff]/80"
+                                className="w-full rounded-2xl bg-blue-600 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-white shadow-xl transition-all hover:bg-blue-500 hover:scale-102 active:scale-98"
                             >
-                                Join
+                                Subscribe
                             </button>
                         </form>
                     </div>

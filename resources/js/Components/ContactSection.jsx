@@ -33,93 +33,70 @@ export function ContactSection() {
             <div className="mx-auto max-w-7xl px-6">
                 <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
                     {/* Left Column */}
-                    <div className="flex flex-col">
-                        <span className="text-sm font-bold uppercase tracking-[0.2em] text-primary">
+                    <div className="flex flex-col" style={{ animation: 'fade-in-left 1s ease-out both' }}>
+                        <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                             Get In Touch
                         </span>
-                        <h2 className="mt-4 font-serif text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl">
-                            <span className="text-balance">
-                                Ready to Transform Your Water Treatment?
-                            </span>
+                        <h2 className="mt-6 font-serif text-4xl font-bold leading-[1.1] tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                            Ready to <br />
+                            <span className="text-primary italic">Transform</span> Your Water?
                         </h2>
-                        <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-                            Whether you need a new installation or want to upgrade your
-                            existing system, our team is ready to help you find the perfect
-                            solution.
+                        <div className="mt-8 h-1 w-20 bg-primary/20" />
+                        <p className="mt-10 max-w-md text-lg font-light leading-relaxed text-muted-foreground/80">
+                            From initial consultation to precision engineering,
+                            our team is dedicated to crafting your <span className="text-foreground font-medium underline underline-offset-4 decoration-primary/30">perfect water solution</span>.
                         </p>
 
                         {/* Contact Details */}
-                        <div className="mt-12 flex flex-col gap-8">
-                            <div className="flex items-center gap-5">
-                                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-primary/20 bg-background">
-                                    <Phone className="h-5 w-5 text-primary" />
+                        <div className="mt-16 flex flex-col gap-10">
+                            {[
+                                { icon: Phone, label: "Call Us", value: "Consultation Lines Open", color: "blue" },
+                                { icon: Mail, label: "Email", value: "info@dubherichus.com", color: "teal" },
+                                { icon: MapPin, label: "Location", value: "HQ - Kerala, India", color: "indigo" }
+                            ].map((item, idx) => (
+                                <div key={item.label} className="group flex items-center gap-6" style={{ animationDelay: `${idx * 150}ms`, animation: 'fade-in-left 1s ease-out both' }}>
+                                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white shadow-xl border border-border/50 transition-all duration-500 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
+                                        <item.icon className="h-5 w-5" />
+                                    </div>
+                                    <div>
+                                        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/60">
+                                            {item.label}
+                                        </p>
+                                        <p className="mt-1 text-lg font-bold tracking-tight text-foreground">
+                                            {item.value}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary">
-                                        Call Us
-                                    </p>
-                                    <p className="mt-0.5 text-base font-semibold text-foreground">
-                                        Contact via website
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center gap-5">
-                                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-primary/20 bg-background">
-                                    <Mail className="h-5 w-5 text-primary" />
-                                </div>
-                                <div>
-                                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary">
-                                        Email
-                                    </p>
-                                    <p className="mt-0.5 text-base font-semibold text-foreground">
-                                        info@dubherichus.com
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center gap-5">
-                                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-primary/20 bg-background">
-                                    <MapPin className="h-5 w-5 text-primary" />
-                                </div>
-                                <div>
-                                    <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary">
-                                        Location
-                                    </p>
-                                    <p className="mt-0.5 text-base font-semibold text-foreground">
-                                        India
-                                    </p>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
 
                     {/* Right Column - Form Card */}
                     <div>
                         {recentlySuccessful ? (
-                            <div className="flex flex-col items-center justify-center rounded-2xl border border-border bg-card px-8 py-16 text-center shadow-lg shadow-foreground/[0.03]">
-                                <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
-                                    <CheckCircle className="h-8 w-8 text-green-600" />
+                            <div className="flex flex-col items-center justify-center rounded-3xl border border-[#0f172a]/5 bg-white px-10 py-20 text-center shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)]">
+                                <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-green-50">
+                                    <CheckCircle className="h-10 w-10 text-green-500" />
                                 </div>
-                                <h3 className="font-serif text-2xl font-bold text-foreground">
-                                    Message Sent!
+                                <h3 className="font-serif text-3xl font-bold text-foreground">
+                                    Message Request Logged
                                 </h3>
-                                <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                                    Thank you for reaching out. Our team will get back to you
-                                    within 24 hours.
+                                <p className="mt-4 max-w-sm text-[15px] font-light leading-relaxed text-muted-foreground">
+                                    Your interest has been noted. A water treatment expert will
+                                    reach out to you <span className="text-foreground font-medium">within 24 hours</span>.
                                 </p>
                             </div>
                         ) : (
                             <form
                                 onSubmit={handleSubmit}
-                                className="rounded-2xl border border-border bg-card px-8 py-10 shadow-lg shadow-foreground/[0.03] md:px-10"
+                                className="rounded-[2.5rem] border border-[#0f172a]/5 bg-white px-10 py-12 shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)] md:px-14 md:py-16"
+                                style={{ animation: 'fade-in-right 1s ease-out both' }}
                             >
-                                <h3 className="font-serif text-xl font-bold text-foreground">
-                                    Send us a message
+                                <h3 className="font-serif text-2xl font-bold text-foreground tracking-tight">
+                                    Inquiry Form
                                 </h3>
-                                <p className="mt-1.5 text-sm text-muted-foreground">
-                                    Fill out the form and our team will get back to you within 24
-                                    hours.
+                                <p className="mt-2 text-[15px] font-light text-muted-foreground/80">
+                                    Experience the future of water purity today.
                                 </p>
 
                                 <div className="mt-8 grid gap-5 sm:grid-cols-2">

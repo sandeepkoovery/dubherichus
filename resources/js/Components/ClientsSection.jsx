@@ -1,46 +1,64 @@
-import { useEffect, useRef } from "react";
-import { Star } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { useAsset } from "@/hooks/useAsset";
 
-const clientLogos = [
-    "HCL",
-    "Ford",
-    "Yamaha",
-    "Bridgestone",
-    "SFS Group",
-    "Tata Motors",
-    "Mahindra",
-    "Reliance",
-    "Infosys",
-    "Wipro",
+const clientLinks = [
+    { name: "Heather Homes", logo: "/images/clients/1-5.png" },
+    { name: "Favourite Homes", logo: "/images/clients/2-5.png" },
+    { name: "Volvo", logo: "/images/clients/4-2.png" },
+    { name: "InDel Corporation", logo: "/images/clients/5-1.png" },
+    { name: "Ford", logo: "/images/clients/7-1.png" },
+    { name: "Yamaha", logo: "/images/clients/8-1.png" },
+    { name: "CUSAT", logo: "/images/clients/9-1.png" },
+    { name: "SFS Homes", logo: "/images/clients/10-1.png" },
 ];
 
 const testimonials = [
     {
-        quote:
-            "Dubhe Richus installed our WTP system 5 years ago and it has been running flawlessly. The water quality is exceptional and maintenance has been virtually zero.",
-        name: "Rajesh Kumar",
-        role: "Plant Manager, Industrial Corp",
-        rating: 5,
+        quote: "Using this for the last one and half year. Very much satisfied with the results. Zero maintenance till now. Just have to do the periodic backwash without fail.",
+        name: "Vivek",
+        role: "Residential Client",
+        image: "/images/testimonials/vivek.png"
     },
     {
-        quote:
-            "Their expertise in effluent treatment is unmatched. They helped us meet all CPCB standards while significantly reducing our operational costs. Highly recommended.",
-        name: "Priya Sharma",
-        role: "Director, Green Manufacturing Ltd",
-        rating: 5,
+        quote: "Bought it a year ago after lot of research. Installation was quick and it's easy to operate. It improved my water pressure all over the 1st floor. I would highly recommend Dubhe Richus.",
+        name: "Tinku Tharasing",
+        role: "Home Owner",
+        image: "/images/testimonials/tinku.png"
     },
     {
-        quote:
-            "The best decision we made for our residential complex was choosing Dubhe Richus. Clean, safe water for over 200 families without any chemicals.",
-        name: "Anil Gupta",
-        role: "Chairman, Sunrise Residences",
-        rating: 5,
+        quote: "I have been using Dubhe Richus water filter for last 8 years and I am thoroughly impressed. The filter provides crisp, clean-tasting water with noticeable improvement.",
+        name: "Nirupama Anil",
+        role: "Long-term User",
+        image: "/images/testimonials/nirupama.png"
+    },
+    {
+        quote: "This water filter is excellent, providing crisp, clean-tasting water every time. It's easy to install, no maintenance, and effectively removes impurities.",
+        name: "Badu sha",
+        role: "Verified Buyer",
+        image: "/images/testimonials/badu.png"
+    },
+    {
+        quote: "We are using this filter more than 10 years. And we are also satisfied with their service. Definitely recommend to all others looking for a water filter.",
+        name: "Anoop Antony",
+        role: "Legacy Client",
+        image: "/images/testimonials/anoop.png"
+    },
+    {
+        quote: "We have been using the water filter for the past 2 years. It is working really well and we are completely satisfied with it. Highly recommended.",
+        name: "George VV",
+        role: "Satisfied Customer",
+        image: "/images/testimonials/george.png"
     },
 ];
 
 export function ClientsSection() {
+    const asset = useAsset();
     const scrollRef = useRef(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
+    // Logos auto-scroll logic
     useEffect(() => {
         const el = scrollRef.current;
         if (!el) return;
@@ -59,71 +77,154 @@ export function ClientsSection() {
         return () => cancelAnimationFrame(animationId);
     }, []);
 
+    // Testimonials auto-play
+    useEffect(() => {
+        if (!isAutoPlaying) return;
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [isAutoPlaying]);
+
+    const nextSlide = () => {
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+        setIsAutoPlaying(false);
+    };
+
+    const prevSlide = () => {
+        setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+        setIsAutoPlaying(false);
+    };
+
     return (
-        <section id="clients" className="bg-background py-24 md:py-32">
-            <div className="mx-auto max-w-7xl px-6">
-                <div className="mb-16 text-center">
-                    <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-primary">
-                        Trusted Partners
+        <section id="clients" className="bg-stone-50/50 py-16 md:py-24 overflow-hidden">
+            <div className="w-full px-6">
+                {/* Logos Section */}
+                <div className="mb-12 text-center">
+                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary/60">
+                        Our Clients
                     </p>
-                    <h2 className="mb-4 font-serif text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-                        Some of Our Esteemed Clients
+                    <h2 className="mb-6 font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                        Some of our esteemed clients and partners
                     </h2>
+                    <div className="mx-auto h-1 w-20 bg-primary/20" />
                 </div>
 
                 <div
                     ref={scrollRef}
-                    className="mb-24 overflow-hidden"
+                    className="mb-20 overflow-hidden py-12 relative"
                     aria-label="Client logos carousel"
                 >
-                    <div className="flex w-max gap-12">
-                        {[...clientLogos, ...clientLogos].map((logo, i) => (
+                    <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-stone-50/50 to-transparent z-10" />
+                    <div className="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-stone-50/50 to-transparent z-10" />
+
+                    <div className="flex w-max gap-16 md:gap-20 items-center px-12">
+                        {[...clientLinks, ...clientLinks, ...clientLinks].map((client, i) => (
                             <div
-                                key={`${logo}-${i}`}
-                                className="flex h-16 w-32 shrink-0 items-center justify-center rounded-lg border border-border bg-card px-4"
+                                key={`${client.name}-${i}`}
+                                className="group flex items-center justify-center shrink-0 transition-all duration-500 hover:scale-110"
                             >
-                                <span className="text-sm font-bold text-muted-foreground">
-                                    {logo}
+                                <img
+                                    src={client.logo.startsWith('http') ? client.logo : asset(client.logo)}
+                                    alt={client.name}
+                                    className="h-24 md:h-28 w-auto object-contain transition-all opacity-90 group-hover:opacity-100"
+                                    onError={(e) => {
+                                        e.target.style.display = 'none';
+                                        const sibling = e.target.nextSibling;
+                                        if (sibling) sibling.classList.remove('hidden');
+                                    }}
+                                />
+                                <span className="hidden text-sm font-bold text-foreground/40 tracking-widest uppercase text-center group-hover:text-primary transition-colors py-4 px-6 border border-border/50 rounded-xl bg-card/20">
+                                    {client.name}
                                 </span>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <div className="mb-16 text-center">
-                    <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-primary">
-                        Testimonials
+                {/* Testimonials Section */}
+                <div className="mb-20 text-center">
+                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
+                        Real Experiences
                     </p>
-                    <h2 className="mb-4 font-serif text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+                    <h2 className="mb-6 font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl opacity-90">
                         Quality in Every Review
                     </h2>
+                    <div className="mx-auto h-1 w-20 bg-primary/20" />
                 </div>
 
-                <div className="grid gap-8 md:grid-cols-3">
-                    {testimonials.map((t) => (
+                <div className="relative mx-auto max-w-5xl">
+                    <div className="overflow-hidden">
                         <div
-                            key={t.name}
-                            className="rounded-xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                            className="flex transition-transform duration-700 ease-in-out"
+                            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                         >
-                            <div className="mb-4 flex gap-1">
-                                {Array.from({ length: t.rating }).map((_, i) => (
-                                    <Star
-                                        key={i}
-                                        className="h-4 w-4 fill-amber-400 text-amber-400"
-                                    />
-                                ))}
-                            </div>
-                            <p className="mb-6 leading-relaxed text-muted-foreground">
-                                &quot;{t.quote}&quot;
-                            </p>
-                            <div className="border-t border-border pt-4">
-                                <p className="text-sm font-semibold text-foreground">
-                                    {t.name}
-                                </p>
-                                <p className="text-xs text-muted-foreground">{t.role}</p>
-                            </div>
+                            {testimonials.map((t, index) => (
+                                <div key={index} className="w-full shrink-0 px-4">
+                                    <div className="group relative rounded-[2.5rem] border border-white/50 bg-white p-10 md:p-16 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] transition-all duration-700 hover:shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)]">
+                                        <div className="absolute top-10 right-10 opacity-5 transition-opacity group-hover:opacity-10">
+                                            <Quote className="h-24 w-24 rotate-180" />
+                                        </div>
+
+                                        <div className="flex flex-col items-center text-center">
+                                            <div className="mb-10 h-24 w-24 overflow-hidden rounded-full border-4 border-primary/5 shadow-2xl transition-transform duration-700 group-hover:scale-110">
+                                                <img
+                                                    src={asset(t.image)}
+                                                    alt={t.name}
+                                                    className="h-full w-full object-cover"
+                                                />
+                                            </div>
+
+                                            <p className="mb-10 max-w-3xl text-lg font-light leading-relaxed text-muted-foreground/90 md:text-xl">
+                                                "{t.quote}"
+                                            </p>
+
+                                            <div className="flex flex-col items-center">
+                                                <p className="text-lg font-bold tracking-tight text-foreground">
+                                                    {t.name}
+                                                </p>
+                                                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary mt-2">
+                                                    {t.role}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+
+                    {/* Navigation Buttons */}
+                    <button
+                        onClick={prevSlide}
+                        className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl border border-border/50 text-foreground transition-all hover:bg-primary hover:text-white hover:scale-110 active:scale-95 hidden md:flex"
+                        aria-label="Previous testimonial"
+                    >
+                        <ChevronLeft className="h-6 w-6" />
+                    </button>
+                    <button
+                        onClick={nextSlide}
+                        className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl border border-border/50 text-foreground transition-all hover:bg-primary hover:text-white hover:scale-110 active:scale-95 hidden md:flex"
+                        aria-label="Next testimonial"
+                    >
+                        <ChevronRight className="h-6 w-6" />
+                    </button>
+
+                    {/* Indicators */}
+                    <div className="mt-12 flex justify-center gap-3">
+                        {testimonials.map((_, i) => (
+                            <button
+                                key={i}
+                                onClick={() => {
+                                    setCurrentIndex(i);
+                                    setIsAutoPlaying(false);
+                                }}
+                                className={`h-1.5 rounded-full transition-all duration-500 ${currentIndex === i ? "w-8 bg-primary" : "w-1.5 bg-primary/20 hover:bg-primary/40"
+                                    }`}
+                                aria-label={`Go to slide ${i + 1}`}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

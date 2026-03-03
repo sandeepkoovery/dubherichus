@@ -56,65 +56,64 @@ export function ProductsSection() {
         <>
             <div
                 ref={parallaxRef}
-                className="relative h-64 bg-cover bg-fixed bg-center md:h-80"
+                className="relative h-72 bg-cover bg-fixed bg-center md:h-96"
                 style={{ backgroundImage: `url(${asset('/images/parallax-water.jpg')})` }}
             >
-                <div className="absolute inset-0 bg-[#0a1628]/70" />
+                <div className="absolute inset-0 bg-[#020617]/80" />
                 <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-                    <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-[#4da3ff]">
-                        Our Range of Products
+                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.5em] text-blue-400">
+                        Crafting Purity
                     </p>
-                    <h2 className="font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl italic">
-                        <span className="text-balance">
-                            "Innovation in Every Drop"
-                        </span>
+                    <h2 className="font-serif text-5xl font-bold text-white md:text-6xl lg:text-7xl opacity-90">
+                        Innovation in Every Drop
                     </h2>
-                    <p className="mt-3 max-w-xl text-white/60">
-                        Household and Industrial Solutions
-                    </p>
+                    <div className="mt-8 h-px w-24 bg-blue-500/30" />
                 </div>
             </div>
 
-            <section id="products" className="bg-background py-24 md:py-32 border-t border-border">
+            <section id="products" className="bg-white py-16 md:py-24">
                 <div className="mx-auto max-w-7xl px-6">
-                    <div className="text-center mb-16">
-                        <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-primary">
+                    <div className="text-center mb-20">
+                        <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                             Product Gallery
                         </p>
-                        <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl lg:text-5xl mb-4 italic">
-                            "PureFlow Insights"
+                        <h2 className="font-serif text-4xl font-bold text-foreground md:text-5xl lg:text-6xl mb-6">
+                            PureFlow Insights
                         </h2>
-                        <p className="text-muted-foreground max-w-xl mx-auto">
-                            Discover the perfect balance of technology and nature.
+                        <div className="mx-auto h-1 w-20 bg-primary/20 mb-8" />
+                        <p className="text-muted-foreground/80 max-w-xl mx-auto text-lg font-light leading-relaxed">
+                            Discover the perfect harmony of nature and <span className="text-primary font-medium">advanced engineering</span>.
                         </p>
                     </div>
 
-                    <div className="grid gap-8 md:grid-cols-3">
-                        {products.map((product) => (
+                    <div className="grid gap-10 md:grid-cols-3">
+                        {products.map((product, index) => (
                             <div
                                 key={product.title}
-                                className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden shadow-sm transition-all hover:shadow-md"
+                                className="group flex flex-col rounded-3xl bg-white overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)] transition-all duration-700 hover:shadow-[0_30px_70px_-15px_rgba(0,0,0,0.15)] hover:-translate-y-4"
+                                style={{ animationDelay: `${index * 150}ms`, animation: 'fade-in-up 1s ease-out both' }}
                             >
-                                <div className="h-48 overflow-hidden">
+                                <div className="h-64 overflow-hidden relative">
                                     <img
                                         src={asset(product.image)}
                                         alt={product.title}
-                                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
                                     />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                                 </div>
-                                <div className="p-6 flex flex-col flex-1">
-                                    <h3 className="mb-2 text-lg font-bold text-foreground">
+                                <div className="p-10 flex flex-col flex-1 border border-t-0 border-border/50 rounded-b-3xl">
+                                    <h3 className="mb-4 text-xl font-bold text-foreground tracking-tight">
                                         {product.title}
                                     </h3>
-                                    <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
+                                    <p className="text-[15px] font-light text-muted-foreground/80 leading-relaxed mb-6">
                                         {product.description}
                                     </p>
                                     <div className="mt-auto">
                                         <Link
                                             href={appBase + product.href}
-                                            className="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all"
+                                            className="inline-flex items-center gap-2 text-blue-600 text-[13px] font-bold uppercase tracking-widest transition-all hover:gap-3 underline decoration-blue-600/20 underline-offset-8"
                                         >
-                                            View Details <ArrowRight className="h-4 w-4" />
+                                            View Details <ArrowRight className="h-3.5 w-3.5" />
                                         </Link>
                                     </div>
                                 </div>
@@ -122,13 +121,6 @@ export function ProductsSection() {
                         ))}
                     </div>
 
-                    <div className="mt-16 text-center">
-                        <Button asChild size="lg">
-                            <Link href={appBase + "/products/standard"}>
-                                View Full Product Catalog
-                            </Link>
-                        </Button>
-                    </div>
                 </div>
             </section>
         </>

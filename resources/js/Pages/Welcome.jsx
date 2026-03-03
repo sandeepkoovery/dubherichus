@@ -19,7 +19,6 @@ export default function Welcome({ appName }) {
                 <ProductsSection />
                 <ProjectsPreview />
                 <ClientsSection />
-                <ContactSection />
             </main>
             <SiteFooter />
         </>
