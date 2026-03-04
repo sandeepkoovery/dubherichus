@@ -3,14 +3,24 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useAsset } from "@/hooks/useAsset";
 
 const clientLinks = [
-    { name: "Heather Homes", logo: "/images/clients/1-5.png" },
-    { name: "Favourite Homes", logo: "/images/clients/2-5.png" },
-    { name: "Volvo", logo: "/images/clients/4-2.png" },
-    { name: "InDel Corporation", logo: "/images/clients/5-1.png" },
-    { name: "Ford", logo: "/images/clients/7-1.png" },
-    { name: "Yamaha", logo: "/images/clients/8-1.png" },
-    { name: "CUSAT", logo: "/images/clients/9-1.png" },
-    { name: "SFS Homes", logo: "/images/clients/10-1.png" },
+    { name: "Client 1", logo: "/images/clients/1.png" },
+    { name: "Client 2", logo: "/images/clients/2.png" },
+    { name: "Client 3", logo: "/images/clients/3.png" },
+    { name: "Client 4", logo: "/images/clients/4.png" },
+    { name: "Client 5", logo: "/images/clients/5.png" },
+    { name: "Client 7", logo: "/images/clients/7.png" },
+    { name: "Client 8", logo: "/images/clients/8.png" },
+    { name: "Client 9", logo: "/images/clients/9.png" },
+    { name: "Client 10", logo: "/images/clients/10.png" },
+    { name: "Client 11", logo: "/images/clients/11.png" },
+    { name: "Client 12", logo: "/images/clients/12.png" },
+    { name: "Client 13", logo: "/images/clients/13.png" },
+    { name: "Client 14", logo: "/images/clients/14.png" },
+    { name: "Client 15", logo: "/images/clients/15.png" },
+    { name: "Client 16", logo: "/images/clients/16.png" },
+    { name: "Client 17", logo: "/images/clients/17.png" },
+    { name: "Client 18", logo: "/images/clients/18.png" },
+    { name: "Client 19", logo: "/images/clients/19.png" },
 ];
 
 const testimonials = [
@@ -112,29 +122,30 @@ export function ClientsSection() {
 
                 <div
                     ref={scrollRef}
-                    className="mb-20 overflow-hidden py-12 relative"
+                    className="mb-12 overflow-hidden py-4 relative"
                     aria-label="Client logos carousel"
                 >
-                    <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-stone-50/50 to-transparent z-10" />
-                    <div className="absolute inset-y-0 right-0 w-48 bg-gradient-to-l from-stone-50/50 to-transparent z-10" />
+                    <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-stone-50/50 to-transparent z-10" />
+                    <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-stone- stone-50/50 to-transparent z-10" />
 
-                    <div className="flex w-max gap-16 md:gap-20 items-center px-12">
-                        {[...clientLinks, ...clientLinks, ...clientLinks].map((client, i) => (
+                    <div className="flex w-max gap-4 items-center px-4">
+                        {[...clientLinks, ...clientLinks, ...clientLinks, ...clientLinks].map((client, i) => (
                             <div
                                 key={`${client.name}-${i}`}
                                 className="group flex items-center justify-center shrink-0 transition-all duration-500 hover:scale-110"
+                                style={{ width: '215px', height: '90px' }}
                             >
                                 <img
                                     src={client.logo.startsWith('http') ? client.logo : asset(client.logo)}
                                     alt={client.name}
-                                    className="h-24 md:h-28 w-auto object-contain transition-all opacity-90 group-hover:opacity-100"
+                                    className="h-full w-full object-contain p-0.5 transition-all opacity-90 group-hover:opacity-100"
                                     onError={(e) => {
                                         e.target.style.display = 'none';
                                         const sibling = e.target.nextSibling;
                                         if (sibling) sibling.classList.remove('hidden');
                                     }}
                                 />
-                                <span className="hidden text-sm font-bold text-foreground/40 tracking-widest uppercase text-center group-hover:text-primary transition-colors py-4 px-6 border border-border/50 rounded-xl bg-card/20">
+                                <span className="hidden text-[10px] font-bold text-foreground/40 tracking-widest uppercase text-center group-hover:text-primary transition-colors py-2 px-4 border border-border/50 rounded-lg bg-card/20">
                                     {client.name}
                                 </span>
                             </div>

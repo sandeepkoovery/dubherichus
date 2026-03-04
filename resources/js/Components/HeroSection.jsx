@@ -44,8 +44,8 @@ export function HeroSection() {
             <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
                 <div className="mx-auto max-w-5xl">
                     <div className="mb-8 flex justify-center">
-                        <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-primary backdrop-blur-md shadow-2xl">
-                            <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+                        <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white backdrop-blur-md shadow-2xl">
+                            <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
                             Premium Water Solutions in Kerala
                         </span>
                     </div>

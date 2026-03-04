@@ -24,17 +24,11 @@ export function SiteFooter() {
                 <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
                     <div className="lg:col-span-1">
                         <Link href={appBase + "/"} className="mb-10 flex items-center gap-4 cursor-pointer group">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-[#020617] transition-transform duration-500 group-hover:rotate-[360deg] group-hover:scale-110">
-                                <Droplets className="h-6 w-6 text-primary" />
-                            </div>
-                            <div>
-                                <span className="block text-2xl font-bold font-serif leading-tight tracking-tight text-white group-hover:text-primary transition-colors">
-                                    DUBHE RICHUS
-                                </span>
-                                <span className="block text-[10px] font-bold uppercase tracking-[0.4em] text-primary/80">
-                                    Innovations for Life
-                                </span>
-                            </div>
+                            <img
+                                src={asset('/images/dubhe-logo.png')}
+                                alt="Dubhe Richus"
+                                className="h-12 w-auto brightness-0 invert transition-all duration-500 group-hover:scale-105"
+                            />
                         </Link>
                         <p className="mb-10 text-[15px] font-light leading-relaxed text-white/50 max-w-sm">
                             Mastering the art of <span className="text-white font-normal underline underline-offset-8 decoration-blue-500/30">natural water filtration</span> for over 33 years.

@@ -23,12 +23,9 @@ const navLinks = [
 
 export function Navbar() {
     const asset = useAsset();
-    const { url } = usePage();
+    const { url, component } = usePage();
     const appBase = asset('');
 
-    // Resolve relative URL for comparison
-    const currentPath = url.replace(appBase, '').split('?')[0];
-    const isHome = currentPath === "/" || currentPath === "" || url === "/";
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -41,6 +38,7 @@ export function Navbar() {
     }, []);
 
     // Navbar is "dark mode" (transparent with white text) only at the top of the Home page
+    const isHome = component === 'Welcome' || component === 'Home' || url === '/' || url === '';
     const isDarkTheme = isHome && !isScrolled;
 
     return (
@@ -52,30 +50,11 @@ export function Navbar() {
         >
             <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
                 <Link href={appBase + "/"} className="flex items-center gap-2">
-                    <div className="flex items-center gap-1.5">
-                        <div
-                            className={`flex h-9 w-9 items-center justify-center rounded-lg font-serif text-sm font-bold ${isDarkTheme
-                                ? "bg-white/20 text-white backdrop-blur-sm"
-                                : "bg-primary text-primary-foreground"
-                                }`}
-                        >
-                            DM
-                        </div>
-                        <div>
-                            <span
-                                className={`block text-xl font-bold font-serif leading-tight tracking-tight ${isDarkTheme ? "text-white" : "text-foreground"
-                                    }`}
-                            >
-                                DUBHE RICHUS
-                            </span>
-                            <span
-                                className={`block text-[9px] font-semibold uppercase tracking-[0.3em] opacity-80 ${isDarkTheme ? "text-white/70" : "text-primary"
-                                    }`}
-                            >
-                                Innovations for Life
-                            </span>
-                        </div>
-                    </div>
+                    <img
+                        src={asset('/images/dubhe-logo.png')}
+                        alt="Dubhe Richus"
+                        className={`h-11 w-auto transition-all duration-500 transform hover:scale-105 ${isDarkTheme ? 'brightness-0 invert opacity-100' : 'opacity-90'}`}
+                    />
                 </Link>
 
                 <div className="hidden items-center gap-10 lg:flex">
