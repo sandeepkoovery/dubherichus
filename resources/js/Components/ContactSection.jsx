@@ -17,7 +17,7 @@ export function ContactSection() {
         name: "",
         email: "",
         phone: "",
-        service: "",
+        subject: "",
         message: "",
     });
 
@@ -35,17 +35,16 @@ export function ContactSection() {
                     {/* Left Column */}
                     <div className="flex flex-col" style={{ animation: 'fade-in-left 1s ease-out both' }}>
                         <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
-                            Get In Touch
+                            CONTACT US
                         </span>
                         <h2 className="mt-6 font-serif text-4xl font-bold leading-[1.1] tracking-tight text-foreground md:text-5xl lg:text-6xl">
-                            Ready to <br />
-                            <span className="text-primary italic">Transform</span> Your Water?
+                            Have questions?<br />
+                            Get in touch!
                         </h2>
-                        <div className="mt-8 h-1 w-20 bg-primary/20" />
-                        <p className="mt-10 max-w-md text-lg font-light leading-relaxed text-muted-foreground/80">
-                            From initial consultation to precision engineering,
-                            our team is dedicated to crafting your <span className="text-foreground font-medium underline underline-offset-4 decoration-primary/30">perfect water solution</span>.
-                        </p>
+                        <div className="mt-10 max-w-md text-sm leading-relaxed text-muted-foreground/80">
+                            Have questions or need assistance? Reach out to us today,
+                            and let our team help you find the perfect water solution!
+                        </div>
 
                         {/* Contact Details */}
                         <div className="mt-16 flex flex-col gap-10">
@@ -140,59 +139,43 @@ export function ContactSection() {
                                     </div>
                                 </div>
 
-                                {/* Phone */}
-                                <div className="mt-5 flex flex-col gap-1.5">
-                                    <Label
-                                        htmlFor="phone"
-                                        className="text-xs font-bold uppercase tracking-[0.1em] text-foreground"
-                                    >
-                                        Phone
-                                    </Label>
-                                    <Input
-                                        id="phone"
-                                        type="tel"
-                                        placeholder="+91 XXXXX XXXXX"
-                                        value={data.phone}
-                                        onChange={(e) => setData("phone", e.target.value)}
-                                        className="h-12 rounded-lg border-border bg-background px-4 text-sm transition-colors placeholder:text-muted-foreground/50 focus:border-primary focus:ring-1 focus:ring-primary/30"
-                                    />
-                                    {errors.phone && <span className="text-xs text-destructive">{errors.phone}</span>}
-                                </div>
-
-                                {/* Service */}
-                                <div className="mt-5 flex flex-col gap-1.5">
-                                    <Label
-                                        htmlFor="service"
-                                        className="text-xs font-bold uppercase tracking-[0.1em] text-foreground"
-                                    >
-                                        Service Required
-                                    </Label>
-                                    <Select onValueChange={(value) => setData("service", value)} value={data.service}>
-                                        <SelectTrigger
-                                            id="service"
-                                            className="h-12 w-full rounded-lg border-border bg-background px-4 text-sm transition-colors focus:border-primary focus:ring-1 focus:ring-primary/30"
+                                <div className="mt-5 grid gap-5 sm:grid-cols-2">
+                                    {/* Phone */}
+                                    <div className="flex flex-col gap-1.5">
+                                        <Label
+                                            htmlFor="phone"
+                                            className="text-xs font-bold uppercase tracking-[0.1em] text-foreground"
                                         >
-                                            <SelectValue placeholder="Select a service" />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            <SelectItem value="wtp">
-                                                Water Treatment Plant (WTP)
-                                            </SelectItem>
-                                            <SelectItem value="etp">
-                                                Effluent Treatment Plant (ETP)
-                                            </SelectItem>
-                                            <SelectItem value="stp">
-                                                Sewage Treatment Plant (STP)
-                                            </SelectItem>
-                                            <SelectItem value="consultation">
-                                                General Consultation
-                                            </SelectItem>
-                                            <SelectItem value="maintenance">
-                                                AMC / Maintenance
-                                            </SelectItem>
-                                        </SelectContent>
-                                    </Select>
-                                    {errors.service && <span className="text-xs text-destructive">{errors.service}</span>}
+                                            Phone
+                                        </Label>
+                                        <Input
+                                            id="phone"
+                                            type="tel"
+                                            placeholder="+91 XXXXX XXXXX"
+                                            value={data.phone}
+                                            onChange={(e) => setData("phone", e.target.value)}
+                                            className="h-12 rounded-lg border-border bg-background px-4 text-sm transition-colors placeholder:text-muted-foreground/50 focus:border-primary focus:ring-1 focus:ring-primary/30"
+                                        />
+                                        {errors.phone && <span className="text-xs text-destructive">{errors.phone}</span>}
+                                    </div>
+
+                                    {/* Subject */}
+                                    <div className="flex flex-col gap-1.5">
+                                        <Label
+                                            htmlFor="subject"
+                                            className="text-xs font-bold uppercase tracking-[0.1em] text-foreground"
+                                        >
+                                            Subject
+                                        </Label>
+                                        <Input
+                                            id="subject"
+                                            placeholder="Nature of inquiry"
+                                            value={data.subject}
+                                            onChange={(e) => setData("subject", e.target.value)}
+                                            className="h-12 rounded-lg border-border bg-background px-4 text-sm transition-colors placeholder:text-muted-foreground/50 focus:border-primary focus:ring-1 focus:ring-primary/30"
+                                        />
+                                        {errors.subject && <span className="text-xs text-destructive">{errors.subject}</span>}
+                                    </div>
                                 </div>
 
                                 {/* Message */}

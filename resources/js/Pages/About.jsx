@@ -167,11 +167,11 @@ export default function About() {
                 <section className="pb-32 bg-white">
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="relative rounded-[3rem] overflow-hidden h-[400px] flex items-center justify-center text-center px-6">
-                            <img src={asset('/images/contact-banner.jpg')} alt="Water Texture" className="absolute inset-0 w-full h-full object-cover" />
+                            <img src={asset('/images/cta-bg.jpg')} alt="" className="absolute inset-0 w-full h-full object-cover" />
                             <div className="absolute inset-0 bg-blue-900/40 backdrop-blur-[2px]" />
                             <div className="relative z-10">
                                 <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-10 leading-tight">
-                                    Transform your water with <br /> Dubhe Richus and Dubhe Merak!
+                                    Transform your water with <br /> Dubhe Richus!
                                 </h2>
                                 <a
                                     href="/contact"

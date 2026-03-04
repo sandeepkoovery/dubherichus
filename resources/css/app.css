@@ -10,8 +10,8 @@
   --card-foreground: oklch(0.15 0.02 240);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0.02 240);
-  --primary: oklch(0.40 0.15 250);
-  /* Deeper, more sophisticated blue */
+  --primary: oklch(0.33 0.08 250);
+  /* Merak Blue - Custom Brand Color #0c3b5e */
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.97 0.01 240);
   --secondary-foreground: oklch(0.2 0.04 240);

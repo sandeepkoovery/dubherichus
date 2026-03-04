@@ -61,7 +61,7 @@ export function ProductsSection() {
             >
                 <div className="absolute inset-0 bg-[#020617]/80" />
                 <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.5em] text-blue-400">
+                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.5em] text-primary">
                         Crafting Purity
                     </p>
                     <h2 className="font-serif text-5xl font-bold text-white md:text-6xl lg:text-7xl opacity-90">
@@ -111,7 +111,7 @@ export function ProductsSection() {
                                     <div className="mt-auto">
                                         <Link
                                             href={appBase + product.href}
-                                            className="inline-flex items-center gap-2 text-blue-600 text-[13px] font-bold uppercase tracking-widest transition-all hover:gap-3 underline decoration-blue-600/20 underline-offset-8"
+                                            className="inline-flex items-center gap-2 text-primary text-[13px] font-bold uppercase tracking-widest transition-all hover:gap-3 underline decoration-primary/20 underline-offset-8"
                                         >
                                             View Details <ArrowRight className="h-3.5 w-3.5" />
                                         </Link>

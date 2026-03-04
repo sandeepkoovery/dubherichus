@@ -25,13 +25,13 @@ export function SiteFooter() {
                     <div className="lg:col-span-1">
                         <Link href={appBase + "/"} className="mb-10 flex items-center gap-4 cursor-pointer group">
                             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-[#020617] transition-transform duration-500 group-hover:rotate-[360deg] group-hover:scale-110">
-                                <Droplets className="h-6 w-6 text-blue-600" />
+                                <Droplets className="h-6 w-6 text-primary" />
                             </div>
                             <div>
-                                <span className="block text-2xl font-bold font-serif leading-tight tracking-tight text-white group-hover:text-blue-400 transition-colors">
+                                <span className="block text-2xl font-bold font-serif leading-tight tracking-tight text-white group-hover:text-primary transition-colors">
                                     DUBHE RICHUS
                                 </span>
-                                <span className="block text-[10px] font-bold uppercase tracking-[0.4em] text-blue-400 opacity-80">
+                                <span className="block text-[10px] font-bold uppercase tracking-[0.4em] text-primary/80">
                                     Innovations for Life
                                 </span>
                             </div>
@@ -41,7 +41,7 @@ export function SiteFooter() {
                             India's premier manufacturer of advanced treatment systems.
                         </p>
                         <div className="flex items-center gap-3 group">
-                            <div className="h-1.5 w-1.5 rounded-full bg-blue-400 group-hover:animate-ping" />
+                            <div className="h-1.5 w-1.5 rounded-full bg-primary group-hover:animate-ping" />
                             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30">
                                 Engineering Purity Since 1991
                             </span>
@@ -104,7 +104,7 @@ export function SiteFooter() {
                             />
                             <button
                                 type="submit"
-                                className="w-full rounded-2xl bg-blue-600 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-white shadow-xl transition-all hover:bg-blue-500 hover:scale-102 active:scale-98"
+                                className="w-full rounded-2xl bg-primary py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-white shadow-xl transition-all hover:bg-primary/90 hover:scale-102 active:scale-98"
                             >
                                 Subscribe
                             </button>

@@ -2,7 +2,6 @@ import { Head } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
 import { useAsset } from "@/hooks/useAsset";
-import { CheckCircle2, Cpu, Sparkles } from "lucide-react";
 import { Button } from "@/Components/ui/button";
 import { Link } from "@inertiajs/react";
 
@@ -12,73 +11,96 @@ export default function Bayaweaver() {
 
     return (
         <>
-            <Head title="Bayaweaver AI Water Systems - Dubhe Richus" />
+            <Head title="Bayaweaver Water Treatment Solutions – Clean Water Systems by Dubhe Merak" />
             <Navbar />
             <main className="pt-20">
-                <section className="bg-[#0a1628] py-24 text-white">
+                {/* Hero Section */}
+                <section className="bg-slate-50 py-24 text-foreground overflow-hidden">
                     <div className="mx-auto max-w-7xl px-6">
-                        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-                            <div>
-                                <p className="mb-4 inline-block rounded-full bg-primary/20 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#4da3ff]">
-                                    Bayaweaver Flagship
+                        <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+                            <div className="order-2 lg:order-1">
+                                <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground">
+                                    DUBHE MERAK
                                 </p>
-                                <h1 className="mb-6 font-serif text-4xl font-bold md:text-5xl lg:text-6xl">
-                                    Next-Gen <span className="text-[#4da3ff]">AI Powered</span> Water
+                                <h1 className="mb-8 font-serif text-6xl font-black md:text-7xl lg:text-8xl tracking-tight leading-[0.9]">
+                                    BAYAWEAVER
                                 </h1>
-                                <p className="text-lg text-white/70 leading-relaxed mb-8">
-                                    The Bayaweaver represents the pinnacle of innovative water treatment. Integrated technology for a peaceful, premium purifying experience.
+                                <p className="text-lg text-muted-foreground/80 leading-relaxed mb-10 max-w-lg font-light">
+                                    At Dubhe Merak Pvt. Ltd., we are dedicated to providing efficient water treatment solutions under our brand BAYAWEAVER. Our systems are designed to accommodate a wide range of treatment capacities, ensuring we meet the diverse needs of our clients.
                                 </p>
-                                <div className="flex gap-4">
-                                    <Button asChild size="lg">
-                                        <Link href={appBase + "/contact"}>Inquire for Bayaweaver</Link>
-                                    </Button>
-                                    <div className="flex items-center gap-2 text-sm text-white/60">
-                                        <Cpu className="h-5 w-5" />
-                                        <span>Centralised AI Monitoring System</span>
-                                    </div>
-                                </div>
+                                <Button asChild size="lg" className="rounded-md bg-primary hover:bg-primary/90 h-16 px-12 text-sm font-bold tracking-widest transition-transform hover:scale-105 active:scale-95 shadow-xl shadow-primary/20">
+                                    <Link href={appBase + "/contact"}>ORDER NOW</Link>
+                                </Button>
                             </div>
-                            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                                <img src={asset('/images/product-stp.jpg')} alt="Bayaweaver AI System" className="w-full h-full object-cover" />
+                            <div className="order-1 lg:order-2 relative flex justify-center">
+                                <div className="absolute -inset-20 bg-blue-500/5 rounded-full blur-[100px]" />
+                                <img
+                                    src={asset('/images/product-stp.jpg')}
+                                    alt="BAYAWEAVER Product"
+                                    className="relative w-full h-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] transition-transform duration-1000 hover:scale-[1.02]"
+                                />
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section className="py-24 bg-background">
+                {/* Features Section */}
+                <section className="py-24 bg-white">
                     <div className="mx-auto max-w-7xl px-6">
-                        <div className="mb-16 text-center">
-                            <h2 className="font-serif text-3xl font-bold mb-4 italic">"Smarter Than You Think"</h2>
-                            <p className="text-muted-foreground">Innovative Features for Advanced Clean Water Systems</p>
+                        <div className="mb-20">
+                            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                                TOP FEATURES
+                            </p>
+                            <h2 className="font-serif text-4xl font-bold md:text-5xl lg:text-6xl max-w-5xl leading-tight tracking-tight">
+                                A range of innovative features that enhance the efficiency and effectiveness of our solutions:
+                            </h2>
                         </div>
 
-                        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="grid gap-6 md:grid-cols-2">
                             {[
-                                { title: "Unique Design", desc: "Aesthetics and efficiency combined in a cylindrical vertical framework." },
-                                { title: "Chemical-Free", desc: "Ensures the highest safety standards using 100% natural media." },
-                                { title: "AI Integrated", desc: "Smart logic controls for real-time adjustments and monitoring." },
-                                { title: "Portability", desc: "Optimized design for easy relocation and installation flexibility." },
-                                { title: "Central Monitoring", desc: "Track water health and system performance via centralized hub." },
-                                { title: "Auto Backwash", desc: "Maintenance-free self-cleaning tech designed for longevitiy." }
+                                {
+                                    title: "Unique Design",
+                                    desc: "Our BAYAWEAVER water treatment plants utilize a highly efficient treatment medium, maximizing filtration performance and ensuring superior water quality."
+                                },
+                                {
+                                    title: "Chemical-Free Process",
+                                    desc: "BAYAWEAVER systems operate without the need for any chemicals at any stage of the treatment process, providing a safer and more environmentally friendly solution."
+                                },
+                                {
+                                    title: "AI System",
+                                    desc: "With advanced AI technology, our plants can be operated remotely, allowing for control from anywhere in the world. This flexibility enhances usability and monitoring."
+                                },
+                                {
+                                    title: "Portability",
+                                    desc: "Designed for versatility, our plants are easy to move, making them adaptable to various locations and site conditions."
+                                },
+                                {
+                                    title: "Centralised monitoring system",
+                                    desc: "Our systems feature centralized monitoring for real-time tracking of water quality and system health through an intuitive interface."
+                                },
+                                {
+                                    title: "Auto Backwash",
+                                    desc: "Includes an automated backwashing system that ensures the filters remain clean and functional with minimal human intervention."
+                                }
                             ].map((item, i) => (
-                                <div key={i} className="p-8 rounded-2xl border border-border bg-card hover:border-primary/30 transition-colors">
-                                    <h3 className="text-lg font-bold mb-3">{item.title}</h3>
-                                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                                <div key={i} className="group p-12 bg-[#f8fafc] rounded-lg transition-all duration-300 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-transparent hover:border-slate-100">
+                                    <h3 className="text-2xl font-bold mb-5 tracking-tight group-hover:text-primary transition-colors">{item.title}</h3>
+                                    <p className="text-lg text-muted-foreground leading-relaxed font-light">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </section>
 
-                <section className="py-24 bg-muted text-center border-t border-border">
-                    <div className="mx-auto max-w-3xl px-6">
-                        <Sparkles className="h-12 w-12 text-primary mx-auto mb-6" />
-                        <h2 className="text-3xl font-bold mb-6 italic">Premium Experience. Engineered Excellence.</h2>
-                        <p className="text-muted-foreground mb-8">
-                            The Bayaweaver is more than a product; it's a testament to 33 years of engineering evolution. Experience the state-of-the-art in water purity.
-                        </p>
-                        <Button asChild variant="outline" size="lg">
-                            <Link href={appBase + "/contact"}>Get a Technical Demo</Link>
+                {/* CTA Banner */}
+                <section className="bg-primary py-20 text-white overflow-hidden relative">
+                    <div className="absolute top-0 left-0 w-32 h-32 bg-white/5 -translate-x-16 -translate-y-16 rounded-full blur-2xl" />
+                    <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-10 relative z-10">
+                        <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left max-w-2xl leading-tight">
+                            Experience clean water today! contact Dubhe Richus for solutions!
+                        </h2>
+                        <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-slate-100 font-bold px-10 h-14 rounded-md text-sm tracking-widest shadow-xl transition-all hover:-translate-y-1 active:translate-y-0">
+                            <Link href={appBase + "/contact"}>Contact Us</Link>
                         </Button>
                     </div>
                 </section>

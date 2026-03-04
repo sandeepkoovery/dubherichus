@@ -44,14 +44,14 @@ export function HeroSection() {
             <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
                 <div className="mx-auto max-w-5xl">
                     <div className="mb-8 flex justify-center">
-                        <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-blue-400 backdrop-blur-md shadow-2xl">
-                            <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
+                        <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-primary backdrop-blur-md shadow-2xl">
+                            <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
                             Premium Water Solutions in Kerala
                         </span>
                     </div>
                     <h1 className="mb-8 font-serif text-5xl font-bold leading-[1.1] tracking-tight text-white md:text-7xl lg:text-8xl">
                         Manufacturer of <br />
-                        <span className="bg-gradient-to-r from-blue-400 to-teal-300 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-primary to-teal-400 bg-clip-text text-transparent">
                             Iron Removal Plants
                         </span>
                     </h1>
@@ -64,7 +64,7 @@ export function HeroSection() {
                         <Button
                             asChild
                             size="lg"
-                            className="h-14 bg-blue-600 px-10 text-[13px] font-bold uppercase tracking-widest text-white shadow-[0_10px_30px_-10px_rgba(37,99,235,0.5)] transition-all hover:bg-blue-500 hover:scale-105 active:scale-95"
+                            className="h-14 bg-primary px-10 text-[13px] font-bold uppercase tracking-widest text-white shadow-[0_10px_30px_-10px_rgba(12,59,94,0.5)] transition-all hover:bg-primary/90 hover:scale-105 active:scale-95"
                         >
                             <Link href={appBase + "/products/standard"}>Explorer Gallery</Link>
                         </Button>
@@ -86,7 +86,7 @@ export function HeroSection() {
                                 <p className="font-serif text-3xl font-bold text-white md:text-4xl tracking-tight">
                                     {stat.value}
                                 </p>
-                                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-400">
+                                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
                                     {stat.label}
                                 </p>
                             </div>

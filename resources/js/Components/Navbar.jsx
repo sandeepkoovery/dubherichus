@@ -116,14 +116,6 @@ export function Navbar() {
                 </div>
 
                 <div className="hidden items-center gap-4 lg:flex">
-                    <a
-                        href="tel:+919876543210"
-                        className={`flex items-center gap-2 text-sm font-medium ${isDarkTheme ? "text-white" : "text-foreground"
-                            }`}
-                    >
-                        <Phone className="h-4 w-4" />
-                        <span>+91 98765 43210</span>
-                    </a>
                     <Button
                         asChild
                         size="sm"
