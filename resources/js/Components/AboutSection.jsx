@@ -62,10 +62,10 @@ export function AboutSection() {
                                 className="h-[400px] w-full object-cover lg:h-[500px]"
                             />
                         </div>
-                        <div className="absolute -bottom-8 -left-8 rounded-2xl border border-white/10 bg-[#0f172a]/95 p-8 shadow-2xl backdrop-blur-xl md:p-10 transition-transform duration-700 hover:scale-110">
+                        <div className="absolute -bottom-8 -left-8 rounded-2xl border border-slate-200 bg-white p-8 shadow-2xl backdrop-blur-xl md:p-10 transition-transform duration-700 hover:scale-110">
                             <div className="text-center">
                                 <p className="font-sans text-5xl font-black text-primary">33+</p>
-                                <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white/50">Years of Legacy</p>
+                                <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500">Years of Legacy</p>
                             </div>
                         </div>
                     </div>
