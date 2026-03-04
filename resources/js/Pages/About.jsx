@@ -47,21 +47,15 @@ export default function About() {
                 {/* Video Section */}
                 <section className="pb-24 bg-white">
                     <div className="mx-auto max-w-6xl px-6">
-                        <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl group cursor-pointer">
-                            <img
-                                src={asset('/images/video-placeholder.jpg')}
-                                alt="Founder Video"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                                <div className="h-20 w-20 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110">
-                                    <Play className="h-8 w-8 fill-current translate-x-1" />
-                                </div>
-                            </div>
-                            <div className="absolute bottom-10 left-10 text-white">
-                                <p className="text-2xl font-bold">Stanley Jacob</p>
-                                <p className="text-sm opacity-80 uppercase tracking-widest">Founder</p>
-                            </div>
+                        <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-100 bg-slate-50">
+                            <iframe
+                                className="w-full h-full"
+                                src="https://www.youtube.com/embed/-NRXVx9J29s?rel=0"
+                                title="Dubhe Richus - Our Journey"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            ></iframe>
                         </div>
                     </div>
                 </section>
