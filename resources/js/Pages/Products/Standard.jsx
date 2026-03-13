@@ -50,9 +50,9 @@ export default function Standard() {
                                 <div className="absolute -inset-10 bg-blue-500/5 rounded-full blur-[80px]" />
                                 <div className="relative bg-slate-100/50 rounded-full p-10 md:p-20 border border-slate-200/50 backdrop-blur-sm shadow-inner">
                                     <img
-                                        src={asset('/images/product-wtp.jpg')}
+                                        src={asset('/images/standard.jpg')}
                                         alt="Standard Series Plant"
-                                        className="w-[280px] md:w-[420px] h-auto drop-shadow-2xl transition-transform duration-700 hover:scale-105 saturate-50"
+                                        className="w-[300px] md:w-[480px] h-auto drop-shadow-2xl transition-transform duration-700 hover:scale-105 saturate-50"
                                     />
                                 </div>
                             </div>

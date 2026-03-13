@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { Button } from "@/Components/ui/button";
-import { ArrowDown, Droplets, MapPin, Users } from "lucide-react";
+import { ArrowDown, Droplets, MapPin, Users, ChevronLeft, ChevronRight } from "lucide-react";
 import { useAsset } from "@/hooks/useAsset";
 import { Link } from "@inertiajs/react";
 
@@ -13,49 +13,121 @@ const stats = [
 export function HeroSection() {
     const asset = useAsset();
     const appBase = asset('');
-    const parallaxRef = useRef(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const intervalRef = useRef(null);
+
+    const banners = [
+        {
+            image: asset('/images/banner1.jpg'),
+            heading: <>No.1 Advanced <br /><span className="bg-gradient-to-r from-cyan-400 to-blue-200 bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">Water Treatment Plant</span><br /> for your Home and Office</>
+        },
+        {
+            image: asset('/images/banner2.jpg'),
+            heading: <>Served More than <br /><span className="bg-gradient-to-r from-cyan-400 to-blue-200 bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">20,000 Families</span><br /> and Counting</>
+        },
+        {
+            image: asset('/images/Banner-3.png'),
+            heading: <>1.6 trillion + <br /><span className="bg-gradient-to-r from-cyan-400 to-blue-200 bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">litres of water</span><br /> recycled</>
+        },
+    ];
+
+    const goToSlide = useCallback((index) => {
+        setCurrentSlide((index + banners.length) % banners.length);
+    }, [banners.length]);
+
+    const startAutoSlide = useCallback(() => {
+        if (intervalRef.current) clearInterval(intervalRef.current);
+        intervalRef.current = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % banners.length);
+        }, 5000);
+    }, [banners.length]);
 
     useEffect(() => {
-        const handleScroll = () => {
-            if (parallaxRef.current) {
-                const scrollY = window.scrollY;
-                parallaxRef.current.style.transform = `translateY(${scrollY * 0.5}px)`;
-            }
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+        startAutoSlide();
+        return () => clearInterval(intervalRef.current);
+    }, [startAutoSlide]);
+
+    const handlePrev = () => {
+        goToSlide(currentSlide - 1);
+        startAutoSlide();
+    };
+
+    const handleNext = () => {
+        goToSlide(currentSlide + 1);
+        startAutoSlide();
+    };
+
+    const handleDot = (index) => {
+        goToSlide(index);
+        startAutoSlide();
+    };
 
     return (
-        <section id="home" className="relative min-h-screen overflow-hidden">
-            <div
-                ref={parallaxRef}
-                className="absolute inset-0 -top-20 -bottom-20 scale-110"
-                style={{
-                    backgroundImage: `url(${asset('/images/hero-bg.jpg')})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    filter: "contrast(1.1) brightness(0.8)",
-                }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#020617] via-[#0f172a]/60 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020617]/20 to-[#020617]" />
+        <section id="home" className="relative min-h-screen overflow-hidden bg-[#020617]">
+            {/* Banner Slides */}
+            {banners.map((slide, i) => (
+                <div
+                    key={i}
+                    className="absolute inset-0 transition-opacity duration-1000"
+                    style={{
+                        opacity: i === currentSlide ? 1 : 0,
+                        backgroundImage: `url(${slide.image})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        filter: "brightness(0.9)",
+                        zIndex: 0,
+                    }}
+                />
+            ))}
 
-            <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
+            {/* Gradient overlays */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#020617]/90 via-[#0f172a]/40 to-transparent" style={{ zIndex: 1 }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#020617]/80" style={{ zIndex: 1 }} />
+
+            {/* Arrow Controls */}
+            <button
+                onClick={handlePrev}
+                className="hidden absolute left-4 top-1/2 -translate-y-1/2 z-20 h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md transition-all hover:bg-white/20 hover:scale-110 active:scale-95"
+                aria-label="Previous slide"
+            >
+                <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button
+                onClick={handleNext}
+                className="hidden absolute right-4 top-1/2 -translate-y-1/2 z-20 h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-md transition-all hover:bg-white/20 hover:scale-110 active:scale-95"
+                aria-label="Next slide"
+            >
+                <ChevronRight className="h-6 w-6" />
+            </button>
+
+            {/* Dot Indicators */}
+            <div className="absolute bottom-64 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                {banners.map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={() => handleDot(i)}
+                        className={`transition-all duration-300 rounded-full ${i === currentSlide
+                            ? "w-8 h-2.5 bg-primary"
+                            : "w-2.5 h-2.5 bg-white/40 hover:bg-white/70"
+                            }`}
+                        aria-label={`Go to slide ${i + 1}`}
+                    />
+                ))}
+            </div>
+
+            {/* Main Content */}
+            <div className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center" style={{ zIndex: 10 }}>
                 <div className="mx-auto max-w-5xl">
-                    <div className="mb-8 flex justify-center">
+                    <div className="mb-6 flex justify-center">
                         <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white backdrop-blur-md shadow-2xl">
                             <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
                             Premium Water Solutions in Kerala
                         </span>
                     </div>
-                    <h1 className="mb-8 font-serif text-5xl font-bold leading-[1.1] tracking-tight text-white md:text-7xl lg:text-8xl">
-                        Manufacturer of <br />
-                        <span className="bg-gradient-to-r from-primary to-teal-400 bg-clip-text text-transparent">
-                            Iron Removal Plants
-                        </span>
+                    <h1 className="mb-6 font-serif text-3xl font-bold leading-[1.2] tracking-tight text-white md:text-5xl lg:text-6xl transition-all duration-700">
+                        {banners[currentSlide].heading}
                     </h1>
-                    <p className="mx-auto mb-12 max-w-2xl text-lg font-light leading-relaxed text-white/60 md:text-xl">
+                    <p className="hidden mx-auto mb-10 max-w-2xl text-base font-light leading-relaxed text-white/60 md:text-lg">
                         Discover India's most advanced iron removal and filtration systems.
                         A legacy of trust, built on <span className="text-white font-medium">uncompromising purity</span> and innovation.
                     </p>

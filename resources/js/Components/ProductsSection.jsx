@@ -6,28 +6,22 @@ import { Link } from "@inertiajs/react";
 
 const products = [
     {
-        title: "Medium Range",
-        description:
-            "Individual household maintenance-free solutions to remove iron, turbidity, and bad odors naturally.",
-        image: "/images/product-wtp.jpg",
-        features: ["Active Oxygen Technology", "33+ Years Experience"],
+        title: "Medium",
+        capacity: "1250- 1500 Ltr./day",
+        image: "/images/medium.jpg",
         href: "/products/medium",
     },
     {
-        title: "Standard Series",
-        description:
-            "High-performance filtration for large families and small businesses. Superior quality and design.",
-        image: "/images/product-wtp.jpg",
-        features: ["Enhanced Flow Rate", "Timeless Design"],
+        title: "Standard",
+        capacity: "1500- 2500 Ltr./day",
+        image: "/images/standard.jpg",
         href: "/products/standard",
     },
     {
-        title: "Bayaweaver Model",
-        description:
-            "Our signature integrated technology for a premium water purifying experience. Patent protected.",
-        image: "/images/product-stp.jpg",
-        features: ["Integrated Technology", "First-Class Design"],
-        href: "/products/bayaweaver",
+        title: "Commercial",
+        capacity: "For Custom Use",
+        image: "/images/commercial.jpg",
+        href: "/products/commercial",
     },
 ];
 
@@ -71,9 +65,9 @@ export function ProductsSection() {
                 </div>
             </div>
 
-            <section id="products" className="bg-white py-16 md:py-24">
-                <div className="mx-auto max-w-7xl px-6">
-                    <div className="text-center mb-20">
+            <section id="products" className="bg-white">
+                <div className="py-16 md:py-24 mx-auto max-w-7xl px-6">
+                    <div className="text-center mb-8">
                         <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                             Product Gallery
                         </p>
@@ -85,42 +79,43 @@ export function ProductsSection() {
                             Discover the perfect harmony of nature and <span className="text-primary font-medium">advanced engineering</span>.
                         </p>
                     </div>
+                </div>
 
-                    <div className="grid gap-10 md:grid-cols-3">
-                        {products.map((product, index) => (
-                            <div
-                                key={product.title}
-                                className="group flex flex-col rounded-3xl bg-white overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.08)] transition-all duration-700 hover:shadow-[0_30px_70px_-15px_rgba(0,0,0,0.15)] hover:-translate-y-4"
-                                style={{ animationDelay: `${index * 150}ms`, animation: 'fade-in-up 1s ease-out both' }}
-                            >
-                                <div className="h-64 overflow-hidden relative">
-                                    <img
-                                        src={asset(product.image)}
-                                        alt={product.title}
-                                        className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                                </div>
-                                <div className="p-10 flex flex-col flex-1 border border-t-0 border-border/50 rounded-b-3xl">
-                                    <h3 className="mb-4 text-xl font-bold text-foreground tracking-tight">
-                                        {product.title}
-                                    </h3>
-                                    <p className="text-[15px] font-light text-muted-foreground/80 leading-relaxed mb-6">
-                                        {product.description}
-                                    </p>
-                                    <div className="mt-auto">
-                                        <Link
-                                            href={appBase + product.href}
-                                            className="inline-flex items-center gap-2 text-primary text-[13px] font-bold uppercase tracking-widest transition-all hover:gap-3 underline decoration-primary/20 underline-offset-8"
-                                        >
-                                            View Details <ArrowRight className="h-3.5 w-3.5" />
-                                        </Link>
-                                    </div>
+                <div className="w-full grid grid-cols-1 md:grid-cols-3">
+                    {products.map((product, index) => (
+                        <Link
+                            key={product.title}
+                            href={appBase + product.href}
+                            className="group relative block w-full h-[60vh] min-h-[500px] overflow-hidden bg-slate-900"
+                        >
+                            <img
+                                src={asset(product.image)}
+                                alt={product.title}
+                                className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:opacity-40 group-hover:scale-110"
+                            />
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent transition-opacity duration-700 opacity-60 group-hover:opacity-100" />
+
+                            <div className="absolute inset-0 p-10 md:p-14 flex flex-col justify-end items-start transition-transform duration-700 translate-y-8 group-hover:translate-y-0">
+                                <p className="text-blue-400 font-bold tracking-[0.2em] text-[10px] md:text-xs mb-3 opacity-0 transition-opacity duration-700 delay-100 group-hover:opacity-100 uppercase drop-shadow-md">
+                                    {product.capacity}
+                                </p>
+                                <h3 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6 drop-shadow-lg transform transition-all duration-700">
+                                    {product.title}
+                                </h3>
+
+                                <div className="flex items-center gap-3 text-white text-xs font-bold uppercase tracking-[0.2em] opacity-0 transition-all duration-700 delay-200 group-hover:opacity-100">
+                                    <span className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-500 group-hover:after:w-full pb-1">
+                                        Explore System
+                                    </span>
+                                    <ArrowRight className="w-4 h-4 ml-2 transform -translate-x-4 transition-transform duration-700 group-hover:translate-x-0" />
                                 </div>
                             </div>
-                        ))}
-                    </div>
 
+                            <div className="absolute top-0 left-0 w-full h-px bg-white/10" />
+                            <div className="absolute top-0 right-0 w-px h-full bg-white/10 hidden md:block" />
+                        </Link>
+                    ))}
                 </div>
             </section>
         </>

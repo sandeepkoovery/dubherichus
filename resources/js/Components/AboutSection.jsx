@@ -57,7 +57,7 @@ export function AboutSection() {
                     <div className="relative order-1 lg:order-2">
                         <div className="overflow-hidden rounded-2xl shadow-2xl">
                             <img
-                                src={asset('/images/about-bg.jpg')}
+                                src={asset('/images/1-commercial.png')}
                                 alt="Dubhe Richus Facility"
                                 className="h-[400px] w-full object-cover lg:h-[500px]"
                             />
