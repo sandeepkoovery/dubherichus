@@ -4,8 +4,8 @@ import { MessageCircle, X, Send, Phone, ArrowUpRight } from 'lucide-react';
 export function FloatingContact() {
     const [isOpen, setIsOpen] = useState(false);
     const [showLabel, setShowLabel] = useState(false);
-    const phoneNumber = "911234567890"; // WhatsApp Number
-    const callNumber = "911234567890"; // Call Number
+    const phoneNumber = "919961122777"; // WhatsApp Number
+    const callNumber = "919961122777"; // Call Number
     const welcomeMessage = "How can I help you? :)";
 
     useEffect(() => {
