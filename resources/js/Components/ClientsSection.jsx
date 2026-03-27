@@ -25,40 +25,34 @@ const clientLinks = [
 
 const testimonials = [
     {
-        quote: "Using this for the last one and half year. Very much satisfied with the results. Zero maintenance till now. Just have to do the periodic backwash without fail.",
-        name: "Vivek",
-        role: "Residential Client",
-        image: "/images/testimonials/vivek.png"
-    },
-    {
-        quote: "Bought it a year ago after lot of research. Installation was quick and it's easy to operate. It improved my water pressure all over the 1st floor. I would highly recommend Dubhe Richus.",
-        name: "Tinku Tharasing",
-        role: "Home Owner",
-        image: "/images/testimonials/tinku.png"
-    },
-    {
-        quote: "I have been using Dubhe Richus water filter for last 8 years and I am thoroughly impressed. The filter provides crisp, clean-tasting water with noticeable improvement.",
-        name: "Nirupama Anil",
-        role: "Long-term User",
-        image: "/images/testimonials/nirupama.png"
-    },
-    {
-        quote: "This water filter is excellent, providing crisp, clean-tasting water every time. It's easy to install, no maintenance, and effectively removes impurities.",
-        name: "Badu sha",
-        role: "Verified Buyer",
-        image: "/images/testimonials/badu.png"
-    },
-    {
         quote: "We are using this filter more than 10 years. And we are also satisfied with their service. Definitely recommend to all others looking for a water filter.",
         name: "Anoop Antony",
-        role: "Legacy Client",
         image: "/images/testimonials/anoop.png"
     },
     {
-        quote: "We have been using the water filter for the past 2 years. It is working really well and we are completely satisfied with it. Highly recommended.",
+        quote: "We have been using the water filter for the past 2 years. It is working really well and we are completely satisfied with it. If you want a good water purifier for your home, I highly recommend it.",
         name: "George VV",
-        role: "Satisfied Customer",
         image: "/images/testimonials/george.png"
+    },
+    {
+        quote: "Using this for the last one and half year. Very much satisfied with the results. Zero maintenance till now. Just have to do the periodic backwash without fail.",
+        name: "Vivek",
+        image: "/images/testimonials/vivek.png"
+    },
+    {
+        quote: "Bought it a year ago after lot of research on YouTube. Installation was quick and it's easy to operate. One of the filters had minor leak and i got it replaced under warranty. Had to do couple of follow-up but they did replace. So far no issues. And there was a bonus with this filter. As they are using tank level air valve, it improved my water pressure all over the 1st floor. Almost till last drop of water pressure will be same. In the past i had to fill the tank over 50% to get pressure on first floor shower 🚿 and still it was low. I would highly recommend Dubhe Richus.",
+        name: "Tinku Tharasing",
+        image: "/images/testimonials/tinku.png"
+    },
+    {
+        quote: "I have been using Dubhe Richus water filter for last 8 years and I am thoroughly impressed with its performance. Beyond the cost, the installation was straightforward. The filter provides crisp, clean-tasting water with noticeable improvement in taste compared to my tap water. Overall, the water filter has exceeded my expectations in both efficiency and ease of use. Highly recommended for anyone looking to enhance their water quality at home.",
+        name: "Nirupama Anil",
+        image: "/images/testimonials/nirupama.png"
+    },
+    {
+        quote: "This water filter is excellent, providing crisp, clean-tasting water every time. It's easy to install, no maintenance, and effectively removes impurities without slowing down water flow. Highly recommended for anyone looking to improve water quality at home.",
+        name: "Badu sha",
+        image: "/images/testimonials/badu.png"
     },
 ];
 
@@ -193,9 +187,6 @@ export function ClientsSection() {
                                             <div className="flex flex-col items-center">
                                                 <p className="text-lg font-bold tracking-tight text-foreground">
                                                     {t.name}
-                                                </p>
-                                                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary mt-2">
-                                                    {t.role}
                                                 </p>
                                             </div>
                                         </div>

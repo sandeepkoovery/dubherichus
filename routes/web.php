@@ -13,4 +13,10 @@ Route::get('/products/commercial', fn() => Inertia\Inertia::render('Products/Com
 Route::get('/products/bayaweaver', fn() => Inertia\Inertia::render('Products/Bayaweaver'))->name('products.bayaweaver');
 Route::get('/contact', fn() => Inertia\Inertia::render('Contact'))->name('contact');
 
+// SEO Redirects
+Route::redirect('/public/medium', '/products/medium', 301);
+Route::redirect('/public/standard', '/products/standard', 301);
+Route::redirect('/public/commercial', '/products/commercial', 301);
+Route::redirect('/public/bayaweaver', '/products/bayaweaver', 301);
+
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
