@@ -101,7 +101,7 @@ export function ClientsSection() {
     };
 
     return (
-        <section id="clients" className="bg-stone-50/50 py-16 md:py-24 overflow-hidden">
+        <section id="clients" className="bg-stone-50/50 py-12 md:py-16 overflow-hidden">
             <div className="w-full px-6">
                 {/* Logos Section */}
                 <div className="mb-12 text-center">
@@ -148,7 +148,7 @@ export function ClientsSection() {
                 </div>
 
                 {/* Testimonials Section */}
-                <div className="mb-20 text-center">
+                <div className="mb-12 text-center">
                     <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                         Real Experiences
                     </p>
@@ -166,13 +166,13 @@ export function ClientsSection() {
                         >
                             {testimonials.map((t, index) => (
                                 <div key={index} className="w-full shrink-0 px-4">
-                                    <div className="group relative rounded-[2.5rem] border border-white/50 bg-white p-10 md:p-16 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] transition-all duration-700 hover:shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)]">
+                                    <div className="group relative rounded-[2.5rem] border border-white/50 bg-white p-8 md:p-12 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] transition-all duration-700 hover:shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)] min-h-[400px] flex flex-col justify-center">
                                         <div className="absolute top-10 right-10 opacity-5 transition-opacity group-hover:opacity-10">
                                             <Quote className="h-24 w-24 rotate-180" />
                                         </div>
 
                                         <div className="flex flex-col items-center text-center">
-                                            <div className="mb-10 h-24 w-24 overflow-hidden rounded-full border-4 border-primary/5 shadow-2xl transition-transform duration-700 group-hover:scale-110">
+                                            <div className="mb-6 h-20 w-20 overflow-hidden rounded-full border-4 border-primary/5 shadow-2xl transition-transform duration-700 group-hover:scale-110">
                                                 <img
                                                     src={asset(t.image)}
                                                     alt={t.name}
@@ -180,7 +180,7 @@ export function ClientsSection() {
                                                 />
                                             </div>
 
-                                            <p className="mb-10 max-w-3xl text-lg font-light leading-relaxed text-muted-foreground/90 md:text-xl">
+                                            <p className="mb-6 max-w-3xl text-lg font-light leading-relaxed text-muted-foreground/90 md:text-xl">
                                                 "{t.quote}"
                                             </p>
 
@@ -199,21 +199,21 @@ export function ClientsSection() {
                     {/* Navigation Buttons */}
                     <button
                         onClick={prevSlide}
-                        className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl border border-border/50 text-foreground transition-all hover:bg-primary hover:text-white hover:scale-110 active:scale-95 hidden md:flex"
+                        className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl border border-border/50 text-foreground transition-all hover:bg-primary hover:text-white hover:scale-110 active:scale-95 hidden md:flex"
                         aria-label="Previous testimonial"
                     >
                         <ChevronLeft className="h-6 w-6" />
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl border border-border/50 text-foreground transition-all hover:bg-primary hover:text-white hover:scale-110 active:scale-95 hidden md:flex"
+                        className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl border border-border/50 text-foreground transition-all hover:bg-primary hover:text-white hover:scale-110 active:scale-95 hidden md:flex"
                         aria-label="Next testimonial"
                     >
                         <ChevronRight className="h-6 w-6" />
                     </button>
 
                     {/* Indicators */}
-                    <div className="mt-12 flex justify-center gap-3">
+                    <div className="mt-4 flex justify-center gap-3">
                         {testimonials.map((_, i) => (
                             <button
                                 key={i}
