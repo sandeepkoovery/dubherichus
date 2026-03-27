@@ -4,6 +4,13 @@
     </IfModule>
 
     RewriteEngine On
+ 
+     # SEO Redirects
+     RewriteRule ^public/medium$ /products/medium [L,R=301]
+     RewriteRule ^public/standard$ /products/standard [L,R=301]
+     RewriteRule ^public/standar$ /products/standard [L,R=301]
+     RewriteRule ^public/commercial$ /products/commercial [L,R=301]
+     RewriteRule ^public/bayaweaver$ /products/bayaweaver [L,R=301]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .

@@ -16,6 +16,7 @@ Route::get('/contact', fn() => Inertia\Inertia::render('Contact'))->name('contac
 // SEO Redirects
 Route::redirect('/public/medium', '/products/medium', 301);
 Route::redirect('/public/standard', '/products/standard', 301);
+Route::redirect('/public/standar', '/products/standard', 301);
 Route::redirect('/public/commercial', '/products/commercial', 301);
 Route::redirect('/public/bayaweaver', '/products/bayaweaver', 301);
 
