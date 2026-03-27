@@ -11,7 +11,9 @@ import { SiteFooter } from "@/Components/SiteFooter";
 export default function Welcome({ appName }) {
     return (
         <>
-            <Head title="Home - Dubhe Richus" />
+            <Head title="Home - Dubhe Richus">
+                <meta name="description" content="Welcome to Dubhe Richus - Your destination for premium high-performance brand experiences." />
+            </Head>
             <Navbar />
             <main>
                 <HeroSection />
