@@ -5,7 +5,7 @@ import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 
-import { WhatsAppFloat } from '@/Components/WhatsAppFloat';
+import { FloatingContact } from '@/Components/FloatingContact';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Dubhe Richus';
 
@@ -21,7 +21,7 @@ createInertiaApp({
         root.render(
             <>
                 <App {...props} />
-                <WhatsAppFloat />
+                <FloatingContact />
             </>
         );
     },
