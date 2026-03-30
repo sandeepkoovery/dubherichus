@@ -74,8 +74,8 @@ export default function Standard() {
                                     </div>
                                     <div className="flex-1 mt-auto overflow-hidden">
                                         <img
-                                            src={asset('/images/rd-img.jpg')}
-                                            alt="History"
+                                            src={asset('/images/clients/Client-List-Dubhe-Richus.png')}
+                                            alt="Client List"
                                             className="w-full h-full object-cover grayscale opacity-60 transition-transform duration-1000 hover:scale-110"
                                         />
                                     </div>
@@ -117,7 +117,7 @@ export default function Standard() {
                                 </h3>
                                 <div className="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
                                     <p>
-                                        Our <span className="text-primary underline underline-offset-4 decoration-primary/20">standard water treatment solutions</span> are used to solve major water problems that occur naturally. It is a complete solution for households, simplifying house maintenance. This solution is an important development of our innovation over the last three decades.
+                                        Our <Link href={appBase + "/"} className="text-primary">standard water treatment solutions</Link> are used to solve major water problems that occur naturally. It is a complete solution for households, simplifying house maintenance. This solution is an important development of our innovation over the last three decades.
                                     </p>
                                     <p>
                                         Each system is designed to remove iron, turbidity, and bad odour naturally for better health results in your everyday life. We present a system integrated with efficient purifying processes that ensure consistent water quality for drinking and all household purposes.

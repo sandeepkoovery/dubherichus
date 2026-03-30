@@ -108,7 +108,7 @@ export default function Commercial() {
                                 </h3>
                                 <div className="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
                                     <p>
-                                        Our <span className="text-primary underline underline-offset-4 decoration-primary/20">industrial water treatment solutions</span> are used to solve major water problems that occur naturally. It is a complete solution for apartments, commercial facilities, hospitals, schools, and offices where water consumption is high.
+                                        Our <Link href={appBase + "/"} className="text-primary">industrial water treatment solutions</Link> are used to solve major water problems that occur naturally. It is a complete solution for apartments, commercial facilities, hospitals, schools, and offices where water consumption is high.
                                     </p>
                                     <p>
                                         Each system is designed to perform at high-capacity levels to ensure consistency for facility operations. We provide centralized plants for better results through our systematic purifying processes, ensuring smooth operation and clean water supply for every activity within the premises.

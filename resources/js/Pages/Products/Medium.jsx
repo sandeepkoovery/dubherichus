@@ -73,8 +73,8 @@ export default function Medium() {
                                     </div>
                                     <div className="flex-1 mt-auto overflow-hidden">
                                         <img
-                                            src={asset('/images/parallax-water.jpg')}
-                                            alt="House Illustration"
+                                            src={asset('/images/clients/Client-List-Dubhe-Richus.png')}
+                                            alt="Client List"
                                             className="w-full h-full object-cover grayscale opacity-60 transition-transform duration-1000 hover:scale-110"
                                         />
                                     </div>
@@ -121,7 +121,7 @@ export default function Medium() {
                                         The advanced medium-sized home water treatment system is designed for average-sized Indian homes and single-storey villas up to 1,800 sq. ft. It improves overall water quality by reducing hardness, iron, and other common impurities found in household water.
                                     </p>
                                     <p>
-                                        Built for everyday use, this <span className="text-primary underline underline-offset-4 decoration-primary/20">water treatment system</span> supplies clean water to up to five taps simultaneously, ensuring consistent water quality in bathrooms, kitchens, and utility areas. Its compact design allows easy installation, even in homes with limited space.
+                                        Built for everyday use, this <Link href={appBase + "/"} className="text-primary">water treatment system</Link> supplies clean water to up to five taps simultaneously, ensuring consistent water quality in bathrooms, kitchens, and utility areas. Its compact design allows easy installation, even in homes with limited space.
                                     </p>
                                     <p>
                                         Each system is carefully engineered to deliver consistent and dependable performance across different water sources, including borewell, well, and mixed supply. Built with durable components and a chemical-free treatment process, it requires minimal maintenance while ensuring long-term reliability. This makes it a practical and efficient solution for everyday household water needs in regions such as Kerala, Tamil Nadu, Karnataka, and across India.
