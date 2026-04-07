@@ -12,7 +12,7 @@ export default function Medium() {
 
     return (
         <>
-            <Head title="Medium Water Treatment Plant – Dubhe Merak Clean Water Solutions" />
+            <Head title="Medium Water Treatment Plant – Dubhe Merak Clean Water Systems" />
             <Navbar />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -124,7 +124,7 @@ export default function Medium() {
                                         Built for everyday use, this <Link href={appBase + "/"} className="text-primary">water treatment system</Link> supplies clean water to up to five taps simultaneously, ensuring consistent water quality in bathrooms, kitchens, and utility areas. Its compact design allows easy installation, even in homes with limited space.
                                     </p>
                                     <p>
-                                        Each system is carefully engineered to deliver consistent and dependable performance across different water sources, including borewell, well, and mixed supply. Built with durable components and a chemical-free treatment process, it requires minimal maintenance while ensuring long-term reliability. This makes it a practical and efficient solution for everyday household water needs in regions such as Kerala, Tamil Nadu, Karnataka, and across India.
+                                        Each system is carefully engineered to deliver consistent and dependable performance across different water sources, including borewell, well, and mixed supply. Built with durable components and a chemical-free treatment process, it requires minimal maintenance while ensuring long-term reliability. This makes it a practical and efficient system for everyday household water needs in regions such as Kerala, Tamil Nadu, Karnataka, and across India.
                                     </p>
                                 </div>
                             </div>
@@ -137,9 +137,9 @@ export default function Medium() {
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="mb-12">
                             <h2 className="font-serif text-3xl font-bold text-slate-900 mb-1">
-                                Customized Home Water & Wastewater treatment solutions
+                                Customized Home Water & Wastewater treatment systems
                             </h2>
-                            <p className="text-slate-500 font-light italic">Efficient solutions for your home need / what Our water treatment range offer</p>
+                            <p className="text-slate-500 font-light italic">Efficient systems for your home need / what Our water treatment range offer</p>
                             <div className="mt-6 h-1 w-20 bg-primary" />
                         </div>
 
@@ -172,7 +172,7 @@ export default function Medium() {
                             <div className="flex flex-col justify-center bg-white p-12 rounded-[40px] border border-slate-100 shadow-sm">
                                 <h3 className="text-4xl font-serif font-bold text-slate-900 mb-6">No Electricity Required</h3>
                                 <p className="text-lg text-slate-600 font-light leading-relaxed">
-                                    DUBHE Merak provides standard home water treatment solutions which work perfectly without any electricity. This makes them cost-effective and easy to maintain even in areas where power outages are common. No more worrying about electricity bills or power failures affecting your clean water supply.
+                                    DUBHE Merak provides standard home water treatment systems which work perfectly without any electricity. This makes them cost-effective and easy to maintain even in areas where power outages are common. No more worrying about electricity bills or power failures affecting your clean water supply.
                                 </p>
                             </div>
                             <div className="relative group">
@@ -220,7 +220,7 @@ export default function Medium() {
                 <section className="bg-primary py-20 text-white relative">
                     <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-10">
                         <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left max-w-2xl leading-tight">
-                            Experience clean water today! contact Dubhe Richus for solutions!
+                            Experience clean water today! contact Dubhe Richus!
                         </h2>
                         <Button asChild className="bg-white text-blue-700 hover:bg-slate-100 font-bold px-10 h-14 rounded-md text-sm tracking-widest shadow-xl transition-all hover:-translate-y-1 active:translate-y-0">
                             <Link href={appBase + "/contact"}>Contact Us</Link>

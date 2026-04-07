@@ -13,6 +13,7 @@ const companyLinks = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Projects", href: "/projects" },
+    { label: "Blog", href: "/blog", isExternal: true },
     { label: "Contact Us", href: "/contact" },
 ];
 
@@ -112,13 +113,23 @@ export function SiteFooter() {
                         <ul className="flex flex-col gap-4">
                             {companyLinks.map((link) => (
                                 <li key={link.label}>
-                                    <Link
-                                        href={appBase + link.href}
-                                        className="group flex items-center gap-2 text-[14px] font-light text-white/50 transition-all hover:text-white"
-                                    >
-                                        <span className="h-px w-0 bg-blue-500 transition-all duration-300 group-hover:w-4" />
-                                        {link.label}
-                                    </Link>
+                                    {link.isExternal ? (
+                                        <a
+                                            href={appBase + link.href}
+                                            className="group flex items-center gap-2 text-[14px] font-light text-white/50 transition-all hover:text-white"
+                                        >
+                                            <span className="h-px w-0 bg-blue-500 transition-all duration-300 group-hover:w-4" />
+                                            {link.label}
+                                        </a>
+                                    ) : (
+                                        <Link
+                                            href={appBase + link.href}
+                                            className="group flex items-center gap-2 text-[14px] font-light text-white/50 transition-all hover:text-white"
+                                        >
+                                            <span className="h-px w-0 bg-blue-500 transition-all duration-300 group-hover:w-4" />
+                                            {link.label}
+                                        </Link>
+                                    )}
                                 </li>
                             ))}
                         </ul>
@@ -129,7 +140,7 @@ export function SiteFooter() {
                             Newsletter
                         </h4>
                         <p className="mb-8 text-[14px] font-light leading-relaxed text-white/50">
-                            Stay updated with our latest water treatment solutions and
+                            Stay updated with our latest water treatment systems and
                             industry insights.
                         </p>
                         <form

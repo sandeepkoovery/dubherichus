@@ -12,7 +12,7 @@ export default function Standard() {
 
     return (
         <>
-            <Head title="Standard Water Treatment Plant – Dubhe Merak Clean Water Solutions" />
+            <Head title="Standard Water Treatment Plant – Dubhe Merak Clean Water Systems" />
             <Navbar />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -69,7 +69,7 @@ export default function Standard() {
                                 <div className="h-full bg-slate-50 rounded-[32px] overflow-hidden border border-slate-100 flex flex-col shadow-sm min-h-[400px]">
                                     <div className="p-8">
                                         <p className="text-slate-800 font-medium leading-relaxed">
-                                            Dubhe Richus Ltd Since 1991, single plant more than 22000 Units across South India
+                                            Dubhe Richus Ltd Since 1991, single plant more than 32000 Units across India
                                         </p>
                                     </div>
                                     <div className="flex-1 mt-auto overflow-hidden">
@@ -117,13 +117,13 @@ export default function Standard() {
                                 </h3>
                                 <div className="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
                                     <p>
-                                        Our <Link href={appBase + "/"} className="text-primary">standard water treatment solutions</Link> are used to solve major water problems that occur naturally. It is a complete solution for households, simplifying house maintenance. This solution is an important development of our innovation over the last three decades.
+                                        Our <Link href={appBase + "/"} className="text-primary">standard water treatment systems</Link> are used to solve major water problems that occur naturally. It is a complete system for households, simplifying house maintenance. This system is an important development of our innovation over the last three decades.
                                     </p>
                                     <p>
                                         Each system is designed to remove iron, turbidity, and bad odour naturally for better health results in your everyday life. We present a system integrated with efficient purifying processes that ensure consistent water quality for drinking and all household purposes.
                                     </p>
                                     <p>
-                                        All our plants are manufactured to deliver high-quality water from the initial stage. It's a completely trusted solution for your family and home water supply for a lifetime, ensuring a high quality of healthy water results that you can depend on every single day.
+                                        All our plants are manufactured to deliver high-quality water from the initial stage. It's a completely trusted system for your family and home water supply for a lifetime, ensuring a high quality of healthy water results that you can depend on every single day.
                                     </p>
                                 </div>
                             </div>
@@ -138,18 +138,18 @@ export default function Standard() {
                             <h2 className="font-serif text-3xl font-bold text-slate-900 mb-1">
                                 Advantages of Our Standard Home Water Treatment System
                             </h2>
-                            <p className="text-slate-500 font-light italic">Efficient solutions for your home need / what Our water treatment range offer</p>
+                            <p className="text-slate-500 font-light italic">Efficient systems for your home need / what Our water treatment range offer</p>
                             <div className="mt-6 h-1 w-20 bg-primary" />
                         </div>
 
                         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {[
                                 { title: "Fully Automatic Operation", desc: "Ensures consistent water treatment protocol without manual intervention." },
-                                { title: "Low Maintenance Cost", desc: "Requires very little upkeep, making it an easy and hassle-free solution." },
+                                { title: "Low Maintenance Cost", desc: "Requires very little upkeep, making it an easy and hassle-free system." },
                                 { title: "Long-lasting & Durable build", desc: "Constructed with high-quality components for multi-year performance and utility." },
                                 { title: "Suitable in Tough Water conditions", desc: "Designed for consistent results and high reliability in water sources." },
                                 { title: "Improves Water Quality for everyday life", desc: "Clean water for drinking, cooking, bathing, and all household purposes." },
-                                { title: "Responsible Wastewater Handling", desc: "Improves overall water quality to support environmentally responsible and sustainable disposal." }
+                                { title: "Responsible Wastewater Handling", desc: "Improves overall water quality to support environmentally responsible and sustainable systems." }
                             ].map((item, i) => (
                                 <div key={i} className="p-8 bg-slate-50 rounded-[28px] border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all group">
                                     <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
@@ -171,7 +171,7 @@ export default function Standard() {
                             <div className="flex flex-col justify-center bg-white p-12 rounded-[40px] border border-slate-100 shadow-sm">
                                 <h3 className="text-4xl font-serif font-bold text-slate-900 mb-6">No Electricity Required</h3>
                                 <p className="text-lg text-slate-600 font-light leading-relaxed">
-                                    DUBHE Merak provides standard home water treatment solutions which work perfectly without any electricity. This makes them cost-effective and easy to maintain even in areas where power outages are common. No more worrying about electricity bills or power failures affecting your clean water supply.
+                                    DUBHE Merak provides standard home water treatment systems which work perfectly without any electricity. This makes them cost-effective and easy to maintain even in areas where power outages are common. No more worrying about electricity bills or power failures affecting your clean water supply.
                                 </p>
                             </div>
                             <div className="relative group">
@@ -219,7 +219,7 @@ export default function Standard() {
                 <section className="bg-primary py-20 text-white relative">
                     <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-10">
                         <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left max-w-2xl leading-tight">
-                            Experience clean water today! contact Dubhe Richus for solutions!
+                            Experience clean water today! contact Dubhe Richus!
                         </h2>
                         <Button asChild className="bg-white text-blue-700 hover:bg-slate-100 font-bold px-10 h-14 rounded-md text-sm tracking-widest shadow-xl transition-all hover:-translate-y-1 active:translate-y-0">
                             <Link href={appBase + "/contact"}>Contact Us</Link>

@@ -7,7 +7,7 @@ import { Link } from "@inertiajs/react";
 const stats = [
     { icon: MapPin, value: "7+", label: "States" },
     { icon: Droplets, value: "7", label: "Products" },
-    { icon: Users, value: "1000+", label: "Clients" },
+    { icon: Users, value: "32K+", label: "Clients" },
 ];
 
 export function HeroSection() {
@@ -23,11 +23,11 @@ export function HeroSection() {
         },
         {
             image: asset('/images/banner2.jpg'),
-            heading: <>Served More than <br /><span className="bg-gradient-to-r from-cyan-400 to-blue-200 bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">20,000 Families</span><br /> and Counting</>
+            heading: <>Served More than <br /><span className="bg-gradient-to-r from-cyan-400 to-blue-200 bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">32,000 Families</span><br /> and Counting</>
         },
         {
             image: asset('/images/Banner-3.png'),
-            heading: <>1.6 trillion + <br /><span className="bg-gradient-to-r from-cyan-400 to-blue-200 bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">litres of water</span><br /> recycled</>
+            heading: <>3.2 trillion + <br /><span className="bg-gradient-to-r from-cyan-400 to-blue-200 bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">litres of water</span><br /> recycled</>
         },
     ];
 
@@ -121,7 +121,7 @@ export function HeroSection() {
                     <div className="mb-6 flex justify-center">
                         <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white backdrop-blur-md shadow-2xl">
                             <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
-                            Premium Water Solutions in Kerala
+                            Premium Water Engineering in India
                         </span>
                     </div>
                     <h1 className="mb-6 font-serif text-3xl font-bold leading-[1.2] tracking-tight text-white md:text-5xl lg:text-6xl transition-all duration-700">

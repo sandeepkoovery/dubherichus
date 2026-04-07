@@ -23,12 +23,12 @@ export function AboutSection() {
                             </span>
                         </h2>
                         <p className="mb-10 max-w-xl text-lg font-light leading-relaxed text-muted-foreground/80 text-balance">
-                            At Dubhe Richus, our vision is to provide sustainable, chemical-free water treatment solutions that last for decades. Our systems, powered by <span className="text-foreground font-medium underline underline-offset-4 decoration-primary/30">innovative Super Jet Technology</span>, are designed to efficiently purify water for homes and large-scale commercial applications. We continuously invest in research and development to enhance our filtration methods, ensuring cleaner, safer water for all. Our goal is to revolutionize water treatment by offering customizable, long-lasting systems that meet the specific needs of industries like hospitals, hotels, and institutions, while promoting environmentally friendly solutions for a healthier planet.
+                            At Dubhe Richus, our vision is to provide sustainable, chemical-free water treatment systems that last for decades. Our systems, powered by <span className="text-foreground font-medium underline underline-offset-4 decoration-primary/30">innovative Super Jet Technology</span>, are designed to efficiently purify water for homes and large-scale commercial applications. We continuously invest in research and development to enhance our filtration methods, ensuring cleaner, safer water for all. Our goal is to revolutionize water treatment by offering customizable, long-lasting systems that meet the specific needs of industries like hospitals, hotels, and institutions, while promoting environmentally friendly systems for a healthier planet.
                         </p>
 
                         <ul className="mb-12 space-y-6">
                             {[
-                                { title: "Innovative Technology", desc: "We utilize Super Jet Technology for efficient, chemical-free water filtration, ensuring long-lasting, eco-friendly solutions." },
+                                { title: "Innovative Technology", desc: "We utilize Super Jet Technology for efficient, chemical-free water filtration, ensuring long-lasting, eco-friendly systems." },
                                 { title: "Custom Designs", desc: "Tailored water treatment systems for both residential and commercial applications, including hospitals, hotels, and institutions." },
                                 { title: "Sustainability", desc: "Our systems operate without electricity and can be used for over 25 years without replacing filter media." }
                             ].map((item) => (

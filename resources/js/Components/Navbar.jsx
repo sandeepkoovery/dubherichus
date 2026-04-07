@@ -8,6 +8,7 @@ const navLinks = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Projects", href: "/projects" },
+    { label: "Blog", href: "/blog", isExternal: true },
     {
         label: "Products",
         href: "#",
@@ -80,6 +81,15 @@ export function Navbar() {
                                         </div>
                                     </div>
                                 </>
+                            ) : link.isExternal ? (
+                                <a
+                                    href={appBase + link.href}
+                                    className={`relative text-[13px] font-semibold uppercase tracking-wider transition-all duration-300 hover:text-primary ${isDarkTheme ? "text-white/90 hover:text-white" : "text-foreground/80"
+                                        }`}
+                                >
+                                    {link.label}
+                                    <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
+                                </a>
                             ) : (
                                 <Link
                                     href={appBase + link.href}
@@ -140,6 +150,14 @@ export function Navbar() {
                                             </Link>
                                         ))}
                                     </div>
+                                ) : link.isExternal ? (
+                                    <a
+                                        href={appBase + link.href}
+                                        className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                    >
+                                        {link.label}
+                                    </a>
                                 ) : (
                                     <Link
                                         href={appBase + link.href}

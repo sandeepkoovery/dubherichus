@@ -12,7 +12,7 @@ export default function Bayaweaver() {
 
     return (
         <>
-            <Head title="Bayaweaver Water Treatment Solutions – Commercial Clean Water Systems by Dubhe Merak" />
+            <Head title="Bayaweaver Water Treatment Systems – Commercial Clean Water Systems by Dubhe Merak" />
             <Navbar />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -104,11 +104,11 @@ export default function Bayaweaver() {
                             {/* Column 3: Detailed Text Content */}
                             <div className="lg:col-span-6 flex flex-col justify-center py-4">
                                 <h3 className="text-4xl font-serif font-bold text-slate-900 mb-8 leading-[1.15]">
-                                    Complete Water Treatment Solutions for Commercial & Industrial Facilities
+                                    Complete Water Treatment Systems for Commercial & Industrial Facilities
                                 </h3>
                                 <div className="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
                                     <p>
-                                        Our <Link href={appBase + "/"} className="text-primary">industrial water treatment solutions</Link> are used to solve major water problems that occur naturally. It is a complete solution for apartments, commercial facilities, hospitals, schools, and offices where water consumption is high.
+                                        Our <Link href={appBase + "/"} className="text-primary">industrial water treatment systems</Link> are used to solve major water problems that occur naturally. It is a complete system for apartments, commercial facilities, hospitals, schools, and offices where water consumption is high.
                                     </p>
                                     <p>
                                         Each system is designed to perform at high-capacity levels to ensure consistency for facility operations. We provide centralized plants for better results through our systematic purifying processes, ensuring smooth operation and clean water supply for every activity within the premises.
@@ -127,9 +127,9 @@ export default function Bayaweaver() {
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="mb-12">
                             <h2 className="font-serif text-3xl font-bold text-slate-900 mb-1">
-                                What Our Bayaweaver Solutions Offer
+                                What Our Bayaweaver Systems Offer
                             </h2>
-                            <p className="text-slate-500 font-light italic">Efficient solutions for large facilities / what our commercial range offer</p>
+                            <p className="text-slate-500 font-light italic">Efficient systems for large facilities / what our commercial range offer</p>
                             <div className="mt-6 h-1 w-20 bg-primary" />
                         </div>
 
@@ -140,7 +140,7 @@ export default function Bayaweaver() {
                                 { title: "Advanced Automation & Controls", desc: "Fully-automated systems ensure consistent performance with minimal manual intervention." },
                                 { title: "Centralised Treatment Mechanism", desc: "Supports centralized plants supplying across multiple departments and facility areas." },
                                 { title: "Durable, Low Maintenance build", desc: "Constructed with multi-year reliability and minimal upkeep for high-volume services." },
-                                { title: "Wastewater Treatment & Reuse", desc: "Includes integrated solutions for wastewater treatment and reuse for flushing and landscaping." }
+                                { title: "Wastewater Treatment & Reuse", desc: "Includes integrated systems for wastewater treatment and reuse for flushing and landscaping." }
                             ].map((item, i) => (
                                 <div key={i} className="p-8 bg-slate-50 rounded-[28px] border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all group">
                                     <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
@@ -162,7 +162,7 @@ export default function Bayaweaver() {
                             <div className="flex flex-col justify-center bg-white p-12 rounded-[40px] border border-slate-100 shadow-sm">
                                 <h3 className="text-4xl font-serif font-bold text-slate-900 mb-6">No Electricity Required</h3>
                                 <p className="text-lg text-slate-600 font-light leading-relaxed">
-                                    DUBHE Merak provides standard water treatment solutions which work perfectly without any electricity. This makes them cost-effective and easy to maintain even in areas where power outages are common. No more worrying about electricity bills or power failures affecting your clean water supply.
+                                    DUBHE Merak provides standard water treatment systems which work perfectly without any electricity. This makes them cost-effective and easy to maintain even in areas where power outages are common. No more worrying about electricity bills or power failures affecting your clean water supply.
                                 </p>
                             </div>
                             <div className="relative group">
@@ -211,7 +211,7 @@ export default function Bayaweaver() {
                     <div className="absolute top-0 left-0 w-32 h-32 bg-white/5 -translate-x-16 -translate-y-16 rounded-full blur-2xl" />
                     <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-10 relative z-10">
                         <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left max-w-2xl leading-tight">
-                            Experience clean water today! contact Dubhe Richus for solutions!
+                            Experience clean water today! contact Dubhe Richus!
                         </h2>
                         <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-slate-100 font-bold px-10 h-14 rounded-md text-sm tracking-widest shadow-xl transition-all hover:-translate-y-1 active:translate-y-0">
                             <Link href={appBase + "/contact"}>Contact Us</Link>

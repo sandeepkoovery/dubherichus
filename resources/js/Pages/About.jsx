@@ -35,10 +35,10 @@ export default function About() {
                     <div className="mx-auto max-w-5xl px-6">
                         <div className="space-y-12 text-center md:text-left">
                             <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
-                                Founded in 1991 under the brand name <span className="text-foreground font-semibold">Richus</span>, we began our journey as pioneers in water solutions. In line with our sustainable vision and global expansion goals, we later rebranded as <span className="text-foreground font-semibold">Dubhe Richus</span>. Today, we are the <span className="text-foreground font-semibold">largest manufacturer of iron removal water treatment plants in South India</span>. Our advanced systems are capable of treating water from all sources, backed by a dedicated R&D division that drives continuous innovation in the water treatment sector.
+                                Founded in 1991 under the brand name <span className="text-foreground font-semibold">Richus</span>, we began our journey as pioneers in water systems. In line with our sustainable vision and global expansion goals, we later rebranded as <span className="text-foreground font-semibold">Dubhe Richus</span>. Today, we are the <span className="text-foreground font-semibold">largest manufacturer of iron removal water treatment plants in South India</span>. Our advanced systems are capable of treating water from all sources, backed by a dedicated R&D division that drives continuous innovation in the water treatment sector.
                             </p>
                             <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
-                                In addition to supplying our product directly to customers, we also operate specialized divisions for Sewage Water Treatment (SWT) and Effluent Treatment Plants (ETP). Our goal is to ensure that both industrial and domestic water treatment plants offer professional solutions for various needs. With our vast product portfolio, we ensure that our customers receive the most efficient and sustainable water treatment systems available.
+                                In addition to supplying our product directly to customers, we also operate specialized divisions for Sewage Water Treatment (SWT) and Effluent Treatment Plants (ETP). Our goal is to ensure that both industrial and domestic water treatment plants offer professional systems for various needs. With our vast product portfolio, we ensure that our customers receive the most efficient and sustainable water treatment systems available.
                             </p>
                         </div>
                     </div>
@@ -65,17 +65,17 @@ export default function About() {
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="mb-20 text-center">
                             <h2 className="font-serif text-4xl font-bold text-foreground md:text-5xl lg:text-6xl tracking-tight">
-                                Transforming Lives <br /> with Clean Water Solutions
+                                Transforming Lives <br /> with Clean Water Systems
                             </h2>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                             {[
-                                { label: "Customers", val: "20,000+", icon: Users },
-                                { label: "Liters Purified", val: "1.4 Billion", icon: Droplets },
+                                { label: "Customers", val: "32,000+", icon: Users },
+                                { label: "Liters Purified", val: "3.2 Trillion", icon: Droplets },
                                 { label: "Years Legacy", val: "33+", icon: Calendar },
                                 { label: "Satisfaction", val: "100%", icon: CheckCircle2 },
                                 { label: "Energy Consumption", val: "0 kWh", icon: Zap },
-                                { label: "Commercial Installations", val: "1,000+", icon: Building2 },
+                                { label: "Commercial Installations", val: "32K+", icon: Building2 },
                             ].map((stat, idx) => (
                                 <div key={idx} className="bg-white p-10 rounded-3xl shadow-sm border border-black/5 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
                                     <div className="mb-6 h-12 w-12 rounded-2xl bg-primary/5 flex items-center justify-center text-primary">
@@ -137,7 +137,7 @@ export default function About() {
                         <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                             Leadership
                         </p>
-                        <h2 className="mb-20 font-serif text-4xl font-bold text-foreground md:text-5xl lg:text-6xl tracking-tight">Innovators Driving Clean <br /> Water Solutions Forward</h2>
+                        <h2 className="mb-20 font-serif text-4xl font-bold text-foreground md:text-5xl lg:text-6xl tracking-tight">Innovators Driving Clean <br /> Water Systems Forward</h2>
                         <div className="grid gap-16 md:grid-cols-2 max-w-4xl mx-auto">
                             {teamMembers.map((member, idx) => (
                                 <div key={member.name} className="group">
