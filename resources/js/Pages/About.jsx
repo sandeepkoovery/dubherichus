@@ -71,7 +71,7 @@ export default function About() {
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                             {[
                                 { label: "Customers", val: "32,000+", icon: Users },
-                                { label: "Liters Purified", val: "3.2 Trillion", icon: Droplets },
+                                { label: "Litres Purified", val: "3.2 Trillion", icon: Droplets },
                                 { label: "Years Legacy", val: "33+", icon: Calendar },
                                 { label: "Satisfaction", val: "100%", icon: CheckCircle2 },
                                 { label: "Energy Consumption", val: "0 kWh", icon: Zap },
