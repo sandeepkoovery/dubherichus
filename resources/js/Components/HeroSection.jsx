@@ -1,14 +1,9 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Button } from "@/Components/ui/button";
-import { ArrowDown, Droplets, MapPin, Users, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { useAsset } from "@/hooks/useAsset";
 import { Link } from "@inertiajs/react";
 
-const stats = [
-    { icon: MapPin, value: "7+", label: "States" },
-    { icon: Droplets, value: "7", label: "Products" },
-    { icon: Users, value: "32K+", label: "Clients" },
-];
 
 export function HeroSection() {
     const asset = useAsset();
@@ -63,7 +58,7 @@ export function HeroSection() {
     };
 
     return (
-        <section id="home" className="relative min-h-screen overflow-hidden bg-[#020617]">
+        <section id="home" className="relative min-h-screen overflow-hidden bg-white">
             {/* Banner Slides */}
             {banners.map((slide, i) => (
                 <div
@@ -74,15 +69,17 @@ export function HeroSection() {
                         backgroundImage: `url(${slide.image})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
-                        filter: "brightness(0.9)",
+                        filter: "brightness(1.1)",
                         zIndex: 0,
                     }}
                 />
             ))}
 
-            {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#020617]/90 via-[#0f172a]/40 to-transparent" style={{ zIndex: 1 }} />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#020617]/80" style={{ zIndex: 1 }} />
+            {/* Navigation visibility gradient (Top) */}
+            <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/50 via-black/20 to-transparent pointer-events-none" style={{ zIndex: 1 }} />
+
+            {/* Subtle bottom gradient to help text readability at the very bottom if needed */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10" style={{ zIndex: 1 }} />
 
             {/* Arrow Controls */}
             <button
@@ -119,17 +116,17 @@ export function HeroSection() {
             <div className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center" style={{ zIndex: 10 }}>
                 <div className="mx-auto max-w-5xl">
                     <div className="mb-6 flex justify-center">
-                        <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white backdrop-blur-md shadow-2xl">
-                            <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
-                            Premium Water Engineering in India
+                        <span className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/40 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-blue-900 backdrop-blur-sm shadow-xl">
+                            <span className="h-1.5 w-1.5 rounded-full bg-blue-600 animate-pulse" />
+                            Advanced Water Treatment in India
                         </span>
                     </div>
-                    <h1 className="mb-6 font-serif text-3xl font-bold leading-[1.2] tracking-tight text-white md:text-5xl lg:text-6xl transition-all duration-700">
+                    <h1 className="mb-6 font-serif text-3xl font-bold leading-[1.2] tracking-tight text-blue-950 md:text-5xl lg:text-6xl transition-all duration-700 drop-shadow-sm">
                         {banners[currentSlide].heading}
                     </h1>
-                    <p className="hidden mx-auto mb-10 max-w-2xl text-base font-light leading-relaxed text-white/60 md:text-lg">
+                    <p className="hidden mx-auto mb-10 max-w-2xl text-base font-bold leading-relaxed text-blue-900/80 md:text-lg drop-shadow-sm">
                         Discover India's most advanced iron removal and filtration systems.
-                        A legacy of trust, built on <span className="text-white font-medium">uncompromising purity</span> and innovation.
+                        A legacy of trust, built on <span className="text-blue-950 font-black">uncompromising purity</span> and innovation.
                     </p>
 
                     <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
@@ -144,31 +141,16 @@ export function HeroSection() {
                             asChild
                             variant="outline"
                             size="lg"
-                            className="h-14 border-white/20 bg-white/5 px-10 text-[13px] font-bold uppercase tracking-widest text-white backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/40 hover:scale-105 active:scale-95"
+                            className="h-14 border-blue-900/20 bg-blue-50/50 px-10 text-[13px] font-bold uppercase tracking-widest text-blue-900 backdrop-blur-md transition-all hover:bg-white/60 hover:border-blue-900/40 hover:scale-105 active:scale-95"
                         >
                             <Link href={appBase + "/contact"}>Consult an Expert</Link>
                         </Button>
                     </div>
                 </div>
 
-                <div className="absolute bottom-16 left-0 right-0 px-6">
-                    <div className="mx-auto flex max-w-2xl items-center justify-center gap-12 border-t border-white/10 pt-12 md:gap-24">
-                        {stats.map((stat) => (
-                            <div key={stat.label} className="group flex flex-col items-center gap-1 transition-transform duration-500 hover:-translate-y-1">
-                                <p className="font-serif text-3xl font-bold text-white md:text-4xl tracking-tight">
-                                    {stat.value}
-                                </p>
-                                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                                    {stat.label}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
                 <a
                     href="#about"
-                    className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce text-white/50 transition-colors hover:text-white"
+                    className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce text-slate-400 transition-colors hover:text-blue-600"
                     aria-label="Scroll to next section"
                 >
                     <ArrowDown className="h-5 w-5" />

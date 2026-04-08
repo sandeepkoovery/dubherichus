@@ -1,6 +1,7 @@
 import { Head } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { HeroSection } from "@/Components/HeroSection";
+import { StatsBlock } from "@/Components/StatsBlock";
 import { AboutSection } from "@/Components/AboutSection";
 import { ProductsSection } from "@/Components/ProductsSection";
 import { ProjectsPreview } from "@/Components/ProjectsPreview";
@@ -17,6 +18,7 @@ export default function Welcome({ appName }) {
             <Navbar />
             <main>
                 <HeroSection />
+                <StatsBlock />
                 <AboutSection />
                 <ProductsSection />
                 <ProjectsPreview />

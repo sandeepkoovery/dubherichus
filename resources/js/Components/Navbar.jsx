@@ -7,8 +7,6 @@ import { useAsset } from "@/hooks/useAsset";
 const navLinks = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Blog", href: "/blog", isExternal: true },
     {
         label: "Products",
         href: "#",
@@ -19,6 +17,8 @@ const navLinks = [
             { label: "Bayaweaver", href: "/products/bayaweaver" },
         ]
     },
+    { label: "Projects", href: "/projects" },
+    { label: "Blog", href: "/blog", isExternal: true },
     { label: "Contact Us", href: "/contact" },
 ];
 
@@ -38,9 +38,8 @@ export function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Navbar is "dark mode" (transparent with white text) only at the top of the Home page
-    const isHome = component === 'Welcome' || component === 'Home' || url === '/' || url === '';
-    const isDarkTheme = isHome && !isScrolled;
+    // Navbar uses high-contrast theme (dark text) because the Home hero is now bright/white
+    const isDarkTheme = false;
 
     return (
         <header

@@ -1,6 +1,31 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+/* BMW India Precise Typography */
+@font-face {
+  font-family: 'BMWTypeNextLatin';
+  src: url('https://www.bmw.in/etc.clientlibs/bmw/components/content/global/v1/clientlibs/fonts/resources/BMWTypeNextLatin-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BMWTypeNextLatin';
+  src: url('https://www.bmw.in/etc.clientlibs/bmw/components/content/global/v1/clientlibs/fonts/resources/BMWTypeNextLatin-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BMWTypeNextLatin';
+  src: url('https://www.bmw.in/etc.clientlibs/bmw/components/content/global/v1/clientlibs/fonts/resources/BMWTypeNextLatin-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -42,8 +67,8 @@
 }
 
 @theme inline {
-  --font-sans: 'Outfit', system-ui, sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'BMWTypeNextLatin', 'Arial', Helvetica, sans-serif;
+  --font-serif: 'BMWTypeNextLatin', 'Arial', Helvetica, sans-serif;
   --font-mono: 'Geist Mono', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
