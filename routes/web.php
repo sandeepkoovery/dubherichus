@@ -9,8 +9,10 @@ Route::get('/about', fn() => Inertia\Inertia::render('About'))->name('about');
 Route::get('/projects', fn() => Inertia\Inertia::render('Projects'))->name('projects');
 Route::get('/products/medium', fn() => Inertia\Inertia::render('Products/Medium'))->name('products.medium');
 Route::get('/products/standard', fn() => Inertia\Inertia::render('Products/Standard'))->name('products.standard');
+Route::get('/products/classic', fn() => Inertia\Inertia::render('Products/Classic'))->name('products.classic');
 Route::get('/products/commercial', fn() => Inertia\Inertia::render('Products/Commercial'))->name('products.commercial');
 Route::get('/products/bayaweaver', fn() => Inertia\Inertia::render('Products/Bayaweaver'))->name('products.bayaweaver');
+Route::get('/products/dubhemerak', fn() => Inertia\Inertia::render('Products/DubheMerak'))->name('products.dubhemerak');
 Route::get('/contact', fn() => Inertia\Inertia::render('Contact'))->name('contact');
 
 // SEO Redirects

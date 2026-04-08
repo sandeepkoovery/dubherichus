@@ -10,11 +10,28 @@ const navLinks = [
     {
         label: "Products",
         href: "#",
-        subLinks: [
-            { label: "Medium Range", href: "/products/medium" },
-            { label: "Standard Series", href: "/products/standard" },
-            { label: "Commercial", href: "/products/commercial" },
-            { label: "Bayaweaver", href: "/products/bayaweaver" },
+        categories: [
+            {
+                label: "Manual",
+                links: [
+                    { label: "Classic (S)", href: "/products/classic" },
+                    { label: "Standard (M)", href: "/products/standard" },
+                    { label: "Medium (L)", href: "/products/medium" },
+                    { label: "Commercial (XL)", href: "/products/commercial" },
+                ]
+            },
+            {
+                label: "Automatic",
+                links: [
+                    { label: "BAYAWEAVER", href: "/products/bayaweaver" },
+                ]
+            },
+            {
+                label: "Sewage Treatment",
+                links: [
+                    { label: "DUBHE MERAK", href: "/products/dubhemerak" },
+                ]
+            }
         ]
     },
     { label: "Projects", href: "/projects" },
@@ -60,7 +77,36 @@ export function Navbar() {
                 <div className="hidden items-center gap-10 lg:flex">
                     {navLinks.map((link) => (
                         <div key={link.label} className="relative group">
-                            {link.subLinks ? (
+                            {link.categories ? (
+                                <>
+                                    <button className={`flex items-center gap-1.5 text-[13px] font-semibold uppercase tracking-wider transition-all duration-300 hover:text-primary ${isDarkTheme ? "text-white/90 hover:text-white" : "text-foreground/80"}`}>
+                                        {link.label}
+                                        <svg className="h-3.5 w-3.5 transition-transform duration-500 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="m6 9 6 6 6-6" /></svg>
+                                    </button>
+                                    <div className="absolute left-1/2 -translate-x-1/2 top-full invisible opacity-0 translate-y-2 w-[540px] pt-4 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+                                        <div className="rounded-2xl border border-white/20 bg-background/95 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.1)] backdrop-blur-2xl grid grid-cols-3 gap-8">
+                                            {link.categories.map((cat) => (
+                                                <div key={cat.label} className="space-y-3">
+                                                    <div className="text-[11px] font-bold uppercase tracking-widest text-primary/60 border-b border-primary/10 pb-2 mb-2 whitespace-nowrap">
+                                                        {cat.label}
+                                                    </div>
+                                                    <div className="space-y-1">
+                                                        {cat.links.map((sub) => (
+                                                            <Link
+                                                                key={sub.href}
+                                                                href={appBase + sub.href}
+                                                                className="block rounded-lg px-3 py-2 text-[12px] font-medium text-muted-foreground transition-all duration-300 hover:bg-primary/5 hover:text-primary hover:translate-x-1"
+                                                            >
+                                                                {sub.label}
+                                                            </Link>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </>
+                            ) : link.subLinks ? (
                                 <>
                                     <button className={`flex items-center gap-1.5 text-[13px] font-semibold uppercase tracking-wider transition-all duration-300 hover:text-primary ${isDarkTheme ? "text-white/90 hover:text-white" : "text-foreground/80"}`}>
                                         {link.label}
@@ -135,7 +181,26 @@ export function Navbar() {
                     <div className="flex flex-col gap-1 px-6 py-4">
                         {navLinks.map((link) => (
                             <div key={link.label}>
-                                {link.subLinks ? (
+                                {link.categories ? (
+                                    <div className="space-y-4 py-2">
+                                        <div className="px-4 text-xs font-bold uppercase tracking-widest text-primary/60">{link.label}</div>
+                                        {link.categories.map((cat) => (
+                                            <div key={cat.label} className="space-y-1">
+                                                <div className="px-6 py-1 text-[10px] font-bold uppercase tracking-widest text-muted-foreground/50">{cat.label}</div>
+                                                {cat.links.map((sub) => (
+                                                    <Link
+                                                        key={sub.href}
+                                                        href={appBase + sub.href}
+                                                        className="block rounded-lg px-10 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                                                        onClick={() => setIsMobileMenuOpen(false)}
+                                                    >
+                                                        {sub.label}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : link.subLinks ? (
                                     <div className="space-y-1">
                                         <div className="px-4 py-2 text-xs font-bold uppercase tracking-widest text-muted-foreground">{link.label}</div>
                                         {link.subLinks.map((sub) => (

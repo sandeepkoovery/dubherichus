@@ -135,7 +135,7 @@ export function HeroSection() {
                             size="lg"
                             className="h-14 bg-primary px-10 text-[13px] font-bold uppercase tracking-widest text-white shadow-[0_10px_30px_-10px_rgba(12,59,94,0.5)] transition-all hover:bg-primary/90 hover:scale-105 active:scale-95"
                         >
-                            <Link href={appBase + "/products/standard"}>Explorer Gallery</Link>
+                            <Link href={appBase + "/products/standard"}>Explore Our Products</Link>
                         </Button>
                         <Button
                             asChild
