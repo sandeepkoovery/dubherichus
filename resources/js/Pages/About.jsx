@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Head } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
@@ -34,10 +34,14 @@ function VideoCard({ id, title, isMain = false, onNext, onPrev }) {
     return (
         <div
             className={`group/btn relative w-full h-full cursor-pointer flex items-center justify-center overflow-hidden`}
-            onClick={() => setIsPlaying(true)}
+            onClick={() => isMain && setIsPlaying(true)}
         >
             <img
                 src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+                onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+                }}
                 alt={title}
                 className="absolute inset-0 w-full h-full object-cover"
             />
@@ -82,6 +86,21 @@ function VideoCard({ id, title, isMain = false, onNext, onPrev }) {
 export default function About() {
     const asset = useAsset();
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+    const scrollContainerRef = useRef(null);
+
+    // Auto-scroll the active thumbnail into view
+    useEffect(() => {
+        if (scrollContainerRef.current) {
+            const activeItem = scrollContainerRef.current.children[currentVideoIndex];
+            if (activeItem) {
+                activeItem.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+        }
+    }, [currentVideoIndex]);
 
     const videos = [
         {
@@ -90,24 +109,39 @@ export default function About() {
             desc: "Explore how Dubhe Richus became a leader in water treatment technology."
         },
         {
-            id: "Fj-v5m6L8m4",
-            title: "Innovative Technology",
-            desc: "A deep dive into our chemical-free water purification systems."
+            id: "dG_qwixf-2M",
+            title: "Crystal Clear Solutions",
+            desc: "Removing iron content and color for perfectly clear, odor-free water."
         },
         {
-            id: "XvH9Pz6C4q0",
-            title: "Industrial Excellence",
-            desc: "Witness our large-scale sewage and effluent treatment operations."
+            id: "IS8WTVfJQlw",
+            title: "Chemical-Free Purity",
+            desc: "Advanced water treatment without the need for harmful chemicals."
         },
         {
-            id: "Sg6j9Uv6_Y0",
-            title: "Customer Success",
-            desc: "Hear from our clients who transformed their water systems."
+            id: "qVORpTDGCbg",
+            title: "Regional Excellence",
+            desc: "Expanding our reach to ensure clean water access for every community."
         },
         {
-            id: "0_6yW6VjW-0",
-            title: "Future of Water",
-            desc: "Our vision for sustainable and pure water solutions worldwide."
+            id: "W0SBadrTdns",
+            title: "Maintenance Free",
+            desc: "Discover the world's first maintenance-free water treatment plant."
+        },
+        {
+            id: "WlAzNowgjF4",
+            title: "Whole House Filtration",
+            desc: "Complete filtration systems designed for entire residential houses."
+        },
+        {
+            id: "-jwVBWN5K48",
+            title: "Modern Wastewater Tech",
+            desc: "Innovative sewage and wastewater treatment technologies from Kerala."
+        },
+        {
+            id: "LP3mLsRKgk0",
+            title: "Commercial Success",
+            desc: "Powering large-scale projects like Oberon Mall with purified water."
         }
     ];
 
@@ -160,20 +194,41 @@ export default function About() {
                         </div>
 
                         {/* Video Thumbnails Selection Row */}
-                        <div className="flex justify-center gap-2 overflow-x-auto pb-4 custom-scrollbar">
-                            {videos.map((video, idx) => (
-                                <button
-                                    key={video.id}
-                                    onClick={() => setCurrentVideoIndex(idx)}
-                                    className={`relative flex-shrink-0 w-32 md:w-44 aspect-video overflow-hidden border-2 transition-all duration-300 ${idx === currentVideoIndex ? 'border-blue-500 shadow-lg' : 'border-slate-200 opacity-70 hover:opacity-100'}`}
-                                >
-                                    <VideoCard
-                                        id={video.id}
-                                        title={video.title}
-                                        isMain={false}
-                                    />
-                                </button>
-                            ))}
+                        <div className="relative flex items-center group/thumbs mx-auto">
+                            {/* Left Navigation Arrow */}
+                            <button
+                                onClick={() => setCurrentVideoIndex(prev => (prev - 1 + videos.length) % videos.length)}
+                                className="absolute left-0 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 border border-slate-200 shadow-md text-slate-600 hover:text-blue-600 transition-all"
+                            >
+                                <ChevronLeft className="h-6 w-6" />
+                            </button>
+
+                            <div
+                                ref={scrollContainerRef}
+                                className="flex justify-start gap-4 overflow-x-auto py-4 no-scrollbar scroll-smooth px-12"
+                            >
+                                {videos.map((video, idx) => (
+                                    <button
+                                        key={video.id}
+                                        onClick={() => setCurrentVideoIndex(idx)}
+                                        className={`relative flex-shrink-0 w-32 md:w-44 aspect-video overflow-hidden border-2 transition-all duration-300 ${idx === currentVideoIndex ? 'border-blue-500 shadow-xl scale-110 z-10' : 'border-slate-200 opacity-60 hover:opacity-100'}`}
+                                    >
+                                        <VideoCard
+                                            id={video.id}
+                                            title={video.title}
+                                            isMain={false}
+                                        />
+                                    </button>
+                                ))}
+                            </div>
+
+                            {/* Right Navigation Arrow */}
+                            <button
+                                onClick={() => setCurrentVideoIndex(prev => (prev + 1) % videos.length)}
+                                className="absolute right-0 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 border border-slate-200 shadow-md text-slate-600 hover:text-blue-600 transition-all"
+                            >
+                                <ChevronRight className="h-6 w-6" />
+                            </button>
                         </div>
                     </div>
                 </section>
