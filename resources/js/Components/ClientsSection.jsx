@@ -25,36 +25,32 @@ const clientLinks = [
 
 const testimonials = [
     {
-        quote: "We are using this filter more than 10 years. And we are also satisfied with their service. Definitely recommend to all others looking for a water filter.",
-        name: "Anoop Antony",
-        image: "/images/testimonials/anoop.png"
+        quote: "It is a very useful item friendly processing method nice filter and business development executive Swetha helpful and support friendly staff thankyou so much Richus💝🤌🏻",
+        name: "Akshay K T",
+        image: "/images/testimonials/Akshay K T.png"
     },
     {
-        quote: "We have been using the water filter for the past 2 years. It is working really well and we are completely satisfied with it. If you want a good water purifier for your home, I highly recommend it.",
-        name: "George VV",
-        image: "/images/testimonials/george.png"
+        quote: "Wonderful experience, top-notch service and extremely polite staffs and 💯 satisfied",
+        name: "Alok Vc",
+        image: "/images/testimonials/Alok Vc.png"
     },
     {
-        quote: "Using this for the last one and half year. Very much satisfied with the results. Zero maintenance till now. Just have to do the periodic backwash without fail.",
-        name: "Vivek",
-        image: "/images/testimonials/vivek.png"
+        quote: "I am using Richus water filter for the last 5 years. 100% satisfied. Highly recommend Dubhe Richus.",
+        name: "Abhilash Cb",
+        image: "/images/testimonials/Abhilash Cb.png"
     },
     {
-        quote: "Bought it a year ago after lot of research on YouTube. Installation was quick and it's easy to operate. One of the filters had minor leak and i got it replaced under warranty. Had to do couple of follow-up but they did replace. So far no issues. And there was a bonus with this filter. As they are using tank level air valve, it improved my water pressure all over the 1st floor. Almost till last drop of water pressure will be same. In the past i had to fill the tank over 50% to get pressure on first floor shower 🚿 and still it was low. I would highly recommend Dubhe Richus.",
-        name: "Tinku Tharasing",
-        image: "/images/testimonials/tinku.png"
+        quote: "Excellent service from the team at Dubhe Richus. From the initial inquiry to the professional installation, everything was seamless. Their Super Jet Technology has completely transformed our borewell water quality. It's now crystal clear and perfect for all household needs. If you’re looking for genuine sewage or water treatment experts, this is the place to go.",
+        name: "AMALA MARIA SHELBI",
+        image: "/images/testimonials/AMALA MARIA SHELBI.png"
     },
     {
-        quote: "I have been using Dubhe Richus water filter for last 8 years and I am thoroughly impressed with its performance. Beyond the cost, the installation was straightforward. The filter provides crisp, clean-tasting water with noticeable improvement in taste compared to my tap water. Overall, the water filter has exceeded my expectations in both efficiency and ease of use. Highly recommended for anyone looking to enhance their water quality at home.",
-        name: "Nirupama Anil",
-        image: "/images/testimonials/nirupama.png"
-    },
-    {
-        quote: "This water filter is excellent, providing crisp, clean-tasting water every time. It's easy to install, no maintenance, and effectively removes impurities without slowing down water flow. Highly recommended for anyone looking to improve water quality at home.",
-        name: "Badu sha",
-        image: "/images/testimonials/badu.png"
+        quote: "I have been using it for four or five years now and it works well. Thank Dubhe",
+        name: "Jestin Baby",
+        image: "/images/testimonials/jestin baby.png"
     },
 ];
+
 
 export function ClientsSection() {
     const asset = useAsset();
