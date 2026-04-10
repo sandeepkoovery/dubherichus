@@ -208,4 +208,13 @@
   .animate-blur-in {
     animation: blur-in 1s ease-out both;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

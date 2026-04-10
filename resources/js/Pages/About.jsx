@@ -1,16 +1,149 @@
+import { useState, useEffect, useRef } from "react";
 import { Head } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
 import { useAsset } from "@/hooks/useAsset";
-import { Shield, Target, Award, Clock, FlaskConical, PenTool, Users, Droplets, Calendar, CheckCircle2, Zap, Building2, Play } from "lucide-react";
+import { Shield, Target, Award, Clock, FlaskConical, PenTool, Users, Droplets, Calendar, CheckCircle2, Zap, Building2, Play, ChevronLeft, ChevronRight } from "lucide-react";
 
 const teamMembers = [
     { name: "Stanley Jacob", role: "Founder", icon: Users },
     { name: "Jacob Richard", role: "Managing Director", icon: Users },
 ];
 
+function VideoCard({ id, title, isMain = false, onNext, onPrev }) {
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    // Reset playback state when the video changes
+    useEffect(() => {
+        setIsPlaying(false);
+    }, [id]);
+
+    if (isPlaying) {
+        return (
+            <iframe
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/${id}?autoplay=1&rel=0`}
+                title={title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+            ></iframe>
+        );
+    }
+
+    return (
+        <div
+            className={`group/btn relative w-full h-full cursor-pointer flex items-center justify-center overflow-hidden`}
+            onClick={() => isMain && setIsPlaying(true)}
+        >
+            <img
+                src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+                onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+                }}
+                alt={title}
+                className="absolute inset-0 w-full h-full object-cover"
+            />
+
+            {/* YouTube Red Play Button Style for Main */}
+            {isMain && (
+                <div className="relative z-10 transition-transform duration-300 group-hover/btn:scale-110">
+                    <div className="bg-red-600 rounded-2xl px-6 py-4 flex items-center justify-center shadow-xl">
+                        <Play className="h-10 w-10 text-white fill-current" />
+                    </div>
+                </div>
+            )}
+
+            {/* Navigation Arrows for Main */}
+            {isMain && (
+                <>
+                    <button
+                        onClick={(e) => { e.stopPropagation(); onPrev(); }}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 flex h-10 w-10 items-center justify-center text-white/50 hover:text-white transition-colors"
+                    >
+                        <ChevronLeft className="h-12 w-12" />
+                    </button>
+                    <button
+                        onClick={(e) => { e.stopPropagation(); onNext(); }}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 flex h-10 w-10 items-center justify-center text-white/50 hover:text-white transition-colors"
+                    >
+                        <ChevronRight className="h-12 w-12" />
+                    </button>
+                </>
+            )}
+
+            {/* Gray Circle Play for Thumbnails */}
+            {!isMain && (
+                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-black/40 backdrop-blur-sm shadow-lg">
+                    <Play className="h-5 w-5 text-white/90 fill-current ml-1" />
+                </div>
+            )}
+        </div>
+    );
+}
+
 export default function About() {
     const asset = useAsset();
+    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+    const scrollContainerRef = useRef(null);
+
+    // Auto-scroll the active thumbnail into view
+    useEffect(() => {
+        if (scrollContainerRef.current) {
+            const activeItem = scrollContainerRef.current.children[currentVideoIndex];
+            if (activeItem) {
+                activeItem.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+        }
+    }, [currentVideoIndex]);
+
+    const videos = [
+        {
+            id: "-NRXVx9J29s",
+            title: "Our Journey",
+            desc: "Explore how Dubhe Richus became a leader in water treatment technology."
+        },
+        {
+            id: "dG_qwixf-2M",
+            title: "Crystal Clear Solutions",
+            desc: "Removing iron content and color for perfectly clear, odor-free water."
+        },
+        {
+            id: "IS8WTVfJQlw",
+            title: "Chemical-Free Purity",
+            desc: "Advanced water treatment without the need for harmful chemicals."
+        },
+        {
+            id: "qVORpTDGCbg",
+            title: "Regional Excellence",
+            desc: "Expanding our reach to ensure clean water access for every community."
+        },
+        {
+            id: "W0SBadrTdns",
+            title: "Maintenance Free",
+            desc: "Discover the world's first maintenance-free water treatment plant."
+        },
+        {
+            id: "WlAzNowgjF4",
+            title: "Whole House Filtration",
+            desc: "Complete filtration systems designed for entire residential houses."
+        },
+        {
+            id: "-jwVBWN5K48",
+            title: "Modern Wastewater Tech",
+            desc: "Innovative sewage and wastewater treatment technologies from Kerala."
+        },
+        {
+            id: "LP3mLsRKgk0",
+            title: "Commercial Success",
+            desc: "Powering large-scale projects like Oberon Mall with purified water."
+        }
+    ];
 
     return (
         <>
@@ -31,7 +164,7 @@ export default function About() {
                 </section>
 
                 {/* History Section */}
-                <section className="py-24 bg-white">
+                <section className="pt-24 pb-8 bg-white">
                     <div className="mx-auto max-w-5xl px-6">
                         <div className="space-y-12 text-center md:text-left">
                             <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
@@ -44,18 +177,58 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* Video Section */}
+                {/* Screenshot-based Video Gallery Section */}
                 <section className="pb-24 bg-white">
-                    <div className="mx-auto max-w-6xl px-6">
-                        <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-100 bg-slate-50">
-                            <iframe
-                                className="w-full h-full"
-                                src="https://www.youtube.com/embed/-NRXVx9J29s?rel=0"
-                                title="Dubhe Richus - Our Journey"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
-                            ></iframe>
+                    <div className="mx-auto max-w-5xl px-6">
+                        {/* Main Featured Video */}
+                        <div className="relative mb-8">
+                            <div className="relative aspect-video overflow-hidden shadow-2xl border border-black/5 bg-slate-900">
+                                <VideoCard
+                                    id={videos[currentVideoIndex].id}
+                                    title={videos[currentVideoIndex].title}
+                                    isMain={true}
+                                    onNext={() => setCurrentVideoIndex(prev => (prev + 1) % videos.length)}
+                                    onPrev={() => setCurrentVideoIndex(prev => (prev - 1 + videos.length) % videos.length)}
+                                />
+                            </div>
+                        </div>
+
+                        {/* Video Thumbnails Selection Row */}
+                        <div className="relative flex items-center group/thumbs mx-auto">
+                            {/* Left Navigation Arrow */}
+                            <button
+                                onClick={() => setCurrentVideoIndex(prev => (prev - 1 + videos.length) % videos.length)}
+                                className="absolute left-0 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 border border-slate-200 shadow-md text-slate-600 hover:text-blue-600 transition-all"
+                            >
+                                <ChevronLeft className="h-6 w-6" />
+                            </button>
+
+                            <div
+                                ref={scrollContainerRef}
+                                className="flex justify-start gap-4 overflow-x-auto py-4 no-scrollbar scroll-smooth px-12"
+                            >
+                                {videos.map((video, idx) => (
+                                    <button
+                                        key={video.id}
+                                        onClick={() => setCurrentVideoIndex(idx)}
+                                        className={`relative flex-shrink-0 w-32 md:w-44 aspect-video overflow-hidden border-2 transition-all duration-300 ${idx === currentVideoIndex ? 'border-blue-500 shadow-xl scale-110 z-10' : 'border-slate-200 opacity-60 hover:opacity-100'}`}
+                                    >
+                                        <VideoCard
+                                            id={video.id}
+                                            title={video.title}
+                                            isMain={false}
+                                        />
+                                    </button>
+                                ))}
+                            </div>
+
+                            {/* Right Navigation Arrow */}
+                            <button
+                                onClick={() => setCurrentVideoIndex(prev => (prev + 1) % videos.length)}
+                                className="absolute right-0 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 border border-slate-200 shadow-md text-slate-600 hover:text-blue-600 transition-all"
+                            >
+                                <ChevronRight className="h-6 w-6" />
+                            </button>
                         </div>
                     </div>
                 </section>
