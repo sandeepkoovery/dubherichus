@@ -164,7 +164,7 @@ export default function About() {
                 </section>
 
                 {/* History Section */}
-                <section className="py-24 bg-white">
+                <section className="pt-24 pb-8 bg-white">
                     <div className="mx-auto max-w-5xl px-6">
                         <div className="space-y-12 text-center md:text-left">
                             <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
@@ -178,7 +178,7 @@ export default function About() {
                 </section>
 
                 {/* Screenshot-based Video Gallery Section */}
-                <section className="py-24 bg-white">
+                <section className="pb-24 bg-white">
                     <div className="mx-auto max-w-5xl px-6">
                         {/* Main Featured Video */}
                         <div className="relative mb-8">
