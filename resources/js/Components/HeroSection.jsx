@@ -14,15 +14,15 @@ export function HeroSection() {
     const banners = [
         {
             image: asset('/images/banner1.jpg'),
-            heading: <>No.1 Advanced <br /><span className="bg-gradient-to-r from-cyan-400 to-blue-200 bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">Water Treatment Plant</span><br /> for your Home and Office</>
+            heading: ""
         },
         {
             image: asset('/images/banner2.jpg'),
-            heading: <>Served More than <br /><span className="bg-gradient-to-r from-cyan-400 to-blue-200 bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">32,000 Families</span><br /> and Counting</>
+            heading: ""
         },
         {
             image: asset('/images/Banner-3.png'),
-            heading: <>3.2 trillion + <br /><span className="bg-gradient-to-r from-cyan-400 to-blue-200 bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">litres of water</span><br /> recycled</>
+            heading: ""
         },
     ];
 
@@ -98,7 +98,7 @@ export function HeroSection() {
             </button>
 
             {/* Dot Indicators */}
-            <div className="absolute bottom-64 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
                 {banners.map((_, i) => (
                     <button
                         key={i}
@@ -113,23 +113,25 @@ export function HeroSection() {
             </div>
 
             {/* Main Content */}
-            <div className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center" style={{ zIndex: 10 }}>
+            <div className="relative flex min-h-screen flex-col items-center justify-end pb-12 md:pb-20 px-6 text-center" style={{ zIndex: 10 }}>
                 <div className="mx-auto max-w-5xl">
-                    <div className="mb-6 flex justify-center">
+                    <div className="mb-2 flex justify-center">
                         <span className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/40 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-blue-900 backdrop-blur-sm shadow-xl">
                             <span className="h-1.5 w-1.5 rounded-full bg-blue-600 animate-pulse" />
                             Advanced Water Treatment in India
                         </span>
                     </div>
-                    <h1 className="mb-6 font-serif text-3xl font-bold leading-[1.2] tracking-tight text-blue-950 md:text-5xl lg:text-6xl transition-all duration-700 drop-shadow-sm">
-                        {banners[currentSlide].heading}
-                    </h1>
+                    {banners[currentSlide].heading && (
+                        <h1 className="mb-6 font-serif text-3xl font-bold leading-[1.2] tracking-tight text-blue-950 md:text-5xl lg:text-6xl transition-all duration-700 drop-shadow-sm">
+                            {banners[currentSlide].heading}
+                        </h1>
+                    )}
                     <p className="hidden mx-auto mb-10 max-w-2xl text-base font-bold leading-relaxed text-blue-900/80 md:text-lg drop-shadow-sm">
                         Discover India's most advanced iron removal and filtration systems.
                         A legacy of trust, built on <span className="text-blue-950 font-black">uncompromising purity</span> and innovation.
                     </p>
 
-                    <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
+                    <div className="flex flex-col items-center justify-center gap-6 sm:flex-row mt-2">
                         <Button
                             asChild
                             size="lg"

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/Components/ui/button";
 import { useAsset } from "@/hooks/useAsset";
@@ -49,6 +49,8 @@ export function ProductsSection() {
     const appBase = asset('');
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsToShow, setItemsToShow] = useState(3);
+    const [isPaused, setIsPaused] = useState(false);
+    const intervalRef = useRef(null);
 
     useEffect(() => {
         const handleResize = () => {
@@ -59,17 +61,33 @@ export function ProductsSection() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const nextSlide = () => {
+    const nextSlide = useCallback(() => {
         setCurrentIndex((prev) =>
             prev >= products.length - itemsToShow ? 0 : prev + 1
         );
-    };
+    }, [itemsToShow]);
 
-    const prevSlide = () => {
+    const prevSlide = useCallback(() => {
         setCurrentIndex((prev) =>
             prev <= 0 ? products.length - itemsToShow : prev - 1
         );
-    };
+    }, [itemsToShow]);
+
+    const startAutoSlide = useCallback(() => {
+        if (intervalRef.current) clearInterval(intervalRef.current);
+        intervalRef.current = setInterval(() => {
+            if (!isPaused) {
+                nextSlide();
+            }
+        }, 5000);
+    }, [nextSlide, isPaused]);
+
+    useEffect(() => {
+        startAutoSlide();
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        };
+    }, [startAutoSlide]);
 
     return (
         <>
@@ -87,7 +105,11 @@ export function ProductsSection() {
                     </p>
                 </div>
 
-                <div className="relative w-full group">
+                <div
+                    className="relative w-full group"
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
+                >
                     <div className="overflow-hidden">
                         <div
                             className="flex transition-transform duration-700 ease-in-out"
