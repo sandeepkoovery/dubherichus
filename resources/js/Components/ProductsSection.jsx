@@ -6,10 +6,10 @@ import { Link } from "@inertiajs/react";
 
 const products = [
     {
-        title: "Medium",
-        capacity: "1250- 1500 Ltr./day",
-        image: "/images/medium.jpg",
-        href: "/products/medium",
+        title: "Classic",
+        capacity: "800 - 1200 Ltr/ Day",
+        image: "/images/standard.jpg",
+        href: "/products/classic",
     },
     {
         title: "Standard",
@@ -18,16 +18,16 @@ const products = [
         href: "/products/standard",
     },
     {
+        title: "Medium",
+        capacity: "1250- 1500 Ltr./day",
+        image: "/images/medium.jpg",
+        href: "/products/medium",
+    },
+    {
         title: "Commercial",
         capacity: "For Custom Use",
         image: "/images/commercial.jpg",
         href: "/products/commercial",
-    },
-    {
-        title: "Classic",
-        capacity: "800 - 1200 Ltr/ Day",
-        image: "/images/standard.jpg",
-        href: "/products/classic",
     },
     {
         title: "Bayaweaver",
@@ -42,6 +42,7 @@ const products = [
         href: "/products/dubhemerak",
     },
 ];
+
 
 export function ProductsSection() {
     const asset = useAsset();
