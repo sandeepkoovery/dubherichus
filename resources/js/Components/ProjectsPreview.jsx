@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Droplets, Layout, PenTool, RefreshCw, Users } from "lucide-react";
+import { ChevronLeft, ChevronRight, Droplets, Layout, PenTool, RefreshCw, Users, ZapOff, FlaskConical } from "lucide-react";
 import { useAsset } from "@/hooks/useAsset";
 
 const features = [
@@ -30,130 +30,66 @@ const features = [
         label: "Features, Technology",
         title: "Manual back washing",
         description: "Manual backwashing in Dubhe Richus systems is recommended every 5-7 days, ensuring optimal filtration performance."
+    },
+    {
+        type: "feature",
+        icon: ZapOff,
+        label: "Efficiency & Purity",
+        title: "No Electricity Required",
+        description: "Our high-efficiency filtration systems operate purely through water pressure, with zero power consumption."
+    },
+    {
+        type: "feature",
+        icon: FlaskConical,
+        label: "Eco-Friendly",
+        title: "No Chemical Used",
+        description: "A completely mechanical process that purifies water without adding harmful chemicals or synthetic agents."
     }
 ];
 
 export function ProjectsPreview() {
-    const asset = useAsset();
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const nextSlide = () => {
-        setCurrentIndex((prev) => (prev + 1) % features.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prev) => (prev - 1 + features.length) % features.length);
-    };
-
-    // Calculate items to show based on window size (simplified)
-    // On desktop we show 3, so we need to loop appropriately.
-    const getVisibleItems = () => {
-        const items = [];
-        for (let i = 0; i < 3; i++) {
-            items.push(features[(currentIndex + i) % features.length]);
-        }
-        return items;
-    };
-
     return (
-        <section id="impact" className="bg-muted py-16 md:py-24 overflow-hidden">
-            <div className="mx-auto max-w-7xl px-6">
-                <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-8">
-                    <div className="w-full">
-                        <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
-                            Innovation & Impact
-                        </p>
-                        <h2 className="font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl whitespace-nowrap">
-                            Excellence in <span className="opacity-90">Every Detail</span>
-                        </h2>
-                    </div>
-
-                    <div className="flex gap-4">
-                        <button
-                            onClick={prevSlide}
-                            className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-white text-foreground transition-all hover:bg-primary hover:text-white hover:border-primary active:scale-95"
-                            aria-label="Previous slide"
-                        >
-                            <ChevronLeft className="h-5 w-5" />
-                        </button>
-                        <button
-                            onClick={nextSlide}
-                            className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-white text-foreground transition-all hover:bg-primary hover:text-white hover:border-primary active:scale-95"
-                            aria-label="Next slide"
-                        >
-                            <ChevronRight className="h-5 w-5" />
-                        </button>
-                    </div>
+        <section id="impact" className="bg-white overflow-hidden">
+            <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+                <div className="mb-16 text-center">
+                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
+                        Innovation & Impact
+                    </p>
+                    <h2 className="font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                        Excellence in <span className="opacity-90">Every Detail</span>
+                    </h2>
+                    <div className="h-1 w-20 bg-primary/20 mt-8 mx-auto" />
                 </div>
 
-                <div className="relative">
-                    <div className="flex gap-8 transition-all duration-700 ease-in-out lg:grid lg:grid-cols-3">
-                        {/* Mobile: Simple 1-item view (handled by hidden/block) 
-                            Desktop: 3-item grid that we update by re-rendering visible items
-                        */}
-                        {getVisibleItems().map((item, idx) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border border-slate-100 shadow-2xl">
+                    {features.map((item, idx) => {
+                        const isBlue = idx % 2 === 0;
+                        return (
                             <div
-                                key={`${item.title}-${idx}`}
-                                className={`w-full shrink-0 lg:shrink lg:w-auto animate-fade-in-up`}
-                                style={{ animationDelay: `${idx * 150}ms` }}
+                                key={item.title}
+                                className={`flex flex-col items-center text-center p-12 md:p-16 h-full transition-all duration-500 ${isBlue
+                                        ? "bg-[#58a2cc] text-white"
+                                        : "bg-white text-slate-800"
+                                    }`}
                             >
-                                {item.type === "clients" ? (
-                                    <div className="h-full flex flex-col rounded-[2.5rem] border border-white bg-white/50 p-10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] backdrop-blur-sm transition-all duration-500 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)]">
-                                        <div className="mb-8">
-                                            <p className="text-[10px] font-bold uppercase tracking-widest text-primary/60 mb-2">{item.label}</p>
-                                            <h3 className="text-xl font-bold text-foreground leading-tight tracking-tight">
-                                                {item.title}
-                                            </h3>
-                                        </div>
-                                        <div className="grid grid-cols-2 gap-4 mt-auto">
-                                            {item.clients.slice(0, 6).map(client => (
-                                                <div key={client} className="flex h-12 items-center justify-center rounded-xl bg-card/40 border border-border/50 px-3 text-[10px] font-bold text-muted-foreground/70 uppercase tracking-tighter text-center">
-                                                    {client}
-                                                </div>
-                                            ))}
-                                        </div>
-                                        <div className="mt-8 pt-6 border-t border-border/10 flex items-center justify-between">
-                                            <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Our Network</span>
-                                            <div className="flex -space-x-2">
-                                                {[1, 2, 3].map(i => (
-                                                    <div key={i} className="h-6 w-6 rounded-full border-2 border-white bg-primary/10" />
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div className="h-full group flex flex-col rounded-[2.5rem] border border-white bg-white/30 p-10 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] backdrop-blur-sm transition-all duration-700 hover:bg-white hover:shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)] hover:-translate-y-4">
-                                        <div className="mb-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/5 text-primary transition-all duration-500 group-hover:bg-primary group-hover:text-white">
-                                            <item.icon className="h-6 w-6" />
-                                        </div>
+                                <div className={`mb-8 flex h-16 w-16 items-center justify-center rounded-2xl ${isBlue ? "text-white" : "text-[#58a2cc]"
+                                    }`}>
+                                    <item.icon className="h-10 w-10" strokeWidth={1.5} />
+                                </div>
 
-                                        <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.4em] text-primary/60">
-                                            {item.label}
-                                        </p>
-                                        <h3 className="mb-6 text-2xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">
-                                            {item.title}
-                                        </h3>
-                                        <p className="text-[15px] font-light leading-relaxed text-muted-foreground/80">
-                                            {item.description}
-                                        </p>
+                                <h3 className="mb-6 text-xl font-bold tracking-widest uppercase">
+                                    {item.title}
+                                </h3>
 
-                                        <div className="mt-10 h-1 w-0 bg-primary/20 rounded-full transition-all duration-500 group-hover:w-16" />
-                                    </div>
-                                )}
+                                <p className={`text-sm font-light leading-relaxed max-w-xs ${isBlue ? "text-white/90" : "text-slate-500"
+                                    }`}>
+                                    {item.description}
+                                </p>
                             </div>
-                        ))}
-                    </div>
+                        );
+                    })}
                 </div>
-
-                <div className="mt-16 flex justify-center gap-2 lg:hidden">
-                    {features.map((_, i) => (
-                        <div
-                            key={i}
-                            className={`h-1.5 rounded-full transition-all duration-300 ${currentIndex === i ? 'w-6 bg-primary' : 'w-1.5 bg-primary/20'}`}
-                        />
-                    ))}
-                </div>
-            </div >
-        </section >
+            </div>
+        </section>
     );
 }
