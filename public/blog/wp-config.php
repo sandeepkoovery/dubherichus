@@ -91,8 +91,13 @@ define('WP_DEBUG', false);
 /** Dynamic URLs */
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
 $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
-define('WP_HOME', $protocol . '://' . $host . '/blog');
-define('WP_SITEURL', $protocol . '://' . $host . '/blog');
+if (strpos($host, 'localhost') !== false || $host === '127.0.0.1') {
+	$base_path = '/dubhemerak/public/blog';
+} else {
+	$base_path = '/blog';
+}
+define('WP_HOME', $protocol . '://' . $host . $base_path);
+define('WP_SITEURL', $protocol . '://' . $host . $base_path);
 
 /* Add any custom values between this line and the "stop editing" line. */
 
