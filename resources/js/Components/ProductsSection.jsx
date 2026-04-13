@@ -137,7 +137,7 @@ export function ProductsSection() {
                                             <p className="text-blue-400 font-bold tracking-[0.2em] text-[10px] md:text-xs mb-3 opacity-0 transition-opacity duration-700 delay-100 group-hover:opacity-100 uppercase drop-shadow-md">
                                                 {product.capacity}
                                             </p>
-                                            <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 drop-shadow-lg transform transition-all duration-700">
+                                            <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 drop-shadow-lg transform transition-all duration-700 uppercase">
                                                 {product.title}
                                             </h3>
 
