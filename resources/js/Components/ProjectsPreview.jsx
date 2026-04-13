@@ -7,43 +7,43 @@ const features = [
         type: "feature",
         icon: Droplets,
         label: "Features",
-        title: "Bulk Collection of Treated Water",
-        description: "Dubhe Richus water treatment systems allow for efficient bulk collection of clean, treated water."
+        title: "Complete Whole-Water Filtration Systems",
+        description: "High-performance whole-water filtration and purification systems built for homes, apartments, villas, hotels, and industries to deliver clean, safe water from every tap."
     },
     {
         type: "feature",
         icon: Layout,
         label: "Design, Features",
-        title: "Custom design",
-        description: "Dubhe Richus offers custom-designed water treatment systems tailored for commercial needs like hotels and hospitals."
+        title: "Zero-Electricity & Low-Maintenance Technology",
+        description: "Dubhe water filters work without electricity using gravity-based filtration, making them cost-effective, eco-friendly, and easy to maintain."
     },
     {
         type: "feature",
         icon: PenTool,
         label: "Features, Technology",
-        title: "Innovative Technology",
-        description: "Dubhe Richus's Innovative Technology ensures efficient water filtration by removing impurities like iron, smell, and turbidity."
+        title: "Customized Water Treatment Plants",
+        description: "Each water treatment plant is designed based on water source and usage requirements, ensuring the perfect solution for residential and commercial needs."
     },
     {
         type: "feature",
         icon: RefreshCw,
         label: "Features, Technology",
-        title: "Manual back washing",
-        description: "Manual backwashing in Dubhe Richus systems is recommended every 5-7 days, ensuring optimal filtration performance."
+        title: "Borewell & Hard Water Problem Experts",
+        description: "Specialized systems designed to remove iron, odor, turbidity, and hardness, making borewell and groundwater safe for daily use."
     },
     {
         type: "feature",
         icon: ZapOff,
         label: "Efficiency & Purity",
-        title: "No Electricity Required",
-        description: "Our high-efficiency filtration systems operate purely through water pressure, with zero power consumption."
+        title: "Sustainable & Chemical-Free Water Treatment",
+        description: "Built for long-lasting, chemical-free water purification that reduces operating costs while protecting the environment."
     },
     {
         type: "feature",
         icon: FlaskConical,
         label: "Eco-Friendly",
-        title: "No Chemical Used",
-        description: "A completely mechanical process that purifies water without adding harmful chemicals or synthetic agents."
+        title: "Research-Driven Innovation & Global Supply",
+        description: "Backed by continuous research and development, Dubhe Richus manufactures and supplies advanced water and wastewater treatment systems in India and worldwide."
     }
 ];
 
@@ -56,7 +56,7 @@ export function ProjectsPreview() {
                         Innovation & Impact
                     </p>
                     <h2 className="font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-                        Excellence in <span className="opacity-90">Every Detail</span>
+                        Why Choose <span className="opacity-90">Dubhe Richus</span>
                     </h2>
                     <div className="h-1 w-20 bg-primary/20 mt-8 mx-auto" />
                 </div>
@@ -68,8 +68,8 @@ export function ProjectsPreview() {
                             <div
                                 key={item.title}
                                 className={`flex flex-col items-center text-center p-12 md:p-16 h-full transition-all duration-500 ${isBlue
-                                        ? "bg-[#58a2cc] text-white"
-                                        : "bg-white text-slate-800"
+                                    ? "bg-[#58a2cc] text-white"
+                                    : "bg-white text-slate-800"
                                     }`}
                             >
                                 <div className={`mb-8 flex h-16 w-16 items-center justify-center rounded-2xl ${isBlue ? "text-white" : "text-[#58a2cc]"

@@ -7,6 +7,7 @@ import { ProductsSection } from "@/Components/ProductsSection";
 import { ProjectsPreview } from "@/Components/ProjectsPreview";
 import { ClientsSection } from "@/Components/ClientsSection";
 import { ContactSection } from "@/Components/ContactSection";
+import { IndustriesSection } from "@/Components/IndustriesSection";
 import { SiteFooter } from "@/Components/SiteFooter";
 
 export default function Welcome({ appName }) {
@@ -20,6 +21,7 @@ export default function Welcome({ appName }) {
                 <HeroSection />
                 <StatsBlock />
                 <AboutSection />
+                <IndustriesSection />
                 <ProductsSection />
                 <ProjectsPreview />
                 <ClientsSection />

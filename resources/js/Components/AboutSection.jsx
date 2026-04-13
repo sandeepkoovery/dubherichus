@@ -15,15 +15,15 @@ export function AboutSection() {
                 <div className="grid items-center gap-16 lg:grid-cols-2">
                     <div className="order-2 lg:order-1">
                         <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary/80">
-                            Engineering Purity
+                            Ensuring Complete Water Purity for Every Space
                         </p>
                         <h2 className="mb-8 font-serif text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
                             <span className="block text-balance opacity-90">
-                                Smarter Than <br /> You Think
+                                Advanced Water Treatment <br /> Company in India
                             </span>
                         </h2>
                         <p className="mb-10 max-w-xl text-lg font-light leading-relaxed text-muted-foreground/80 text-balance">
-                            At Dubhe Richus, our vision is to provide sustainable, chemical-free water treatment systems that last for decades. Our systems, powered by <span className="text-foreground font-medium">innovative Super Jet Technology</span>, are designed to efficiently purify water for homes and large-scale commercial applications. We continuously invest in research and development to enhance our filtration methods, ensuring cleaner, safer water for all. Our goal is to revolutionize water treatment by offering customizable, long-lasting systems that meet the specific needs of industries like hospitals, hotels, and institutions, while promoting environmentally friendly systems for a healthier planet.
+                            Clean and safe water is important for every home and business, and Dubhe Richus provides advanced whole-water filters designed for reliable, long-term use. Using Super Jet Technology. Our systems effectively filter and purify water for houses, apartments, and large commercial spaces. We continuously improve our water purifier systems to deliver better water quality, low maintenance, and long-lasting performance, ensuring consistent chemical-free water treatment for daily use. Our customized water purifiers are suitable for homes, hospitals, hotels, and institutions, making it easy to choose the right whole-house water filtration system for any need while supporting sustainable and eco-friendly water purification for a healthier future.
                         </p>
 
                         <ul className="mb-12 space-y-6">

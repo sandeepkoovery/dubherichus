@@ -97,7 +97,7 @@ export function ProductsSection() {
                         Product Gallery
                     </p>
                     <h2 className="font-serif text-4xl font-bold text-foreground md:text-5xl lg:text-6xl mb-6">
-                        PureFlow Insights
+                        Explore Our Products
                     </h2>
                     <div className="h-1 w-20 bg-primary/20 mb-8 mx-auto md:mx-0" />
                     <p className="text-muted-foreground/80 max-w-xl text-lg font-light leading-relaxed">
