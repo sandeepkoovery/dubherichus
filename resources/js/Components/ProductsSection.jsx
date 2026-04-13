@@ -38,7 +38,7 @@ const products = [
     {
         title: "Dubhe Merak",
         capacity: "Advanced Sewage Treatment",
-        image: "/images/product-etp.jpg",
+        image: null,
         href: "/products/dubhemerak",
     },
 ];
@@ -119,13 +119,17 @@ export function ProductsSection() {
                                 <div key={product.title} className="w-full md:w-1/3 flex-shrink-0">
                                     <Link
                                         href={appBase + product.href}
-                                        className="group relative block w-full h-[60vh] min-h-[500px] overflow-hidden bg-slate-900 border-r border-white/10"
+                                        className="group relative block w-full h-[60vh] min-h-[500px] overflow-hidden bg-slate-950 border-r border-white/10"
                                     >
-                                        <img
-                                            src={asset(product.image)}
-                                            alt={product.title}
-                                            className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:opacity-40 group-hover:scale-110"
-                                        />
+                                        {product.image ? (
+                                            <img
+                                                src={asset(product.image)}
+                                                alt={product.title}
+                                                className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:opacity-40 group-hover:scale-110"
+                                            />
+                                        ) : (
+                                            <div className="absolute inset-0 w-full h-full bg-blue-900/40 transition-all duration-1000 group-hover:bg-blue-800/60" />
+                                        )}
 
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent transition-opacity duration-700 opacity-60 group-hover:opacity-100" />
 
