@@ -32,13 +32,13 @@ const products = [
     {
         title: "Bayaweaver",
         capacity: "Custom capacity as per the use",
-        image: "/images/commercial.jpg",
+        image: "/images/bayaweaver.jpg",
         href: "/products/bayaweaver",
     },
     {
         title: "Dubhe Merak",
         capacity: "Advanced Sewage Treatment",
-        image: null,
+        image: "/images/dubhemerak.jpg",
         href: "/products/dubhemerak",
     },
 ];

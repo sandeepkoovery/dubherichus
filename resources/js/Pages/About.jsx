@@ -151,15 +151,11 @@ export default function About() {
             <Navbar />
             <main className="pt-20">
                 {/* Hero Section */}
-                <section className="relative overflow-hidden bg-[#020617] py-32 text-white">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent opacity-50" />
+                <section className="relative overflow-hidden bg-[#020617] py-40 md:py-60 text-white">
+                    <img src={asset('/images/about.jpeg')} alt="About Dubhe Richus" className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-black/10" />
                     <div className="mx-auto max-w-7xl px-6 text-center relative z-10">
-                        <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.5em] text-blue-400">
-                            Dubhe Richus
-                        </p>
-                        <h1 className="font-serif text-5xl font-bold md:text-7xl lg:text-8xl tracking-tight">
-                            Smarter <br /> <span className="text-blue-400">than you think</span>
-                        </h1>
+                        {/* Text removed per user request */}
                     </div>
                 </section>
 
