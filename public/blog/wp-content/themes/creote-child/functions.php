@@ -15,7 +15,7 @@ function creote_child_enqueue_styles()
         'creote-child-style',
         get_stylesheet_directory_uri() . '/style.css',
         array('creote-style'),
-        wp_get_theme()->get('Version')
+        filemtime(get_stylesheet_directory() . '/style.css')
     );
 }
 
