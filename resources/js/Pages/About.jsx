@@ -164,19 +164,25 @@ export default function About() {
                     <div className="mx-auto max-w-5xl px-6">
                         <div className="mb-16 text-center md:text-left">
                             <h2 className="font-serif text-4xl font-bold text-foreground md:text-5xl lg:text-6xl tracking-tight mb-8">
-                                About Dubherichus
+                                About Dubhe Richus
                             </h2>
                             <div className="space-y-12">
                                 <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
                                     Dubhe Richus began its journey in 1991 under the brand name <span className="text-foreground font-semibold">Richus</span>, pioneering water filtration and treatment services. Guided by a long-term vision for sustainability and global growth, the brand later evolved into <span className="text-foreground font-semibold">Dubhe Richus</span>. Today, we are one of India’s leading water treatment companies and the <span className="text-foreground font-semibold">largest manufacturer of iron removal water treatment plants in Kerala, India</span>. Our high-performance water filtration systems are designed to purify water from every source. Supported by a dedicated research and development team, we continuously drive innovation and deliver reliable, future-ready water treatment technology.
                                 </p>
                                 <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
-                                    In addition to supplying our product directly to customers, we also operate specialized divisions for Sewage Water Treatment (SWT) and Effluent Treatment Plants (ETP). Our goal is to ensure that both industrial and domestic water treatment plants offer professional systems for various needs. With our vast product portfolio, we ensure that our customers receive the most efficient and sustainable water treatment systems available.
+                                    Along with manufacturing water treatment systems, we provide complete support for diverse water and wastewater needs. We have dedicated divisions for <span className="text-foreground font-semibold">Sewage Treatment Plants (STP)</span> and <span className="text-foreground font-semibold">Effluent Treatment Plants (ETP)</span>, ensuring safe and efficient wastewater management for homes, businesses, and industries.
+                                </p>
+                                <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
+                                    Our products are built for reliable performance, easy operation, and long-term use. With a wide range of offerings and strong engineering expertise, we deliver custom-designed water treatment systems that ensure clean, safe, and high-quality water wherever it is needed across India.
                                 </p>
                             </div>
                         </div>
 
                         {/* Moved Team Grid */}
+                        <h2 className="font-serif text-3xl font-bold text-foreground tracking-tight mb-10 text-center md:text-left">
+                            The People Behind the Company
+                        </h2>
                         <div className="grid gap-12 md:grid-cols-2 max-w-4xl mx-auto">
                             {teamMembers.map((member, idx) => (
                                 <div key={member.name} className="group">
@@ -207,14 +213,14 @@ export default function About() {
                                 id: "vision",
                                 label: "Our Vision",
                                 title: "Our Vision",
-                                desc: "Dubhe Richus aims to contribute towards the development of a better social Infrastructure by providing reliable technologies and services with superior value with expertise in the field of water/ waste water treatment.",
+                                desc: "Dubhe Richus aims to make clean and safe water accessible through trusted water and wastewater treatment plant services. We work across India to deliver practical water treatment that enhances daily living and supports long-term environmental responsibility, backed by strong professional expertise.",
                                 img: "/images/vision-img.jpg"
                             },
                             {
                                 id: "rd",
                                 label: "R&D FOCUS",
-                                title: "Research and Development",
-                                desc: "Our research and development team is dedicated to the development and upgradation of water treatment sector through grassroots action, research, and education. We look forward to keep the sustainability of the local natural environment in the development process.",
+                                title: "Research & Development for Environmental Progress",
+                                desc: "Our R&D team continuously improves water treatment technologies through research, field experience, and innovation. We focus on improving product efficiency, performance, and sustainability while protecting natural water resources and ensuring environmentally responsible water management practices.",
                                 img: "/images/rd-img.jpg"
                             },
                             {
@@ -244,6 +250,9 @@ export default function About() {
                 {/* Screenshot-based Video Gallery Section */}
                 <section className="pb-24 bg-white">
                     <div className="mx-auto max-w-5xl px-6">
+                        <h2 className="font-serif text-3xl font-bold text-foreground tracking-tight mb-8 text-center md:text-left">
+                            Projects and Experiences
+                        </h2>
                         {/* Main Featured Video */}
                         <div className="relative mb-8">
                             <div className="relative aspect-video overflow-hidden shadow-2xl border border-black/5 bg-slate-900">
