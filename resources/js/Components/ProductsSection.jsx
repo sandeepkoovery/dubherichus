@@ -8,7 +8,7 @@ const products = [
     {
         title: "Classic",
         capacity: "800 - 1200 Ltr/ Day",
-        image: "/images/standard.jpg",
+        image: "/images/classic.jpg",
         href: "/products/classic",
     },
     {
@@ -100,8 +100,8 @@ export function ProductsSection() {
                         Explore Our Products
                     </h2>
                     <div className="h-1 w-20 bg-primary/20 mb-8 mx-auto md:mx-0" />
-                    <p className="text-muted-foreground/80 max-w-xl text-lg font-light leading-relaxed">
-                        Discover the perfect harmony of nature and <span className="text-primary font-medium">advanced engineering</span>.
+                    <p className="text-muted-foreground/80 max-w-2xl text-lg font-light leading-relaxed">
+                        Take a closer look at our products crafted to deliver pure, safe, and reliable water every day. Each system reflects our commitment to quality, innovation, and long-lasting performance.
                     </p>
                 </div>
 
