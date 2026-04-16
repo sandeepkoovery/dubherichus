@@ -149,13 +149,27 @@ export default function About() {
         <>
             <Head title="About Us - Dubhe Richus" />
             <Navbar />
-            <main className="pt-20">
+            <main className="pt-16 lg:pt-0">
                 {/* Hero Section */}
-                <section className="relative overflow-hidden bg-[#020617] py-40 md:py-60 text-white">
-                    <img src={asset('/images/about.jpeg')} alt="About Dubhe Richus" className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-black/10" />
-                    <div className="mx-auto max-w-7xl px-6 text-center relative z-10">
-                        {/* Text removed per user request */}
+                <section className="relative overflow-hidden bg-[#020617]">
+                    {/* Mobile/Tablet: No-crop image */}
+                    <div className="lg:hidden w-full">
+                        <img
+                            src={asset('/images/about.jpeg')}
+                            alt="About Dubhe Richus"
+                            className="w-full h-auto"
+                        />
+                    </div>
+                    {/* Desktop: Cinematic Hero */}
+                    <div
+                        className="hidden lg:block relative py-40 md:py-60"
+                        style={{
+                            backgroundImage: `url(${asset('/images/about.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
+                    >
+                        <div className="absolute inset-0 bg-black/10" />
                     </div>
                 </section>
 
@@ -168,10 +182,10 @@ export default function About() {
                             </h2>
                             <div className="space-y-12">
                                 <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
-                                    Dubhe Richus began its journey in 1991 under the brand name <span className="text-foreground font-semibold">Richus</span>, pioneering water filtration and treatment services. Guided by a long-term vision for sustainability and global growth, the brand later evolved into <span className="text-foreground font-semibold">Dubhe Richus</span>. Today, we are one of India’s leading water treatment companies and the <span className="text-foreground font-semibold">largest manufacturer of iron removal water treatment plants in Kerala, India</span>. Our high-performance water filtration systems are designed to purify water from every source. Supported by a dedicated research and development team, we continuously drive innovation and deliver reliable, future-ready water treatment technology.
+                                    Dubhe Richus began its journey in 1991 under the brand name Richus, pioneering water filtration and treatment services. Guided by a long-term vision for sustainability and global growth, the brand later evolved into Dubhe Richus. Today, we are one of India’s leading water treatment companies and the largest manufacturer of iron removal water treatment plants in Kerala, India. Our high-performance water filtration systems are designed to purify water from every source. Supported by a dedicated research and development team, we continuously drive innovation and deliver reliable, future-ready water treatment technology.
                                 </p>
                                 <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
-                                    Along with manufacturing water treatment systems, we provide complete support for diverse water and wastewater needs. We have dedicated divisions for <span className="text-foreground font-semibold">Sewage Treatment Plants (STP)</span> and <span className="text-foreground font-semibold">Effluent Treatment Plants (ETP)</span>, ensuring safe and efficient wastewater management for homes, businesses, and industries.
+                                    Along with manufacturing water treatment systems, we provide complete support for diverse water and wastewater needs. We have dedicated divisions for Sewage Treatment Plants (STP) and Effluent Treatment Plants (ETP), ensuring safe and efficient wastewater management for homes, businesses, and industries.
                                 </p>
                                 <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
                                     Our products are built for reliable performance, easy operation, and long-term use. With a wide range of offerings and strong engineering expertise, we deliver custom-designed water treatment systems that ensure clean, safe, and high-quality water wherever it is needed across India.

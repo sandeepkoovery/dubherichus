@@ -3,9 +3,10 @@ import { Link } from "@inertiajs/react";
 import { useAsset } from "@/hooks/useAsset";
 
 const productLinks = [
-    { label: "Medium", href: "/products/medium" },
-    { label: "Standard", href: "/products/standard" },
-    { label: "Commercial", href: "/products/commercial" },
+    { label: "CLASSIC (S)", href: "/products/classic" },
+    { label: "MEDIUM (M)", href: "/products/medium" },
+    { label: "STANDARD (L)", href: "/products/standard" },
+    { label: "COMMERCIAL (XL)", href: "/products/commercial" },
     { label: "Bayaweaver", href: "/products/bayaweaver" },
 ];
 

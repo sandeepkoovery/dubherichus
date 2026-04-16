@@ -12,7 +12,9 @@ export default function Commercial() {
 
     return (
         <>
-            <Head title="Commercial Water Treatment Plant – Dubhe Merak Industrial Systems" />
+            <Head title="Commercial & Industrial Water Treatment Plants in Kerala, India">
+                <meta name="description" content="Commercial water treatment plants in India by Dubhe Richus, offering customized water filtration for borewell and hard water using sustainable, chemical-free, low-maintenance technology." />
+            </Head>
             <Navbar />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -49,9 +51,9 @@ export default function Commercial() {
                                 <div className="absolute -inset-10 bg-blue-500/5 rounded-full blur-[80px]" />
                                 <div className="relative bg-slate-100/50 rounded-full p-10 md:p-20 border border-slate-200/50 backdrop-blur-sm shadow-inner">
                                     <img
-                                        src={asset('/images/product-etp.jpg')}
+                                        src={asset('/images/commercial.jpg')}
                                         alt="Commercial Series Plant"
-                                        className="w-[300px] md:w-[480px] h-auto drop-shadow-2xl transition-transform duration-700 hover:scale-105 saturate-50"
+                                        className="w-[300px] md:w-[480px] h-auto drop-shadow-2xl transition-transform duration-700 hover:scale-105"
                                     />
                                 </div>
                             </div>

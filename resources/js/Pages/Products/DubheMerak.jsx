@@ -12,7 +12,9 @@ export default function DubheMerak() {
 
     return (
         <>
-            <Head title="DUBHE MERAK Sewage Treatment Plant – Advanced Wastewater Solutions" />
+            <Head title=" Branded Water Filtration Plant - Dubhe Merak | Dubhe Richus">
+                <meta name="description" content="Choose the Dubhe Merak water treatment plant from Dubhe Richus for dependable iron removal, turbidity reduction, and clean water treatment across Kerala and India." />
+            </Head>
             <Navbar />
             <main className="pt-20">
                 {/* Hero Section */}

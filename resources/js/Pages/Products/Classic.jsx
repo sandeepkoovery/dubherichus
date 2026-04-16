@@ -12,7 +12,9 @@ export default function Classic() {
 
     return (
         <>
-            <Head title="Classic Water Treatment Plant – Dubhe Merak Clean Water Systems" />
+            <Head title="Classic Whole House Water Filters for Small Homes & Apartments">
+                <meta name="description" content="Compact water filter system for apartments and small homes in Kerala. Removes iron, odor and hardness with chemical-free, low-maintenance filtration for safe everyday water use." />
+            </Head>
             <Navbar />
             <main className="pt-20">
                 {/* Hero Section */}

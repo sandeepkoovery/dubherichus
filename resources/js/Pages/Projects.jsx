@@ -22,17 +22,32 @@ export default function Projects() {
         <>
             <Head title="Our Projects - Dubhe Richus" />
             <Navbar />
-            <main className="pt-20 bg-white">
-                <section className="py-24">
+            <main className="pt-16 lg:pt-0 bg-white">
+                {/* Responsive Banner Section */}
+                <section className="relative overflow-hidden bg-[#020617]">
+                    {/* Mobile/Tablet: No-crop image */}
+                    <div className="lg:hidden w-full">
+                        <img
+                            src={asset('/images/our_projects.jpeg')}
+                            alt="Our Projects"
+                            className="w-full h-auto"
+                        />
+                    </div>
+                    {/* Desktop: Cinematic Hero */}
+                    <div
+                        className="hidden lg:block relative py-40 md:py-60"
+                        style={{
+                            backgroundImage: `url(${asset('/images/our_projects.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
+                    >
+                        <div className="absolute inset-0 bg-black/10" />
+                    </div>
+                </section>
+
+                <section className="py-12 md:py-24">
                     <div className="mx-auto max-w-7xl px-6">
-                        <div className="mb-20 text-center">
-                            <h1 className="font-serif text-5xl font-bold tracking-tight text-foreground md:text-6xl mb-6">Our Projects</h1>
-                            <div className="mx-auto h-1 w-20 bg-primary/20 mb-6" />
-                            <p className="mx-auto max-w-2xl text-lg text-muted-foreground font-light leading-relaxed">
-                                From large-scale industrial plants to specialized commercial installations,
-                                explore how we're redefining <span className="text-primary font-medium">water purity</span> across India.
-                            </p>
-                        </div>
 
                         <div className="mb-16">
                             <h2 className="text-sm font-bold uppercase tracking-[0.4em] text-primary text-center mb-4">Portfolio</h2>

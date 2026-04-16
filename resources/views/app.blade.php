@@ -18,25 +18,31 @@
     <meta name="theme-color" content="#1a56db">
     <meta name="asset-url" content="{{ rtrim(asset(''), '/') }}">
 
-    <title inertia>{{ config('app.name', 'Dubhe Richus') }}</title>
+    <title inertia>{!! $meta_title ?? 'Advanced Water Filters for Home & Industry | Dubhe Richus' !!}</title>
+    <meta name="title" content="{{ $meta_title ?? 'Advanced Water Filters for Home & Industry | Dubhe Richus' }}">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Dubhe Richus - Premium High-Performance Brand Experience.">
+    <meta name="description"
+        content="{{ $meta_description ?? 'Dubhe Richus provides STP, ETP and water treatment systems in Kerala for homes and industries. Get clean, safe, long-lasting water with expert installation and support.' }}">
     <meta name="keywords" content="luxury, premium, performance, dubhe richus">
     <meta name="author" content="Dubhe Richus">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="{{ config('app.name', 'Dubhe Richus') }}">
-    <meta property="og:description" content="Dubhe Richus - Premium High-Performance Brand Experience.">
+    <meta property="og:title"
+        content="{{ $meta_title ?? 'Advanced Water Filters for Home & Industry | Dubhe Richus' }}">
+    <meta property="og:description"
+        content="{{ $meta_description ?? 'Dubhe Richus provides STP, ETP and water treatment systems in Kerala for homes and industries. Get clean, safe, long-lasting water with expert installation and support.' }}">
     <meta property="og:image" content="{{ asset('images/og-image.jpg') }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ url()->current() }}">
-    <meta property="twitter:title" content="{{ config('app.name', 'Dubhe Richus') }}">
-    <meta property="twitter:description" content="Dubhe Richus - Premium High-Performance Brand Experience.">
+    <meta property="twitter:title"
+        content="{{ $meta_title ?? 'Advanced Water Filters for Home & Industry | Dubhe Richus' }}">
+    <meta property="twitter:description"
+        content="{{ $meta_description ?? 'Dubhe Richus provides STP, ETP and water treatment systems in Kerala for homes and industries. Get clean, safe, long-lasting water with expert installation and support.' }}">
     <meta property="twitter:image" content="{{ asset('images/og-image.jpg') }}">
 
     <!-- Meta Pixel Code -->
@@ -44,7 +50,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;

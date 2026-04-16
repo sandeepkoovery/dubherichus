@@ -1,7 +1,9 @@
-import { MapPin, Droplets, Users } from "lucide-react";
+import { MapPin, Droplets, Users, Zap } from "lucide-react";
 
 export function StatsBlock() {
     const stats = [
+        { icon: Droplets, value: "3.2 Tr", label: "Litres Purified" },
+        { icon: Zap, value: "0kWh", label: "Energy Consumption" },
         { icon: MapPin, value: "7+", label: "States" },
         { icon: Droplets, value: "7", label: "Products" },
         { icon: Users, value: "32K+", label: "Clients" },

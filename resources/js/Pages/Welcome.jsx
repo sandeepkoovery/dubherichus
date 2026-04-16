@@ -13,8 +13,8 @@ import { SiteFooter } from "@/Components/SiteFooter";
 export default function Welcome({ appName }) {
     return (
         <>
-            <Head title="Home - Dubhe Richus">
-                <meta name="description" content="Welcome to Dubhe Richus - Your destination for premium high-performance brand experiences." />
+            <Head title="Advanced Water Filters for Home & Industry | Dubhe Richus">
+                <meta name="description" content="Dubhe Richus provides STP, ETP and water treatment systems in Kerala for homes and industries. Get clean, safe, long-lasting water with expert installation and support." />
             </Head>
             <Navbar />
             <main>

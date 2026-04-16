@@ -12,7 +12,9 @@ export default function Standard() {
 
     return (
         <>
-            <Head title="Standard Water Treatment Plant – Dubhe Merak Clean Water Systems" />
+            <Head title="Whole House Water Filters in Kerala | Dubhe Richus">
+                <meta name="description" content="High-capacity whole house water filtration system for large homes and commercial spaces. Advanced iron removal and hard water treatment with long-lasting, eco-friendly performance." />
+            </Head>
             <Navbar />
             <main className="pt-20">
                 {/* Hero Section */}

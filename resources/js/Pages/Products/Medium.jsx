@@ -12,7 +12,9 @@ export default function Medium() {
 
     return (
         <>
-            <Head title="Medium Water Treatment Plant – Dubhe Merak Clean Water Systems" />
+            <Head title="Water Purification Filters for Medium Homes (M) | Dubhe Richus">
+                <meta name="description" content="Reliable home water purification system designed for family houses and villas. Treat borewell and hard water with eco-friendly filtration for clean water from every tap." />
+            </Head>
             <Navbar />
             <main className="pt-20">
                 {/* Hero Section */}

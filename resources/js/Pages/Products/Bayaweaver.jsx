@@ -12,7 +12,9 @@ export default function Bayaweaver() {
 
     return (
         <>
-            <Head title="Bayaweaver Water Treatment Systems – Commercial Clean Water Systems by Dubhe Merak" />
+            <Head title="Automatic Water Treatment Plant in Kerala, India - Bayaweaver">
+                <meta name="description" content="Bayaweaver is an AI-powered automatic water filtration system from Dubhe Richus. Complete water treatment with chemical-free, low-maintenance performance for homes and industries." />
+            </Head>
             <Navbar />
             <main className="pt-20">
                 {/* Hero Section */}

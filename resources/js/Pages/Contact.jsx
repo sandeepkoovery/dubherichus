@@ -3,14 +3,38 @@ import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
 import { ContactSection } from "@/Components/ContactSection";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { useAsset } from "@/hooks/useAsset";
 
 export default function Contact() {
+    const asset = useAsset();
     return (
         <div className="min-h-screen bg-white">
             <Head title="Contact Us - Dubhe Richus" />
             <Navbar />
 
-            <main className="pt-20 pb-20">
+            <main className="pt-16 lg:pt-0 pb-20">
+                {/* Responsive Banner Section */}
+                <section className="relative overflow-hidden bg-[#020617]">
+                    {/* Mobile/Tablet: No-crop image */}
+                    <div className="lg:hidden w-full">
+                        <img
+                            src={asset('/images/contactus.jpeg')}
+                            alt="Contact Us"
+                            className="w-full h-auto"
+                        />
+                    </div>
+                    {/* Desktop: Cinematic Hero */}
+                    <div
+                        className="hidden lg:block relative py-40 md:py-60"
+                        style={{
+                            backgroundImage: `url(${asset('/images/contactus.jpeg')})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
+                    >
+                        <div className="absolute inset-0 bg-black/10" />
+                    </div>
+                </section>
                 {/* Main Contact Section (Original Component) */}
                 <ContactSection />
 

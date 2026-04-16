@@ -14,10 +14,10 @@ const navLinks = [
             {
                 label: "Manual",
                 links: [
-                    { label: "Classic (S)", href: "/products/classic" },
-                    { label: "Standard (M)", href: "/products/standard" },
-                    { label: "Medium (L)", href: "/products/medium" },
-                    { label: "Commercial (XL)", href: "/products/commercial" },
+                    { label: "CLASSIC (S)", href: "/products/classic" },
+                    { label: "MEDIUM (M)", href: "/products/medium" },
+                    { label: "STANDARD (L)", href: "/products/standard" },
+                    { label: "COMMERCIAL (XL)", href: "/products/commercial" },
                 ]
             },
             {
