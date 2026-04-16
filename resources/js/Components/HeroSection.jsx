@@ -21,7 +21,7 @@ export function HeroSection() {
             heading: ""
         },
         {
-            image: asset('/images/Banner-3.png'),
+            image: asset('/images/banner3.png'),
             heading: ""
         },
     ];
