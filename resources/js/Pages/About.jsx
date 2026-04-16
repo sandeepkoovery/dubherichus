@@ -235,7 +235,7 @@ export default function About() {
                                 label: "R&D FOCUS",
                                 title: "Research & Development for Environmental Progress",
                                 desc: "Our R&D team continuously improves water treatment technologies through research, field experience, and innovation. We focus on improving product efficiency, performance, and sustainability while protecting natural water resources and ensuring environmentally responsible water management practices.",
-                                img: "/images/rd-img.jpg"
+                                img: "/images/research.jpeg"
                             },
                             {
                                 id: "tech",
