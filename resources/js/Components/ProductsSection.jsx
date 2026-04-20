@@ -96,7 +96,10 @@ export function ProductsSection() {
                     <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                         Product Gallery
                     </p>
-                    <h2 className="font-serif text-4xl font-bold text-foreground md:text-5xl lg:text-6xl mb-6">
+                    <h2 
+                        className="font-sans text-4xl tracking-tight text-foreground md:text-5xl lg:text-6xl mb-6"
+                        style={{ fontWeight: '300' }}
+                    >
                         Explore Our Products
                     </h2>
                     <div className="h-1 w-20 bg-primary/20 mb-8 mx-auto md:mx-0" />
@@ -137,7 +140,10 @@ export function ProductsSection() {
                                             <p className="text-blue-400 font-bold tracking-[0.2em] text-[10px] md:text-xs mb-3 opacity-0 transition-opacity duration-700 delay-100 group-hover:opacity-100 uppercase drop-shadow-md">
                                                 {product.capacity}
                                             </p>
-                                            <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 drop-shadow-lg transform transition-all duration-700 uppercase">
+                                            <h3 
+                                                className="text-3xl md:text-4xl font-sans tracking-tight mb-6 drop-shadow-lg transform transition-all duration-700 uppercase"
+                                                style={{ color: '#ffffff', fontWeight: '300' }}
+                                            >
                                                 {product.title}
                                             </h3>
 

@@ -51,7 +51,12 @@ export default function Projects() {
 
                         <div className="mb-16">
                             <h2 className="text-sm font-bold uppercase tracking-[0.4em] text-primary text-center mb-4">Portfolio</h2>
-                            <h3 className="text-3xl font-serif text-center" style={{ color: '#0f172a' }}>Commercial Excellence</h3>
+                            <h3 
+                                className="text-3xl font-sans text-center"
+                                style={{ color: '#262626', fontWeight: '300' }}
+                            >
+                                Commercial Excellence
+                            </h3>
                         </div>
 
                         <div className="grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -75,13 +80,13 @@ export default function Projects() {
 
                                     {/* Project Labels Overlay with animation */}
                                     <div className="absolute bottom-8 left-0 flex flex-col items-start gap-1 transform transition-all duration-700 ease-out group-hover:translate-x-3">
-                                        <div className="bg-[#0f172a] px-6 py-2 shadow-2xl transition-all duration-500 group-hover:bg-primary">
+                                        <div className="bg-[#262626] px-6 py-2 shadow-2xl transition-all duration-500 group-hover:bg-primary">
                                             <span className="text-[14px] font-bold tracking-wider text-white uppercase">
                                                 {project.title}
                                             </span>
                                         </div>
                                         <div className="bg-white/95 backdrop-blur-md px-4 py-1.5 shadow-xl transition-all duration-500">
-                                            <span className="text-[11px] font-semibold tracking-widest text-[#0f172a]/70 uppercase">
+                                            <span className="text-[11px] font-semibold tracking-widest text-[#262626]/70 uppercase">
                                                 {project.location}
                                             </span>
                                         </div>
@@ -95,7 +100,10 @@ export default function Projects() {
                 <section className="py-32 bg-[#020617] relative overflow-hidden">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent opacity-50" />
                     <div className="mx-auto max-w-4xl px-6 relative z-10">
-                        <h2 className="font-serif text-4xl font-bold mb-8 text-white leading-relaxed">
+                        <h2 
+                            className="font-sans text-4xl mb-8 text-white leading-relaxed"
+                            style={{ fontWeight: '300' }}
+                        >
                             Smarter Than You Think
                         </h2>
                         <div className="mx-auto h-px w-24 bg-blue-500/50 mb-8" />

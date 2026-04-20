@@ -63,7 +63,20 @@
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=1302509291728511&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
+    <!-- Premium Fonts: Public Sans (BMW-like Geometric Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --font-sans: 'Public Sans', ui-sans-serif, system-ui, sans-serif;
+            --font-serif: 'Public Sans', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+        }
+    </style>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/images/icon.svg">

@@ -25,7 +25,10 @@ export function IndustriesSection() {
 
             <div className="mx-auto max-w-7xl px-6 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="font-serif text-4xl font-bold text-blue-950 md:text-5xl mb-4">
+                    <h2 
+                        className="font-sans text-4xl md:text-5xl mb-4"
+                        style={{ fontWeight: '300', color: '#262626' }}
+                    >
                         Industries We Serve
                     </h2>
                     <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
@@ -40,7 +43,10 @@ export function IndustriesSection() {
                             <div className="mb-4 p-4 rounded-xl bg-blue-50 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
                                 {industry.icon}
                             </div>
-                            <h3 className="text-center text-sm font-bold text-slate-700 leading-snug">
+                            <h3 
+                                className="text-center text-sm leading-snug"
+                                style={{ color: '#262626', fontWeight: '300' }}
+                            >
                                 {industry.name}
                             </h3>
                         </div>

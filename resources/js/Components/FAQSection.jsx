@@ -37,7 +37,10 @@ export const FAQSection = () => {
                         HAVE QUESTIONS?
                     </span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight uppercase">
+                <h2 
+                    className="text-4xl md:text-5xl mb-6 tracking-tight uppercase"
+                    style={{ fontWeight: '300', color: '#262626' }}
+                >
                     FREQUENTLY ASKED QUESTIONS
                 </h2>
                 <p className="text-gray-500 text-lg md:text-xl">

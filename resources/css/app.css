@@ -1,36 +1,16 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-/* BMW India Precise Typography */
-@font-face {
-  font-family: 'BMWTypeNextLatin';
-  src: url('https://www.bmw.in/etc.clientlibs/bmw/components/content/global/v1/clientlibs/fonts/resources/BMWTypeNextLatin-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'BMWTypeNextLatin';
-  src: url('https://www.bmw.in/etc.clientlibs/bmw/components/content/global/v1/clientlibs/fonts/resources/BMWTypeNextLatin-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'BMWTypeNextLatin';
-  src: url('https://www.bmw.in/etc.clientlibs/bmw/components/content/global/v1/clientlibs/fonts/resources/BMWTypeNextLatin-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+/* 
+Note: Fonts are injected via Google Fonts in app.blade.php for reliability.
+Primary: Public Sans (Geometric)
+*/
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
   --background: oklch(0.99 0.005 240);
-  --foreground: oklch(0.15 0.02 240);
+  --foreground: #262626;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.15 0.02 240);
   --popover: oklch(1 0 0);
@@ -67,8 +47,8 @@
 }
 
 @theme inline {
-  --font-sans: 'BMWTypeNextLatin', 'Arial', Helvetica, sans-serif;
-  --font-serif: 'BMWTypeNextLatin', 'Arial', Helvetica, sans-serif;
+  --font-sans: 'Public Sans', 'Inter', 'Arial', Helvetica, sans-serif;
+  --font-serif: 'Public Sans', 'Arial', Helvetica, sans-serif;
   --font-mono: 'Geist Mono', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -102,7 +82,23 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Public Sans', 'Inter', sans-serif;
+    letter-spacing: -0.01em;
+    font-weight: 400;
+    color: #262626 !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Public Sans', sans-serif;
+    @apply tracking-tight;
+    font-weight: 300;
+    color: #262626 !important;
   }
 
   html {

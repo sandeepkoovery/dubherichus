@@ -158,13 +158,19 @@ export function HeroSection() {
                 <div className="relative flex min-h-screen flex-col items-center justify-end pb-20 px-6 text-center" style={{ zIndex: 10 }}>
                     <div className="mx-auto max-w-5xl w-full">
                         <div className="mb-4 flex justify-center">
-                            <span className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/40 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-blue-900 backdrop-blur-sm shadow-xl">
+                            <span 
+                                className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/40 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.3em] backdrop-blur-sm shadow-xl"
+                                style={{ color: '#262626' }}
+                            >
                                 <span className="h-1.5 w-1.5 rounded-full bg-blue-600 animate-pulse" />
                                 Advanced Water Treatment in India
                             </span>
                         </div>
                         {banners[currentSlide].heading && (
-                            <h1 className="mb-6 font-serif text-5xl font-bold leading-[1.2] tracking-tight text-blue-950 lg:text-6xl transition-all duration-700 drop-shadow-sm">
+                            <h1 
+                                className="mb-6 font-sans text-5xl tracking-tighter leading-[1.1] lg:text-7xl transition-all duration-700 drop-shadow-sm"
+                                style={{ color: '#262626', fontWeight: '300' }}
+                            >
                                 {banners[currentSlide].heading}
                             </h1>
                         )}

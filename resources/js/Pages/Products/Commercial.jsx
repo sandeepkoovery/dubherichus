@@ -22,10 +22,13 @@ export default function Commercial() {
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
                             <div>
-                                <h1 className="mb-2 font-serif text-5xl font-bold tracking-tight text-slate-900 md:text-6xl">
+                                <h1 className="mb-2 font-sans text-5xl font-bold tracking-tight text-slate-900 md:text-6xl">
                                     Commercial
                                 </h1>
-                                <h2 className="mb-8 font-serif text-3xl font-light text-slate-500 md:text-4xl">
+                                <h2 
+                                    className="mb-8 font-sans text-3xl md:text-4xl"
+                                    style={{ color: '#262626', fontWeight: '300' }}
+                                >
                                     Water Treatment Plant
                                 </h2>
 
@@ -105,7 +108,10 @@ export default function Commercial() {
 
                             {/* Column 3: Detailed Text Content */}
                             <div className="lg:col-span-6 flex flex-col justify-center py-4">
-                                <h3 className="text-4xl font-serif font-bold text-slate-900 mb-8 leading-[1.15]">
+                                <h3 
+                                    className="text-4xl font-sans mb-8 leading-[1.15]"
+                                    style={{ color: '#262626', fontWeight: '300' }}
+                                >
                                     Complete Water Treatment Systems for Commercial & Industrial Facilities
                                 </h3>
                                 <div className="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
@@ -128,7 +134,10 @@ export default function Commercial() {
                 <section className="py-20 bg-white">
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="mb-12">
-                            <h2 className="font-serif text-3xl font-bold text-slate-900 mb-1">
+                            <h2 
+                                className="font-sans text-3xl mb-1"
+                                style={{ color: '#262626', fontWeight: '300' }}
+                            >
                                 What Our Commercial Water Treatment Systems Offer
                             </h2>
                             <p className="text-slate-500 font-light italic">Efficient systems for large facilities / what our commercial range offer</p>
@@ -162,7 +171,12 @@ export default function Commercial() {
                         {/* No Electricity */}
                         <div className="grid lg:grid-cols-2 gap-12 items-stretch">
                             <div className="flex flex-col justify-center bg-white p-12 rounded-[40px] border border-slate-100 shadow-sm">
-                                <h3 className="text-4xl font-serif font-bold text-slate-900 mb-6">No Electricity Required</h3>
+                                <h3 
+                                    className="text-4xl font-sans mb-6"
+                                    style={{ color: '#262626', fontWeight: '300' }}
+                                >
+                                    No Electricity Required
+                                </h3>
                                 <p className="text-lg text-slate-600 font-light leading-relaxed">
                                     DUBHE Merak provides standard home water treatment systems which work perfectly without any electricity. This makes them cost-effective and easy to maintain even in areas where power outages are common. No more worrying about electricity bills or power failures affecting your clean water supply.
                                 </p>
@@ -196,7 +210,12 @@ export default function Commercial() {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 flex flex-col justify-center bg-white p-12 rounded-[40px] border border-slate-100 shadow-sm">
-                                <h3 className="text-4xl font-serif font-bold text-slate-900 mb-6">No Chemical used</h3>
+                                <h3 
+                                    className="text-4xl font-sans mb-6"
+                                    style={{ color: '#262626', fontWeight: '300' }}
+                                >
+                                    No Chemical used
+                                </h3>
                                 <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">
                                     DUBHE Water purification systems use natural filtering media to remove impurities from your water supply. This means no chemicals are added during the treatment process, resulting in cleaner and healthier water for your family.
                                 </p>
@@ -211,7 +230,10 @@ export default function Commercial() {
                 {/* Final CTA Banner */}
                 <section className="bg-primary py-20 text-white relative">
                     <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-10">
-                        <h2 className="text-3xl md:text-4xl font-bold text-center md:text-left max-w-2xl leading-tight">
+                        <h2 
+                            className="text-3xl md:text-4xl text-center md:text-left max-w-2xl leading-tight"
+                            style={{ color: '#ffffff', fontWeight: '300' }}
+                        >
                             Experience clean water today! contact Dubhe Richus!
                         </h2>
                         <Button asChild className="bg-white text-blue-700 hover:bg-slate-100 font-bold px-10 h-14 rounded-md text-sm tracking-widest shadow-xl transition-all hover:-translate-y-1 active:translate-y-0">

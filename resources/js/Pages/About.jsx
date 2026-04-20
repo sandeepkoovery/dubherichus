@@ -177,7 +177,10 @@ export default function About() {
                 <section className="pt-24 pb-24 bg-white">
                     <div className="mx-auto max-w-5xl px-6">
                         <div className="mb-16 text-center md:text-left">
-                            <h2 className="font-serif text-4xl font-bold text-foreground md:text-5xl lg:text-6xl tracking-tight mb-8">
+                            <h2 
+                                className="font-sans text-4xl tracking-tight text-foreground md:text-5xl lg:text-6xl mb-8"
+                                style={{ fontWeight: '300' }}
+                            >
                                 About Dubhe Richus
                             </h2>
                             <div className="space-y-12">
@@ -194,7 +197,10 @@ export default function About() {
                         </div>
 
                         {/* Moved Team Grid */}
-                        <h2 className="font-serif text-3xl font-bold text-foreground tracking-tight mb-10 text-center md:text-left">
+                        <h2 
+                            className="font-sans text-3xl tracking-tight text-foreground mb-10 text-center md:text-left"
+                            style={{ fontWeight: '300' }}
+                        >
                             The People Behind the Company
                         </h2>
                         <div className="grid gap-12 md:grid-cols-2 max-w-4xl mx-auto">
@@ -204,7 +210,12 @@ export default function About() {
                                         <img src={asset(`/images/team-${idx}.jpg`)} alt={member.name} className="w-full h-full object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-bottom p-8 items-end">
                                             <div className="text-left text-white">
-                                                <h3 className="text-xl font-bold tracking-tight">{member.name}</h3>
+                                                <h3 
+                                                    className="text-xl tracking-tight"
+                                                    style={{ fontWeight: '300' }}
+                                                >
+                                                    {member.name}
+                                                </h3>
                                                 <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-blue-400">{member.role}</p>
                                             </div>
                                         </div>
@@ -250,7 +261,12 @@ export default function About() {
                                     <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                                         {item.label}
                                     </p>
-                                    <h2 className="mb-8 font-serif text-4xl font-bold leading-tight">{item.title}</h2>
+                                    <h2 
+                                        className="mb-8 font-sans text-4xl tracking-tight leading-tight"
+                                        style={{ fontWeight: '300' }}
+                                    >
+                                        {item.title}
+                                    </h2>
                                     <p className="text-lg font-light leading-relaxed text-muted-foreground/80">{item.desc}</p>
                                 </div>
                                 <div className={`relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
@@ -264,7 +280,10 @@ export default function About() {
                 {/* Screenshot-based Video Gallery Section */}
                 <section className="pb-24 bg-white">
                     <div className="mx-auto max-w-5xl px-6">
-                        <h2 className="font-serif text-3xl font-bold text-foreground tracking-tight mb-8 text-center md:text-left">
+                        <h2 
+                            className="font-sans text-3xl tracking-tight text-foreground mb-8 text-center md:text-left"
+                            style={{ fontWeight: '300' }}
+                        >
                             Projects and Experiences
                         </h2>
                         {/* Main Featured Video */}

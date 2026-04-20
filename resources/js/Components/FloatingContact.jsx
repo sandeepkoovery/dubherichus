@@ -35,7 +35,12 @@ export function FloatingContact() {
                                 <MessageCircle className="h-6 w-6" />
                             </div>
                             <div>
-                                <h3 className="text-sm font-bold">Let's chat on WhatsApp</h3>
+                                <h3 
+                                    className="text-sm"
+                                    style={{ fontWeight: '300' }}
+                                >
+                                    Let's chat on WhatsApp
+                                </h3>
                                 <div className="flex items-center gap-1.5">
                                     <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
                                     <span className="text-[10px] opacity-80">Online</span>

@@ -37,7 +37,10 @@ export function ContactSection() {
                         <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                             CONTACT US
                         </span>
-                        <h2 className="mt-6 font-serif text-4xl font-bold leading-[1.1] tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                        <h2 
+                            className="mt-6 font-sans text-4xl leading-[1.1] tracking-tight text-foreground md:text-5xl lg:text-6xl"
+                            style={{ fontWeight: '300' }}
+                        >
                             Have questions?<br />
                             Get in touch!
                         </h2>
@@ -61,7 +64,7 @@ export function ContactSection() {
                                         <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/60">
                                             {item.label}
                                         </p>
-                                        <p className="mt-1 text-lg font-bold tracking-tight text-foreground">
+                                        <p className="mt-1 text-lg font-semibold tracking-tight text-foreground">
                                             {item.value}
                                         </p>
                                     </div>
@@ -73,11 +76,14 @@ export function ContactSection() {
                     {/* Right Column - Form Card */}
                     <div>
                         {recentlySuccessful ? (
-                            <div className="flex flex-col items-center justify-center rounded-3xl border border-[#0f172a]/5 bg-white px-10 py-20 text-center shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)]">
+                            <div className="flex flex-col items-center justify-center rounded-3xl border border-[#262626]/5 bg-white px-10 py-20 text-center shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)]">
                                 <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-green-50">
                                     <CheckCircle className="h-10 w-10 text-green-500" />
                                 </div>
-                                <h3 className="font-serif text-3xl font-bold text-foreground">
+                                <h3 
+                                    className="font-sans text-3xl tracking-tight"
+                                    style={{ color: '#262626', fontWeight: '300' }}
+                                >
                                     Message Request Logged
                                 </h3>
                                 <p className="mt-4 max-w-sm text-[15px] font-light leading-relaxed text-muted-foreground">
@@ -88,10 +94,13 @@ export function ContactSection() {
                         ) : (
                             <form
                                 onSubmit={handleSubmit}
-                                className="rounded-[2.5rem] border border-[#0f172a]/5 bg-white px-10 py-12 shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)] md:px-14 md:py-16"
+                                className="rounded-[2.5rem] border border-[#262626]/5 bg-white px-10 py-12 shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)] md:px-14 md:py-16"
                                 style={{ animation: 'fade-in-right 1s ease-out both' }}
                             >
-                                <h3 className="font-serif text-2xl font-bold text-foreground tracking-tight">
+                                <h3 
+                                    className="font-sans text-2xl tracking-tight"
+                                    style={{ color: '#262626', fontWeight: '300' }}
+                                >
                                     Inquiry Form
                                 </h3>
                                 <p className="mt-2 text-[15px] font-light text-muted-foreground/80">

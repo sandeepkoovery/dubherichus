@@ -104,7 +104,10 @@ export function ClientsSection() {
                     <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary/60">
                         Our Clients
                     </p>
-                    <h2 className="mb-6 font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                    <h2 
+                        className="mb-6 font-sans text-4xl tracking-tight text-foreground md:text-5xl lg:text-6xl"
+                        style={{ fontWeight: '300' }}
+                    >
                         Our Esteemed Clients & Partners
                     </h2>
                     <div className="mx-auto h-1 w-20 bg-primary/20" />
@@ -148,7 +151,10 @@ export function ClientsSection() {
                     <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                         Real Experiences
                     </p>
-                    <h2 className="mb-6 font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl opacity-90">
+                    <h2 
+                        className="mb-6 font-sans text-4xl tracking-tight text-foreground md:text-5xl lg:text-6xl opacity-90"
+                        style={{ fontWeight: '300' }}
+                    >
                         Quality in Every Review
                     </h2>
                     <div className="mx-auto h-1 w-20 bg-primary/20" />

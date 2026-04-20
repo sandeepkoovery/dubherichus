@@ -15,10 +15,10 @@ export function StatsBlock() {
                 <div className="flex flex-wrap items-center justify-center gap-12 md:gap-32">
                     {stats.map((stat, idx) => (
                         <div key={idx} className="flex flex-col items-center group transition-transform duration-500 hover:-translate-y-1">
-                            <span className="text-4xl md:text-5xl font-serif font-black text-blue-950 tracking-tighter">
+                            <span className="text-4xl md:text-5xl font-sans font-bold text-blue-950 tracking-tighter">
                                 {stat.value}
                             </span>
-                            <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-blue-600/70 mt-1">
+                            <span className="text-[11px] font-medium uppercase tracking-[0.3em] text-blue-600/70 mt-1">
                                 {stat.label}
                             </span>
                         </div>

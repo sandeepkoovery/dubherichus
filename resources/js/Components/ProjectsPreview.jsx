@@ -55,7 +55,10 @@ export function ProjectsPreview() {
                     <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                         Innovation & Impact
                     </p>
-                    <h2 className="font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                    <h2 
+                        className="font-sans text-4xl tracking-tight text-foreground md:text-5xl lg:text-6xl"
+                        style={{ fontWeight: '300' }}
+                    >
                         Why Choose <span className="opacity-90">Dubhe Richus</span>
                     </h2>
                     <div className="h-1 w-20 bg-primary/20 mt-8 mx-auto" />
@@ -77,7 +80,10 @@ export function ProjectsPreview() {
                                     <item.icon className="h-10 w-10" strokeWidth={1.5} />
                                 </div>
 
-                                <h3 className="mb-6 text-xl font-bold tracking-widest uppercase">
+                                <h3 
+                                    className="mb-6 text-xl tracking-widest uppercase"
+                                    style={{ fontWeight: '300' }}
+                                >
                                     {item.title}
                                 </h3>
 

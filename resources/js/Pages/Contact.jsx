@@ -43,7 +43,12 @@ export default function Contact() {
                     <div className="grid gap-8 md:grid-cols-2">
                         {/* Cochin */}
                         <div className="rounded-[2.5rem] bg-white p-12 shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-slate-50 transition-all hover:shadow-[0_30px_60px_rgba(0,0,0,0.06)] group">
-                            <h3 className="font-serif text-3xl font-bold text-slate-900 mb-8">Cochin</h3>
+                            <h3 
+                                className="font-sans text-3xl font-bold mb-8"
+                                style={{ color: '#262626', fontWeight: '300' }}
+                            >
+                                Cochin
+                            </h3>
                             <div className="space-y-6">
                                 <div className="flex gap-4">
                                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
@@ -71,7 +76,12 @@ export default function Contact() {
 
                         {/* Kannur */}
                         <div className="rounded-[2.5rem] bg-white p-12 shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-slate-50 transition-all hover:shadow-[0_30px_60px_rgba(0,0,0,0.06)] group">
-                            <h3 className="font-serif text-3xl font-bold text-slate-900 mb-8">Kannur</h3>
+                            <h3 
+                                className="font-sans text-3xl font-bold mb-8"
+                                style={{ color: '#262626', fontWeight: '300' }}
+                            >
+                                Kannur
+                            </h3>
                             <div className="space-y-6">
                                 <div className="flex gap-4">
                                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">

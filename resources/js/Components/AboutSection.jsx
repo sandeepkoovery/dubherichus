@@ -14,10 +14,16 @@ export function AboutSection() {
             <div className="mx-auto max-w-7xl px-6">
                 <div className="grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
                     <div className="order-2 lg:order-1 flex flex-col justify-center py-4">
-                        <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary/80">
+                        <p 
+                            className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em]"
+                            style={{ color: '#262626' }}
+                        >
                             Ensuring Complete Water Purity for Every Space
                         </p>
-                        <h2 className="mb-8 font-serif text-3xl font-bold leading-tight text-foreground md:text-4xl lg:text-[2.75rem]">
+                        <h2 
+                            className="mb-8 font-sans text-3xl tracking-tight leading-tight md:text-4xl lg:text-[2.75rem]"
+                            style={{ color: '#262626', fontFamily: "'Public Sans', sans-serif", fontWeight: '300' }}
+                        >
                             Advanced Water Treatment <br className="hidden lg:block" /> Company in India
                         </h2>
                         <p className="text-lg font-light leading-relaxed text-muted-foreground/80">
@@ -36,7 +42,7 @@ export function AboutSection() {
                         <div className="absolute -bottom-8 -left-8 rounded-2xl border border-slate-200 bg-white p-8 shadow-2xl backdrop-blur-xl md:p-10 transition-transform duration-700 hover:scale-110">
                             <div className="text-center">
                                 <p className="font-sans text-5xl font-black text-primary">33+</p>
-                                <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500">Years of Legacy</p>
+                                <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.3em] text-slate-500">Years of Legacy</p>
                             </div>
                         </div>
                     </div>
