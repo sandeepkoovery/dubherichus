@@ -206,12 +206,12 @@ export default function About() {
                         >
                             The People Behind the Company
                         </h2>
-                        <div className="grid gap-12 md:grid-cols-2 max-w-4xl mx-auto">
+                        <div className="grid gap-12 md:grid-cols-2">
                             {teamMembers.map((member, idx) => (
                                 <div key={member.name} className="group">
                                     <div className="relative mb-6 aspect-square rounded-[2.5rem] overflow-hidden shadow-xl transition-transform duration-700 group-hover:scale-105">
                                         <img src={asset(`/images/team-${idx}.jpg`)} alt={member.name} className="w-full h-full object-cover" />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-bottom p-8 items-end">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex p-10 items-end">
                                             <div className="text-left text-white">
                                                 <h3 
                                                     className="text-xl tracking-tight"
