@@ -211,15 +211,15 @@ export default function About() {
                                 <div key={member.name} className="group">
                                     <div className="relative mb-6 aspect-square rounded-[2.5rem] overflow-hidden shadow-xl transition-transform duration-700 group-hover:scale-105">
                                         <img src={asset(`/images/team-${idx}.jpg`)} alt={member.name} className="w-full h-full object-cover" />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex p-10 items-end">
-                                            <div className="text-left text-white">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex p-10 items-end z-10">
+                                            <div className="text-left text-white relative z-20">
                                                 <h3 
                                                     className="text-xl tracking-tight"
-                                                    style={{ fontWeight: '300' }}
+                                                    style={{ fontWeight: '300', color: 'white' }}
                                                 >
                                                     {member.name}
                                                 </h3>
-                                                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-blue-400">{member.role}</p>
+                                                <p className="text-[10px] font-bold uppercase tracking-[0.3em]" style={{ color: '#60a5fa' }}>{member.role}</p>
                                             </div>
                                         </div>
                                     </div>
