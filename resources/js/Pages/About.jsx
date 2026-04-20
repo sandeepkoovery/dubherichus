@@ -10,7 +10,7 @@ const teamMembers = [
     { name: "Jacob Richard", role: "Managing Director", icon: Users },
 ];
 
-function VideoCard({ id, title, isMain = false, onNext, onPrev }) {
+function VideoCard({ id, title, isMain = false, onNext, onPrev, customThumbnail = null }) {
     const [isPlaying, setIsPlaying] = useState(false);
 
     // Reset playback state when the video changes
@@ -37,8 +37,9 @@ function VideoCard({ id, title, isMain = false, onNext, onPrev }) {
             onClick={() => isMain && setIsPlaying(true)}
         >
             <img
-                src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+                src={customThumbnail || `https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
                 onError={(e) => {
+                    if (customThumbnail) return;
                     e.target.onerror = null;
                     e.target.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
                 }}
@@ -111,12 +112,14 @@ export default function About() {
         {
             id: "dG_qwixf-2M",
             title: "Crystal Clear Solutions",
-            desc: "Removing iron content and color for perfectly clear, odor-free water."
+            desc: "Removing iron content and color for perfectly clear, odor-free water.",
+            thumbnail: "/images/thumb1.jpg"
         },
         {
             id: "IS8WTVfJQlw",
             title: "Chemical-Free Purity",
-            desc: "Advanced water treatment without the need for harmful chemicals."
+            desc: "Advanced water treatment without the need for harmful chemicals.",
+            thumbnail: "/images/thumb2.jpg"
         },
         {
             id: "qVORpTDGCbg",
@@ -174,8 +177,8 @@ export default function About() {
                 </section>
 
                 {/* History Section */}
-                <section className="pt-24 pb-24 bg-white">
-                    <div className="mx-auto max-w-5xl px-6">
+                <section className="pt-24 pb-16 bg-white">
+                    <div className="mx-auto max-w-7xl px-6">
                         <div className="mb-16 text-center md:text-left">
                             <h2 
                                 className="font-sans text-4xl tracking-tight text-foreground md:text-5xl lg:text-6xl mb-8"
@@ -231,7 +234,7 @@ export default function About() {
 
 
                 {/* Core Values / Features with Images */}
-                <section className="py-32 bg-white space-y-32">
+                <section className="pt-8 pb-32 bg-white space-y-48">
                     <div className="mx-auto max-w-7xl px-6">
                         {[
                             {
@@ -256,7 +259,7 @@ export default function About() {
                                 img: "/images/products-tech.png"
                             }
                         ].map((item, idx) => (
-                            <div key={item.id} className={`grid gap-16 lg:grid-cols-2 items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                            <div key={item.id} className={`grid gap-16 lg:grid-cols-2 items-center py-8 ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                                 <div className={idx % 2 === 1 ? 'lg:order-2' : ''}>
                                     <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                                         {item.label}
@@ -279,7 +282,7 @@ export default function About() {
 
                 {/* Screenshot-based Video Gallery Section */}
                 <section className="pb-24 bg-white">
-                    <div className="mx-auto max-w-5xl px-6">
+                    <div className="mx-auto max-w-7xl px-6">
                         <h2 
                             className="font-sans text-3xl tracking-tight text-foreground mb-8 text-center md:text-left"
                             style={{ fontWeight: '300' }}
@@ -295,6 +298,7 @@ export default function About() {
                                     isMain={true}
                                     onNext={() => setCurrentVideoIndex(prev => (prev + 1) % videos.length)}
                                     onPrev={() => setCurrentVideoIndex(prev => (prev - 1 + videos.length) % videos.length)}
+                                    customThumbnail={videos[currentVideoIndex].thumbnail ? asset(videos[currentVideoIndex].thumbnail) : null}
                                 />
                             </div>
                         </div>
@@ -323,6 +327,7 @@ export default function About() {
                                             id={video.id}
                                             title={video.title}
                                             isMain={false}
+                                            customThumbnail={video.thumbnail ? asset(video.thumbnail) : null}
                                         />
                                     </button>
                                 ))}
