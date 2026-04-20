@@ -89,7 +89,7 @@ export function SiteFooter() {
                     </div>
 
                     <div>
-                        <h4 className="mb-10 text-[10px] font-bold uppercase tracking-[0.4em] text-white/30">
+                        <h4 className="mb-10 text-[10px] uppercase tracking-[0.4em] text-white/30" style={{ fontWeight: '300' }}>
                             Products
                         </h4>
                         <ul className="flex flex-col gap-4">
@@ -108,7 +108,7 @@ export function SiteFooter() {
                     </div>
 
                     <div>
-                        <h4 className="mb-10 text-[10px] font-bold uppercase tracking-[0.4em] text-white/30">
+                        <h4 className="mb-10 text-[10px] uppercase tracking-[0.4em] text-white/30" style={{ fontWeight: '300' }}>
                             Menu
                         </h4>
                         <ul className="flex flex-col gap-4">
@@ -137,7 +137,7 @@ export function SiteFooter() {
                     </div>
 
                     <div>
-                        <h4 className="mb-10 text-[10px] font-bold uppercase tracking-[0.4em] text-white/30">
+                        <h4 className="mb-10 text-[10px] uppercase tracking-[0.4em] text-white/30" style={{ fontWeight: '300' }}>
                             Newsletter
                         </h4>
                         <p className="mb-8 text-[14px] font-light leading-relaxed text-white/50">

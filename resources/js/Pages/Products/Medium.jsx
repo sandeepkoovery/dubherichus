@@ -166,7 +166,7 @@ export default function Medium() {
                                     <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
                                         <Check className="w-6 h-6" />
                                     </div>
-                                    <h4 className="text-xl font-bold mb-3 text-slate-900">{item.title}</h4>
+                                    <h4 className="text-xl mb-3 text-slate-900" style={{ fontWeight: '300' }}>{item.title}</h4>
                                     <p className="text-slate-500 font-light leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}

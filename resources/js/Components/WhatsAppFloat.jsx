@@ -34,7 +34,7 @@ export function WhatsAppFloat() {
                                 <MessageCircle className="h-6 w-6" />
                             </div>
                             <div>
-                                <h4 className="font-sans font-bold text-white text-lg leading-tight mb-2">Connect via WhatsApp</h4>
+                                <h4 className="font-sans text-white text-lg leading-tight mb-2" style={{ fontWeight: '300' }}>Connect via WhatsApp</h4>
                                 <div className="flex items-center gap-1.5">
                                     <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
                                     <span className="text-[10px] opacity-80">Online</span>
