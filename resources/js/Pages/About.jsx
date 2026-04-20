@@ -253,7 +253,7 @@ export default function About() {
                                 label: "INNOVATION",
                                 title: "Design and Technology",
                                 desc: "Dubhe Richus integrated technology for a peaceful water purifying experience. (Completely patent protected) Perfection in every detail, our cylindrical vertical type of water treatment heavy machineries stands out from the crowd with superior quality, results and first-class design. Discover water flow rate maintaining iron removing with active oxygen and keeping natural minerals with the manual back washing method for hygienic water treatment with low temperatures. Our all models strive for sustainability and appreciate the active lifestyle of you and your family Water treatment plant in this range offer you real benefits and efficient features combined with timeless design.",
-                                img: "/images/tech-img.jpg"
+                                img: "/images/products-tech.png"
                             }
                         ].map((item, idx) => (
                             <div key={item.id} className={`grid gap-16 lg:grid-cols-2 items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>

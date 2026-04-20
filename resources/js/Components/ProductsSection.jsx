@@ -8,37 +8,37 @@ const products = [
     {
         title: "Classic",
         capacity: "800 - 1200 Ltr/ Day",
-        image: "/images/classic.jpg",
+        image: "/images/products_classic.jpeg",
         href: "/products/classic",
     },
     {
         title: "Standard",
         capacity: "1500- 2500 Ltr./day",
-        image: "/images/standard.jpg",
+        image: "/images/products_standard.jpeg",
         href: "/products/standard",
     },
     {
         title: "Medium",
         capacity: "1250- 1500 Ltr./day",
-        image: "/images/medium.jpg",
+        image: "/images/products_medium.jpeg",
         href: "/products/medium",
     },
     {
         title: "Commercial",
         capacity: "For Custom Use",
-        image: "/images/commercial.jpg",
+        image: "/images/products_commercial.jpeg",
         href: "/products/commercial",
     },
     {
         title: "Bayaweaver",
         capacity: "Custom capacity as per the use",
-        image: "/images/bayaweaver.jpg",
+        image: "/images/products_bayaweaver.jpeg",
         href: "/products/bayaweaver",
     },
     {
         title: "Dubhe Merak",
         capacity: "Advanced Sewage Treatment",
-        image: "/images/dubhemerak.jpg",
+        image: "/images/products_dubhemerak.jpeg",
         href: "/products/dubhemerak",
     },
 ];

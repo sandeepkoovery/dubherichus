@@ -86,7 +86,7 @@ Primary: Public Sans (Geometric)
     font-family: 'Public Sans', 'Inter', sans-serif;
     letter-spacing: -0.01em;
     font-weight: 400;
-    color: #262626 !important;
+    color: #262626;
   }
 
   h1,
@@ -98,7 +98,7 @@ Primary: Public Sans (Geometric)
     font-family: 'Public Sans', sans-serif;
     @apply tracking-tight;
     font-weight: 300;
-    color: #262626 !important;
+    color: #262626;
   }
 
   html {
