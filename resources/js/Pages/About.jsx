@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Head } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
+import { FAQSection } from "@/Components/FAQSection";
 import { useAsset } from "@/hooks/useAsset";
 import { Shield, Target, Award, Clock, FlaskConical, PenTool, Users, Droplets, Calendar, CheckCircle2, Zap, Building2, Play, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -83,6 +84,25 @@ function VideoCard({ id, title, isMain = false, onNext, onPrev, customThumbnail 
         </div>
     );
 }
+
+const aboutFaqs = [
+    {
+        question: "HOW LONG HAS DUBHE RICHUS BEEN IN THE WATER TREATMENT INDUSTRY?",
+        answer: "We began our journey in 1991 under the brand name Richus and have since evolved into one of India’s leading water treatment companies, specializing in high-performance filtration systems."
+    },
+    {
+        question: "WHAT IS THE SIGNIFICANCE OF YOUR RESEARCH & DEVELOPMENT FOCUS?",
+        answer: "Our R&D team continuously innovates to improve product efficiency and sustainability. We focus on protecting natural water resources and ensuring environmentally responsible management through field-tested and patented technologies."
+    },
+    {
+        question: "ARE YOUR DESIGNS PATENT-PROTECTED?",
+        answer: "Yes, our unique cylindrical vertical water treatment machineries and specific filtration techniques are patent-protected. We take pride in delivering first-class designs that are built for reliable performance."
+    },
+    {
+        question: "WHAT IS DUBHE RICHUS' VISION FOR THE FUTURE?",
+        answer: "Our vision is to make clean and safe water accessible across India through practical, expert-backed treatment solutions that enhance daily living and promote environmental responsibility."
+    }
+];
 
 export default function About() {
     const asset = useAsset();
@@ -343,11 +363,7 @@ export default function About() {
                         </div>
                     </div>
                 </section>
-
-
-
-
-
+                <FAQSection items={aboutFaqs} title="ABOUT OUR COMPANY & TECH" />
             </main>
             <SiteFooter />
         </>

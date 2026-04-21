@@ -1,10 +1,30 @@
 import { Head } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
+import { FAQSection } from "@/Components/FAQSection";
 import { useAsset } from "@/hooks/useAsset";
 import { Button } from "@/Components/ui/button";
 import { Link } from "@inertiajs/react";
 import { Check, X, ShieldCheck, Zap, Droplets, Building2 } from "lucide-react";
+
+const productFaqs = [
+    {
+        question: "HOW ARE THE COMMERCIAL SYSTEMS CUSTOMIZED?",
+        answer: "Every commercial plant is custom-engineered based on a detailed analysis of your raw water quality, required daily capacity, and specific industry standards. We ensure the system meets your exact operational needs."
+    },
+    {
+        question: "WHAT IS THE CAPACITY RANGE FOR COMMERCIAL PLANTS?",
+        answer: "Our commercial and industrial plants are designed for high-volume demand. Capacity is customized to your requirements, ranging from several thousand to lakhs of litres per day for large institutions and industries."
+    },
+    {
+        question: "DO YOU PROVIDE INSTALLATION AND MAINTENANCE SERVICES?",
+        answer: "Yes, Dubhe Richus provides end-to-end services, including site survey, custom design, installation, and ongoing maintenance support to ensure your facility has a reliable supply of clean water."
+    },
+    {
+        question: "CAN THE SYSTEM HANDLE EXTREMELY TOUGH WATER CONDITIONS?",
+        answer: "Absolutely. Our commercial systems are built to handle high levels of iron, turbidity, and other complex impurities common in borewell and industrial water sources across South India."
+    }
+];
 
 export default function Commercial() {
     const asset = useAsset();
@@ -241,6 +261,7 @@ export default function Commercial() {
                         </Button>
                     </div>
                 </section>
+                <FAQSection items={productFaqs} title="COMMERCIAL SYSTEM FAQS" />
             </main>
             <SiteFooter />
         </>

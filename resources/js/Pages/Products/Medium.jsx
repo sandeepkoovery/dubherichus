@@ -1,10 +1,30 @@
 import { Head } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
+import { FAQSection } from "@/Components/FAQSection";
 import { useAsset } from "@/hooks/useAsset";
 import { Button } from "@/Components/ui/button";
 import { Link } from "@inertiajs/react";
 import { Check, X, ShieldCheck, Zap, Droplets } from "lucide-react";
+
+const productFaqs = [
+    {
+        question: "HOW OFTEN SHOULD THE SYSTEM BE BACKWASHED?",
+        answer: "Depending on your water usage and quality, manual backwashing is typically needed every few days to keep the media clean and hygienic. The process is simple and takes only a few minutes."
+    },
+    {
+        question: "DOES THIS SYSTEM REMOVE IRON AND BAD ODOUR?",
+        answer: "Yes, our specialized filtration media and aeration technology are specifically designed to effectively remove iron content, color, and unpleasant odors from the water source."
+    },
+    {
+        question: "IS THE MEDIUM SERIES SUITABLE FOR TYPICAL INDIAN HOMES?",
+        answer: "Yes, the Medium series is ideal for typical Indian homes and single-storey villas (up to 1800 sq.ft.), providing 1250-1500 litres per day of purified water."
+    },
+    {
+        question: "HOW LONG DOES THE FILTRATION MEDIA LAST?",
+        answer: "With regular backwashing, our high-quality filtration media is designed for long-term durability and can last for several years before needing replacement, depending on the raw water quality."
+    }
+];
 
 export default function Medium() {
     const asset = useAsset();
@@ -251,6 +271,7 @@ export default function Medium() {
                         </Button>
                     </div>
                 </section>
+                <FAQSection items={productFaqs} title="PRODUCT & MAINTENANCE FAQS" />
             </main>
             <SiteFooter />
         </>

@@ -1,9 +1,29 @@
 import { Head } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
+import { FAQSection } from "@/Components/FAQSection";
 import { ContactSection } from "@/Components/ContactSection";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { useAsset } from "@/hooks/useAsset";
+
+const contactFaqs = [
+    {
+        question: "HOW CAN I CONTACT DUBHE RICHUS FOR CUSTOMER SUPPORT?",
+        answer: "You can reach our dedicated support team via phone or WhatsApp at 099611 22777. We are also available through email at info@email.com for any inquiries regarding our water treatment systems."
+    },
+    {
+        question: "WHICH AREAS IN INDIA DO YOU PROVIDE SERVICES TO?",
+        answer: "Dubhe Richus provides comprehensive water and wastewater treatment services across Kerala and throughout major cities in India. We have experience handling both residential and large-scale industrial projects."
+    },
+    {
+        question: "HOW LONG DOES THE INSTALLATION PROCESS TAKE?",
+        answer: "The installation time for our standard water treatment plants typically ranges from 1 to 3 days after order confirmation, depending on the site requirements and system complexity."
+    },
+    {
+        question: "DO YOU OFFER AFTER-SALES MAINTENANCE AND SERVICE?",
+        answer: "Yes, we prioritize customer satisfaction and offer regular maintenance services, yearly checkups, and technical support to ensure your system continues to perform optimally for years."
+    }
+];
 
 export default function Contact() {
     const asset = useAsset();
@@ -141,6 +161,7 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
+                <FAQSection items={contactFaqs} title="SUPPORT & SERVICE FAQS" />
             </main>
 
             <SiteFooter />

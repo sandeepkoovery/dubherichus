@@ -9,6 +9,26 @@ import { ClientsSection } from "@/Components/ClientsSection";
 import { ContactSection } from "@/Components/ContactSection";
 import { IndustriesSection } from "@/Components/IndustriesSection";
 import { SiteFooter } from "@/Components/SiteFooter";
+import { FAQSection } from "@/Components/FAQSection";
+
+const homeFaqs = [
+    {
+        question: "WHY CHOOSE DUBHE RICHUS FOR WATER TREATMENT?",
+        answer: "With over 30 years of experience and patented technology, Dubhe Richus is a leader in high-performance water filtration. Our systems are designed for reliability, efficiency, and superior water quality across diverse sources."
+    },
+    {
+        question: "IS THE WATER TREATMENT SYSTEM TRULY MAINTENANCE-FREE?",
+        answer: "Our patented cylindrical vertical machineries are designed for long-term durability and ease of use. Using advanced filtration methods like active oxygen and manual backwashing, we minimize the need for complex maintenance or chemical additives."
+    },
+    {
+        question: "CAN YOUR SYSTEMS TREAT IRON-CONTAMINATED BOREHOLE WATER?",
+        answer: "Yes, we are specialists in the treatment of iron-contaminated water, especially in Kerala. Our systems effectively remove iron, color, and odor, providing crystal clear water for your home or industry."
+    },
+    {
+        question: "DO YOU PROVIDE PAN-INDIA SERVICES AND INSTALLATION?",
+        answer: "Yes, Dubhe Richus has a dedicated team of professionals and a wide service network to ensure seamless installation and support for water and wastewater treatment plants across India."
+    }
+];
 
 export default function Welcome({ appName }) {
     return (
@@ -25,8 +45,10 @@ export default function Welcome({ appName }) {
                 <ProductsSection />
                 <ProjectsPreview />
                 <ClientsSection />
+                <FAQSection items={homeFaqs} />
             </main>
             <SiteFooter />
         </>
     );
 }
+

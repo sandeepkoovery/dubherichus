@@ -1,10 +1,30 @@
 import { Head } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
+import { FAQSection } from "@/Components/FAQSection";
 import { useAsset } from "@/hooks/useAsset";
 import { Button } from "@/Components/ui/button";
 import { Link } from "@inertiajs/react";
 import { Check, X, ShieldCheck, Zap, Droplets, Building2 } from "lucide-react";
+
+const productFaqs = [
+    {
+        question: "HOW DOES THE DUBHE MERAK STP WORK?",
+        answer: "The Dubhe Merak STP uses advanced biological and mechanical processes to treat domestic and industrial sewage, removing contaminants and producing treated water safe for non-potable reuse."
+    },
+    {
+        question: "WHAT CAN THE TREATED WATER BE USED FOR?",
+        answer: "Treated water from our STPs is ideal for landscaping, gardening, toilet flushing, and other industrial non-potable applications, helping you significantly reduce fresh water consumption."
+    },
+    {
+        question: "IS THE SYSTEM ODOUR-FREE?",
+        answer: "Yes, Dubhe Merak STPs are engineered with efficient aeration and odour control mechanisms to ensure a clean, odour-free operation even in residential environments."
+    },
+    {
+        question: "DO YOU OFFER COMPACT UNITS FOR INDIVIDUAL HOMES?",
+        answer: "Absolutely. We provide modular and compact sewage treatment units specifically designed for individual villas and apartments, alongside large-scale systems for commercial complexes."
+    }
+];
 
 export default function DubheMerak() {
     const asset = useAsset();
@@ -229,6 +249,7 @@ export default function DubheMerak() {
                         </Button>
                     </div>
                 </section>
+                <FAQSection items={productFaqs} title="WASTEWATER TREATMENT FAQS" />
             </main>
             <SiteFooter />
         </>

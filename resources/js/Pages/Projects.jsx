@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Head, Link } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
+import { FAQSection } from "@/Components/FAQSection";
 import { useAsset } from "@/hooks/useAsset";
 import { Home, Building2, ChevronRight, ChevronLeft } from "lucide-react";
 
@@ -14,6 +15,25 @@ const logos = [
     { name: "Heather Homes", src: "/images/projects/p1.png" },
     { name: "Arctic Hotels", src: "/images/projects/p2.png" },
     { name: "Navya Bakers", src: "/images/projects/p3.png" },
+];
+
+const projectsFaqs = [
+    {
+        question: "WHAT TYPES OF PROJECTS DOES DUBHE RICHUS SPECIALIZE IN?",
+        answer: "We handle a wide range of projects including premium residential complexes, large-scale commercial buildings like malls and hospitals, and industrial water/wastewater treatment plants."
+    },
+    {
+        question: "CAN YOU DESIGN SYSTEMS FOR LARGE-SCALE COMMERCIAL USE?",
+        answer: "Yes, our engineering team specializes in custom-designed systems for high-volume needs. We have many successful installations in commercial sectors across India, ensuring clean and safe water for thousands of people."
+    },
+    {
+        question: "DO YOU PROVIDE WASTEWATER TREATMENT SOLUTIONS LIKE STP AND ETP?",
+        answer: "Absolutely. We have dedicated divisions for Sewage Treatment Plants (STP) and Effluent Treatment Plants (ETP), providing safe and efficient wastewater management for businesses and industries."
+    },
+    {
+        question: "HOW DO YOU ENSURE THE QUALITY AND RELIABILITY OF YOUR INSTALLATIONS?",
+        answer: "Every project follows strict engineering standards. Since 1991, our installations have been known for their durability and performance, backed by our expertise and commitment to environmental sustainability."
+    }
 ];
 
 export default function Projects() {
@@ -189,6 +209,7 @@ export default function Projects() {
                         </p>
                     </div>
                 </section>
+                <FAQSection items={projectsFaqs} title="PROJECTS & INSTALLATION FAQS" />
             </main>
             <SiteFooter />
         </>

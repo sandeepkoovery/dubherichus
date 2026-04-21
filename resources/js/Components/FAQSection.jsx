@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Plus, X, ChevronsRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-const FAQ_DATA = [
+const DEFAULT_FAQ = [
     {
         question: "HOW DOES WATER SOFTENING WORK?",
         answer: "Water softening removes minerals like calcium and magnesium from hard water, replacing them with sodium ions through an ion exchange process, resulting in softened water."
@@ -21,7 +21,11 @@ const FAQ_DATA = [
     }
 ];
 
-export const FAQSection = () => {
+export const FAQSection = ({ 
+    items = DEFAULT_FAQ, 
+    title = "FREQUENTLY ASKED QUESTIONS", 
+    description = "All your questions about the Water Treatment were answered." 
+}) => {
     const [openIndex, setOpenIndex] = useState(0);
 
     const toggleAccordion = (index) => {
@@ -30,7 +34,7 @@ export const FAQSection = () => {
 
     return (
         <section className="py-20 bg-white" id="faq">
-            <div className="container mx-auto px-4 max-w-4xl text-center mb-12">
+            <div className="container mx-auto px-6 max-w-7xl text-center mb-12">
                 <div className="flex items-center justify-center gap-2 mb-4">
                     <ChevronsRight className="w-5 h-5 text-[#3b82f6]" strokeWidth={3} />
                     <span className="text-[#1e3a8a] font-bold text-sm tracking-widest uppercase">
@@ -41,41 +45,48 @@ export const FAQSection = () => {
                     className="text-4xl md:text-5xl mb-6 tracking-tight uppercase"
                     style={{ fontWeight: '300', color: '#262626' }}
                 >
-                    FREQUENTLY ASKED QUESTIONS
+                    {title}
                 </h2>
-                <p className="text-gray-500 text-lg md:text-xl">
-                    All your questions about the Water Treatment were answered.
-                </p>
+                {description && (
+                    <p className="text-gray-500 text-lg md:text-xl font-light">
+                        {description}
+                    </p>
+                )}
             </div>
-            <div className="container mx-auto px-4 max-w-4xl">
+            <div className="container mx-auto px-6 max-w-7xl">
                 <div className="space-y-4">
-                    {FAQ_DATA.map((item, index) => (
+                    {items.map((item, index) => (
                         <div key={index} className="border-b border-gray-100 last:border-0">
                             <button
                                 onClick={() => toggleAccordion(index)}
                                 className="w-full py-6 flex items-center justify-between text-left focus:outline-none group"
                             >
                                 <span className={cn(
-                                    "text-lg font-bold tracking-wider uppercase transition-colors duration-200",
-                                    openIndex === index ? "text-[#0A2647]" : "text-gray-700 group-hover:text-[#0A2647]"
+                                    "text-lg font-normal tracking-wide transition-colors duration-200",
+                                    openIndex === index ? "text-[#0A2647]" : "text-gray-600 group-hover:text-[#0A2647]"
                                 )}>
                                     {item.question}
                                 </span>
                                 <div className="ml-4 flex-shrink-0">
-                                    {openIndex === index ? (
-                                        <X className="w-6 h-6 text-[#0A2647]" strokeWidth={1} />
-                                    ) : (
-                                        <Plus className="w-6 h-6 text-[#0A2647]" strokeWidth={1} />
-                                    )}
+                                    <div className={cn(
+                                        "w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center transition-all duration-300",
+                                        openIndex === index ? "bg-[#0A2647] border-[#0A2647] rotate-90" : "bg-transparent"
+                                    )}>
+                                        {openIndex === index ? (
+                                            <X className="w-4 h-4 text-white" strokeWidth={1.5} />
+                                        ) : (
+                                            <Plus className="w-4 h-4 text-gray-500" strokeWidth={1.5} />
+                                        )}
+                                    </div>
                                 </div>
                             </button>
                             <div
                                 className={cn(
                                     "overflow-hidden transition-all duration-300 ease-in-out",
-                                    openIndex === index ? "max-h-96 pb-8" : "max-h-0"
+                                    openIndex === index ? "max-h-[500px] pb-8 opacity-100" : "max-h-0 opacity-0"
                                 )}
                             >
-                                <p className="text-gray-500 leading-relaxed text-[17px]">
+                                <p className="text-gray-500 leading-relaxed text-[17px] font-light">
                                     {item.answer}
                                 </p>
                             </div>
@@ -86,3 +97,4 @@ export const FAQSection = () => {
         </section>
     );
 };
+
