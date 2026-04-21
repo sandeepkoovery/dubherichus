@@ -34,7 +34,7 @@ export default function Standard() {
 
                                 <div className="max-w-xl mb-12">
                                     <p className="text-xl text-slate-600 font-light leading-relaxed">
-                                        High-capacity whole-house filtration for large residences and commercial spaces. Engineered for superior iron removal and hard water treatment, providing a sustainable and low-maintenance solution for your property.
+                                        Give your home the confidence of clean, healthy water from every tap. Our Standard Whole-House Water Treatment System is designed to solve common water quality problems at the source and deliver reliable, worry-free water throughout your entire home.
                                     </p>
                                 </div>
 
@@ -73,7 +73,7 @@ export default function Standard() {
                                 <div className="h-full bg-slate-50 rounded-[32px] overflow-hidden border border-slate-100 flex flex-col shadow-sm min-h-[400px]">
                                     <div className="p-8">
                                         <p className="text-slate-800 font-medium leading-relaxed">
-                                            Dubhe Richus Ltd Since 1991, single plant more than 32000 Units across India
+                                            Suitable for, Upto 3500 sq.ft. single storied house or 2800 sq.ft. double storied house
                                         </p>
                                     </div>
                                     <div className="flex-1 mt-auto overflow-hidden">
@@ -88,27 +88,27 @@ export default function Standard() {
 
                             {/* Column 2: Specific Data Cards */}
                             <div className="lg:col-span-3 flex flex-col gap-6">
-                                <div className="flex-1 bg-slate-50 p-8 rounded-[32px] border border-slate-100 flex flex-col justify-center items-center text-center shadow-sm">
-                                    <div className="bg-white p-4 rounded-2xl shadow-sm mb-4">
-                                        <Zap className="w-8 h-8 text-yellow-500" />
+                                    <div className="mb-6 flex gap-1 items-end">
+                                        {[1, 2, 3, 4, 5].map(i => (
+                                            <Droplets key={i} className="w-6 h-6 text-blue-400" />
+                                        ))}
                                     </div>
-                                    <p className="text-slate-600 font-bold uppercase tracking-widest text-xs">Saves energy & money</p>
-                                </div>
+                                    <p className="text-slate-600 font-medium text-center">5 taps can use at a time</p>
 
                                 <div className="flex-1 bg-slate-50 p-8 rounded-[32px] border border-slate-100 shadow-sm">
                                     <p className="text-xl font-bold text-slate-800 mb-6">Dimensions</p>
                                     <div className="space-y-4 text-slate-600 font-medium">
                                         <p className="flex flex-col">
                                             <span className="text-xs uppercase tracking-widest text-slate-400">Height</span>
-                                            <span className="text-lg text-slate-900 font-bold">3.5 Feet</span>
+                                            <span className="text-lg text-slate-900 font-bold">5.1 feet</span>
                                         </p>
                                         <p className="flex flex-col">
-                                            <span className="text-xs uppercase tracking-widest text-slate-400">Width</span>
-                                            <span className="text-lg text-slate-900 font-bold">18 Inch</span>
+                                            <span className="text-xs uppercase tracking-widest text-slate-400">Dia</span>
+                                            <span className="text-lg text-slate-900 font-bold">200mm</span>
                                         </p>
                                         <p className="flex flex-col">
-                                            <span className="text-xs uppercase tracking-widest text-slate-400">Filter Diameter</span>
-                                            <span className="text-lg text-slate-900 font-bold">6 Inch</span>
+                                            <span className="text-xs uppercase tracking-widest text-slate-400">Outlet ratio</span>
+                                            <span className="text-lg text-slate-900 font-bold">50mm</span>
                                         </p>
                                     </div>
                                 </div>
@@ -124,13 +124,13 @@ export default function Standard() {
                                 </h3>
                                 <div className="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
                                     <p>
-                                        Our <Link href={appBase + "/"} className="text-primary">standard water treatment systems</Link> are used to solve major water problems that occur naturally. It is a complete system for households, simplifying house maintenance. This system is an important development of our innovation over the last three decades.
+                                        Give your home the confidence of clean, healthy water from every tap. Our Standard Whole-House Water Treatment System is designed to solve common water quality problems at the source and deliver reliable, worry-free water throughout your entire home.
                                     </p>
                                     <p>
-                                        Each system is designed to remove iron, turbidity, and bad odour naturally for better health results in your everyday life. We present a system integrated with efficient purifying processes that ensure consistent water quality for drinking and all household purposes.
+                                        Built on more than three decades of expertise and innovation, this system naturally removes iron, turbidity, and unpleasant odour to improve water used for drinking, cooking, bathing, cleaning, and everyday household needs. The advanced home water filtration process ensures consistent performance and dependable water quality every day.
                                     </p>
                                     <p>
-                                        All our plants are manufactured to deliver high-quality water from the initial stage. It's a completely trusted system for your family and home water supply for a lifetime, ensuring a high quality of healthy water results that you can depend on every single day.
+                                        Engineered with proven technology and high-quality components, the Dubhe water purification filter system delivers efficient performance from day one while reducing overall home maintenance. It helps protect your plumbing, bathroom fittings, and household appliances from damage caused by poor water quality. By reducing stains, scaling, and buildup, it keeps your home running smoothly and helps you avoid frequent repairs. This makes it a smart long-term choice for your family’s comfort and peace of mind.
                                     </p>
                                 </div>
                             </div>

@@ -34,7 +34,7 @@ export default function Medium() {
 
                                 <div className="max-w-xl mb-12">
                                     <p className="text-xl text-slate-600 font-light leading-relaxed">
-                                        Reliable home water purification tailored for villas and family houses. Advanced borehole and hard water treatment that delivers pure, safe water to every tap in your home with eco-friendly efficiency.
+                                        Medium home water purification filter made for typical Indian homes and single-storey villas. It supplies treated water to multiple taps while protecting plumbing and appliances from scaling and damage.
                                     </p>
                                 </div>
 
@@ -122,17 +122,17 @@ export default function Medium() {
                                     className="text-4xl font-sans tracking-tight mb-8 leading-[1.15]"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
-                                    Medium-Size Home Water Purification System for Consistent Clean Water
+                                    Medium Whole House Water Filter for Clean Water Throughout Your Home
                                 </h3>
                                 <div className="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
                                     <p>
-                                        The advanced medium-sized home water treatment system is designed for average-sized Indian homes and single-storey villas up to 1,800 sq. ft. It improves overall water quality by reducing hardness, iron, and other common impurities found in household water.
+                                        Hard water, yellow stains, iron smell and scaling in bathrooms and kitchens are common issues in many homes across Kerala and India. Most families simply want clean, clear water for everyday use without worrying about high maintenance or running costs. In Dubhe Water treatment system is designed to meet real household needs and deliver water filter to reliable long-term performance.
                                     </p>
                                     <p>
-                                        Built for everyday use, this <Link href={appBase + "/"} className="text-primary">water treatment system</Link> supplies clean water to up to five taps simultaneously, ensuring consistent water quality in bathrooms, kitchens, and utility areas. Its compact design allows easy installation, even in homes with limited space.
+                                        Our medium home water purification filter made for typical Indian homes and single-storey villas, it supplies treated water to multiple taps at the same time. Bathrooms, kitchens and utility areas receive consistent water quality while plumbing, fittings and home appliances stay protected from scaling and damage.
                                     </p>
                                     <p>
-                                        Each system is carefully engineered to deliver consistent and dependable performance across different water sources, including borewell, well, and mixed supply. Built with durable components and a chemical-free treatment process, it requires minimal maintenance while ensuring long-term reliability. This makes it a practical and efficient system for everyday household water needs in regions such as Kerala, Tamil Nadu, Karnataka, and across India.
+                                        Developed through more than three decades of expertise and innovation, this system naturally removes iron, turbidity, and unpleasant odour to improve water for drinking, cooking, bathing, cleaning, and everyday household use. The advanced home water filtration process ensures consistent performance and dependable water quality every day.
                                     </p>
                                 </div>
                             </div>
@@ -185,10 +185,10 @@ export default function Medium() {
                                     className="text-4xl font-sans mb-6"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
-                                    No Electricity Required
+                                    Electricity-Free Operation
                                 </h3>
                                 <p className="text-lg text-slate-600 font-light leading-relaxed">
-                                    DUBHE Merak provides standard home water treatment systems which work perfectly without any electricity. This makes them cost-effective and easy to maintain even in areas where power outages are common. No more worrying about electricity bills or power failures affecting your clean water supply.
+                                    Enjoy a continuous supply of treated water even during power cuts. The filter operates without electricity, which helps reduce energy bills and keeps running costs low. Its simple, power-free design also means fewer complications and reliable performance every day, giving your home a dependable water treatment solution.
                                 </p>
                             </div>
                             <div className="relative group">
@@ -224,10 +224,10 @@ export default function Medium() {
                                     className="text-4xl font-sans mb-6"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
-                                    No Chemical used
+                                    Naturally Filtered Water
                                 </h3>
                                 <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">
-                                    DUBHE Water purification systems use natural filtering media to remove impurities from your water supply. This means no chemicals are added during the treatment process, resulting in cleaner and healthier water for your family.
+                                    Water is purified through advanced filtration without the use of chemicals or additives. This makes it safe for daily household use while helping protect plumbing systems and household appliances, and supporting a more environmentally responsible home.
                                 </p>
                                 <Button asChild className="w-fit h-14 px-10 bg-primary hover:bg-primary/90 font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20">
                                     <Link href={appBase + "/contact"}>GET PRICING</Link>

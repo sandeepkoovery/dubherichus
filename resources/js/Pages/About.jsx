@@ -186,7 +186,7 @@ export default function About() {
                             >
                                 About Dubhe Richus
                             </h2>
-                            <div className="space-y-12">
+                            <div className="space-y-6">
                                 <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
                                     Dubhe Richus began its journey in 1991 under the brand name Richus, pioneering water filtration and treatment services. Guided by a long-term vision for sustainability and global growth, the brand later evolved into Dubhe Richus. Today, we are one of India’s leading water treatment companies and the largest manufacturer of iron removal water treatment plants in Kerala, India. Our high-performance water filtration systems are designed to purify water from every source. Supported by a dedicated research and development team, we continuously drive innovation and deliver reliable, future-ready water treatment technology.
                                 </p>

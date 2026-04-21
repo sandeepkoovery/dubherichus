@@ -34,7 +34,7 @@ export default function Classic() {
 
                                 <div className="max-w-xl mb-12">
                                     <p className="text-xl text-slate-600 font-light leading-relaxed">
-                                        Compact and efficient water filtration designed for smaller households. Removes iron, turbidity, and natural odors without electricity or chemicals, ensuring a lifetime of clean, safe water for your family.
+                                        Classic Water Filters are specially designed for Indian homes and perfectly suited for the average household size in Kerala and across India. Providing safe and clean water for all domestic needs.
                                     </p>
                                 </div>
 
@@ -120,17 +120,17 @@ export default function Classic() {
                                     className="text-4xl font-sans tracking-tight mb-8 leading-[1.15]"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
-                                    Classic Whole-House Clean Water Treatment System
+                                    Classic Whole-House Water Filtration System for Homes
                                 </h3>
                                 <div className="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
                                     <p>
-                                        Our <Link href={appBase + "/"} className="text-primary">classic water treatment systems</Link> are used to solve major water problems that occur naturally. It is a complete system for smaller households, simplifying house maintenance. This system is an important development of our innovation over the last three decades.
+                                        Classic Water Filters are specially designed for Indian homes and perfectly suited for the average household size in Kerala and across India. This compact water treatment plant is ideal for smaller homes and everyday usage, providing safe and clean water for all domestic needs.
                                     </p>
                                     <p>
-                                        Each system is designed to remove iron, turbidity, and bad odour naturally for better health results in your everyday life. We present a system integrated with efficient purifying processes that ensure consistent water quality for drinking and all household purposes.
+                                        Clean water is essential for good health, which is why this small-capacity system makes reliable water purification accessible and affordable even for homes with lower water consumption. It ensures safe water for bathrooms, kitchens, pipelines, and every tap in your home.
                                     </p>
                                     <p>
-                                        All our plants are manufactured to deliver high-quality water from the initial stage. It's a completely trusted system for your family and home water supply for a lifetime, ensuring a high quality of healthy water results that you can depend on every single day.
+                                        Designed for long-term performance and reliable service, the system delivers consistent water purification with low maintenance and a capacity of 800–1200 litres per day. Our experts manage installation and ongoing support, addressing common issues such as yellow water, iron content, and other impurities to ensure a steady supply of clean water.
                                     </p>
                                 </div>
                             </div>
@@ -183,10 +183,10 @@ export default function Classic() {
                                     className="text-4xl font-sans tracking-tight mb-6"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
-                                    No Electricity Required
+                                    Works Without Electricity
                                 </h3>
                                 <p className="text-lg text-slate-600 font-light leading-relaxed">
-                                    DUBHE Merak provides classic home water treatment systems which work perfectly without any electricity. This makes them cost-effective and easy to maintain even in areas where power outages are common. No more worrying about electricity bills or power failures affecting your clean water supply.
+                                    Classic water treatment filters from Dubhe Richus work without electricity, making them dependable and economical for everyday household use. Clean water continues to flow even during power cuts, helping reduce energy expenses and minimizing maintenance worries.
                                 </p>
                             </div>
                             <div className="relative group">
@@ -222,10 +222,10 @@ export default function Classic() {
                                     className="text-4xl font-sans tracking-tight mb-6"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
-                                    No Chemical used
+                                    Chemical-Free Water Treatment
                                 </h3>
                                 <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">
-                                    DUBHE Water purification systems use natural filtering media to remove impurities from your water supply. This means no chemicals are added during the treatment process, resulting in cleaner and healthier water for your family.
+                                    Specially selected filtration media helps remove impurities from your water without the use of chemicals or additives. This process improves water quality while keeping it safe for everyday household use such as cooking, bathing, and cleaning, giving your family cleaner and healthier water every day.
                                 </p>
                                 <Button asChild className="w-fit h-14 px-10 bg-primary hover:bg-primary/90 font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20">
                                     <Link href={appBase + "/contact"}>GET PRICING</Link>
