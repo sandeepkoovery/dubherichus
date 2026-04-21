@@ -22,32 +22,32 @@ export default function Bayaweaver() {
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
                             <div>
-                                <h1 className="mb-2 font-sans text-5xl font-bold tracking-tight text-slate-900 md:text-6xl">
+                                <h1 className="mb-2 font-sans text-5xl font-semibold tracking-tight text-slate-900 md:text-6xl uppercase">
                                     BAYAWEAVER
                                 </h1>
                                 <h2 
                                     className="mb-8 font-sans text-3xl md:text-4xl"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
-                                    Commercial Treatment Plant
+                                    Automatic Treatment Plant
                                 </h2>
 
-                                <div className="flex gap-3 mb-8">
-                                    {[1, 2, 3, 4].map((i) => (
-                                        <div key={i} className="w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden border border-slate-200 shadow-sm">
-                                            <img src={asset(`/images/projects/p${i + 4}.png`)} alt={`Usage ${i}`} className="w-full h-full object-cover" />
-                                        </div>
-                                    ))}
+                                <div className="max-w-xl mb-12">
+                                    <p className="text-xl text-slate-600 font-light leading-relaxed">
+                                        AI-powered automatic water treatment system for intelligent, worry-free filtration. Precision cleaning and maintenance-free performance designed to handle the most demanding water conditions automatically.
+                                    </p>
                                 </div>
 
-                                <div className="mb-10">
-                                    <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-1">Capacity</p>
-                                    <p className="text-3xl font-bold text-slate-800">Custom capacity as per the use</p>
+                                <div className="mb-12 flex flex-col md:flex-row gap-8 items-start md:items-center">
+                                    <div>
+                                        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-2">Capacity</p>
+                                        <p className="text-2xl text-slate-800" style={{ fontWeight: '300' }}>Custom capacity as per the use</p>
+                                    </div>
+                                    <div className="h-10 w-px bg-slate-200 hidden md:block" />
+                                    <Button asChild size="lg" className="rounded-md bg-primary hover:bg-primary/90 h-14 px-10 text-[11px] font-bold uppercase tracking-[0.2em] transition-all shadow-xl shadow-primary/20 active:scale-95">
+                                        <Link href={appBase + "/contact"}>ORDER NOW</Link>
+                                    </Button>
                                 </div>
-
-                                <Button asChild size="lg" className="rounded-md bg-primary hover:bg-primary/90 h-14 px-10 text-sm font-bold tracking-widest transition-all shadow-lg shadow-primary/20 active:scale-95">
-                                    <Link href={appBase + "/contact"}>ORDER NOW</Link>
-                                </Button>
                             </div>
 
                             <div className="relative flex justify-center lg:justify-end">

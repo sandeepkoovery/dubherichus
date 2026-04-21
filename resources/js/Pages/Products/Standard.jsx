@@ -22,7 +22,7 @@ export default function Standard() {
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
                             <div>
-                                <h1 className="mb-2 font-sans text-5xl font-medium tracking-tight text-slate-900 md:text-6xl uppercase">
+                                <h1 className="mb-2 font-sans text-5xl font-semibold tracking-tight text-slate-900 md:text-6xl uppercase">
                                     Standard
                                 </h1>
                                 <h2 
@@ -32,23 +32,22 @@ export default function Standard() {
                                     Water Treatment Plant
                                 </h2>
 
-                                {/* Hero Gallery Thumbnails */}
-                                <div className="flex gap-3 mb-8">
-                                    {[1, 2, 3, 4].map((i) => (
-                                        <div key={i} className="w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden border border-slate-200 shadow-sm">
-                                            <img src={asset(`/images/projects/p${i}.png`)} alt={`Usage ${i}`} className="w-full h-full object-cover" />
-                                        </div>
-                                    ))}
+                                <div className="max-w-xl mb-12">
+                                    <p className="text-xl text-slate-600 font-light leading-relaxed">
+                                        High-capacity whole-house filtration for large residences and commercial spaces. Engineered for superior iron removal and hard water treatment, providing a sustainable and low-maintenance solution for your property.
+                                    </p>
                                 </div>
 
-                                <div className="mb-10">
-                                    <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-1">Capacity</p>
-                                    <p className="text-3xl font-medium text-slate-800">1500 - 2500 Ltr/ Day</p>
+                                <div className="mb-12 flex flex-col md:flex-row gap-8 items-start md:items-center">
+                                    <div>
+                                        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-2">Capacity</p>
+                                        <p className="text-2xl text-slate-800" style={{ fontWeight: '300' }}>1500 - 2500 Ltr/ Day</p>
+                                    </div>
+                                    <div className="h-10 w-px bg-slate-200 hidden md:block" />
+                                    <Button asChild size="lg" className="rounded-md bg-primary hover:bg-primary/90 h-14 px-10 text-[11px] font-bold uppercase tracking-[0.2em] transition-all shadow-xl shadow-primary/20 active:scale-95">
+                                        <Link href={appBase + "/contact"}>ORDER NOW</Link>
+                                    </Button>
                                 </div>
-
-                                <Button asChild size="lg" className="rounded-md bg-primary hover:bg-primary/90 h-14 px-10 text-sm font-bold tracking-widest transition-all shadow-lg shadow-primary/20 active:scale-95">
-                                    <Link href={appBase + "/contact"}>ORDER NOW</Link>
-                                </Button>
                             </div>
 
                             <div className="relative flex justify-center lg:justify-end">
