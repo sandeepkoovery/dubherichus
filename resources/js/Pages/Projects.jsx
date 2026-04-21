@@ -1,29 +1,34 @@
-import { Head } from "@inertiajs/react";
+import { useRef } from "react";
+import { Head, Link } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
 import { useAsset } from "@/hooks/useAsset";
+import { Home, Building2, ChevronRight, ChevronLeft } from "lucide-react";
 
-const projects = [
-    { id: 1, title: "Heather Homes", location: "Trivandrum", category: "Commercial", image: "/images/projects/p1.png" },
-    { id: 2, title: "Arctic Hotels", location: "Cochin", category: "Commercial", image: "/images/projects/p2.png" },
-    { id: 3, title: "Navya Bakers", location: "Cochin", category: "Commercial", image: "/images/projects/p3.png" },
-    { id: 4, title: "Abad Builders", location: "Cochin", category: "Commercial", image: "/images/projects/p4.png" },
-    { id: 5, title: "Asset Homes", location: "Kottayam", category: "Commercial", image: "/images/projects/p5.png" },
-    { id: 6, title: "Skyline Builders", location: "Thrissur", category: "Commercial", image: "/images/projects/p6.png" },
-    { id: 7, title: "Confident Group", location: "Calicut", category: "Commercial", image: "/images/projects/p7.png" },
-    { id: 8, title: "Joyalukkas", location: "Cochin", category: "Commercial", image: "/images/projects/p8.png" },
-    { id: 9, title: "St Raphelales Parish Hall", location: "Cochin", category: "Commercial", image: "/images/projects/p9.png" },
+const logos = [
+    { name: "Skyline Builders", src: "/images/projects/p6.png" },
+    { name: "Abad Builders", src: "/images/projects/p4.png" },
+    { name: "Asset Homes", src: "/images/projects/p5.png" },
+    { name: "Joy Alukkas", src: "/images/projects/p8.png" },
+    { name: "Confident Group", src: "/images/projects/p7.png" },
+    { name: "Heather Homes", src: "/images/projects/p1.png" },
+    { name: "Arctic Hotels", src: "/images/projects/p2.png" },
+    { name: "Navya Bakers", src: "/images/projects/p3.png" },
 ];
 
 export default function Projects() {
     const asset = useAsset();
+    const appBase = asset('');
+    const scrollContainerRef = useRef(null);
 
     return (
         <>
-            <Head title="Our Projects - Dubhe Richus" />
+            <Head title="Our Projects - Global Water Treatment Excellence | Dubhe Richus">
+                <meta name="description" content="Explore our portfolio of successful water treatment projects across India. From premium residential installations to large-scale commercial plants for industry leaders." />
+            </Head>
             <Navbar />
             <main className="pt-16 lg:pt-0 bg-white">
-                {/* Responsive Banner Section */}
+                {/* Hero Section */}
                 <section className="relative overflow-hidden bg-[#020617]">
                     {/* Mobile/Tablet: No-crop image */}
                     <div className="lg:hidden w-full">
@@ -46,70 +51,141 @@ export default function Projects() {
                     </div>
                 </section>
 
-                <section className="py-12 md:py-24">
-                    <div className="mx-auto max-w-7xl px-6">
-
-                        <div className="mb-16">
-                            <h2 className="text-sm font-bold uppercase tracking-[0.4em] text-primary text-center mb-4">Portfolio</h2>
-                            <h3 
-                                className="text-3xl font-sans text-center"
-                                style={{ color: '#262626', fontWeight: '300' }}
-                            >
-                                Commercial Excellence
-                            </h3>
-                        </div>
-
-                        <div className="grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-                            {projects.map((project, index) => (
-                                <div
-                                    key={project.id}
-                                    className="group relative cursor-pointer"
-                                    style={{
-                                        animationDelay: `${index * 100}ms`,
-                                        animation: 'fade-in-up 1s ease-out both'
-                                    }}
-                                >
-                                    <div className="aspect-[1/1] overflow-hidden w-full rounded-2xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] transition-all duration-700 group-hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.2)] group-hover:-translate-y-3">
-                                        <img
-                                            src={asset(project.image)}
-                                            alt={project.title}
-                                            className="h-full w-full object-cover grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 ease-out"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                                    </div>
-
-                                    {/* Project Labels Overlay with animation */}
-                                    <div className="absolute bottom-8 left-0 flex flex-col items-start gap-1 transform transition-all duration-700 ease-out group-hover:translate-x-3">
-                                        <div className="bg-[#262626] px-6 py-2 shadow-2xl transition-all duration-500 group-hover:bg-primary">
-                                            <span className="text-[14px] font-bold tracking-wider text-white uppercase">
-                                                {project.title}
-                                            </span>
-                                        </div>
-                                        <div className="bg-white/95 backdrop-blur-md px-4 py-1.5 shadow-xl transition-all duration-500">
-                                            <span className="text-[11px] font-semibold tracking-widest text-[#262626]/70 uppercase">
-                                                {project.location}
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
+                {/* Description Section */}
+                <section className="pt-16 pb-4 bg-white">
+                    <div className="mx-auto max-w-7xl px-6 text-center md:text-left">
+                        <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary mb-4">Portfolio Highlight</p>
+                        <h1 
+                            className="font-sans text-4xl tracking-tight text-foreground md:text-5xl lg:text-6xl mb-10"
+                            style={{ fontWeight: '300' }}
+                        >
+                            Our Projects
+                        </h1>
+                        <div className="max-w-4xl mx-auto md:mx-0">
+                            <p className="text-lg leading-relaxed text-slate-600 font-light mb-6">
+                                Dubhe Richus has been at the forefront of water purification since 1991, delivering thousands of successful projects across residential and commercial sectors. Our commitment to engineering excellence ensures that every installation meets the highest standards of purity, reliability, and sustainability.
+                            </p>
+                            <p className="text-lg leading-relaxed text-slate-600 font-light">
+                                From premium residential complexes to large-scale industrial plants, we provide custom-engineered solutions that handle the most challenging water conditions. Explore our diverse portfolio of projects that showcase our liquid legacy of innovation.
+                            </p>
                         </div>
                     </div>
                 </section>
 
-                <section className="py-32 bg-[#020617] relative overflow-hidden">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent opacity-50" />
-                    <div className="mx-auto max-w-4xl px-6 relative z-10">
+                {/* Commercial Excellence - Logo Slider */}
+                <section className="pt-6 pb-16 bg-white overflow-hidden border-t border-slate-100">
+                    <div className="mx-auto max-w-7xl px-6">
+                        <div className="mb-10">
+                             <h3 
+                                 className="text-3xl text-[#262626]"
+                                 style={{ fontWeight: '300' }}
+                             >
+                                 Commercial Excellence
+                             </h3>
+                             <div className="mt-3 h-1 w-16 bg-primary/30" />
+                        </div>
+
+                        <div className="relative group">
+                            {/* Navigation Arrows */}
+                            <button 
+                                onClick={() => scrollContainerRef.current?.scrollBy({ left: -500, behavior: 'smooth' })}
+                                className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/95 rounded-full shadow-lg border border-slate-100 text-slate-400 hover:text-primary hover:scale-110 transition-all opacity-0 group-hover:opacity-100 hidden md:block"
+                            >
+                                <ChevronLeft size={20} />
+                            </button>
+                            <button 
+                                onClick={() => scrollContainerRef.current?.scrollBy({ left: 500, behavior: 'smooth' })}
+                                className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/95 rounded-full shadow-lg border border-slate-100 text-slate-400 hover:text-primary hover:scale-110 transition-all opacity-0 group-hover:opacity-100 hidden md:block"
+                            >
+                                <ChevronRight size={20} />
+                            </button>
+
+                            <div 
+                                ref={scrollContainerRef}
+                                className="flex overflow-x-auto no-scrollbar gap-2 md:gap-3 items-stretch py-8 scroll-smooth"
+                            >
+                                {logos.map((logo, index) => (
+                                    <div 
+                                        key={index} 
+                                        className="w-64 md:w-96 aspect-square flex-shrink-0 relative overflow-hidden rounded-xl border border-slate-200 shadow-sm transition-all duration-500 hover:shadow-xl group/logo cursor-pointer"
+                                    >
+                                        <div className="absolute inset-0 flex items-center justify-center grayscale opacity-80 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-500">
+                                            <img 
+                                                src={asset(logo.src)} 
+                                                alt={logo.name} 
+                                                className="w-full h-full object-contain p-4" 
+                                            />
+                                        </div>
+                                        <div className="absolute bottom-0 inset-x-0 bg-slate-900/90 backdrop-blur-md py-3 px-6 text-center border-t border-white/10">
+                                            <span className="text-xs md:text-sm font-bold text-white uppercase tracking-[0.2em]">
+                                                {logo.name}
+                                            </span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Project Categories */}
+                <section className="py-16 bg-slate-50">
+                    <div className="mx-auto max-w-7xl px-6">
+                        <div className="grid md:grid-cols-2 gap-8">
+                            {/* Home Projects Box */}
+                            <Link 
+                                href={appBase + "/products/classic"}
+                                className="group relative overflow-hidden rounded-[40px] bg-white p-12 shadow-sm border border-slate-100 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-500/5 hover:-translate-y-2"
+                            >
+                                <div className="mb-10 w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                                    <Home size={36} strokeWidth={1.5} />
+                                </div>
+                                <h4 className="text-4xl text-[#262626] font-light mb-6 tracking-tight">Home</h4>
+                                <p className="text-lg text-slate-500 font-light mb-10 leading-relaxed max-w-sm">
+                                    Advanced water purification for residences, providing clean water for every tap in your home.
+                                </p>
+                                <div className="flex items-center text-primary font-bold text-sm uppercase tracking-widest">
+                                    Explore Home Systems 
+                                    <ChevronRight className="ml-2 w-4 h-4 transition-transform duration-500 group-hover:translate-x-3" />
+                                </div>
+                                <div className="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all cursor-pointer" />
+                            </Link>
+
+                            {/* Commercial Projects Box */}
+                            <Link 
+                                href={appBase + "/products/commercial"}
+                                className="group relative overflow-hidden rounded-[40px] bg-white p-12 shadow-sm border border-slate-100 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-500/5 hover:-translate-y-2"
+                            >
+                                <div className="mb-10 w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:-rotate-6">
+                                    <Building2 size={36} strokeWidth={1.5} />
+                                </div>
+                                <h4 className="text-4xl text-[#262626] font-light mb-6 tracking-tight">Commercial</h4>
+                                <p className="text-lg text-slate-500 font-light mb-10 leading-relaxed max-w-sm">
+                                    Large-scale treatment solutions for industries, hospitals, and high-volume commercial complexes.
+                                </p>
+                                <div className="flex items-center text-primary font-bold text-sm uppercase tracking-widest">
+                                    Explore Industrial Systems
+                                    <ChevronRight className="ml-2 w-4 h-4 transition-transform duration-500 group-hover:translate-x-3" />
+                                </div>
+                                <div className="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all" />
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="py-32 bg-[#020617] text-center">
+                    <div className="mx-auto max-w-4xl px-6">
+                        <p className="text-sm font-bold uppercase tracking-[0.5em] text-blue-500/60 mb-8">Engineering Excellence</p>
                         <h2 
-                            className="font-sans text-4xl mb-8 text-white leading-relaxed"
+                            className="text-4xl md:text-5xl text-white mb-10 leading-tight"
                             style={{ fontWeight: '300' }}
                         >
-                            Smarter Than You Think
+                            Over 32,000+ Units Installed Across India
                         </h2>
-                        <div className="mx-auto h-px w-24 bg-blue-500/50 mb-8" />
-                        <p className="text-xl text-white/60 font-light leading-relaxed tracking-wide">
-                            Our projects stand as a testament to our engineering excellence
-                            and our relentless pursuit of <span className="text-white font-normal">perfect water purity</span>.
+                        <div className="mx-auto h-1 w-20 bg-blue-500/30 mb-10" />
+                        <p className="text-xl text-white/50 font-light leading-relaxed">
+                            Since 1991, Dubhe Richus has been the trusted partner for premium water filtration,
+                            delivering natural purity to thousands of satisfied clients.
                         </p>
                     </div>
                 </section>
