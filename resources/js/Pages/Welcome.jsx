@@ -13,20 +13,24 @@ import { FAQSection } from "@/Components/FAQSection";
 
 const homeFaqs = [
     {
-        question: "WHY CHOOSE DUBHE RICHUS FOR WATER TREATMENT?",
-        answer: "With over 30 years of experience and patented technology, Dubhe Richus is a leader in high-performance water filtration. Our systems are designed for reliability, efficiency, and superior water quality across diverse sources."
+        question: "Do you offer solutions for both homes and businesses?",
+        answer: "Yes. We provide whole-house water treatment systems for residential use and customized water and wastewater solutions for apartments, offices, institutions, and industrial facilities."
     },
     {
-        question: "IS THE WATER TREATMENT SYSTEM TRULY MAINTENANCE-FREE?",
-        answer: "Our patented cylindrical vertical machineries are designed for long-term durability and ease of use. Using advanced filtration methods like active oxygen and manual backwashing, we minimize the need for complex maintenance or chemical additives."
+        question: "Can the system be customised for my water and usage needs?",
+        answer: "Absolutely. Every solution is designed after understanding your water quality, daily usage, and site conditions to ensure optimal performance and long-term reliability."
     },
     {
-        question: "CAN YOUR SYSTEMS TREAT IRON-CONTAMINATED BOREHOLE WATER?",
-        answer: "Yes, we are specialists in the treatment of iron-contaminated water, especially in Kerala. Our systems effectively remove iron, color, and odor, providing crystal clear water for your home or industry."
+        question: "Will you handle installation and service support?",
+        answer: "Yes. Our team manages everything from professional installation to routine maintenance and dependable after-sales support, ensuring a smooth and hassle-free experience."
     },
     {
-        question: "DO YOU PROVIDE PAN-INDIA SERVICES AND INSTALLATION?",
-        answer: "Yes, Dubhe Richus has a dedicated team of professionals and a wide service network to ensure seamless installation and support for water and wastewater treatment plants across India."
+        question: "Can your systems remove iron, bad odour, and other impurities?",
+        answer: "Yes. Our systems remove iron, dirt, bad smell, and other common impurities from water, making it much cleaner and safer to use."
+    },
+    {
+        question: "Do you provide services across India?",
+        answer: "Yes. We offer water and wastewater treatment solutions along with support services across India."
     }
 ];
 
