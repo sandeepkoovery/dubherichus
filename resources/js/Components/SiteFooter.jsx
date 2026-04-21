@@ -7,7 +7,8 @@ const productLinks = [
     { label: "MEDIUM (M)", href: "/products/medium" },
     { label: "STANDARD (L)", href: "/products/standard" },
     { label: "COMMERCIAL (XL)", href: "/products/commercial" },
-    { label: "Bayaweaver", href: "/products/bayaweaver" },
+    { label: "DUBHE MERAK", href: "/products/dubhe-merak" },
+    { label: "BAYAWEAVER", href: "/products/bayaweaver" },
 ];
 
 const companyLinks = [
