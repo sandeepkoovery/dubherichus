@@ -7,14 +7,15 @@ import { useAsset } from "@/hooks/useAsset";
 import { Home, Building2, ChevronRight, ChevronLeft } from "lucide-react";
 
 const logos = [
-    { name: "Skyline Builders", src: "/images/projects/p6.png" },
-    { name: "Abad Builders", src: "/images/projects/p4.png" },
-    { name: "Asset Homes", src: "/images/projects/p5.png" },
-    { name: "Joy Alukkas", src: "/images/projects/p8.png" },
-    { name: "Confident Group", src: "/images/projects/p7.png" },
-    { name: "Heather Homes", src: "/images/projects/p1.png" },
-    { name: "Arctic Hotels", src: "/images/projects/p2.png" },
-    { name: "Navya Bakers", src: "/images/projects/p3.png" },
+    { name: "Heather Homes", src: "/images/projects/p1.jpeg" },
+    { name: "Arctic Hotels", src: "/images/projects/p2.jpeg" },
+    { name: "Navya Bakers", src: "/images/projects/p3.jpeg" },
+    { name: "Abad Builders", src: "/images/projects/p4.jpeg" },
+    { name: "Asset Homes", src: "/images/projects/p5.jpeg" },
+    { name: "Skyline Builders", src: "/images/projects/p6.jpeg" },
+    { name: "Confident Group", src: "/images/projects/p7.jpeg" },
+    { name: "Joy Alukkas", src: "/images/projects/p8.jpeg" },
+    { name: "Project 9", src: "/images/projects/p9.jpeg" },
 ];
 
 const projectsFaqs = [
@@ -129,18 +130,14 @@ export default function Projects() {
                                         key={index} 
                                         className="w-64 md:w-96 aspect-square flex-shrink-0 relative overflow-hidden rounded-xl border border-slate-200 shadow-sm transition-all duration-500 hover:shadow-xl group/logo cursor-pointer"
                                     >
-                                        <div className="absolute inset-0 flex items-center justify-center grayscale opacity-80 group-hover/logo:grayscale-0 group-hover/logo:opacity-100 transition-all duration-500">
+                                        <div className="absolute inset-0 flex items-center justify-center transition-all duration-500">
                                             <img 
                                                 src={asset(logo.src)} 
                                                 alt={logo.name} 
                                                 className="w-full h-full object-contain p-4" 
                                             />
                                         </div>
-                                        <div className="absolute bottom-0 inset-x-0 bg-slate-900/90 backdrop-blur-md py-3 px-6 text-center border-t border-white/10">
-                                            <span className="text-xs md:text-sm font-bold text-white uppercase tracking-[0.2em]">
-                                                {logo.name}
-                                            </span>
-                                        </div>
+
                                     </div>
                                 ))}
                             </div>
