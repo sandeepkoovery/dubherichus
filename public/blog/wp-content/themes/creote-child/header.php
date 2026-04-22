@@ -12,20 +12,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
     <style>
-        /* Custom Header Styles to match main site */
+        /* Custom Header Styles to match main site's LIGHT theme */
         header.custom-header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1100;
-            background: rgba(10, 22, 40, 0.9);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             height: 72px;
             display: flex;
             align-items: center;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
         }
 
         .header-container {
@@ -57,8 +58,8 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: rgba(255, 255, 255, 0.9);
-            transition: color 0.3s;
+            color: rgba(0, 0, 0, 0.7);
+            transition: all 0.3s;
         }
 
         .nav-item:hover {
@@ -80,13 +81,14 @@
             width: 100%;
         }
 
-        /* Dropdown */
+        /* Hierarchical Dropdown */
         .nav-dropdown {
             position: relative;
             display: flex;
             align-items: center;
             gap: 6px;
             cursor: pointer;
+            padding: 10px 0;
         }
 
         .dropdown-menu {
@@ -94,15 +96,18 @@
             top: 100%;
             left: 50%;
             transform: translateX(-50%) translateY(10px);
-            background: #0f172a;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 12px;
-            width: 256px;
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+            padding: 24px;
+            width: 540px;
             visibility: hidden;
             opacity: 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
         }
 
         .nav-dropdown:hover .dropdown-menu {
@@ -111,21 +116,35 @@
             transform: translateX(-50%) translateY(0px);
         }
 
+        .dropdown-section-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #3b82f6;
+            opacity: 0.6;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.1);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            display: block;
+            white-space: nowrap;
+        }
+
         .dropdown-item {
             display: block;
-            padding: 12px 20px;
+            padding: 8px 12px;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
-            color: rgba(255, 255, 255, 0.6);
-            border-radius: 12px;
+            color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
             transition: all 0.3s;
         }
 
         .dropdown-item:hover {
-            background: rgba(59, 130, 246, 0.1);
+            background: rgba(59, 130, 246, 0.05);
             color: #3b82f6;
-            padding-left: 24px;
+            transform: translateX(4px);
         }
 
         .header-right {
@@ -148,6 +167,7 @@
         .quote-btn:hover {
             background: #2563eb;
             transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
         }
 
         /* Mobile Menu */
@@ -155,7 +175,7 @@
             display: none;
             background: transparent;
             border: none;
-            color: white;
+            color: #000;
             cursor: pointer;
             padding: 8px;
         }
@@ -166,13 +186,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(10, 22, 40, 0.98);
+            background: rgba(255, 255, 255, 0.98);
             z-index: 2000;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 32px;
+            gap: 24px;
             visibility: hidden;
             opacity: 0;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -189,16 +209,16 @@
             right: 24px;
             background: transparent;
             border: none;
-            color: white;
+            color: #000;
             font-size: 32px;
             cursor: pointer;
         }
 
         .mobile-nav-link {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 600;
             text-decoration: none;
-            color: white;
+            color: #000;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             transition: color 0.3s;
@@ -229,25 +249,36 @@
     <header class="custom-header">
         <div class="header-container">
             <a href="http://localhost/dubhemerak/public/" class="logo-link">
-                <img src="http://localhost/dubhemerak/public/images/dubhe-logo.png" alt="Dubhe Richus" style="filter: brightness(0) invert(1);">
+                <img src="http://localhost/dubhemerak/public/images/dubhe-logo.png" alt="Dubhe Richus">
             </a>
 
             <div class="nav-links">
                 <a href="http://localhost/dubhemerak/public/" class="nav-item">Home</a>
                 <a href="http://localhost/dubhemerak/public/about" class="nav-item">About Us</a>
-                <a href="http://localhost/dubhemerak/public/projects" class="nav-item">Projects</a>
-                <a href="http://localhost/dubhemerak/public/blog" class="nav-item" style="color: #3b82f6;">Blog</a>
                 
                 <div class="nav-dropdown">
                     <span class="nav-item">Products <svg style="width:14px; height:14px; display:inline-block; vertical-align:middle; margin-left:4px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>
                     <div class="dropdown-menu">
-                        <a href="http://localhost/dubhemerak/public/products/medium" class="dropdown-item">Medium Range</a>
-                        <a href="http://localhost/dubhemerak/public/products/standard" class="dropdown-item">Standard Series</a>
-                        <a href="http://localhost/dubhemerak/public/products/commercial" class="dropdown-item">Commercial</a>
-                        <a href="http://localhost/dubhemerak/public/products/bayaweaver" class="dropdown-item">Bayaweaver</a>
+                        <div class="dropdown-column">
+                            <span class="dropdown-section-title">Manual</span>
+                            <a href="http://localhost/dubhemerak/public/products/classic" class="dropdown-item">CLASSIC (S)</a>
+                            <a href="http://localhost/dubhemerak/public/products/medium" class="dropdown-item">MEDIUM (M)</a>
+                            <a href="http://localhost/dubhemerak/public/products/standard" class="dropdown-item">STANDARD (L)</a>
+                            <a href="http://localhost/dubhemerak/public/products/commercial" class="dropdown-item">COMMERCIAL (XL)</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <span class="dropdown-section-title">Automatic</span>
+                            <a href="http://localhost/dubhemerak/public/products/bayaweaver" class="dropdown-item">BAYAWEAVER</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <span class="dropdown-section-title">Sewage Treatment</span>
+                            <a href="http://localhost/dubhemerak/public/products/dubhemerak" class="dropdown-item">DUBHE MERAK</a>
+                        </div>
                     </div>
                 </div>
 
+                <a href="http://localhost/dubhemerak/public/projects" class="nav-item">Projects</a>
+                <a href="http://localhost/dubhemerak/public/blog" class="nav-item" style="color: #3b82f6;">Blog</a>
                 <a href="http://localhost/dubhemerak/public/contact" class="nav-item">Contact Us</a>
             </div>
 
@@ -263,7 +294,7 @@
     <div class="mobile-overlay">
         <button class="mobile-close-btn" onclick="document.querySelector('.mobile-overlay').classList.remove('active')">&times;</button>
         <a href="http://localhost/dubhemerak/public/" class="mobile-nav-link">Home</a>
-        <a href="http://localhost/dubhemerak/public/about" class="mobile-nav-link">About</a>
+        <a href="http://localhost/dubhemerak/public/about" class="mobile-nav-link">About Us</a>
         <a href="http://localhost/dubhemerak/public/projects" class="mobile-nav-link">Projects</a>
         <a href="http://localhost/dubhemerak/public/blog" class="mobile-nav-link" style="color: #3b82f6;">Blog</a>
         <a href="http://localhost/dubhemerak/public/contact" class="mobile-nav-link">Contact</a>
