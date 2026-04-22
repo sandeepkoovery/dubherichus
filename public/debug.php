@@ -13,4 +13,11 @@ $paths = [
 foreach ($paths as $path) {
     echo "Checking: $path - " . (file_exists($path) ? "FOUND" : "NOT FOUND") . "\n";
 }
+
+echo "\n--- DIR LIST (public) ---\n";
+if (is_dir(__DIR__)) {
+    foreach (scandir(__DIR__) as $file) {
+        echo $file . "\n";
+    }
+}
 ?>

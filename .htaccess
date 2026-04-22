@@ -2,23 +2,12 @@
     RewriteEngine On
     RewriteBase /
 
-    # 1. Handle WordPress blog (it is in public/blog)
+    # 1. Handle Blog (inside public/blog)
     RewriteCond %{REQUEST_URI} ^/blog
     RewriteRule ^blog(/.*)?$ public/blog/$1 [L,QSA]
 
-    # 2. Redirect /public requests to root
-    RewriteCond %{REQUEST_URI} ^/public/
-    RewriteRule ^public/(.*)$ /$1 [L,R=301]
-
-    # 3. Handle Assets (If file exists in public folder)
+    # 2. Redirect everything to public/ folder
+    # This will handle BOTH assets (like build/manifest.json) and index.php (Laravel)
     RewriteCond %{REQUEST_URI} !^/public/
-    RewriteCond %{REQUEST_URI} !^/blog
-    RewriteCond %{DOCUMENT_ROOT}/public/$1 -f
     RewriteRule ^(.*)$ public/$1 [L]
-
-    # 4. Handle Laravel Routing (Everything else to public/index.php)
-    # This specifically ignores any index.php in the root
-    RewriteCond %{REQUEST_URI} !^/public/
-    RewriteCond %{REQUEST_URI} !^/blog
-    RewriteRule ^(.*)$ public/index.php [L,QSA]
 </IfModule>
