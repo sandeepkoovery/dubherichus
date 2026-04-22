@@ -118,6 +118,12 @@ export function SiteFooter() {
                                     {link.isExternal ? (
                                         <a
                                             href={link.href}
+                                            onClick={(e) => {
+                                                if (link.label === "Blog") {
+                                                    e.preventDefault();
+                                                    window.location.href = link.href;
+                                                }
+                                            }}
                                             className="group flex items-center gap-2 text-[14px] font-light text-white/50 transition-all hover:text-white"
                                         >
                                             <span className="h-px w-0 bg-blue-500 transition-all duration-300 group-hover:w-4" />

@@ -129,6 +129,12 @@ export function Navbar() {
                             ) : link.isExternal ? (
                                 <a
                                     href={link.href}
+                                    onClick={(e) => {
+                                        if (link.label === "Blog") {
+                                            e.preventDefault();
+                                            window.location.href = link.href;
+                                        }
+                                    }}
                                     className={`relative text-[13px] font-semibold uppercase tracking-wider transition-all duration-300 hover:text-primary ${isDarkTheme ? "text-white/90 hover:text-white" : "text-foreground/80"
                                         }`}
                                 >
@@ -218,7 +224,13 @@ export function Navbar() {
                                     <a
                                         href={link.href}
                                         className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted"
-                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        onClick={(e) => {
+                                            if (link.label === "Blog") {
+                                                e.preventDefault();
+                                                window.location.href = link.href;
+                                            }
+                                            setIsMobileMenuOpen(false);
+                                        }}
                                     >
                                         {link.label}
                                     </a>
