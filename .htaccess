@@ -1,13 +1,14 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /
 
-    # 1. Handle Blog (inside public/blog)
-    RewriteCond %{REQUEST_URI} ^/blog
-    RewriteRule ^blog(/.*)?$ public/blog/$1 [L,QSA]
+    # ✅ Force root (/) to Laravel
+    RewriteRule ^$ public/index.php [L]
 
-    # 2. Redirect everything to public/ folder
-    # This will handle BOTH assets (like build/manifest.json) and index.php (Laravel)
-    RewriteCond %{REQUEST_URI} !^/public/
-    RewriteRule ^(.*)$ public/$1 [L]
+    # ✅ WordPress blog
+    RewriteRule ^blog(/.*)?$ public/blog/$1 [L]
+
+    # ✅ Laravel for all other routes
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ public/index.php [L]
 </IfModule>
