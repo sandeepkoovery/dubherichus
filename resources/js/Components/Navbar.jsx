@@ -35,7 +35,7 @@ const navLinks = [
         ]
     },
     { label: "Projects", href: "/projects" },
-    { label: "Blog", href: "/blog", isExternal: true },
+    { label: "Blog", href: "https://dubherichus.com/blog", isExternal: true },
     { label: "Contact Us", href: "/contact" },
 ];
 
