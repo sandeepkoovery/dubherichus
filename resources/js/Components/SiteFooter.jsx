@@ -115,7 +115,15 @@ export function SiteFooter() {
                         <ul className="flex flex-col gap-4">
                             {companyLinks.map((link) => (
                                 <li key={link.label}>
-                                    {link.isExternal ? (
+                                    {link.label === "Blog" ? (
+                                        <a
+                                            href="/blog"
+                                            className="group flex items-center gap-2 text-[14px] font-light text-white/50 transition-all hover:text-white"
+                                        >
+                                            <span className="h-px w-0 bg-blue-500 transition-all duration-300 group-hover:w-4" />
+                                            {link.label}
+                                        </a>
+                                    ) : link.isExternal ? (
                                         <a
                                             href={link.href}
                                             onClick={(e) => {

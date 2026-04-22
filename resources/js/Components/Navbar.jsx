@@ -77,7 +77,16 @@ export function Navbar() {
                 <div className="hidden items-center gap-10 lg:flex">
                     {navLinks.map((link) => (
                         <div key={link.label} className="relative group">
-                            {link.categories ? (
+                            {link.label === "Blog" ? (
+                                <a
+                                    href="/blog"
+                                    className={`relative text-[13px] font-semibold uppercase tracking-wider transition-all duration-300 hover:text-primary ${isDarkTheme ? "text-white/90 hover:text-white" : "text-foreground/80"
+                                        }`}
+                                >
+                                    {link.label}
+                                    <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
+                                </a>
+                            ) : link.categories ? (
                                 <>
                                     <button className={`flex items-center gap-1.5 text-[13px] font-semibold uppercase tracking-wider transition-all duration-300 hover:text-primary ${isDarkTheme ? "text-white/90 hover:text-white" : "text-foreground/80"}`}>
                                         {link.label}
@@ -187,7 +196,15 @@ export function Navbar() {
                     <div className="flex flex-col gap-1 px-6 py-4">
                         {navLinks.map((link) => (
                             <div key={link.label}>
-                                {link.categories ? (
+                                {link.label === "Blog" ? (
+                                    <a
+                                        href="/blog"
+                                        className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                    >
+                                        {link.label}
+                                    </a>
+                                ) : link.categories ? (
                                     <div className="space-y-4 py-2">
                                         <div className="px-4 text-xs font-bold uppercase tracking-widest text-primary/60">{link.label}</div>
                                         {link.categories.map((cat) => (
