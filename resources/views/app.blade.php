@@ -17,6 +17,7 @@
     <!-- End Google Tag Manager -->
     <meta name="theme-color" content="#1a56db">
     <meta name="asset-url" content="{{ rtrim(asset(''), '/') }}">
+    <meta name="app-url" content="{{ rtrim(url('/'), '/') }}">
 
     <title inertia>{!! $meta_title ?? 'Advanced Water Filters for Home & Industry | Dubhe Richus' !!}</title>
     <meta name="title" content="{{ $meta_title ?? 'Advanced Water Filters for Home & Industry | Dubhe Richus' }}">

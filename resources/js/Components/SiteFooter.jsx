@@ -1,6 +1,7 @@
 import { Droplets } from "lucide-react";
 import { Link } from "@inertiajs/react";
 import { useAsset } from "@/hooks/useAsset";
+import { useAppUrl } from "@/hooks/useAppUrl";
 
 const productLinks = [
     { label: "CLASSIC (S)", href: "/products/classic" },
@@ -21,7 +22,7 @@ const companyLinks = [
 
 export function SiteFooter() {
     const asset = useAsset();
-    const appBase = asset('');
+    const appBase = useAppUrl();
     return (
         <footer className="border-t border-border bg-[#0a1628] text-white">
             <div className="mx-auto max-w-7xl px-6 py-16">
@@ -117,7 +118,7 @@ export function SiteFooter() {
                                 <li key={link.label}>
                                     {link.label === "Blog" ? (
                                         <a
-                                            href="/blog"
+                                            href={`${appBase}/blog`}
                                             className="group flex items-center gap-2 text-[14px] font-light text-white/50 transition-all hover:text-white"
                                         >
                                             <span className="h-px w-0 bg-blue-500 transition-all duration-300 group-hover:w-4" />

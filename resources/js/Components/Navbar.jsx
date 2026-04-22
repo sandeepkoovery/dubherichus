@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/Components/ui/button";
-import { Link, usePage } from "@inertiajs/react";
+import { usePage, Link } from "@inertiajs/react";
 import { useAsset } from "@/hooks/useAsset";
+import { useAppUrl } from "@/hooks/useAppUrl";
 
 const navLinks = [
     { label: "Home", href: "/" },
@@ -42,7 +43,7 @@ const navLinks = [
 export function Navbar() {
     const asset = useAsset();
     const { url, component } = usePage();
-    const appBase = asset('');
+    const appBase = useAppUrl();
 
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -79,7 +80,7 @@ export function Navbar() {
                         <div key={link.label} className="relative group">
                             {link.label === "Blog" ? (
                                 <a
-                                    href="/blog"
+                                    href={`${appBase}/blog`}
                                     className={`relative text-[13px] font-semibold uppercase tracking-wider transition-all duration-300 hover:text-primary ${isDarkTheme ? "text-white/90 hover:text-white" : "text-foreground/80"
                                         }`}
                                 >
@@ -198,7 +199,7 @@ export function Navbar() {
                             <div key={link.label}>
                                 {link.label === "Blog" ? (
                                     <a
-                                        href="/blog"
+                                        href={`${appBase}/blog`}
                                         className="block rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
