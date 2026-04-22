@@ -150,8 +150,7 @@ export default function Projects() {
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="grid md:grid-cols-2 gap-8">
                             {/* Home Projects Box */}
-                            <Link 
-                                href={appBase + "/products/classic"}
+                            <div 
                                 className="group relative overflow-hidden rounded-[40px] bg-white p-12 shadow-sm border border-slate-100 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-500/5 hover:-translate-y-2"
                             >
                                 <div className="mb-10 w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
@@ -161,16 +160,11 @@ export default function Projects() {
                                 <p className="text-lg text-slate-500 font-light mb-10 leading-relaxed max-w-sm">
                                     Advanced water purification for residences, providing clean water for every tap in your home.
                                 </p>
-                                <div className="flex items-center text-primary font-bold text-sm uppercase tracking-widest">
-                                    Explore Home Systems 
-                                    <ChevronRight className="ml-2 w-4 h-4 transition-transform duration-500 group-hover:translate-x-3" />
-                                </div>
                                 <div className="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all cursor-pointer" />
-                            </Link>
+                            </div>
 
                             {/* Commercial Projects Box */}
-                            <Link 
-                                href={appBase + "/products/commercial"}
+                            <div 
                                 className="group relative overflow-hidden rounded-[40px] bg-white p-12 shadow-sm border border-slate-100 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-500/5 hover:-translate-y-2"
                             >
                                 <div className="mb-10 w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:-rotate-6">
@@ -180,12 +174,8 @@ export default function Projects() {
                                 <p className="text-lg text-slate-500 font-light mb-10 leading-relaxed max-w-sm">
                                     Large-scale treatment solutions for industries, hospitals, and high-volume commercial complexes.
                                 </p>
-                                <div className="flex items-center text-primary font-bold text-sm uppercase tracking-widest">
-                                    Explore Industrial Systems
-                                    <ChevronRight className="ml-2 w-4 h-4 transition-transform duration-500 group-hover:translate-x-3" />
-                                </div>
                                 <div className="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all" />
-                            </Link>
+                            </div>
                         </div>
                     </div>
                 </section>
