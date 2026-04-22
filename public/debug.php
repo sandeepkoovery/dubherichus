@@ -1,8 +1,16 @@
 <?php
 header('Content-Type: text/plain');
-echo "REQUEST_URI: " . $_SERVER['REQUEST_URI'] . "\n";
-echo "SCRIPT_NAME: " . $_SERVER['SCRIPT_NAME'] . "\n";
-echo "PHP_SELF: " . $_SERVER['PHP_SELF'] . "\n";
 echo "DOCUMENT_ROOT: " . $_SERVER['DOCUMENT_ROOT'] . "\n";
-echo "APP_URL: " . getenv('APP_URL') . "\n";
+echo "BASE_PATH: " . realpath(__DIR__ . '/..') . "\n";
+
+$paths = [
+    __DIR__ . '/build/manifest.json',
+    __DIR__ . '/public/build/manifest.json',
+    realpath(__DIR__ . '/..') . '/public/build/manifest.json',
+    realpath(__DIR__ . '/..') . '/build/manifest.json',
+];
+
+foreach ($paths as $path) {
+    echo "Checking: $path - " . (file_exists($path) ? "FOUND" : "NOT FOUND") . "\n";
+}
 ?>
