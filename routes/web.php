@@ -24,8 +24,8 @@ Route::get('/products/commercial', fn() => Inertia\Inertia::render('Products/Com
     'meta_description' => 'Commercial water treatment plants in India by Dubhe Richus, offering customized water filtration for borewell and hard water using sustainable, chemical-free, low-maintenance technology.'
 ]))->name('products.commercial');
 Route::get('/products/bayaweaver', fn() => Inertia\Inertia::render('Products/Bayaweaver')->withViewData([
-    'meta_title' => 'Automatic Water Treatment Plant in Kerala, India - Bayaweaver',
-    'meta_description' => 'Bayaweaver is an AI-powered automatic water filtration system from Dubhe Richus. Complete water treatment with chemical-free, low-maintenance performance for homes and industries.'
+    'meta_title' => 'Automatic Commercial Water Treatment Plant - Bayaweaver',
+    'meta_description' => 'Bayaweaver is an AI-powered automatic water filtration system from Dubhe Richus. Complete water treatment with chemical-free, low-maintenance performance for industries.'
 ]))->name('products.bayaweaver');
 Route::get('/products/dubhemerak', fn() => Inertia\Inertia::render('Products/DubheMerak')->withViewData([
     'meta_title' => ' Branded Water Filtration Plant - Dubhe Merak | Dubhe Richus',
