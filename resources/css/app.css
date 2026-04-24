@@ -101,6 +101,10 @@ Primary: Public Sans (Geometric)
     color: #262626;
   }
 
+  p {
+    text-align: justify;
+  }
+
   html {
     scroll-behavior: smooth;
   }
