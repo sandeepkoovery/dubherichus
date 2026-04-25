@@ -15,7 +15,7 @@ export function AboutSection() {
                 <div className="grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
                     <div className="order-2 lg:order-1 flex flex-col justify-center py-4">
                         <p 
-                            className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em]"
+                            className="mb-4 text-center lg:text-left text-[10px] font-bold uppercase tracking-[0.4em]"
                             style={{ color: '#262626' }}
                         >
                             Ensuring Complete Water Purity for Every Space

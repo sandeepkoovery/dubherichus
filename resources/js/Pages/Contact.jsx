@@ -8,19 +8,19 @@ import { useAsset } from "@/hooks/useAsset";
 
 const contactFaqs = [
     {
-        question: "HOW CAN I CONTACT DUBHE RICHUS FOR CUSTOMER SUPPORT?",
+        question: "How can I contact Dubhe Richus for customer support?",
         answer: "You can reach our dedicated support team via phone or WhatsApp at 099611 22777. We are also available through email at info@email.com for any inquiries regarding our water treatment systems."
     },
     {
-        question: "WHICH AREAS IN INDIA DO YOU PROVIDE SERVICES TO?",
+        question: "Which areas in India do you provide services to?",
         answer: "Dubhe Richus provides comprehensive water and wastewater treatment services across Kerala and throughout major cities in India. We have experience handling both residential and large-scale industrial projects."
     },
     {
-        question: "HOW LONG DOES THE INSTALLATION PROCESS TAKE?",
+        question: "How long does the installation process take?",
         answer: "The installation time for our standard water treatment plants typically ranges from 1 to 3 days after order confirmation, depending on the site requirements and system complexity."
     },
     {
-        question: "DO YOU OFFER AFTER-SALES MAINTENANCE AND SERVICE?",
+        question: "Do you offer after-sales maintenance and service?",
         answer: "Yes, we prioritize customer satisfaction and offer regular maintenance services, yearly checkups, and technical support to ensure your system continues to perform optimally for years."
     }
 ];

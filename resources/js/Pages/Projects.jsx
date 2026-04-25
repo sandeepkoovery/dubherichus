@@ -20,19 +20,19 @@ const logos = [
 
 const projectsFaqs = [
     {
-        question: "WHAT TYPES OF PROJECTS DOES DUBHE RICHUS SPECIALIZE IN?",
+        question: "What types of projects does Dubhe Richus specialize in?",
         answer: "We handle a wide range of projects including premium residential complexes, large-scale commercial buildings like malls and hospitals, and industrial water/wastewater treatment plants."
     },
     {
-        question: "CAN YOU DESIGN SYSTEMS FOR LARGE-SCALE COMMERCIAL USE?",
+        question: "Can you design systems for large-scale commercial use?",
         answer: "Yes, our engineering team specializes in custom-designed systems for high-volume needs. We have many successful installations in commercial sectors across India, ensuring clean and safe water for thousands of people."
     },
     {
-        question: "DO YOU PROVIDE WASTEWATER TREATMENT SOLUTIONS LIKE STP AND ETP?",
+        question: "Do you provide wastewater treatment solutions like STP and ETP?",
         answer: "Absolutely. We have dedicated divisions for Sewage Treatment Plants (STP) and Effluent Treatment Plants (ETP), providing safe and efficient wastewater management for businesses and industries."
     },
     {
-        question: "HOW DO YOU ENSURE THE QUALITY AND RELIABILITY OF YOUR INSTALLATIONS?",
+        question: "How do you ensure the quality and reliability of your installations?",
         answer: "Every project follows strict engineering standards. Since 1991, our installations have been known for their durability and performance, backed by our expertise and commitment to environmental sustainability."
     }
 ];

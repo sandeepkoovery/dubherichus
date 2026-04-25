@@ -52,7 +52,7 @@ export function ProjectsPreview() {
         <section id="impact" className="bg-white overflow-hidden">
             <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
                 <div className="mb-16 text-center">
-                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
+                    <p className="mb-4 text-center text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                         Innovation & Impact
                     </p>
                     <h2 

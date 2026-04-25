@@ -4,19 +4,19 @@ import { cn } from '@/lib/utils';
 
 const DEFAULT_FAQ = [
     {
-        question: "HOW DOES WATER SOFTENING WORK?",
+        question: "How does water softening work?",
         answer: "Water softening removes minerals like calcium and magnesium from hard water, replacing them with sodium ions through an ion exchange process, resulting in softened water."
     },
     {
-        question: "WHAT ARE THE BENEFITS OF REVERSE OSMOSIS?",
+        question: "What are the benefits of reverse osmosis?",
         answer: "Reverse osmosis effectively removes contaminants such as lead, chlorine, and fluoride, providing clean, great-tasting drinking water for your home or business."
     },
     {
-        question: "HOW OFTEN SHOULD FILTERS BE REPLACED?",
+        question: "How often should filters be replaced?",
         answer: "Filter replacement frequency depends on your water usage and system type, but typically ranges from every 6 to 12 months for optimal performance."
     },
     {
-        question: "DO YOU OFFER MAINTENANCE SERVICES?",
+        question: "Do you offer maintenance services?",
         answer: "Yes, we provide comprehensive maintenance and repair services for all our water treatment systems to ensure they continue to operate at peak efficiency."
     }
 ];
@@ -33,8 +33,8 @@ export const FAQSection = ({
     };
 
     return (
-        <section className="py-20 bg-white" id="faq">
-            <div className="container mx-auto px-6 max-w-7xl text-center mb-12">
+        <section className="py-12 md:py-16 bg-white" id="faq">
+            <div className="container mx-auto px-6 max-w-7xl text-center mb-8">
                 <div className="flex items-center justify-center gap-2 mb-4">
                     <ChevronsRight className="w-5 h-5 text-[#3b82f6]" strokeWidth={3} />
                     <span className="text-[#1e3a8a] font-bold text-sm tracking-widest uppercase">
@@ -54,12 +54,12 @@ export const FAQSection = ({
                 )}
             </div>
             <div className="container mx-auto px-6 max-w-7xl">
-                <div className="space-y-4">
+                <div className="space-y-1">
                     {items.map((item, index) => (
                         <div key={index} className="border-b border-gray-100 last:border-0">
                             <button
                                 onClick={() => toggleAccordion(index)}
-                                className="w-full py-6 flex items-center justify-between text-left focus:outline-none group"
+                                className="w-full py-4 flex items-center justify-between text-left focus:outline-none group"
                             >
                                 <span className={cn(
                                     "text-lg font-normal tracking-wide transition-colors duration-200",
@@ -83,7 +83,7 @@ export const FAQSection = ({
                             <div
                                 className={cn(
                                     "overflow-hidden transition-all duration-300 ease-in-out",
-                                    openIndex === index ? "max-h-[500px] pb-8 opacity-100" : "max-h-0 opacity-0"
+                                    openIndex === index ? "max-h-[500px] pb-4 opacity-100" : "max-h-0 opacity-0"
                                 )}
                             >
                                 <p className="text-gray-500 leading-relaxed text-[17px] font-light">

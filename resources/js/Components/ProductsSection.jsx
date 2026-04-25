@@ -93,7 +93,7 @@ export function ProductsSection() {
         <>
             <section id="products" className="bg-white overflow-hidden">
                 <div className="pt-16 md:pt-24 pb-12 mx-auto max-w-7xl px-6 text-center md:text-left">
-                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
+                    <p className="mb-4 text-center md:text-left text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                         Product Gallery
                     </p>
                     <h2 

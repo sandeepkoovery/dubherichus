@@ -87,19 +87,19 @@ function VideoCard({ id, title, isMain = false, onNext, onPrev, customThumbnail 
 
 const aboutFaqs = [
     {
-        question: "HOW LONG HAS DUBHE RICHUS BEEN IN THE WATER TREATMENT INDUSTRY?",
+        question: "How long has Dubhe Richus been in the water treatment industry?",
         answer: "We began our journey in 1991 under the brand name Richus and have since evolved into one of India’s leading water treatment companies, specializing in high-performance filtration systems."
     },
     {
-        question: "WHAT IS THE SIGNIFICANCE OF YOUR RESEARCH & DEVELOPMENT FOCUS?",
+        question: "What is the significance of your research & development focus?",
         answer: "Our R&D team continuously innovates to improve product efficiency and sustainability. We focus on protecting natural water resources and ensuring environmentally responsible management through field-tested and patented technologies."
     },
     {
-        question: "ARE YOUR DESIGNS PATENT-PROTECTED?",
+        question: "Are your designs patent-protected?",
         answer: "Yes, our unique cylindrical vertical water treatment machineries and specific filtration techniques are patent-protected. We take pride in delivering first-class designs that are built for reliable performance."
     },
     {
-        question: "WHAT IS DUBHE RICHUS' VISION FOR THE FUTURE?",
+        question: "What is Dubhe Richus' vision for the future?",
         answer: "Our vision is to make clean and safe water accessible across India through practical, expert-backed treatment solutions that enhance daily living and promote environmental responsibility."
     }
 ];

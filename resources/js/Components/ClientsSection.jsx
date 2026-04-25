@@ -101,7 +101,7 @@ export function ClientsSection() {
             <div className="w-full px-6">
                 {/* Logos Section */}
                 <div className="mb-12 text-center">
-                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary/60">
+                    <p className="mb-4 text-center text-[10px] font-bold uppercase tracking-[0.4em] text-primary/60">
                         Our Clients
                     </p>
                     <h2 
@@ -148,7 +148,7 @@ export function ClientsSection() {
 
                 {/* Testimonials Section */}
                 <div className="mb-12 text-center">
-                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
+                    <p className="mb-4 text-center text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                         Real Experiences
                     </p>
                     <h2 

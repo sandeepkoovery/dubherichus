@@ -9,19 +9,19 @@ import { Check, X, ShieldCheck, Zap, Droplets } from "lucide-react";
 
 const productFaqs = [
     {
-        question: "HOW OFTEN SHOULD THE SYSTEM BE BACKWASHED?",
+        question: "How often should the system be backwashed?",
         answer: "Depending on your water usage and quality, manual backwashing is typically needed every few days to keep the media clean and hygienic. The process is simple and takes only a few minutes."
     },
     {
-        question: "DOES THIS SYSTEM REMOVE IRON AND BAD ODOUR?",
+        question: "Does this system remove iron and bad odour?",
         answer: "Yes, our specialized filtration media and aeration technology are specifically designed to effectively remove iron content, color, and unpleasant odors from the water source."
     },
     {
-        question: "IS THE STANDARD SERIES SUITABLE FOR A LARGE FAMILY?",
+        question: "Is the standard series suitable for a large family?",
         answer: "Absolutely. The Standard series is designed for large homes (up to 3500 sq.ft.) and can handle 1500-2500 litres per day, supplying clean water to multiple taps simultaneously."
     },
     {
-        question: "HOW LONG DOES THE FILTRATION MEDIA LAST?",
+        question: "How long does the filtration media last?",
         answer: "With regular backwashing, our high-quality filtration media is designed for long-term durability and can last for several years before needing replacement, depending on the raw water quality."
     }
 ];
