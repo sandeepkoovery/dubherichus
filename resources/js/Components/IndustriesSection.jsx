@@ -25,7 +25,7 @@ export function IndustriesSection() {
 
             <div className="mx-auto max-w-7xl px-6 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 
+                    <h2
                         className="font-sans text-4xl md:text-5xl mb-4"
                         style={{ fontWeight: '300', color: '#262626' }}
                     >
@@ -43,8 +43,8 @@ export function IndustriesSection() {
                             <div className="mb-4 p-4 rounded-xl bg-blue-50 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
                                 {industry.icon}
                             </div>
-                            <h3 
-                                className="text-center text-sm leading-snug"
+                            <h3
+                                className="text-center text-lg leading-snug"
                                 style={{ color: '#262626', fontWeight: '300' }}
                             >
                                 {industry.name}

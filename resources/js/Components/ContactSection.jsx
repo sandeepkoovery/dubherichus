@@ -37,14 +37,14 @@ export function ContactSection() {
                         <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                             CONTACT US
                         </span>
-                        <h2 
+                        <h2
                             className="mt-6 font-sans text-4xl leading-[1.1] tracking-tight text-foreground md:text-5xl lg:text-6xl"
                             style={{ fontWeight: '300' }}
                         >
                             Have questions?<br />
                             Get in touch!
                         </h2>
-                        <div className="mt-10 max-w-md text-sm leading-relaxed text-muted-foreground/80">
+                        <div className="mt-10 max-w-md text-lg leading-relaxed text-muted-foreground/80">
                             Have questions or need assistance? Reach out to us today,
                             and let our team help you find the perfect water solution!
                         </div>
@@ -80,13 +80,13 @@ export function ContactSection() {
                                 <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-green-50">
                                     <CheckCircle className="h-10 w-10 text-green-500" />
                                 </div>
-                                <h3 
+                                <h3
                                     className="font-sans text-3xl tracking-tight"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
                                     Message Request Logged
                                 </h3>
-                                <p className="mt-4 max-w-sm text-[15px] font-light leading-relaxed text-muted-foreground">
+                                <p className="mt-4 max-w-sm text-lg font-light leading-relaxed text-muted-foreground">
                                     Your interest has been noted. A water treatment expert will
                                     reach out to you <span className="text-foreground font-medium">within 24 hours</span>.
                                 </p>
@@ -97,13 +97,13 @@ export function ContactSection() {
                                 className="rounded-[2.5rem] border border-[#262626]/5 bg-white px-10 py-12 shadow-[0_45px_100px_-20px_rgba(0,0,0,0.1)] md:px-14 md:py-16"
                                 style={{ animation: 'fade-in-right 1s ease-out both' }}
                             >
-                                <h3 
+                                <h3
                                     className="font-sans text-2xl tracking-tight"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
                                     Inquiry Form
                                 </h3>
-                                <p className="mt-2 text-[15px] font-light text-muted-foreground/80">
+                                <p className="mt-2 text-lg font-light text-muted-foreground/80">
                                     Experience the future of water purity today.
                                 </p>
 

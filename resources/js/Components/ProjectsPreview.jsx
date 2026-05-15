@@ -55,7 +55,7 @@ export function ProjectsPreview() {
                     <p className="mb-4 text-center text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                         Innovation & Impact
                     </p>
-                    <h2 
+                    <h2
                         className="font-sans text-4xl tracking-tight text-foreground md:text-5xl lg:text-6xl"
                         style={{ fontWeight: '300' }}
                     >
@@ -80,14 +80,14 @@ export function ProjectsPreview() {
                                     <item.icon className="h-10 w-10" strokeWidth={1.5} />
                                 </div>
 
-                                <h3 
+                                <h3
                                     className="mb-6 text-xl tracking-widest uppercase"
                                     style={{ fontWeight: '300' }}
                                 >
                                     {item.title}
                                 </h3>
 
-                                <p className={`text-sm font-light leading-relaxed max-w-xs ${isBlue ? "text-white/90" : "text-slate-500"
+                                <p className={`text-lg font-light leading-relaxed max-w-xs ${isBlue ? "text-white/90" : "text-slate-500"
                                     }`}>
                                     {item.description}
                                 </p>

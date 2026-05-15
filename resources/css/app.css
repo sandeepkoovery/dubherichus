@@ -103,6 +103,7 @@ Primary: Public Sans (Geometric)
 
   p {
     text-align: justify;
+    font-size: var(--text-lg);
   }
 
   html {
@@ -110,8 +111,13 @@ Primary: Public Sans (Geometric)
   }
 
   @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   .animate-marquee {

@@ -42,10 +42,11 @@ export default function DubheMerak() {
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
                             <div>
-                                <h1 className="mb-2 font-sans text-5xl font-semibold tracking-tight text-slate-900 md:text-6xl uppercase">
-                                    DUBHE MERAK
+                                <h1 className="mb-2 font-sans text-5xl tracking-tighter md:text-6xl uppercase flex flex-wrap gap-3">
+                                    <span className="text-primary font-bold" style={{ fontWeight: '800' }}>DUBHE</span>
+                                    <span className="text-slate-800" style={{ fontWeight: '300' }}>MERAK</span>
                                 </h1>
-                                <h2 
+                                <h2
                                     className="mb-8 font-sans text-3xl md:text-4xl"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
@@ -128,7 +129,7 @@ export default function DubheMerak() {
 
                             {/* Column 3: Detailed Text Content */}
                             <div className="lg:col-span-6 flex flex-col justify-center py-4">
-                                <h3 
+                                <h3
                                     className="text-4xl font-sans mb-8 leading-[1.15]"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
@@ -154,7 +155,7 @@ export default function DubheMerak() {
                 <section className="py-20 bg-white">
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="mb-12">
-                            <h2 
+                            <h2
                                 className="font-sans text-3xl mb-1"
                                 style={{ color: '#262626', fontWeight: '300' }}
                             >
@@ -191,7 +192,7 @@ export default function DubheMerak() {
                         {/* Environmental Impact */}
                         <div className="grid lg:grid-cols-2 gap-12 items-stretch">
                             <div className="flex flex-col justify-center bg-white p-12 rounded-[40px] border border-slate-100 shadow-sm">
-                                <h3 
+                                <h3
                                     className="text-4xl font-sans mb-6"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
@@ -218,7 +219,7 @@ export default function DubheMerak() {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 flex flex-col justify-center bg-white p-12 rounded-[40px] border border-slate-100 shadow-sm">
-                                <h3 
+                                <h3
                                     className="text-4xl font-sans mb-6"
                                     style={{ color: '#262626', fontWeight: '300' }}
                                 >
@@ -238,7 +239,7 @@ export default function DubheMerak() {
                 {/* Final CTA Banner */}
                 <section className="bg-primary py-20 text-white relative">
                     <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-10">
-                        <h2 
+                        <h2
                             className="text-3xl md:text-4xl text-center md:text-left max-w-2xl leading-tight"
                             style={{ color: '#ffffff', fontWeight: '300' }}
                         >
