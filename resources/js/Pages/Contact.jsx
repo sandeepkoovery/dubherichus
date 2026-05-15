@@ -74,9 +74,10 @@ export default function Contact() {
                                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                         <MapPin className="h-3 w-3" />
                                     </div>
-                                    <p className="text-lg text-slate-500 leading-relaxed font-normal">
-                                        August Nursing Home Rd 282/20, Changampuzha Nagar, South<br />
-                                        Kalamassery, Edappally, Kochi, Kerala 682033
+                                    <p className="text-lg text-slate-500 leading-relaxed font-normal text-left">
+                                        August Nursing Home Rd 282/20,<br />
+                                        Changampuzha Nagar, South Kalamassery,<br />
+                                        Edappally, Kochi, Kerala 682033
                                     </p>
                                 </div>
                                 <div className="flex gap-4">
@@ -107,9 +108,9 @@ export default function Contact() {
                                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                         <MapPin className="h-3 w-3" />
                                     </div>
-                                    <p className="text-lg text-slate-500 leading-relaxed font-normal">
-                                        Thulichery Road, near CSI Church,<br />
-                                        Talap, Kannur, Kerala 670002
+                                    <p className="text-lg text-slate-500 leading-relaxed font-normal text-left">
+                                        Thulichery Road, near CSI Church, Talap,<br />
+                                        Kannur, Kerala 670002
                                     </p>
                                 </div>
                                 <div className="flex gap-4">
