@@ -200,7 +200,7 @@ export default function About() {
                 <section className="pt-24 pb-16 bg-white">
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="mb-16 text-center md:text-left">
-                            <h2 
+                            <h2
                                 className="font-sans text-4xl tracking-tight text-foreground md:text-5xl lg:text-6xl mb-8"
                                 style={{ fontWeight: '300' }}
                             >
@@ -220,7 +220,7 @@ export default function About() {
                         </div>
 
                         {/* Moved Team Grid */}
-                        <h2 
+                        <h2
                             className="font-sans text-3xl tracking-tight text-foreground mb-10 text-center md:text-left"
                             style={{ fontWeight: '300' }}
                         >
@@ -233,7 +233,7 @@ export default function About() {
                                         <img src={asset(`/images/team-${idx}.jpg`)} alt={member.name} className="w-full h-full object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex p-10 items-end z-10">
                                             <div className="text-left text-white relative z-20">
-                                                <h3 
+                                                <h3
                                                     className="text-xl tracking-tight"
                                                     style={{ fontWeight: '300', color: 'white' }}
                                                 >
@@ -260,22 +260,22 @@ export default function About() {
                             {
                                 id: "vision",
                                 label: "Our Vision",
-                                title: "Our Vision",
-                                desc: "Dubhe Richus aims to make clean and safe water accessible through trusted water and wastewater treatment plant services. We work across India to deliver practical water treatment that enhances daily living and supports long-term environmental responsibility, backed by strong professional expertise.",
+                                title: "Trusted Water Filtration for Clean and Safe Living",
+                                desc: "Dubhe Richus is committed to making clean and safe water accessible for everyone. We provide advanced water treatment filters designed for both homes and commercial spaces, helping families and businesses enjoy better water quality daily. We improve borewell and tap water by removing iron, hardness, bad smell and dirt, and we also treat wastewater so it can be safely handled. We have a strong vision to expand further and make reliable water filters accessible everywhere, from Kerala to the whole of India. With an experienced team handling water testing, installation, and ongoing service support, we ensure every customer receives the right solution for long-term performance and lasting trust.",
                                 img: "/images/vision-img.jpg"
                             },
                             {
                                 id: "rd",
                                 label: "R&D FOCUS",
                                 title: "Research & Development for Environmental Progress",
-                                desc: "Our R&D team continuously improves water treatment technologies through research, field experience, and innovation. We focus on improving product efficiency, performance, and sustainability while protecting natural water resources and ensuring environmentally responsible water management practices.",
+                                desc: "Dubhe Richus uses advanced design and technology to deliver a smooth and reliable water purification experience. Our cylindrical vertical-type water treatment filters are engineered with precision, strong structural design, superior quality, and high performance. The smart custom design supports steady water flow, efficient iron removal using active oxygen, and helps retain natural minerals. With a manual backwashing system, they are easy to operate and maintain even in different water conditions. Our systems also include wastewater. Every model is designed with a strong focus on both design and technology, combining efficiency, sustainability, and a modern premium finish for long-term use.",
                                 img: "/images/research.jpeg"
                             },
                             {
                                 id: "tech",
                                 label: "INNOVATION",
                                 title: "Design and Technology",
-                                desc: "Dubhe Richus integrated technology for a peaceful water purifying experience. (Completely patent protected) Perfection in every detail, our cylindrical vertical type of water treatment heavy machineries stands out from the crowd with superior quality, results and first-class design. Discover water flow rate maintaining iron removing with active oxygen and keeping natural minerals with the manual back washing method for hygienic water treatment with low temperatures. Our all models strive for sustainability and appreciate the active lifestyle of you and your family Water treatment plant in this range offer you real benefits and efficient features combined with timeless design.",
+                                desc: "Our R&D team continuously works on improving water treatment technologies through detailed research, field experience, and continuous innovation. We focus on developing systems that deliver higher efficiency, better performance, and long-term reliability in real water conditions. Along with improving product quality, we also work on making our solutions more sustainable by reducing environmental impact and supporting the responsible use of natural water resources. Our aim is to design advanced water treatment systems that not only solve real water problems in homes and commercial spaces but also promote environmentally responsible water management practices for a better and healthier future.",
                                 img: "/images/products-tech.png"
                             }
                         ].map((item, idx) => (
@@ -284,7 +284,7 @@ export default function About() {
                                     <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                                         {item.label}
                                     </p>
-                                    <h2 
+                                    <h2
                                         className="mb-8 font-sans text-4xl tracking-tight leading-tight"
                                         style={{ fontWeight: '300' }}
                                     >
@@ -303,7 +303,7 @@ export default function About() {
                 {/* Screenshot-based Video Gallery Section */}
                 <section className="pb-24 bg-white">
                     <div className="mx-auto max-w-7xl px-6">
-                        <h2 
+                        <h2
                             className="font-sans text-3xl tracking-tight text-foreground mb-8 text-center md:text-left"
                             style={{ fontWeight: '300' }}
                         >
