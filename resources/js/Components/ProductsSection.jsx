@@ -109,67 +109,76 @@ export function ProductsSection() {
                 </div>
 
                 <div
-                    className="relative w-full group"
+                    className="relative w-full group px-4 md:px-12"
                     onMouseEnter={() => setIsPaused(true)}
                     onMouseLeave={() => setIsPaused(false)}
                 >
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden py-8">
                         <div
                             className="flex transition-transform duration-700 ease-in-out"
-                            style={{ transform: `translateX(-${currentIndex * (window.innerWidth < 768 ? 100 : 33.333)}%)` }}
+                            style={{ transform: `translateX(-${currentIndex * (itemsToShow === 1 ? 100 : 33.3333)}%)` }}
                         >
-                            {products.map((product) => (
-                                <div key={product.title} className="w-full md:w-1/3 flex-shrink-0">
-                                    <Link
-                                        href={appBase + product.href}
-                                        className="group relative block w-full h-[60vh] min-h-[500px] overflow-hidden bg-slate-950 border-r border-white/10"
+                            {products.map((product, idx) => {
+                                const isVisible = idx >= currentIndex && idx < currentIndex + itemsToShow;
+                                return (
+                                    <div 
+                                        key={product.title} 
+                                        className={`w-full md:w-1/3 flex-shrink-0 px-4 transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-30 scale-95 pointer-events-none'}`}
                                     >
-                                        {product.image ? (
-                                            <img
-                                                src={asset(product.image)}
-                                                alt={product.title}
-                                                className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:opacity-40 group-hover:scale-110"
-                                            />
-                                        ) : (
-                                            <div className="absolute inset-0 w-full h-full bg-blue-900/40 transition-all duration-1000 group-hover:bg-blue-800/60" />
-                                        )}
+                                        <Link
+                                            href={appBase + product.href}
+                                            className="group relative block w-full h-[60vh] min-h-[500px] overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950 rounded-[2rem] border border-slate-800/60 shadow-xl transition-all duration-500 hover:shadow-[0_20px_50px_rgba(59,130,246,0.18)] hover:-translate-y-3 hover:border-blue-500/40"
+                                        >
+                                            {/* Shimmer Sheen Sweep Effect */}
+                                            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none bg-gradient-to-r from-transparent via-white/10 to-transparent z-10" />
 
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent transition-opacity duration-700 opacity-60 group-hover:opacity-100" />
+                                            {product.image ? (
+                                                <img
+                                                    src={asset(product.image)}
+                                                    alt={product.title}
+                                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 group-hover:rotate-1 group-hover:opacity-85"
+                                                />
+                                            ) : (
+                                                <div className="absolute inset-0 w-full h-full bg-blue-900/40 transition-all duration-1000 group-hover:bg-blue-800/60" />
+                                            )}
 
-                                        <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end items-start transition-transform duration-700 translate-y-8 group-hover:translate-y-0">
-                                            <p className="text-blue-400 font-bold tracking-[0.2em] text-[10px] md:text-xs mb-3 opacity-0 transition-opacity duration-700 delay-100 group-hover:opacity-100 uppercase drop-shadow-md">
-                                                {product.capacity}
-                                            </p>
-                                            <h3 
-                                                className="text-3xl md:text-4xl font-sans tracking-tight mb-6 drop-shadow-lg transform transition-all duration-700 uppercase"
-                                                style={{ color: '#ffffff', fontWeight: '300' }}
-                                            >
-                                                {product.title}
-                                            </h3>
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent transition-opacity duration-700 opacity-70 group-hover:opacity-95" />
 
-                                            <div className="flex items-center gap-3 text-white text-xs font-bold uppercase tracking-[0.2em] opacity-0 transition-all duration-700 delay-200 group-hover:opacity-100">
-                                                <span className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-500 group-hover:after:w-full pb-1">
-                                                    Explore System
-                                                </span>
-                                                <ArrowRight className="w-4 h-4 ml-2 transform -translate-x-4 transition-transform duration-700 group-hover:translate-x-0" />
+                                            <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end items-start transition-transform duration-700 translate-y-6 group-hover:translate-y-0">
+                                                <p className="text-blue-400 font-bold tracking-[0.2em] text-[10px] md:text-xs mb-3 opacity-0 -translate-y-2 transition-all duration-700 delay-100 group-hover:opacity-100 group-hover:translate-y-0 uppercase drop-shadow-md">
+                                                    {product.capacity}
+                                                </p>
+                                                <h3 
+                                                    className="text-3xl md:text-4xl font-sans tracking-tight mb-6 drop-shadow-lg transform transition-all duration-700 uppercase"
+                                                    style={{ color: '#ffffff', fontWeight: '300' }}
+                                                >
+                                                    {product.title}
+                                                </h3>
+
+                                                <div className="flex items-center gap-3 text-white text-xs font-bold uppercase tracking-[0.2em] opacity-0 translate-y-2 transition-all duration-700 delay-200 group-hover:opacity-100 group-hover:translate-y-0">
+                                                    <span className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-500 group-hover:after:w-full pb-1">
+                                                        Explore System
+                                                    </span>
+                                                    <ArrowRight className="w-4 h-4 ml-2 transform -translate-x-4 transition-transform duration-700 group-hover:translate-x-0" />
+                                                </div>
                                             </div>
-                                        </div>
-                                    </Link>
-                                </div>
-                            ))}
+                                        </Link>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
 
                     {/* Navigation Buttons inside slider */}
                     <button
                         onClick={prevSlide}
-                        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-md hover:bg-black/40 transition-all active:scale-95 opacity-0 group-hover:opacity-100"
+                        className="absolute left-0 md:left-4 top-1/2 -translate-y-1/2 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-md hover:bg-black/40 transition-all active:scale-95 opacity-0 group-hover:opacity-100"
                     >
                         <ChevronLeft className="h-8 w-8" />
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-md hover:bg-black/40 transition-all active:scale-95 opacity-0 group-hover:opacity-100"
+                        className="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-md hover:bg-black/40 transition-all active:scale-95 opacity-0 group-hover:opacity-100"
                     >
                         <ChevronRight className="h-8 w-8" />
                     </button>
