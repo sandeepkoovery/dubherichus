@@ -44,6 +44,13 @@ const products = [
 ];
 
 
+const getCircularOffset = (idx, current, total) => {
+    let diff = idx - current;
+    if (diff > total / 2) diff -= total;
+    if (diff < -total / 2) diff += total;
+    return diff;
+};
+
 export function ProductsSection() {
     const asset = useAsset();
     const appBase = asset('');
@@ -62,16 +69,12 @@ export function ProductsSection() {
     }, []);
 
     const nextSlide = useCallback(() => {
-        setCurrentIndex((prev) =>
-            prev >= products.length - itemsToShow ? 0 : prev + 1
-        );
-    }, [itemsToShow]);
+        setCurrentIndex((prev) => (prev + 1) % products.length);
+    }, []);
 
     const prevSlide = useCallback(() => {
-        setCurrentIndex((prev) =>
-            prev <= 0 ? products.length - itemsToShow : prev - 1
-        );
-    }, [itemsToShow]);
+        setCurrentIndex((prev) => (prev - 1 + products.length) % products.length);
+    }, []);
 
     const startAutoSlide = useCallback(() => {
         if (intervalRef.current) clearInterval(intervalRef.current);
@@ -113,21 +116,78 @@ export function ProductsSection() {
                     onMouseEnter={() => setIsPaused(true)}
                     onMouseLeave={() => setIsPaused(false)}
                 >
-                    <div className="overflow-hidden py-8">
-                        <div
-                            className="flex transition-transform duration-700 ease-in-out"
-                            style={{ transform: `translateX(-${currentIndex * (itemsToShow === 1 ? 100 : 33.3333)}%)` }}
-                        >
+                    <div className="overflow-hidden py-12 h-[68vh] min-h-[580px] relative w-full flex justify-center items-center" style={{ perspective: '1200px' }}>
+                        <div className="relative w-full h-full flex justify-center items-center" style={{ transformStyle: 'preserve-3d' }}>
                             {products.map((product, idx) => {
-                                const isVisible = idx >= currentIndex && idx < currentIndex + itemsToShow;
+                                const offset = getCircularOffset(idx, currentIndex, products.length);
+                                
+                                // Determine styling variables based on offset and viewport size
+                                let transformStyle = "";
+                                let opacityStyle = 0;
+                                let zIndexStyle = 1;
+                                
+                                if (itemsToShow === 1) {
+                                    // Mobile: show only active card in center
+                                    if (offset === 0) {
+                                        transformStyle = "translate3d(-50%, 0, 0) scale(1) rotateY(0deg)";
+                                        opacityStyle = 1;
+                                        zIndexStyle = 10;
+                                    } else {
+                                        transformStyle = `translate3d(${offset > 0 ? "50%" : "-150%"}, 0, -100px) scale(0.8) rotateY(${offset > 0 ? "-20deg" : "20deg"})`;
+                                        opacityStyle = 0;
+                                        zIndexStyle = 1;
+                                    }
+                                } else {
+                                    // Desktop: 3D Coverflow
+                                    if (offset === 0) {
+                                        transformStyle = "translate3d(-50%, 0, 0) scale(1.05) rotateY(0deg)";
+                                        opacityStyle = 1;
+                                        zIndexStyle = 10;
+                                    } else if (offset === -1) {
+                                        transformStyle = "translate3d(-145%, 0, -150px) scale(0.88) rotateY(32deg)";
+                                        opacityStyle = 0.65;
+                                        zIndexStyle = 5;
+                                    } else if (offset === 1) {
+                                        transformStyle = "translate3d(45%, 0, -150px) scale(0.88) rotateY(-32deg)";
+                                        opacityStyle = 0.65;
+                                        zIndexStyle = 5;
+                                    } else if (offset < -1) {
+                                        transformStyle = "translate3d(-240%, 0, -250px) scale(0.75) rotateY(45deg)";
+                                        opacityStyle = 0;
+                                        zIndexStyle = 1;
+                                    } else if (offset > 1) {
+                                        transformStyle = "translate3d(140%, 0, -250px) scale(0.75) rotateY(-45deg)";
+                                        opacityStyle = 0;
+                                        zIndexStyle = 1;
+                                    }
+                                }
+
+                                const isVisible = offset === 0 || (itemsToShow > 1 && Math.abs(offset) === 1);
+
                                 return (
                                     <div 
                                         key={product.title} 
-                                        className={`w-full md:w-1/3 flex-shrink-0 px-4 transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-30 scale-95 pointer-events-none'}`}
+                                        className="absolute left-1/2 top-0 flex-shrink-0 px-4 transition-all duration-700 ease-in-out cursor-pointer animate-fade-in"
+                                        style={{
+                                            width: itemsToShow === 1 ? '90%' : '30%',
+                                            transform: transformStyle,
+                                            opacity: opacityStyle,
+                                            zIndex: zIndexStyle,
+                                            transformStyle: 'preserve-3d',
+                                        }}
+                                        onClick={(e) => {
+                                            if (offset !== 0) {
+                                                e.preventDefault();
+                                                setCurrentIndex(idx);
+                                            }
+                                        }}
                                     >
                                         <Link
                                             href={appBase + product.href}
                                             className="group relative block w-full h-[60vh] min-h-[500px] overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950 rounded-[2rem] border border-slate-800/60 shadow-xl transition-all duration-500 hover:shadow-[0_20px_50px_rgba(59,130,246,0.18)] hover:-translate-y-3 hover:border-blue-500/40"
+                                            style={{
+                                                pointerEvents: isVisible ? 'auto' : 'none'
+                                            }}
                                         >
                                             {/* Shimmer Sheen Sweep Effect */}
                                             <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none bg-gradient-to-r from-transparent via-white/10 to-transparent z-10" />

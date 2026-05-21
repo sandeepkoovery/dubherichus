@@ -165,15 +165,7 @@ export function Navbar() {
                     ))}
                 </div>
 
-                <div className="hidden items-center gap-4 lg:flex">
-                    <Button
-                        asChild
-                        size="sm"
-                        className="bg-primary text-primary-foreground hover:bg-primary/90"
-                    >
-                        <Link href={appBase + "/contact"}>Get a Quote</Link>
-                    </Button>
-                </div>
+
 
                 <button
                     className="lg:hidden"
@@ -263,16 +255,7 @@ export function Navbar() {
                                 )}
                             </div>
                         ))}
-                        <div className="mt-2 border-t border-border pt-4">
-                            <Button asChild className="w-full bg-primary text-primary-foreground">
-                                <Link
-                                    href={appBase + "/contact"}
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                    Get a Quote
-                                </Link>
-                            </Button>
-                        </div>
+
                     </div>
                 </div>
             )}
