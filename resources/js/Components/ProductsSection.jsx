@@ -38,7 +38,7 @@ const products = [
     {
         title: "Dubhe Merak",
         capacity: "Advanced Sewage Treatment",
-        image: "/images/products_dubhemerak.jpeg",
+        image: "/images/dubhemerak.jpg",
         href: "/products/dubhemerak",
     },
 ];
