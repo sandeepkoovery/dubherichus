@@ -13,16 +13,14 @@ export function HeroSection() {
 
     const banners = [
         {
-            image: asset('/images/banner1.jpg'),
-            heading: ""
-        },
-        {
             image: asset('/images/banner2.jpg'),
-            heading: ""
+            heading: "",
+            position: "center"
         },
         {
             image: asset('/images/banner3.png'),
-            heading: ""
+            heading: "",
+            position: "center top"
         },
     ];
 
@@ -58,7 +56,7 @@ export function HeroSection() {
     };
 
     return (
-        <section id="home" className="relative mt-16 lg:mt-0 overflow-hidden bg-white">
+        <section id="home" className="relative mt-16 lg:mt-[76px] overflow-hidden bg-white">
 
             {/* ── MOBILE: stack img tags so they never crop ── */}
             <div className="block lg:hidden relative w-full">
@@ -119,7 +117,10 @@ export function HeroSection() {
             </div>
 
             {/* ── DESKTOP: full-screen cover background ── */}
-            <div className="hidden lg:block relative min-h-screen">
+            <div className="hidden lg:block relative w-full bg-slate-50">
+                {/* Invisible static image to set the container aspect ratio automatically */}
+                <img src={banners[0].image} className="w-full h-auto invisible" alt="" />
+
                 {banners.map((slide, i) => (
                     <div
                         key={i}
@@ -128,8 +129,7 @@ export function HeroSection() {
                             opacity: i === currentSlide ? 1 : 0,
                             backgroundImage: `url(${slide.image})`,
                             backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            filter: 'brightness(1.1)',
+                            backgroundPosition: slide.position || 'center',
                             zIndex: 0,
                         }}
                     />
@@ -137,7 +137,7 @@ export function HeroSection() {
 
                 {/* Desktop gradient overlay */}
                 <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/50 via-black/20 to-transparent pointer-events-none" style={{ zIndex: 1 }} />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10" style={{ zIndex: 1 }} />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none" style={{ zIndex: 1 }} />
 
                 {/* Desktop dot indicators */}
                 <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
@@ -155,7 +155,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Desktop content overlay */}
-                <div className="relative flex min-h-screen flex-col items-center justify-end pb-20 px-6 text-center" style={{ zIndex: 10 }}>
+                <div className="absolute inset-0 flex flex-col items-center justify-end pb-20 px-6 text-center" style={{ zIndex: 10 }}>
                     <div className="mx-auto max-w-5xl w-full">
                         <div className="mb-4 flex justify-center">
                             <span 

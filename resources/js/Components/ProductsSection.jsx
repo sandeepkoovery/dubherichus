@@ -14,25 +14,25 @@ const products = [
     {
         title: "Standard",
         capacity: "1500- 2500 Ltr./day",
-        image: "/images/products_standard.jpeg",
+        image: "/images/standard.jpeg",
         href: "/products/standard",
     },
     {
         title: "Medium",
         capacity: "1250- 1500 Ltr./day",
-        image: "/images/products_medium.jpeg",
+        image: "/images/medium.jpeg",
         href: "/products/medium",
     },
     {
         title: "Commercial",
         capacity: "For Custom Use",
-        image: "/images/products_commercial.jpeg",
+        image: "/images/commercial.jpeg",
         href: "/products/commercial",
     },
     {
         title: "Bayaweaver",
         capacity: "Custom capacity as per the use",
-        image: "/images/products_bayaweaver.jpeg",
+        image: "/images/bayaweaver.jpg",
         href: "/products/bayaweaver",
     },
     {
@@ -44,13 +44,6 @@ const products = [
 ];
 
 
-const getCircularOffset = (idx, current, total) => {
-    let diff = idx - current;
-    if (diff > total / 2) diff -= total;
-    if (diff < -total / 2) diff += total;
-    return diff;
-};
-
 export function ProductsSection() {
     const asset = useAsset();
     const appBase = asset('');
@@ -59,22 +52,41 @@ export function ProductsSection() {
     const [isPaused, setIsPaused] = useState(false);
     const intervalRef = useRef(null);
 
+    // Touch event state for mobile swipe navigation
+    const [touchStart, setTouchStart] = useState(null);
+    const [touchEnd, setTouchEnd] = useState(null);
+
     useEffect(() => {
         const handleResize = () => {
-            setItemsToShow(window.innerWidth < 768 ? 1 : 3);
+            if (window.innerWidth < 640) {
+                setItemsToShow(1);
+            } else if (window.innerWidth < 1024) {
+                setItemsToShow(2);
+            } else {
+                setItemsToShow(3);
+            }
         };
         handleResize();
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    const maxIndex = Math.max(0, products.length - itemsToShow);
+
+    // Keep currentIndex within valid bounds when itemsToShow changes
+    useEffect(() => {
+        if (currentIndex > maxIndex) {
+            setCurrentIndex(maxIndex);
+        }
+    }, [itemsToShow, maxIndex, currentIndex]);
+
     const nextSlide = useCallback(() => {
-        setCurrentIndex((prev) => (prev + 1) % products.length);
-    }, []);
+        setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    }, [maxIndex]);
 
     const prevSlide = useCallback(() => {
-        setCurrentIndex((prev) => (prev - 1 + products.length) % products.length);
-    }, []);
+        setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+    }, [maxIndex]);
 
     const startAutoSlide = useCallback(() => {
         if (intervalRef.current) clearInterval(intervalRef.current);
@@ -91,6 +103,29 @@ export function ProductsSection() {
             if (intervalRef.current) clearInterval(intervalRef.current);
         };
     }, [startAutoSlide]);
+
+    const handleTouchStart = (e) => {
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchMove = (e) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const diff = touchStart - touchEnd;
+        const minSwipeDistance = 50;
+
+        if (diff > minSwipeDistance) {
+            nextSlide();
+        } else if (diff < -minSwipeDistance) {
+            prevSlide();
+        }
+
+        setTouchStart(null);
+        setTouchEnd(null);
+    };
 
     return (
         <>
@@ -112,114 +147,65 @@ export function ProductsSection() {
                 </div>
 
                 <div
-                    className="relative w-full group px-4 md:px-12"
+                    className="relative w-full group/slider px-4 md:px-12"
                     onMouseEnter={() => setIsPaused(true)}
                     onMouseLeave={() => setIsPaused(false)}
                 >
-                    <div className="overflow-hidden py-12 h-[68vh] min-h-[580px] relative w-full flex justify-center items-center" style={{ perspective: '1200px' }}>
-                        <div className="relative w-full h-full flex justify-center items-center" style={{ transformStyle: 'preserve-3d' }}>
-                            {products.map((product, idx) => {
-                                const offset = getCircularOffset(idx, currentIndex, products.length);
-                                
-                                // Determine styling variables based on offset and viewport size
-                                let transformStyle = "";
-                                let opacityStyle = 0;
-                                let zIndexStyle = 1;
-                                
-                                if (itemsToShow === 1) {
-                                    // Mobile: show only active card in center
-                                    if (offset === 0) {
-                                        transformStyle = "translate3d(-50%, 0, 0) scale(1) rotateY(0deg)";
-                                        opacityStyle = 1;
-                                        zIndexStyle = 10;
-                                    } else {
-                                        transformStyle = `translate3d(${offset > 0 ? "50%" : "-150%"}, 0, -100px) scale(0.8) rotateY(${offset > 0 ? "-20deg" : "20deg"})`;
-                                        opacityStyle = 0;
-                                        zIndexStyle = 1;
-                                    }
-                                } else {
-                                    // Desktop: 3D Coverflow
-                                    if (offset === 0) {
-                                        transformStyle = "translate3d(-50%, 0, 0) scale(1.05) rotateY(0deg)";
-                                        opacityStyle = 1;
-                                        zIndexStyle = 10;
-                                    } else if (offset === -1) {
-                                        transformStyle = "translate3d(-145%, 0, -150px) scale(0.88) rotateY(32deg)";
-                                        opacityStyle = 0.65;
-                                        zIndexStyle = 5;
-                                    } else if (offset === 1) {
-                                        transformStyle = "translate3d(45%, 0, -150px) scale(0.88) rotateY(-32deg)";
-                                        opacityStyle = 0.65;
-                                        zIndexStyle = 5;
-                                    } else if (offset < -1) {
-                                        transformStyle = "translate3d(-240%, 0, -250px) scale(0.75) rotateY(45deg)";
-                                        opacityStyle = 0;
-                                        zIndexStyle = 1;
-                                    } else if (offset > 1) {
-                                        transformStyle = "translate3d(140%, 0, -250px) scale(0.75) rotateY(-45deg)";
-                                        opacityStyle = 0;
-                                        zIndexStyle = 1;
-                                    }
-                                }
-
-                                const isVisible = offset === 0 || (itemsToShow > 1 && Math.abs(offset) === 1);
-
+                    <div 
+                        className="overflow-hidden py-12"
+                        onTouchStart={handleTouchStart}
+                        onTouchMove={handleTouchMove}
+                        onTouchEnd={handleTouchEnd}
+                    >
+                        <div 
+                            className="flex transition-transform duration-700 ease-in-out"
+                            style={{ 
+                                transform: `translate3d(-${currentIndex * (100 / itemsToShow)}%, 0, 0)` 
+                            }}
+                        >
+                            {products.map((product) => {
                                 return (
                                     <div 
                                         key={product.title} 
-                                        className="absolute left-1/2 top-0 flex-shrink-0 px-4 transition-all duration-700 ease-in-out cursor-pointer animate-fade-in"
-                                        style={{
-                                            width: itemsToShow === 1 ? '90%' : '30%',
-                                            transform: transformStyle,
-                                            opacity: opacityStyle,
-                                            zIndex: zIndexStyle,
-                                            transformStyle: 'preserve-3d',
-                                        }}
-                                        onClick={(e) => {
-                                            if (offset !== 0) {
-                                                e.preventDefault();
-                                                setCurrentIndex(idx);
-                                            }
-                                        }}
+                                        className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4 cursor-pointer"
                                     >
                                         <Link
                                             href={appBase + product.href}
-                                            className="group relative block w-full h-[60vh] min-h-[500px] overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950 rounded-[2rem] border border-slate-800/60 shadow-xl transition-all duration-500 hover:shadow-[0_20px_50px_rgba(59,130,246,0.18)] hover:-translate-y-3 hover:border-blue-500/40"
-                                            style={{
-                                                pointerEvents: isVisible ? 'auto' : 'none'
-                                            }}
+                                            className="group/card relative block w-full h-[65vh] min-h-[520px] rounded-2xl border border-slate-800/60 shadow-xl overflow-hidden"
                                         >
-                                            {/* Shimmer Sheen Sweep Effect */}
-                                            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none bg-gradient-to-r from-transparent via-white/10 to-transparent z-10" />
+                                            {/* Image wrapper — overflow-hidden clips the zoom to inside the card */}
+                                            <div className="absolute inset-0 overflow-hidden rounded-2xl">
+                                                {product.image ? (
+                                                    <img
+                                                        src={asset(product.image)}
+                                                        alt={product.title}
+                                                        className="w-full h-full object-cover scale-100 group-hover/card:scale-110 transition-transform duration-700 ease-in-out"
+                                                    />
+                                                ) : (
+                                                    <div className="w-full h-full bg-blue-900/40" />
+                                                )}
+                                            </div>
 
-                                            {product.image ? (
-                                                <img
-                                                    src={asset(product.image)}
-                                                    alt={product.title}
-                                                    className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 group-hover:rotate-1 group-hover:opacity-85"
-                                                />
-                                            ) : (
-                                                <div className="absolute inset-0 w-full h-full bg-blue-900/40 transition-all duration-1000 group-hover:bg-blue-800/60" />
-                                            )}
+                                            {/* Dark overlay gradient */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10" />
 
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent transition-opacity duration-700 opacity-70 group-hover:opacity-95" />
-
-                                            <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end items-start transition-transform duration-700 translate-y-6 group-hover:translate-y-0">
-                                                <p className="text-blue-400 font-bold tracking-[0.2em] text-[10px] md:text-xs mb-3 opacity-0 -translate-y-2 transition-all duration-700 delay-100 group-hover:opacity-100 group-hover:translate-y-0 uppercase drop-shadow-md">
+                                            {/* Text content - hidden by default, slides up on hover */}
+                                            <div className="absolute inset-0 z-20 p-8 md:p-12 pb-10 md:pb-12 flex flex-col justify-end items-center text-center opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-500 ease-in-out">
+                                                <p className="text-blue-400 font-bold tracking-[0.2em] text-[10px] md:text-xs mb-3 uppercase drop-shadow-md">
                                                     {product.capacity}
                                                 </p>
                                                 <h3 
-                                                    className="text-3xl md:text-4xl font-sans tracking-tight mb-6 drop-shadow-lg transform transition-all duration-700 uppercase"
+                                                    className="text-2xl md:text-3xl font-sans tracking-tight mb-4 drop-shadow-lg uppercase"
                                                     style={{ color: '#ffffff', fontWeight: '300' }}
                                                 >
                                                     {product.title}
                                                 </h3>
 
-                                                <div className="flex items-center gap-3 text-white text-xs font-bold uppercase tracking-[0.2em] opacity-0 translate-y-2 transition-all duration-700 delay-200 group-hover:opacity-100 group-hover:translate-y-0">
-                                                    <span className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-500 group-hover:after:w-full pb-1">
+                                                <div className="flex items-center gap-2 text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">
+                                                    <span className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-500 group-hover/card:after:w-full pb-1">
                                                         Explore System
                                                     </span>
-                                                    <ArrowRight className="w-4 h-4 ml-2 transform -translate-x-4 transition-transform duration-700 group-hover:translate-x-0" />
+                                                    <ArrowRight className="w-4 h-4 ml-1" />
                                                 </div>
                                             </div>
                                         </Link>
@@ -229,16 +215,16 @@ export function ProductsSection() {
                         </div>
                     </div>
 
-                    {/* Navigation Buttons inside slider */}
+                    {/* Navigation Buttons inside slider container but outside overflow */}
                     <button
                         onClick={prevSlide}
-                        className="absolute left-0 md:left-4 top-1/2 -translate-y-1/2 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-md hover:bg-black/40 transition-all active:scale-95 opacity-0 group-hover:opacity-100"
+                        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-slate-950/40 text-white backdrop-blur-md hover:bg-slate-900/70 transition-all active:scale-95 opacity-0 group-hover/slider:opacity-100"
                     >
                         <ChevronLeft className="h-8 w-8" />
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="absolute right-0 md:right-4 top-1/2 -translate-y-1/2 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-md hover:bg-black/40 transition-all active:scale-95 opacity-0 group-hover:opacity-100"
+                        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 flex h-14 w-14 items-center justify-center rounded-full bg-slate-950/40 text-white backdrop-blur-md hover:bg-slate-900/70 transition-all active:scale-95 opacity-0 group-hover/slider:opacity-100"
                     >
                         <ChevronRight className="h-8 w-8" />
                     </button>
