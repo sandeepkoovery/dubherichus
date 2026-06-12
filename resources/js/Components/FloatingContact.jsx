@@ -92,7 +92,7 @@ export function FloatingContact() {
             {!isOpen && (
                 <a
                     href={`tel:${callNumber}`}
-                    className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white shadow-xl transition-all duration-300 hover:scale-110 hover:bg-blue-700 active:scale-95 animate-in fade-in slide-in-from-bottom-2"
+                    className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:bg-blue-700 active:scale-95 animate-in fade-in slide-in-from-bottom-2"
                     title="Call Us"
                 >
                     <Phone className="h-5 w-5 fill-current" />
@@ -108,15 +108,15 @@ export function FloatingContact() {
                 )}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className={`flex h-14 w-14 items-center justify-center rounded-full shadow-2xl transition-all duration-500 hover:scale-110 active:scale-95 ${isOpen ? 'bg-white text-gray-800' : 'bg-[#25D366] text-white'
+                    className={`flex h-12 w-12 items-center justify-center rounded-full shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl active:scale-95 ${isOpen ? 'bg-white text-gray-800' : 'bg-[#25D366] text-white'
                         }`}
                 >
                     {isOpen ? (
-                        <X className="h-7 w-7" />
+                        <X className="h-5 w-5" />
                     ) : (
                         <div className="relative">
-                            <MessageCircle className="h-7 w-7 fill-current" />
-                            <div className="absolute -top-1 -right-1 h-3 w-3 rounded-full border-2 border-[#25D366] bg-red-500" />
+                            <MessageCircle className="h-5 w-5 fill-current" />
+                            <div className="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full border-2 border-[#25D366] bg-red-500" />
                         </div>
                     )}
                 </button>

@@ -81,7 +81,7 @@ export function ProjectsPreview() {
                                 </div>
 
                                 <h3
-                                    className="mb-6 text-xl tracking-widest uppercase"
+                                    className="mb-6 text-2xl font-sans tracking-tight"
                                     style={{ fontWeight: '300' }}
                                 >
                                     {item.title}

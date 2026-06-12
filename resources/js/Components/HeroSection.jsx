@@ -86,7 +86,7 @@ export function HeroSection() {
                                 onClick={() => handleDot(i)}
                                 className={`transition-all duration-300 rounded-full ${i === currentSlide
                                     ? "w-6 h-1.5 bg-primary"
-                                    : "w-1.5 h-1.5 bg-slate-300 hover:bg-slate-500"
+                                    : "w-1.5 h-1.5 bg-slate-400 hover:bg-slate-600"
                                     }`}
                                 aria-label={`Go to slide ${i + 1}`}
                             />
@@ -96,11 +96,11 @@ export function HeroSection() {
                         <span className="h-1 w-1 rounded-full bg-blue-600 animate-pulse" />
                         Advanced Water Treatment in India
                     </span>
-                    <div className="flex flex-row gap-2 w-full">
+                    <div className="flex flex-row gap-2 justify-center mt-2">
                         <Button
                             asChild
                             size="sm"
-                            className="h-7 bg-primary px-3 text-[8px] font-bold uppercase tracking-wider text-white flex-1"
+                            className="h-7 bg-primary px-4 text-[8px] font-bold uppercase tracking-wider text-white"
                         >
                             <Link href={appBase + "/products/standard"} className="whitespace-nowrap">Explore Products</Link>
                         </Button>
@@ -108,7 +108,7 @@ export function HeroSection() {
                             asChild
                             variant="outline"
                             size="sm"
-                            className="h-7 border-blue-900/30 bg-blue-50 px-3 text-[8px] font-bold uppercase tracking-wider text-blue-900 flex-1"
+                            className="h-7 border-blue-900/30 bg-blue-50 px-4 text-[8px] font-bold uppercase tracking-wider text-blue-900"
                         >
                             <Link href={appBase + "/contact"} className="whitespace-nowrap">Consult Expert</Link>
                         </Button>
@@ -140,14 +140,14 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none" style={{ zIndex: 1 }} />
 
                 {/* Desktop dot indicators */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                <div className="absolute bottom-14 left-1/2 -translate-x-1/2 z-20 flex gap-2">
                     {banners.map((_, i) => (
                         <button
                             key={i}
                             onClick={() => handleDot(i)}
                             className={`transition-all duration-300 rounded-full ${i === currentSlide
                                 ? "w-8 h-2.5 bg-primary"
-                                : "w-2.5 h-2.5 bg-white/40 hover:bg-white/70"
+                                : "w-2.5 h-2.5 bg-white/70 hover:bg-white"
                                 }`}
                             aria-label={`Go to slide ${i + 1}`}
                         />
