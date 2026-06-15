@@ -34,7 +34,7 @@ export function AboutSection() {
                     <div className="relative order-1 lg:order-2">
                         <div className="overflow-hidden rounded-2xl shadow-2xl h-full min-h-[400px]">
                             <img
-                                src={asset('/images/1-commercial.png')}
+                                src={asset('/images/medium.jpeg')}
                                 alt="Dubhe Richus Facility"
                                 className="h-full w-full object-cover"
                             />
