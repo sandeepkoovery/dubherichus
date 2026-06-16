@@ -64,36 +64,27 @@ export function ProjectsPreview() {
                     <div className="h-1 w-20 bg-primary/20 mt-8 mx-auto" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border border-slate-100 shadow-2xl">
-                    {features.map((item, idx) => {
-                        const isBlue = idx % 2 === 0;
-                        return (
-                            <div
-                                key={item.title}
-                                className={`flex flex-col items-center text-center p-12 md:p-16 h-full transition-all duration-500 ${isBlue
-                                    ? "bg-[#58a2cc] text-white"
-                                    : "bg-white text-slate-800"
-                                    }`}
-                            >
-                                <div className={`mb-8 flex h-16 w-16 items-center justify-center rounded-2xl ${isBlue ? "text-white" : "text-[#58a2cc]"
-                                    }`}>
-                                    <item.icon className="h-10 w-10" strokeWidth={1.5} />
-                                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mt-12">
+                    {features.map((item, idx) => (
+                        <div
+                            key={item.title}
+                            className="flex flex-col sm:flex-row gap-6 items-start border-t border-slate-200 pt-8 group"
+                        >
+                            <div className="flex-shrink-0 mt-1 bg-slate-50 p-4 rounded-2xl group-hover:bg-primary/5 transition-colors duration-300">
+                                <item.icon className="h-8 w-8 text-slate-400 group-hover:text-primary transition-colors duration-300" strokeWidth={1.5} />
+                            </div>
 
-                                <h3
-                                    className="mb-6 text-2xl font-sans tracking-tight"
-                                    style={{ fontWeight: '300' }}
-                                >
+                            <div>
+                                <h3 className="mb-3 text-xl font-bold tracking-tight text-slate-900 group-hover:text-primary transition-colors duration-300">
                                     {item.title}
                                 </h3>
 
-                                <p className={`text-lg font-light leading-relaxed max-w-xs ${isBlue ? "text-white/90" : "text-slate-500"
-                                    }`}>
+                                <p className="text-[15px] font-light leading-relaxed text-slate-500">
                                     {item.description}
                                 </p>
                             </div>
-                        );
-                    })}
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
