@@ -171,7 +171,7 @@ export function ProductsSection() {
                                     >
                                         <Link
                                             href={appBase + product.href}
-                                            className="group/card relative block w-full h-[65vh] min-h-[520px] rounded-2xl border border-slate-800/60 shadow-xl overflow-hidden"
+                                            className="group/card relative block w-full h-[65vh] min-h-[520px] rounded-2xl shadow-xl overflow-hidden bg-slate-900"
                                         >
                                             {/* Image wrapper — overflow-hidden clips the zoom to inside the card */}
                                             <div className="absolute inset-0 overflow-hidden rounded-2xl">
@@ -179,15 +179,15 @@ export function ProductsSection() {
                                                     <img
                                                         src={asset(product.image)}
                                                         alt={product.title}
-                                                        className="w-full h-full object-cover scale-100 group-hover/card:scale-110 transition-transform duration-700 ease-in-out"
+                                                        className="w-full h-full object-cover scale-100 group-hover/card:scale-150 transition-transform duration-700 ease-in-out"
                                                     />
                                                 ) : (
                                                     <div className="w-full h-full bg-blue-900/40" />
                                                 )}
                                             </div>
 
-                                            {/* Dark overlay gradient */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10" />
+                                            {/* Dark overlay gradient that appears ONLY on hover, and ONLY at the bottom half */}
+                                            <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 ease-in-out" />
 
                                             {/* Text content - hidden by default, slides up on hover */}
                                             <div className="absolute inset-0 z-20 p-8 md:p-12 pb-10 md:pb-12 flex flex-col justify-end items-center text-center opacity-0 translate-y-4 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-500 ease-in-out">
@@ -195,8 +195,8 @@ export function ProductsSection() {
                                                     {product.capacity}
                                                 </p>
                                                 <h3 
-                                                    className="text-2xl md:text-3xl font-sans tracking-tight mb-4 drop-shadow-lg uppercase"
-                                                    style={{ color: '#ffffff', fontWeight: '300' }}
+                                                    className="text-2xl md:text-3xl font-sans tracking-tight mb-4 uppercase text-white drop-shadow-lg"
+                                                    style={{ fontWeight: '300' }}
                                                 >
                                                     {product.title}
                                                 </h3>
