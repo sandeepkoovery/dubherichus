@@ -5,7 +5,7 @@ import { FAQSection } from "@/Components/FAQSection";
 import { useAsset } from "@/hooks/useAsset";
 import { Button } from "@/Components/ui/button";
 import { Link } from "@inertiajs/react";
-import { Check, X, ShieldCheck, Zap, Droplets, Building2 } from "lucide-react";
+import { Check, Building2, Zap, ShieldCheck, ArrowRight, Factory, Settings, Wrench, Activity, Cpu, Network, Shield, Recycle } from "lucide-react";
 
 const productFaqs = [
     {
@@ -26,6 +26,15 @@ const productFaqs = [
     }
 ];
 
+const features = [
+    { title: "Custom-Engineered System Design", desc: "Designed based on specific water source quality, consumption patterns, and site layout.", icon: Wrench },
+    { title: "High-Volume Efficient Treatment", desc: "Built specifically to handle large water demand and continuous operation for facilities.", icon: Activity },
+    { title: "Advanced Automation & Controls", desc: "Fully-automated systems ensure consistent performance with minimal manual intervention.", icon: Cpu },
+    { title: "Centralised Treatment Mechanism", desc: "Supports centralized plants supplying across multiple departments and facility areas.", icon: Network },
+    { title: "Durable, Low-Maintenance Build", desc: "Constructed with multi-year reliability and minimal upkeep for high-volume services.", icon: Shield },
+    { title: "Wastewater Treatment & Reuse", desc: "Integrated systems for wastewater treatment and reuse for flushing and landscaping.", icon: Recycle }
+];
+
 export default function Commercial() {
     const asset = useAsset();
     const appBase = asset('');
@@ -37,230 +46,194 @@ export default function Commercial() {
             </Head>
             <Navbar />
             <main className="pt-20">
-                {/* Hero Section */}
-                <section className="bg-white py-12 text-foreground overflow-hidden border-b border-slate-100">
-                    <div className="mx-auto max-w-7xl px-6">
-                        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+
+                {/* ── HERO ── */}
+                <section className="bg-white overflow-hidden">
+                    <div className="mx-auto max-w-7xl px-6 py-12 lg:py-20">
+                        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                             <div>
-                                <h1 className="mb-2 font-sans text-5xl font-semibold tracking-tight text-slate-900 md:text-6xl uppercase">
+                                <span className="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.3em]">
+                                    Size XL · Commercial Series
+                                </span>
+                                <h1 className="font-sans text-6xl md:text-7xl font-black tracking-tight text-slate-900 uppercase mb-2">
                                     Commercial
                                 </h1>
-                                <h2 
-                                    className="mb-8 font-sans text-3xl md:text-4xl"
-                                    style={{ color: '#262626', fontWeight: '300' }}
-                                >
+                                <p className="text-2xl md:text-3xl font-light text-slate-500 mb-8 tracking-tight">
                                     Water Treatment Plant
-                                </h2>
-
-                                <div className="max-w-xl mb-12">
-                                    <p className="text-xl text-slate-600 font-light leading-relaxed">
-                                        Custom-engineered water treatment plants for industries, institutions, and large-scale operations. Sustainable, chemical-free technology designed for high-volume demand and long-term reliability in any environment.
-                                    </p>
+                                </p>
+                                <p className="text-lg text-slate-600 font-light leading-relaxed mb-10 max-w-lg">
+                                    Custom-engineered water treatment plants for industries, institutions, and large-scale operations. Sustainable, chemical-free technology designed for high-volume demand and long-term reliability.
+                                </p>
+                                <div className="flex flex-wrap gap-3 mb-10">
+                                    {[
+                                        { icon: Factory, label: "Custom Capacity" },
+                                        { icon: Building2, label: "Any Scale Facility" },
+                                        { icon: Settings, label: "End-to-End Service" },
+                                    ].map(({ icon: Icon, label }) => (
+                                        <div key={label} className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-full px-4 py-2">
+                                            <Icon className="w-4 h-4 text-primary" />
+                                            <span className="text-sm font-medium text-slate-700">{label}</span>
+                                        </div>
+                                    ))}
                                 </div>
-
-                                <div className="mb-12 flex flex-col md:flex-row gap-8 items-start md:items-center">
-                                    <div>
-                                        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-2">Capacity</p>
-                                        <p className="text-2xl text-slate-800" style={{ fontWeight: '300' }}>Custom capacity as per the use</p>
-                                    </div>
-                                    <div className="h-10 w-px bg-slate-200 hidden md:block" />
-                                    <Button asChild size="lg" className="rounded-md bg-primary hover:bg-primary/90 h-14 px-10 text-[11px] font-bold uppercase tracking-[0.2em] transition-all shadow-xl shadow-primary/20 active:scale-95">
-                                        <Link href={appBase + "/contact"}>ORDER NOW</Link>
-                                    </Button>
-                                </div>
+                                <Button asChild size="lg" className="h-14 px-10 bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">
+                                    <Link href={appBase + "/contact"}>Get a Quote <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                                </Button>
                             </div>
 
-                            <div className="relative flex justify-center lg:justify-end">
-                                <div className="absolute -inset-10 bg-blue-500/5 rounded-full blur-[80px]" />
-                                <div className="relative bg-slate-100/50 rounded-full p-10 md:p-20 border border-slate-200/50 backdrop-blur-sm shadow-inner">
+                            {/* Square image */}
+                            <div className="relative">
+                                <div className="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl" />
+                                <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl border border-primary/10">
                                     <img
                                         src={asset('/images/commercial.jpeg')}
-                                        alt="Commercial Series Plant"
-                                        className="w-[300px] md:w-[480px] h-auto drop-shadow-2xl transition-transform duration-700 hover:scale-105"
+                                        alt="Commercial Series Water Treatment Plant"
+                                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                                     />
+                                    <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg">
+                                        <p className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Capacity</p>
+                                        <p className="text-lg font-black text-primary">Custom Engineered</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Description & Precise Layout Section (Refined) */}
-                <section className="py-16 bg-white overflow-hidden pb-0">
+                {/* ── STATS STRIP ── */}
+                <section className="bg-primary py-10">
                     <div className="mx-auto max-w-7xl px-6">
-                        <div className="grid gap-8 lg:grid-cols-12 items-stretch">
-                            {/* Column 1: Industry/Client Card */}
-                            <div className="lg:col-span-3">
-                                <div className="h-full bg-slate-50 rounded-[32px] overflow-hidden border border-slate-100 flex flex-col shadow-sm min-h-[400px]">
-                                    <div className="p-8">
-                                        <p className="text-slate-800 font-medium leading-relaxed">
-                                            Trusted by major industries and institutions across South India since 1991
-                                        </p>
-                                    </div>
-                                    <div className="flex-1 mt-auto overflow-hidden">
-                                        <img
-                                            src={asset('/images/clients/Client-List-Dubhe-Richus.png')}
-                                            alt="Client List"
-                                            className="w-full h-full object-cover grayscale opacity-60 transition-transform duration-1000 hover:scale-110"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Column 2: Specific Data Cards */}
-                            <div className="lg:col-span-3 flex flex-col gap-6">
-                                <div className="flex-1 bg-slate-50 p-8 rounded-[32px] border border-slate-100 flex flex-col justify-center items-center text-center shadow-sm">
-                                    <div className="bg-white p-4 rounded-2xl shadow-sm mb-4">
-                                        <Building2 className="w-8 h-8 text-blue-500" />
-                                    </div>
-                                    <p className="text-slate-600 font-bold uppercase tracking-widest text-xs">High-Volume Capacity</p>
-                                </div>
-
-                                <div className="flex-1 bg-slate-50 p-8 rounded-[32px] border border-slate-100 shadow-sm">
-                                    <p className="text-xl font-bold text-slate-800 mb-6">Applications</p>
-                                    <ul className="space-y-2 text-sm font-medium text-slate-600">
-                                        <li className="flex items-center gap-2"><Check className="w-4 h-4 text-blue-500" /> Hospitals & Schools</li>
-                                        <li className="flex items-center gap-2"><Check className="w-4 h-4 text-blue-500" /> Industries & Malls</li>
-                                        <li className="flex items-center gap-2"><Check className="w-4 h-4 text-blue-500" /> Resorts & Hotels</li>
-                                        <li className="flex items-center gap-2"><Check className="w-4 h-4 text-blue-500" /> Apartments</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            {/* Column 3: Detailed Text Content */}
-                            <div className="lg:col-span-6 flex flex-col justify-center py-4">
-                                <h3 
-                                    className="text-4xl font-sans mb-8 leading-[1.15]"
-                                    style={{ color: '#262626', fontWeight: '300' }}
-                                >
-                                    Complete Water Treatment Systems for Commercial & Industrial Facilities
-                                </h3>
-                                <div className="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
-                                    <p>
-                                        Our <Link href={appBase + "/"} className="text-primary">industrial water treatment systems</Link> are used to solve major water problems that occur naturally. It is a complete system for apartments, commercial facilities, hospitals, schools, and offices where water consumption is high.
-                                    </p>
-                                    <p>
-                                        Each system is designed to perform at high-capacity levels to ensure consistency for facility operations. We provide centralized plants for better results through our systematic purifying processes, ensuring smooth operation and clean water supply for every activity within the premises.
-                                    </p>
-                                    <p>
-                                        Every plant is customized based on your water source and usage requirement. We provide full construction and maintenance services for industrial water treatment plants, supporting environmentally responsible and sustainable water management across South India.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Features Section */}
-                <section className="py-20 bg-white">
-                    <div className="mx-auto max-w-7xl px-6">
-                        <div className="mb-12">
-                            <h2 
-                                className="font-sans text-3xl mb-1"
-                                style={{ color: '#262626', fontWeight: '300' }}
-                            >
-                                What Our Commercial Water Treatment Systems Offer
-                            </h2>
-                            <p className="text-slate-500 font-light italic">Efficient systems for large facilities / what our commercial range offer</p>
-                            <div className="mt-6 h-1 w-20 bg-primary" />
-                        </div>
-
-                        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center">
                             {[
-                                { title: "Custom-engineered System Design", desc: "Designed based on specific water source quality, consumption patterns, and site site/building layout." },
-                                { title: "High-Volume Efficient Treatment", desc: "Built specifically to handle large water demand and continuous operation for facilities." },
-                                { title: "Advanced Automation & Controls", desc: "Fully-automated systems ensure consistent performance with minimal manual intervention." },
-                                { title: "Centralised Treatment Mechanism", desc: "Supports centralized plants supplying across multiple departments and facility areas." },
-                                { title: "Durable, Low Maintenance build", desc: "Constructed with multi-year reliability and minimal upkeep for high-volume services." },
-                                { title: "Wastewater Treatment & Reuse", desc: "Includes integrated systems for wastewater treatment and reuse for flushing and landscaping." }
-                            ].map((item, i) => (
-                                <div key={i} className="p-8 bg-slate-50 rounded-[28px] border border-slate-100 hover:border-blue-200 hover:shadow-xl transition-all group">
-                                    <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                                        <Check className="w-6 h-6" />
-                                    </div>
-                                    <h4 className="text-xl mb-3 text-slate-900" style={{ fontWeight: '300' }}>{item.title}</h4>
-                                    <p className="text-slate-500 font-light leading-relaxed">{item.desc}</p>
+                                { value: "33+", label: "Years of Experience" },
+                                { value: "100%", label: "Chemical Free" },
+                                { value: "0W", label: "Electricity Used" },
+                                { value: "Custom", label: "Capacity" },
+                            ].map(({ value, label }) => (
+                                <div key={label}>
+                                    <p className="text-white text-4xl font-black mb-1">{value}</p>
+                                    <p className="text-white/70 text-xs uppercase tracking-widest font-medium">{label}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </section>
 
-                {/* Pillars Sections (Refined and Compact) */}
-                <section className="py-20 bg-slate-50">
-                    <div className="mx-auto max-w-7xl px-6 space-y-20">
-                        {/* No Electricity */}
-                        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
-                            <div className="flex flex-col justify-center bg-white p-12 rounded-[40px] border border-slate-100 shadow-sm">
-                                <h3 
-                                    className="text-4xl font-sans mb-6"
-                                    style={{ color: '#262626', fontWeight: '300' }}
-                                >
-                                    No Electricity Required
-                                </h3>
-                                <p className="text-lg text-slate-600 font-light leading-relaxed">
-                                    DUBHE Merak provides standard home water treatment systems which work perfectly without any electricity. This makes them cost-effective and easy to maintain even in areas where power outages are common. No more worrying about electricity bills or power failures affecting your clean water supply.
-                                </p>
-                            </div>
-                            <div className="relative group">
-                                <div className="absolute inset-0 bg-primary/5 rounded-[40px] blur-2xl group-hover:bg-primary/10 transition-colors" />
-                                <div className="relative h-full min-h-[400px] rounded-[40px] overflow-hidden border border-slate-200 shadow-xl group-hover:border-blue-200 transition-all">
-                                    <img src={asset('/images/about-mission.png')} alt="No Electricity" className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
-                                    <div className="absolute inset-0 flex items-center justify-center bg-slate-900/10">
-                                        <div className="relative">
-                                            <Zap className="w-40 h-40 text-white/40 stroke-[1]" />
-                                            <X className="absolute inset-0 w-40 h-40 text-red-500/60 stroke-[4] scale-110" />
-                                        </div>
-                                    </div>
+                {/* ── DESCRIPTION ── */}
+                <section className="py-20 bg-white">
+                    <div className="mx-auto max-w-7xl px-6">
+                        <div className="grid lg:grid-cols-2 gap-16 items-center">
+                            <div>
+                                <h2 className="text-4xl font-sans tracking-tight mb-6 leading-snug text-slate-900" style={{ fontWeight: '300' }}>
+                                    Complete Water Treatment Systems for Commercial & Industrial Facilities
+                                </h2>
+                                <div className="space-y-5 text-lg text-slate-600 font-light leading-relaxed">
+                                    <p>Our <Link href={appBase + "/"} className="text-primary underline underline-offset-2">industrial water treatment systems</Link> solve major water problems naturally. Complete systems for apartments, commercial facilities, hospitals, schools, and offices where water consumption is high.</p>
+                                    <p>Each system is designed to perform at high-capacity levels for facility operations. We provide centralized plants ensuring smooth operation and clean water supply for every activity within the premises.</p>
+                                    <p>Every plant is customized based on your water source and usage requirement. We provide full construction and maintenance services supporting sustainable water management across India.</p>
                                 </div>
                             </div>
-                        </div>
-
-                        {/* No Chemical */}
-                        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
-                            <div className="order-2 lg:order-1 relative group">
-                                <div className="absolute inset-0 bg-primary/5 rounded-[40px] blur-2xl group-hover:bg-primary/10 transition-colors" />
-                                <div className="relative h-full min-h-[400px] rounded-[40px] overflow-hidden border border-slate-200 shadow-xl group-hover:border-blue-200 transition-all">
-                                    <img src={asset('/images/parallax-water.jpg')} alt="No Chemicals" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
-                                    <div className="absolute inset-0 flex items-center justify-center bg-slate-900/10">
-                                        <div className="relative">
-                                            <ShieldCheck className="w-40 h-40 text-white/40 stroke-[1]" />
-                                            <X className="absolute inset-0 w-40 h-40 text-red-500/60 stroke-[4] scale-110" />
-                                        </div>
-                                    </div>
+                            {/* Image with overlay — same pattern as Medium & Standard */}
+                            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl border border-slate-100">
+                                <img
+                                    src={asset('/images/commercial.jpeg')}
+                                    alt="Commercial Series Water Treatment Plant"
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
+                                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 mb-3">Trusted By</p>
+                                    <ul className="space-y-2">
+                                        {[
+                                            "Hospitals & Healthcare Facilities",
+                                            "Industries & Manufacturing Plants",
+                                            "Resorts, Hotels & Hospitality",
+                                            "Apartments & Residential Complexes",
+                                        ].map(item => (
+                                            <li key={item} className="flex items-center gap-2 text-white text-sm font-medium">
+                                                <Check className="w-3.5 h-3.5 text-white/80 shrink-0" />
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-                            </div>
-                            <div className="order-1 lg:order-2 flex flex-col justify-center bg-white p-12 rounded-[40px] border border-slate-100 shadow-sm">
-                                <h3 
-                                    className="text-4xl font-sans mb-6"
-                                    style={{ color: '#262626', fontWeight: '300' }}
-                                >
-                                    No Chemical used
-                                </h3>
-                                <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">
-                                    DUBHE Water purification systems use natural filtering media to remove impurities from your water supply. This means no chemicals are added during the treatment process, resulting in cleaner and healthier water for your family.
-                                </p>
-                                <Button asChild className="w-fit h-14 px-10 bg-primary hover:bg-primary/90 font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20">
-                                    <Link href={appBase + "/contact"}>GET PRICING</Link>
-                                </Button>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Final CTA Banner */}
-                <section className="bg-primary py-20 text-white relative">
+                {/* ── FEATURES GRID ── */}
+                <section className="py-20 bg-slate-50">
+                    <div className="mx-auto max-w-7xl px-6">
+                        <div className="mb-12 text-center">
+                            <h2 className="font-sans text-4xl tracking-tight text-slate-900 mb-3" style={{ fontWeight: '300' }}>
+                                What Our Commercial Systems Offer
+                            </h2>
+                            <p className="text-center text-slate-500 font-light">Efficient systems for large facilities and high-volume operations</p>
+                            <div className="mt-6 h-1 w-16 bg-primary mx-auto rounded-full" />
+                        </div>
+                        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                            {features.map((item, i) => {
+                                const Icon = item.icon;
+                                return (
+                                    <div key={i} className="relative p-8 bg-white rounded-3xl border border-slate-100/80 shadow-sm hover:shadow-2xl hover:border-primary/20 hover:-translate-y-1 transition-all duration-300 group overflow-hidden">
+                                        <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl translate-x-8 -translate-y-8 group-hover:bg-primary/10 transition-colors" />
+                                        <div className="w-12 h-12 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                                            <Icon className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
+                                        </div>
+                                        <h4 className="text-xl font-bold text-slate-900 mb-3 tracking-tight group-hover:text-primary transition-colors duration-300">{item.title}</h4>
+                                        <p className="text-slate-500 font-light leading-relaxed text-sm">{item.desc}</p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+
+                {/* ── PILLARS ── */}
+                <section className="py-20 bg-white">
+                    <div className="mx-auto max-w-7xl px-6 space-y-16">
+                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                                <img src={asset('/images/about-mission.png')} alt="No Electricity" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                            </div>
+                            <div>
+                                <div className="inline-flex items-center gap-2 bg-yellow-50 text-yellow-700 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-6">
+                                    <Zap className="w-3.5 h-3.5" /> Zero Electricity
+                                </div>
+                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>Electricity-Free Operation</h3>
+                                <p className="text-lg text-slate-600 font-light leading-relaxed">DUBHE commercial systems work without electricity, dramatically reducing operational costs. Ideal for facilities that require 24/7 water supply without being affected by power outages or high energy bills.</p>
+                            </div>
+                        </div>
+                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            <div className="order-2 lg:order-1">
+                                <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-6">
+                                    <ShieldCheck className="w-3.5 h-3.5" /> Chemical Free
+                                </div>
+                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>No Chemicals. No Compromise.</h3>
+                                <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">Our commercial water purification systems use advanced natural filtering media — no chemicals added. Clean, safe water for your facility's staff, residents, patients, or guests with full environmental compliance.</p>
+                                <Button asChild className="h-14 px-10 bg-primary hover:bg-primary/90 font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20 text-white">
+                                    <Link href={appBase + "/contact"}>Get Pricing</Link>
+                                </Button>
+                            </div>
+                            <div className="order-1 lg:order-2 w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                                <img src={asset('/images/parallax-water.jpg')} alt="No Chemicals" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* ── CTA ── */}
+                <section className="bg-primary py-20 text-white">
                     <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-10">
-                        <h2 
-                            className="text-3xl md:text-4xl text-center md:text-left max-w-2xl leading-tight"
-                            style={{ color: '#ffffff', fontWeight: '300' }}
-                        >
-                            Experience clean water today! contact Dubhe Richus!
+                        <h2 className="text-white text-3xl md:text-4xl text-center md:text-left max-w-2xl leading-tight" style={{ fontWeight: '300' }}>
+                            Need a custom commercial water treatment solution? Let's talk.
                         </h2>
-                        <Button asChild className="bg-white text-blue-700 hover:bg-slate-100 font-bold px-10 h-14 rounded-md text-sm tracking-widest shadow-xl transition-all hover:-translate-y-1 active:translate-y-0">
+                        <Button asChild className="bg-white text-primary hover:bg-slate-100 font-bold px-10 h-14 rounded-xl text-sm tracking-widest shadow-xl transition-all hover:-translate-y-1 active:translate-y-0 shrink-0">
                             <Link href={appBase + "/contact"}>Contact Us</Link>
                         </Button>
                     </div>
                 </section>
+
                 <FAQSection items={productFaqs} title="COMMERCIAL SYSTEM FAQS" />
             </main>
             <SiteFooter />
