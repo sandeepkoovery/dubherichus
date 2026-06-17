@@ -10,6 +10,11 @@ export function HeroSection() {
     const appBase = asset('');
     const [currentSlide, setCurrentSlide] = useState(0);
     const intervalRef = useRef(null);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const banners = [
         {
@@ -60,21 +65,25 @@ export function HeroSection() {
 
             {/* ── MOBILE: stack img tags so they never crop ── */}
             <div className="block lg:hidden relative w-full">
-                {banners.map((slide, i) => (
-                    <div
-                        key={i}
-                        className="w-full transition-opacity duration-1000"
-                        style={{
-                            display: i === currentSlide ? 'block' : 'none',
-                        }}
-                    >
-                        <img
-                            src={slide.image}
-                            alt={`Banner ${i + 1}`}
-                            className="w-full h-auto"
-                        />
-                    </div>
-                ))}
+                <div className="relative w-full overflow-hidden">
+                    <img src={banners[0].image} className="w-full h-auto invisible" alt="" />
+                    {banners.map((slide, i) => (
+                        <div
+                            key={i}
+                            className="absolute inset-0 transition-opacity duration-1000"
+                            style={{
+                                opacity: i === currentSlide ? 1 : 0,
+                                zIndex: i === currentSlide ? 1 : 0,
+                            }}
+                        >
+                            <img
+                                src={slide.image}
+                                alt={`Banner ${i + 1}`}
+                                className={`w-full h-full object-cover transition-transform duration-[10000ms] ease-out ${i === currentSlide && mounted ? 'scale-[1.15]' : 'scale-100'}`}
+                            />
+                        </div>
+                    ))}
+                </div>
 
                 {/* Mobile Buttons + Dots */}
                 <div className="flex flex-col items-center gap-2 w-full px-4 py-2 bg-white/90">
@@ -117,7 +126,7 @@ export function HeroSection() {
             </div>
 
             {/* ── DESKTOP: full-screen cover background ── */}
-            <div className="hidden lg:block relative w-full bg-slate-50">
+            <div className="hidden lg:block relative w-full bg-slate-50 overflow-hidden">
                 {/* Invisible static image to set the container aspect ratio automatically */}
                 <img src={banners[0].image} className="w-full h-auto invisible" alt="" />
 
@@ -127,12 +136,17 @@ export function HeroSection() {
                         className="absolute inset-0 transition-opacity duration-1000"
                         style={{
                             opacity: i === currentSlide ? 1 : 0,
-                            backgroundImage: `url(${slide.image})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: slide.position || 'center',
-                            zIndex: 0,
+                            zIndex: i === currentSlide ? 1 : 0,
                         }}
-                    />
+                    >
+                        <div 
+                            className={`w-full h-full bg-cover transition-transform duration-[10000ms] ease-out ${i === currentSlide && mounted ? 'scale-[1.15]' : 'scale-100'}`}
+                            style={{
+                                backgroundImage: `url(${slide.image})`,
+                                backgroundPosition: slide.position || 'center',
+                            }}
+                        />
+                    </div>
                 ))}
 
                 {/* Desktop gradient overlay */}
