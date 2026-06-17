@@ -15,7 +15,6 @@ const navLinks = [
             {
                 label: "Manual",
                 links: [
-                    { label: "CLASSIC (S)", href: "/products/classic" },
                     { label: "MEDIUM (M)", href: "/products/medium" },
                     { label: "STANDARD (L)", href: "/products/standard" },
                     { label: "COMMERCIAL (XL)", href: "/products/commercial" },

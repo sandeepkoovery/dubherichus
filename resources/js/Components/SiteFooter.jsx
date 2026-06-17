@@ -4,7 +4,6 @@ import { useAsset } from "@/hooks/useAsset";
 import { useAppUrl } from "@/hooks/useAppUrl";
 
 const productLinks = [
-    { label: "CLASSIC (S)", href: "/products/classic" },
     { label: "MEDIUM (M)", href: "/products/medium" },
     { label: "STANDARD (L)", href: "/products/standard" },
     { label: "COMMERCIAL (XL)", href: "/products/commercial" },

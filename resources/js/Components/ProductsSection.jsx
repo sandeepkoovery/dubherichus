@@ -6,12 +6,6 @@ import { Link } from "@inertiajs/react";
 
 const products = [
     {
-        title: "Classic",
-        capacity: "800 - 1200 Ltr/ Day",
-        image: "/images/products_classic.jpeg",
-        href: "/products/classic",
-    },
-    {
         title: "Standard",
         capacity: "1500- 2500 Ltr./day",
         image: "/images/standard.jpeg",
