@@ -38,11 +38,27 @@ function VideoCard({ id, title, isMain = false, onNext, onPrev, customThumbnail 
             onClick={() => isMain && setIsPlaying(true)}
         >
             <img
+                key={id}
                 src={customThumbnail || `https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
                 onError={(e) => {
                     if (customThumbnail) return;
-                    e.target.onerror = null;
-                    e.target.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+                    if (!e.target.dataset.fallback) {
+                        e.target.dataset.fallback = 'hq720';
+                        e.target.src = `https://img.youtube.com/vi/${id}/hq720.jpg`;
+                    } else if (e.target.dataset.fallback === 'hq720') {
+                        e.target.dataset.fallback = 'hqdefault';
+                        e.target.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+                    }
+                }}
+                onLoad={(e) => {
+                    if (customThumbnail) return;
+                    if (e.target.naturalWidth <= 120 && !e.target.dataset.fallback) {
+                        e.target.dataset.fallback = 'hq720';
+                        e.target.src = `https://img.youtube.com/vi/${id}/hq720.jpg`;
+                    } else if (e.target.naturalWidth <= 120 && e.target.dataset.fallback === 'hq720') {
+                        e.target.dataset.fallback = 'hqdefault';
+                        e.target.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+                    }
                 }}
                 alt={title}
                 className="absolute inset-0 w-full h-full object-cover"
@@ -162,9 +178,64 @@ export default function About() {
             desc: "Innovative sewage and wastewater treatment technologies from Kerala."
         },
         {
-            id: "LP3mLsRKgk0",
-            title: "Commercial Success",
-            desc: "Powering large-scale projects like Oberon Mall with purified water."
+            id: "tinXhCUAJAQ",
+            title: "Dubhe Richus Showcase",
+            desc: "Explore our latest water treatment technology."
+        },
+        {
+            id: "i7ZL8lSMIAw",
+            title: "Advanced Filtration",
+            desc: "See our advanced filtration systems in action."
+        },
+        {
+            id: "wCgEz2PaLjU",
+            title: "Water Purification",
+            desc: "Ensuring pure and safe water for everyone."
+        },
+        {
+            id: "naooq0auZAk",
+            title: "Our Technology",
+            desc: "Inside look at Dubhe Richus technology."
+        },
+        {
+            id: "jwOe-8PFPl4",
+            title: "Installation Process",
+            desc: "How our systems are installed seamlessly."
+        },
+        {
+            id: "myjhGFjnx-s",
+            title: "Project Highlight",
+            desc: "Highlighting another successful project."
+        },
+        {
+            id: "ENBcbUOOIM8",
+            title: "Quality Assurance",
+            desc: "Our commitment to high-quality filtration."
+        },
+        {
+            id: "GsxStc8Y6bU",
+            title: "System Overview",
+            desc: "Overview of our complete water systems."
+        },
+        {
+            id: "O2ImDMVa-ts",
+            title: "Sustainable Water",
+            desc: "Providing sustainable water solutions."
+        },
+        {
+            id: "DG6OrdzGXCE",
+            title: "Commercial Projects",
+            desc: "Delivering pure water for commercial use."
+        },
+        {
+            id: "PEN_Pl--JDY",
+            title: "Residential Solutions",
+            desc: "Perfect for any residential application."
+        },
+        {
+            id: "Y-5Kd2Wc8LI",
+            title: "Future of Water",
+            desc: "Innovating the future of water treatment."
         }
     ];
 
