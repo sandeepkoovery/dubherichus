@@ -136,7 +136,7 @@ export default function Medium() {
                             {/* Image alongside description to fill the blank space */}
                             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl border border-slate-100">
                                 <img
-                                    src={asset('/images/medium.jpeg')}
+                                    src={asset('/images/medium1.jpeg')}
                                     alt="Medium Series Water Treatment Plant"
                                     className="w-full h-full object-cover"
                                 />
