@@ -216,7 +216,7 @@ export default function Commercial() {
                                 </Button>
                             </div>
                             <div className="order-1 lg:order-2 w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                                <img src={asset('/images/parallax-water.jpg')} alt="No Chemicals" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                                <img src={asset('/images/bottom_commercial.jpeg')} alt="No Chemicals" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                             </div>
                         </div>
                     </div>

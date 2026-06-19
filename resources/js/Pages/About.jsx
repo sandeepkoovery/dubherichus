@@ -243,28 +243,14 @@ export default function About() {
         <>
             <Head title="About Us - Dubhe Richus" />
             <Navbar />
-            <main className="pt-16 lg:pt-0">
+            <main className="pt-16">
                 {/* Hero Section */}
                 <section className="relative overflow-hidden bg-[#020617]">
-                    {/* Mobile/Tablet: No-crop image */}
-                    <div className="lg:hidden w-full">
-                        <img
-                            src={asset('/images/about.jpeg')}
-                            alt="About Dubhe Richus"
-                            className="w-full h-auto"
-                        />
-                    </div>
-                    {/* Desktop: Cinematic Hero */}
-                    <div
-                        className="hidden lg:block relative py-40 md:py-60"
-                        style={{
-                            backgroundImage: `url(${asset('/images/about.jpeg')})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                        }}
-                    >
-                        <div className="absolute inset-0 bg-black/10" />
-                    </div>
+                    <img
+                        src={asset('/images/about.jpeg')}
+                        alt="About Dubhe Richus"
+                        className="w-full h-auto block"
+                    />
                 </section>
 
                 {/* History Section */}

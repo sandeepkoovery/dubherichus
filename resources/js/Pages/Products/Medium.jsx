@@ -194,7 +194,7 @@ export default function Medium() {
                     <div className="mx-auto max-w-7xl px-6 space-y-16">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                                <img src={asset('/images/about-mission.png')} alt="No Electricity" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                                <img src={asset('/images/no_electricity.jpeg')} alt="No Electricity" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                             </div>
                             <div>
                                 <div className="inline-flex items-center gap-2 bg-yellow-50 text-yellow-700 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-6">
