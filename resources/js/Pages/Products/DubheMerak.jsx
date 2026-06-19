@@ -159,28 +159,28 @@ export default function DubheMerak() {
                             
                             {/* Left side info */}
                             <div className="lg:col-span-5 space-y-6">
-                                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Applications</h2>
+                                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-blue-400">Applications</h2>
                                 <h3 className="text-4xl font-sans font-light tracking-tight text-white leading-tight">
-                                    Wastewater Solutions Built for High Compliance
-                                </h3>
+                                     Wastewater Solutions Built for High Compliance
+                                 </h3>
                                 <p className="text-slate-300 font-light leading-relaxed">
-                                    Using advanced biological and mechanical treatment processes, the Dubhe Merak STP removes contaminants from sewage, producing treated water that can be used for landscaping, flushing, or other non-potable applications.
-                                </p>
-                                <ul className="space-y-3 pt-4">
-                                    {[
-                                        "Residential Villas & Complexes",
-                                        "Apartments & Housing Societies",
-                                        "Commercial & Retail Complexes",
-                                        "Industrial Parks & Manufacturing",
-                                    ].map(item => (
-                                        <li key={item} className="flex items-center gap-3 text-slate-300 text-sm font-medium">
-                                            <div className="w-5 h-5 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
-                                                <Check className="w-3 h-3 text-primary" />
-                                            </div>
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
+                                     Using advanced biological and mechanical treatment processes, the Dubhe Merak STP removes contaminants from sewage, producing treated water that can be used for landscaping, flushing, or other non-potable applications.
+                                 </p>
+                                 <ul className="space-y-3 pt-4">
+                                     {[
+                                         "Residential Villas & Complexes",
+                                         "Apartments & Housing Societies",
+                                         "Commercial & Retail Complexes",
+                                         "Industrial Parks & Manufacturing",
+                                     ].map(item => (
+                                         <li key={item} className="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                                             <div className="w-5 h-5 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
+                                                 <Check className="w-3 h-3 text-blue-400" />
+                                             </div>
+                                             {item}
+                                         </li>
+                                     ))}
+                                 </ul>
                             </div>
 
                             {/* Right side interactive grid */}
@@ -191,8 +191,8 @@ export default function DubheMerak() {
                                     { title: "Commercial Malls", desc: "Treated output supports large scale toilet flushing and HVAC systems.", stat: "Reclamation" },
                                     { title: "Industrial Parks", desc: "Designed for high durability and strict regulatory standard compliance.", stat: "Compliant" },
                                 ].map((item, i) => (
-                                    <div key={i} className="bg-slate-800/50 p-8 rounded-3xl border border-slate-700/50 hover:border-primary/30 hover:bg-slate-800 transition-all duration-300">
-                                        <span className="inline-block bg-primary/10 text-primary border border-primary/20 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest mb-4">
+                                    <div key={i} className="bg-slate-800/50 p-8 rounded-3xl border border-slate-700/50 hover:border-blue-500/30 hover:bg-slate-800 transition-all duration-300">
+                                        <span className="inline-block bg-blue-500/10 text-blue-300 border border-blue-500/20 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest mb-4">
                                             {item.stat}
                                         </span>
                                         <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>

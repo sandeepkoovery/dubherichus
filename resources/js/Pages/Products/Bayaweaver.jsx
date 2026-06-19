@@ -160,7 +160,7 @@ export default function Bayaweaver() {
                             
                             {/* Left side info */}
                             <div className="lg:col-span-5 space-y-6">
-                                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Applications</h2>
+                                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-blue-400">Applications</h2>
                                 <h3 className="text-4xl font-sans font-light tracking-tight text-white leading-tight">
                                     High-Volume Water Treatment for Modern Infrastructure
                                 </h3>
@@ -175,8 +175,8 @@ export default function Bayaweaver() {
                                         "High-Rise Residential Complexes",
                                     ].map(item => (
                                         <li key={item} className="flex items-center gap-3 text-slate-300 text-sm font-medium">
-                                            <div className="w-5 h-5 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
-                                                <Check className="w-3 h-3 text-primary" />
+                                            <div className="w-5 h-5 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
+                                                <Check className="w-3 h-3 text-blue-400" />
                                             </div>
                                             {item}
                                         </li>
@@ -192,8 +192,8 @@ export default function Bayaweaver() {
                                     { title: "Hotels & Clubs", desc: "Guarantees premium aesthetic soft water for guests and pools.", stat: "Soft Water" },
                                     { title: "Apartment Blocks", desc: "Centralized supply with low operation and maintenance cost.", stat: "Centralized" },
                                 ].map((item, i) => (
-                                    <div key={i} className="bg-slate-850 p-8 rounded-3xl border border-slate-800 hover:border-primary/20 hover:bg-slate-800/50 transition-all duration-300">
-                                        <span className="inline-block bg-primary/10 text-primary border border-primary/20 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest mb-4">
+                                    <div key={i} className="bg-slate-850 p-8 rounded-3xl border border-slate-800 hover:border-blue-500/30 hover:bg-slate-800/50 transition-all duration-300">
+                                        <span className="inline-block bg-blue-500/10 text-blue-300 border border-blue-500/20 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest mb-4">
                                             {item.stat}
                                         </span>
                                         <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
