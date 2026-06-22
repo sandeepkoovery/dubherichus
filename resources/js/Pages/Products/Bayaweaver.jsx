@@ -238,7 +238,7 @@ export default function Bayaweaver() {
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
                             <div className="relative">
                                 <div className="aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-100">
-                                    <img src={asset('/images/about-mission.png')} alt="Natural Media" className="w-full h-full object-cover" />
+                                    <img src={asset('/images/bayaweaver2.jpeg')} alt="Natural Media" className="w-full h-full object-cover" />
                                 </div>
                                 <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 max-w-[200px]">
                                     <p className="text-3xl font-black text-primary">0%</p>

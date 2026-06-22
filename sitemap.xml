@@ -12,14 +12,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Product: Classic Home Water Filter (Size S) -->
-  <url>
-    <loc>https://dubherichus.com/products/classic</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
   <!-- Product: Medium Home Water Filter (Size M) -->
   <url>
     <loc>https://dubherichus.com/products/medium</loc>
