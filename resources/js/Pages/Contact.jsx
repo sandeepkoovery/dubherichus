@@ -32,7 +32,7 @@ export default function Contact() {
             <Head title="Contact Us - Dubhe Richus" />
             <Navbar />
 
-            <main className="pt-16 lg:pt-0 pb-20">
+            <main className="pt-20 pb-20">
                 {/* Responsive Banner Section */}
                 <section className="relative overflow-hidden bg-[#020617]">
                     <div className="w-full">
