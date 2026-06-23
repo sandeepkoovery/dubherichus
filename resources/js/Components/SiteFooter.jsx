@@ -70,7 +70,7 @@ export function SiteFooter() {
                                 </svg>
                             </a>
                             <a
-                                href="https://www.youtube.com/@dubherichus2108"
+                                href="https://www.youtube.com/@dubherichus1991"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF0000] shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl active:scale-95"
