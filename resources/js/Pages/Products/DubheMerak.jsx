@@ -235,13 +235,9 @@ export default function DubheMerak() {
                 <section className="py-24 bg-slate-50/50 border-t border-slate-100">
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
-                            <div className="relative">
+                            <div>
                                 <div className="aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-100">
-                                    <img src={asset('/images/parallax-water.jpg')} alt="Water Reuse" className="w-full h-full object-cover" />
-                                </div>
-                                <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 max-w-[200px]">
-                                    <p className="text-3xl font-black text-primary">85%</p>
-                                    <p className="text-xs text-slate-500 font-medium mt-1">Water recovery rate from typical daily sewage volume</p>
+                                    <img src={asset('/images/merak.jpeg')} alt="Water Reuse" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                             <div className="space-y-8">
