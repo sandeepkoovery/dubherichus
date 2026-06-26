@@ -48,27 +48,15 @@ export default function Projects() {
                 <meta name="description" content="Explore our portfolio of successful water treatment projects across India. From premium residential installations to large-scale commercial plants for industry leaders." />
             </Head>
             <Navbar />
-            <main className="pt-16 lg:pt-0 bg-white">
+            <main className="pt-20 bg-white">
                 {/* Hero Section */}
                 <section className="relative overflow-hidden bg-[#020617]">
-                    {/* Mobile/Tablet: No-crop image */}
-                    <div className="lg:hidden w-full">
+                    <div className="w-full">
                         <img
-                            src={asset('/images/our_projects.jpeg')}
+                            src={asset('/images/our_projects_new.jpeg')}
                             alt="Our Projects"
                             className="w-full h-auto"
                         />
-                    </div>
-                    {/* Desktop: Cinematic Hero */}
-                    <div
-                        className="hidden lg:block relative py-40 md:py-60"
-                        style={{
-                            backgroundImage: `url(${asset('/images/our_projects.jpeg')})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                        }}
-                    >
-                        <div className="absolute inset-0 bg-black/10" />
                     </div>
                 </section>
 
