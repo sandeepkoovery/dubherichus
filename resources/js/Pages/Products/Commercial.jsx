@@ -27,12 +27,11 @@ const productFaqs = [
 ];
 
 const features = [
-    { title: "Custom-Engineered System Design", desc: "Designed based on specific water source quality, consumption patterns, and site layout.", icon: Wrench },
-    { title: "High-Volume Efficient Treatment", desc: "Built specifically to handle large water demand and continuous operation for facilities.", icon: Activity },
-    { title: "Advanced Automation & Controls", desc: "Fully-automated systems ensure consistent performance with minimal manual intervention.", icon: Cpu },
-    { title: "Centralised Treatment Mechanism", desc: "Supports centralized plants supplying across multiple departments and facility areas.", icon: Network },
-    { title: "Durable, Low-Maintenance Build", desc: "Constructed with multi-year reliability and minimal upkeep for high-volume services.", icon: Shield },
-    { title: "Wastewater Treatment & Reuse", desc: "Integrated systems for wastewater treatment and reuse for flushing and landscaping.", icon: Recycle }
+    { title: "Bespoke Systems Architecture", desc: "Engineered around a comprehensive diagnostic analysis of your water source and operational requirements.", icon: Wrench },
+    { title: "High-Volume Continuous Yield", desc: "Built to withstand the rigorous demands of 24/7 continuous commercial operations.", icon: Activity },
+    { title: "Advanced Process Automation", desc: "Smart controls ensure consistent water outputs with negligible operator oversight.", icon: Cpu },
+    { title: "Centralized Distribution Integration", desc: "Uniformly feeds purified water across expansive, multi-department facilities.", icon: Network },
+    { title: "Wastewater Reclamation Capabilities", desc: "Offers integrated frameworks for treated effluent recycling, ideal for flushing and landscaping applications.", icon: Recycle }
 ];
 
 export default function Commercial() {
@@ -62,13 +61,13 @@ export default function Commercial() {
                                     Water Treatment Plant
                                 </p>
                                 <p className="text-lg text-slate-600 font-light leading-relaxed mb-10 max-w-lg">
-                                    Custom-engineered water treatment plants for industries, institutions, and large-scale operations. Sustainable, chemical-free technology designed for high-volume demand and long-term reliability.
+                                    High-Volume Centralized Systems for Commercial & Industrial Infrastructure. Custom engineered and scalable to any demand.
                                 </p>
                                 <div className="flex flex-wrap gap-3 mb-10">
                                     {[
-                                        { icon: Factory, label: "Custom Capacity" },
-                                        { icon: Building2, label: "Any Scale Facility" },
-                                        { icon: Settings, label: "End-to-End Service" },
+                                        { icon: Factory, label: "Custom Engineered" },
+                                        { icon: Building2, label: "Large-Scale Facilities" },
+                                        { icon: Settings, label: "End-to-End Execution" },
                                     ].map(({ icon: Icon, label }) => (
                                         <div key={label} className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-full px-4 py-2">
                                             <Icon className="w-4 h-4 text-primary" />
@@ -125,12 +124,11 @@ export default function Commercial() {
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
                             <div>
                                 <h2 className="text-4xl font-sans tracking-tight mb-6 leading-snug text-slate-900" style={{ fontWeight: '300' }}>
-                                    Complete Water Treatment Systems for Commercial & Industrial Facilities
+                                    High-Volume Centralized Systems for Commercial & Industrial Infrastructure
                                 </h2>
                                 <div className="space-y-5 text-lg text-slate-600 font-light leading-relaxed">
-                                    <p>Our <Link href={appBase + "/"} className="text-primary underline underline-offset-2">industrial water treatment systems</Link> solve major water problems naturally. Complete systems for apartments, commercial facilities, hospitals, schools, and offices where water consumption is high.</p>
-                                    <p>Each system is designed to perform at high-capacity levels for facility operations. We provide centralized plants ensuring smooth operation and clean water supply for every activity within the premises.</p>
-                                    <p>Every plant is customized based on your water source and usage requirement. We provide full construction and maintenance services supporting sustainable water management across India.</p>
+                                    <p>Our industrial-grade water treatment plants solve heavy-volume water challenges naturally. We design and deploy comprehensive centralized systems for luxury apartments, commercial hubs, hospitals, educational institutions and manufacturing facilities where clean water is critical to daily operations.</p>
+                                    <p>Each plant is bespoke—custom-tailored to your precise raw water chemistry, spatial layout and daily consumption patterns. From concept and construction to ongoing lifecycle maintenance, we deliver high-performance water architecture across India.</p>
                                 </div>
                             </div>
                             {/* Image with overlay — same pattern as Medium & Standard */}
@@ -144,10 +142,10 @@ export default function Commercial() {
                                     <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 mb-3">Trusted By</p>
                                     <ul className="space-y-2">
                                         {[
-                                            "Hospitals & Healthcare Facilities",
-                                            "Industries & Manufacturing Plants",
-                                            "Resorts, Hotels & Hospitality",
-                                            "Apartments & Residential Complexes",
+                                            "Premier Hospitals & Healthcare Networks",
+                                            "Industrial Manufacturing & Processing Plants",
+                                            "Elite Resorts, Hotels, and Hospitality Chains",
+                                            "High-Rise Residential Complexes & Townships",
                                         ].map(item => (
                                             <li key={item} className="flex items-center gap-2 text-white text-sm font-medium">
                                                 <Check className="w-3.5 h-3.5 text-white/80 shrink-0" />
@@ -166,9 +164,8 @@ export default function Commercial() {
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="mb-12 text-center">
                             <h2 className="font-sans text-4xl tracking-tight text-slate-900 mb-3" style={{ fontWeight: '300' }}>
-                                What Our Commercial Systems Offer
+                                Key Features & Benefits
                             </h2>
-                            <p className="text-center text-slate-500 font-light">Efficient systems for large facilities and high-volume operations</p>
                             <div className="mt-6 h-1 w-16 bg-primary mx-auto rounded-full" />
                         </div>
                         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -200,8 +197,8 @@ export default function Commercial() {
                                 <div className="inline-flex items-center gap-2 bg-yellow-50 text-yellow-700 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-6">
                                     <Zap className="w-3.5 h-3.5" /> Zero Electricity
                                 </div>
-                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>Electricity-Free Operation</h3>
-                                <p className="text-lg text-slate-600 font-light leading-relaxed">DUBHE commercial systems work without electricity, dramatically reducing operational costs. Ideal for facilities that require 24/7 water supply without being affected by power outages or high energy bills.</p>
+                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>Grid-Independent Commercial Operation</h3>
+                                <p className="text-lg text-slate-600 font-light leading-relaxed">Drastically cuts facility overheads. These high-capacity systems run flawlessly without electricity, ensuring a constant water supply even during major power disruptions.</p>
                             </div>
                         </div>
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -209,8 +206,8 @@ export default function Commercial() {
                                 <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-6">
                                     <ShieldCheck className="w-3.5 h-3.5" /> Chemical Free
                                 </div>
-                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>No Chemicals. No Compromise.</h3>
-                                <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">Our commercial water purification systems use advanced natural filtering media — no chemicals added. Clean, safe water for your facility's staff, residents, patients, or guests with full environmental compliance.</p>
+                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>Zero Chemicals, Total Compliance</h3>
+                                <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">Advanced natural filtration media ensures you achieve full environmental and regulatory compliance without introducing toxic chemicals or synthetic balancing additives into the ecosystem.</p>
                                 <Button asChild className="h-14 px-10 bg-primary hover:bg-primary/90 font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20 text-white">
                                     <Link href={appBase + "/contact"}>Get Pricing</Link>
                                 </Button>

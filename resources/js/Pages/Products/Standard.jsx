@@ -27,12 +27,11 @@ const productFaqs = [
 ];
 
 const features = [
-    { title: "Fully Automatic Operation", desc: "Ensures consistent water treatment protocol without manual intervention.", icon: Cpu },
-    { title: "Low Maintenance Cost", desc: "Requires very little upkeep, making it an easy and hassle-free system.", icon: PiggyBank },
-    { title: "Long-lasting & Durable Build", desc: "Constructed with high-quality components for multi-year performance.", icon: Shield },
-    { title: "Suitable in Tough Water Conditions", desc: "Designed for consistent results and high reliability in any water source.", icon: Droplets },
-    { title: "Improves Water Quality Daily", desc: "Clean water for drinking, cooking, bathing, and all household purposes.", icon: Award },
-    { title: "Responsible Wastewater Handling", desc: "Supports environmentally responsible and sustainable water management.", icon: Leaf }
+    { title: "Fully Automated Operation", desc: "Programmed to manage its own treatment protocols flawlessly without requiring manual operation.", icon: Cpu },
+    { title: "Ultra-Low Lifecycle Costs", desc: "Engineered for maximum efficiency with minimal upkeep, providing a true \"fit-and-forget\" experience.", icon: PiggyBank },
+    { title: "Heavy-Duty Build Quality", desc: "Constructed utilizing premium-tier, industrial-grade components for multi-decade durability.", icon: Shield },
+    { title: "Resilient in Extreme Conditions", desc: "Specially calibrated to deliver consistent, highly reliable filtration parameters across erratic water sources.", icon: Droplets },
+    { title: "Eco-Responsible Backwash", desc: "Supports sustainable water management with optimized, low-waste discharge protocols.", icon: Leaf }
 ];
 
 export default function Standard() {
@@ -80,15 +79,15 @@ export default function Standard() {
                                     Water Treatment Plant
                                 </p>
                                 <p className="text-lg text-slate-600 font-light leading-relaxed mb-10 max-w-lg">
-                                    Built for large homes and double-storey villas. Delivers clean, healthy water from every tap, solving common water quality problems at the source with proven, worry-free technology.
+                                    High-Capacity Whole-House Treatment for Homes. Equip your home with the absolute confidence of pure, healthy water from every faucet.
                                 </p>
 
                                 {/* Spec pills */}
                                 <div className="flex flex-wrap gap-3 mb-10">
                                     {[
-                                        { icon: Droplets, label: "1500–2500 Ltr/Day" },
-                                        { icon: Home, label: "Upto 3500 sq.ft." },
-                                        { icon: Ruler, label: "H: 5.1ft · Dia: 200mm" },
+                                        { icon: Droplets, label: "1,500–2,500 L/Day" },
+                                        { icon: Home, label: "Up to 3,500 sq. ft." },
+                                        { icon: Ruler, label: "H: 5.1 ft · Dia: 200 mm" },
                                     ].map(({ icon: Icon, label }) => (
                                         <div key={label} className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-full px-4 py-2">
                                             <Icon className="w-4 h-4 text-primary" />
@@ -130,12 +129,12 @@ export default function Standard() {
                         <div className="grid lg:grid-cols-2 gap-16 items-start">
                             <div>
                                 <h2 className="text-4xl font-sans tracking-tight mb-6 leading-snug text-slate-900" style={{ fontWeight: '300' }}>
-                                    Standard Whole-House Clean Water Treatment System
+                                    High-Capacity Whole-House Treatment for Homes
                                 </h2>
                                 <div className="space-y-5 text-lg text-slate-600 font-light leading-relaxed">
-                                    <p>Give your home the confidence of clean, healthy water from every tap. Our Standard Whole-House Water Treatment System solves common water quality problems at the source and delivers reliable, worry-free water throughout your entire home.</p>
-                                    <p>Built on more than three decades of expertise and innovation, this system naturally removes iron, turbidity, and unpleasant odour to improve water for drinking, cooking, bathing, cleaning, and everyday household needs.</p>
-                                    <p>Engineered with proven technology, the Dubhe water purification system delivers efficient performance from day one, protecting plumbing, fittings, and appliances from damage caused by poor water quality.</p>
+                                    <p>Equip your home with the absolute confidence of pure, healthy water from every faucet.</p>
+                                    <p>Our Standard Whole-House Water Treatment System eliminates water quality issues at the point of entry, delivering worry-free, crystal-clear water throughout your entire property.</p>
+                                    <p>Designed for expansive multi-storey residences and double-storey villas, this system leverages our three decades of proprietary engineering to naturally eradicate iron, cloudiness and heavy Odors. It safeguards your premium bathroom fittings, expensive appliances and plumbing infrastructure from the severe damage caused by untreated water.</p>
                                 </div>
                             </div>
                             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl border border-slate-100">
@@ -145,13 +144,13 @@ export default function Standard() {
                                     className="w-full h-full object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
-                                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 mb-3">Suitable For</p>
+                                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 mb-3">Ideal For</p>
                                     <ul className="space-y-2">
                                         {[
-                                            "Single-storey homes up to 3500 sq.ft.",
-                                            "Double-storey homes up to 2800 sq.ft.",
-                                            "Large families needing high daily water output",
-                                            "Homes with severe hard or borewell water issues",
+                                            "Single-storey luxury homes up to 3,500 sq. ft.",
+                                            "Double-storey villas up to 2,800 sq. ft.",
+                                            "Large families requiring high-volume daily water yields.",
+                                            "Estates facing severe hard water or heavily contaminated borewell sources.",
                                         ].map(item => (
                                             <li key={item} className="flex items-center gap-2 text-white text-sm font-medium">
                                                 <Check className="w-3.5 h-3.5 text-white/80 shrink-0" />
@@ -170,9 +169,8 @@ export default function Standard() {
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="mb-12 text-center">
                             <h2 className="font-sans text-4xl tracking-tight text-slate-900 mb-3" style={{ fontWeight: '300' }}>
-                                Advantages of Our Standard Home Water Treatment
+                                                Key Features & Benefits
                             </h2>
-                            <p className="text-center text-slate-500 font-light">What our standard water treatment range offers</p>
                             <div className="mt-6 h-1 w-16 bg-primary mx-auto rounded-full" />
                         </div>
                         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -204,8 +202,8 @@ export default function Standard() {
                                 <div className="inline-flex items-center gap-2 bg-yellow-50 text-yellow-700 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-6">
                                     <Zap className="w-3.5 h-3.5" /> Zero Electricity
                                 </div>
-                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>No Electricity Required</h3>
-                                <p className="text-lg text-slate-600 font-light leading-relaxed">DUBHE systems work perfectly without any electricity. This makes them cost-effective and easy to maintain even in areas where power outages are common. No more worrying about electricity bills or power failures affecting your clean water supply.</p>
+                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>Zero Electricity Required</h3>
+                                <p className="text-lg text-slate-600 font-light leading-relaxed">Operates smoothly and completely independent of the power grid, rendering it entirely immune to power failures or rising energy bills.</p>
                             </div>
                         </div>
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -213,8 +211,8 @@ export default function Standard() {
                                 <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-6">
                                     <ShieldCheck className="w-3.5 h-3.5" /> Chemical Free
                                 </div>
-                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>No Chemical Used</h3>
-                                <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">DUBHE Water purification systems use natural filtering media to remove impurities from your water supply. No chemicals are added during the treatment process, resulting in cleaner and healthier water for your family.</p>
+                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>100% Chemical-Free</h3>
+                                <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">Utilizes premium natural filtration media to strip away impurities, yielding healthier, safer water for your family's daily wellness.</p>
                                 <Button asChild className="h-14 px-10 bg-primary hover:bg-primary/90 font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20">
                                     <Link href={appBase + "/contact"}>Get Pricing</Link>
                                 </Button>

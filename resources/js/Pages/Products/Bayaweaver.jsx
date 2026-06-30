@@ -68,22 +68,22 @@ export default function Bayaweaver() {
                                     </h2>
                                 </div>
                                 <p className="text-lg text-slate-200 font-light leading-relaxed max-w-xl text-left">
-                                    AI-powered automatic water treatment system for intelligent, worry-free filtration. Precision self-cleaning and maintenance-free performance designed to handle demanding industrial water conditions.
+                                    An AI-powered, autonomous water treatment ecosystem designed for intelligent, entirely hands-off filtration. Combining precision self-cleaning functionality with maintenance-free performance, Bayaweaver is engineered to dominate demanding industrial and commercial water profiles.
                                 </p>
                                 
                                 {/* Quick Dashboard Metrics */}
                                 <div className="grid grid-cols-3 gap-6 py-6 border-y border-slate-800/80">
                                     <div>
                                         <p className="text-2xl md:text-3xl font-bold text-white">0%</p>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Manual Effort</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Manual Effort (Fully Autonomous)</p>
                                     </div>
                                     <div>
                                         <p className="text-2xl md:text-3xl font-bold text-white">24/7</p>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Flow Monitoring</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Continuous Flow Monitoring</p>
                                     </div>
                                     <div>
                                         <p className="text-2xl md:text-3xl font-bold text-white">Auto</p>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Self-Cleaning</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Predictive Auto Self-Cleaning Cycles</p>
                                     </div>
                                 </div>
 
@@ -130,9 +130,9 @@ export default function Bayaweaver() {
 
                         <div className="grid md:grid-cols-3 gap-8 relative">
                             {[
-                                { step: "01", title: "Real-Time Monitoring", desc: "Advanced electronic sensors continuously monitor inlet water quality, pressure levels, and flow volume.", icon: Eye },
-                                { step: "02", title: "Adaptive Filtration", desc: "Chemical-free multi-layer media adjusts to load variations, filtering out iron, smell, and impurities efficiently.", icon: Cpu },
-                                { step: "03", title: "Self-Cleaning Cycle", desc: "Once cleaning thresholds are reached, the system initiates automatic backwash, flushing debris instantly.", icon: RefreshCw },
+                                { step: "01", title: "Real-Time Monitoring", desc: "Advanced electronic sensors continuously track inlet water quality variations, line pressure and volumetric flow rates.", icon: Eye },
+                                { step: "02", title: "Adaptive Filtration", desc: "Our custom-formulated, chemical-free multi-layer media dynamically adjusts to varying pollution loads, trapping iron, particulates and Odor molecules with absolute precision.", icon: Cpu },
+                                { step: "03", title: "Self-Cleaning Cycle", desc: "Upon hitting predefined optimization thresholds, the system autonomously triggers a high-velocity backwash cycle, instantly flushing away trapped debris without operator intervention.", icon: RefreshCw },
                             ].map((item, i) => {
                                 const Icon = item.icon;
                                 return (
@@ -162,17 +162,17 @@ export default function Bayaweaver() {
                             <div className="lg:col-span-5 space-y-6">
                                 <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-blue-400">Applications</h2>
                                 <h3 className="text-4xl font-sans font-light tracking-tight text-white leading-tight">
-                                    High-Volume Water Treatment for Modern Infrastructure
+                                    Modern High-Volume Infrastructure
                                 </h3>
                                 <p className="text-slate-400 font-light leading-relaxed">
-                                    Our industrial systems are used to solve major water problems that occur naturally. It is a complete system for apartments, commercial facilities, hospitals, schools, and offices where water consumption is high.
+                                    Our Bayaweaver automatic water treatment plants are designed for high-performance and reliable operations across modern commercial and industrial infrastructure.
                                 </p>
                                 <ul className="space-y-3 pt-4">
                                     {[
-                                        "Hospitals, Laboratories & Schools",
+                                        "Hospitals, Laboratories & Universities",
                                         "Manufacturing & Assembly Plants",
-                                        "Resorts, Luxury Hotels & Clubs",
-                                        "High-Rise Residential Complexes",
+                                        "Luxury Hotels, Resorts & Clubs",
+                                        "High-Rise Residential Townships",
                                     ].map(item => (
                                         <li key={item} className="flex items-center gap-3 text-slate-300 text-sm font-medium">
                                             <div className="w-5 h-5 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
@@ -187,10 +187,10 @@ export default function Bayaweaver() {
                             {/* Right side interactive grid */}
                             <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
                                 {[
-                                    { title: "Industrial Plants", desc: "Continuous operation with zero downtime under heavy load.", stat: "Continuous" },
-                                    { title: "Hospitals & Labs", desc: "Meets chemical-free safety guidelines for sensitive sanitization.", stat: "Ultra-Pure" },
-                                    { title: "Hotels & Clubs", desc: "Guarantees premium aesthetic soft water for guests and pools.", stat: "Soft Water" },
-                                    { title: "Apartment Blocks", desc: "Centralized supply with low operation and maintenance cost.", stat: "Centralized" },
+                                    { title: "Manufacturing & Assembly Plants", desc: "Engineered for continuous, heavy-load operations with zero operational downtime.", stat: "Continuous" },
+                                    { title: "Hospitals, Laboratories & Universities", desc: "Meets strict, chemical-free purity guidelines required for sensitive environments and sanitization protocols.", stat: "Ultra-Pure" },
+                                    { title: "Luxury Hotels, Resorts & Clubs", desc: "Guarantees premium, highly aesthetic soft water that protects luxury guest amenities, piping and swimming pools.", stat: "Soft Water" },
+                                    { title: "High-Rise Residential Townships", desc: "Centralized, ultra-efficient water distribution boasting the lowest operational and maintenance cost per litre in its class.", stat: "Centralized" },
                                 ].map((item, i) => (
                                     <div key={i} className="bg-slate-850 p-8 rounded-3xl border border-slate-800 hover:border-blue-500/30 hover:bg-slate-800/50 transition-all duration-300">
                                         <span className="inline-block bg-blue-500/10 text-blue-300 border border-blue-500/20 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest mb-4">
@@ -246,7 +246,7 @@ export default function Bayaweaver() {
                                     Why Natural Filtration Media Wins
                                 </h3>
                                 <p className="text-slate-600 font-light leading-relaxed text-left">
-                                    Rather than injecting chemicals that require complex chemical balancing and leave trace residues, Bayaweaver relies on custom-formulated natural filtration layers. This ensures cleaner water, zero chemical residue, and supports long-term ecological sustainability.
+                                    Traditional systems inject synthetic chemicals that require complex balancing acts and leave trace chemical residues. Bayaweaver replaces this with proprietary, eco-compliant natural filtration strata. The result is safer, chemical-residue-free water, zero environmental pollution upon discharge and a radically reduced carbon footprint.
                                 </p>
                                 <div className="grid grid-cols-2 gap-6 pt-4">
                                     <div className="space-y-2 text-left">

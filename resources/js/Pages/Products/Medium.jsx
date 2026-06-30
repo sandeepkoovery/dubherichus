@@ -27,12 +27,12 @@ const productFaqs = [
 ];
 
 const features = [
-    { title: "Iron Removal Filter", desc: "Removes iron content and multi-level impurities from your water source.", icon: Filter },
-    { title: "Maintenance-Free System", desc: "Easy manual cleaning process with minimal human intervention required.", icon: Settings },
-    { title: "Degasser for Odour Removal", desc: "Integrated degasser removes foul odour and bad smell naturally.", icon: Wind },
-    { title: "Activated Carbon Filter", desc: "For better taste and water quality with high precision results.", icon: Layers },
-    { title: "Compact Single-Unit Solution", desc: "Consistent performance for residential homes with systematic treatment.", icon: Box },
-    { title: "Responsive After-Sales Service", desc: "Dedicated support team to ensure lifetime performance of your system.", icon: HeartHandshake }
+    { title: "Advanced Iron Removal", desc: "Eliminates heavy iron content and multi-level particulate impurities directly at the source.", icon: Filter },
+    { title: "Maintenance-Free Engineering", desc: "Features a streamlined manual backwash process requiring negligible human intervention.", icon: Settings },
+    { title: "Natural Aeration Degasser", desc: "An integrated degassing system naturally eliminates foul Odors and sour smells without chemicals.", icon: Wind },
+    { title: "High-Precision Activated Carbon", desc: "Enhances taste, clarity and overall organic water quality with exceptional filtration accuracy.", icon: Layers },
+    { title: "Compact Single-Unit Footprint", desc: "A space-saving, systematic design engineered for seamless residential integration.", icon: Box },
+    { title: "Responsive After-Sales Care", desc: "Backed by a dedicated support network to guarantee lifetime system performance.", icon: HeartHandshake }
 ];
 
 export default function Medium() {
@@ -62,13 +62,13 @@ export default function Medium() {
                                     Water Treatment Plant
                                 </p>
                                 <p className="text-lg text-slate-600 font-light leading-relaxed mb-10 max-w-lg">
-                                    Designed for typical Indian homes and single-storey villas. Supplies treated water to multiple taps, protecting plumbing and appliances from scaling and damage.
+                                    Premium Whole-House Water Filtration for Uncompromising Purity. Supplies treated water to multiple taps, protecting plumbing and appliances from scaling and damage.
                                 </p>
                                 <div className="flex flex-wrap gap-3 mb-10">
                                     {[
-                                        { icon: Droplets, label: "1250–1500 Ltr/Day" },
-                                        { icon: Home, label: "Upto 1800 sq.ft." },
-                                        { icon: Ruler, label: "H: 4.1ft · Dia: 200mm" },
+                                        { icon: Droplets, label: "1,250–1,500 L/Day" },
+                                        { icon: Home, label: "Up to 1,800 sq. ft." },
+                                        { icon: Ruler, label: "H: 4.1 ft · Dia: 200 mm" },
                                     ].map(({ icon: Icon, label }) => (
                                         <div key={label} className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-full px-4 py-2">
                                             <Icon className="w-4 h-4 text-primary" />
@@ -125,12 +125,12 @@ export default function Medium() {
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
                             <div>
                                 <h2 className="text-4xl font-sans tracking-tight mb-6 leading-snug text-slate-900" style={{ fontWeight: '300' }}>
-                                    Medium Whole House Water Filter for Clean Water Throughout Your Home
+                                    Premium Whole-House Water Filtration for Uncompromising Purity
                                 </h2>
                                 <div className="space-y-5 text-lg text-slate-600 font-light leading-relaxed">
-                                    <p>Hard water, yellow stains, iron smell and scaling in bathrooms and kitchens are common issues in many homes across Kerala and India. Dubhe Water Treatment System is designed to meet real household needs and deliver reliable long-term performance.</p>
-                                    <p>Our medium home water purification filter, made for typical Indian homes and single-storey villas, supplies treated water to multiple taps at the same time. Bathrooms, kitchens and utility areas receive consistent water quality while plumbing, fittings and appliances stay protected.</p>
-                                    <p>Developed through more than three decades of expertise and innovation, this system naturally removes iron, turbidity, and unpleasant odour to improve water for drinking, cooking, bathing, and everyday use.</p>
+                                    <p>Hard water, yellow staining, heavy iron Odors and disruptive scaling in bathrooms and kitchens are common challenges faced by households across India. The Dubhe Water Treatment System is purpose-built to address these real-world issues, delivering dependable, long-term performance.</p>
+                                    <p>Engineered specifically for typical Indian homes and single-storey villas, our Medium Home Series delivers treated water to multiple outlets simultaneously. Bathrooms, kitchens and utility zones receive a consistent supply of premium-quality water, effectively shielding your plumbing infrastructure, high-end fixtures and appliances from scaling and corrosion.</p>
+                                    <p>Developed through over three decades of pioneering expertise, this system naturally eliminates iron, turbidity and unpleasant Odors—fundamentally elevating your water quality for drinking, cooking, bathing and daily use.</p>
                                 </div>
                             </div>
                             {/* Image alongside description to fill the blank space */}
@@ -141,13 +141,13 @@ export default function Medium() {
                                     className="w-full h-full object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
-                                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 mb-3">Suitable For</p>
+                                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/70 mb-3">Ideal For</p>
                                     <ul className="space-y-2">
                                         {[
-                                            "Single-storey homes up to 1800 sq.ft.",
-                                            "Typical Indian homes & villas",
-                                            "Families using borewell or hard water",
-                                            "Homes needing clean water from every tap",
+                                            "Single-storey residences up to 1,800 sq. ft.",
+                                            "Standard Indian homes and boutique villas.",
+                                            "Households relying on challenging borewell or hard water sources.",
+                                            "Homeowners demanding pristine, clean water from every single tap.",
                                         ].map(item => (
                                             <li key={item} className="flex items-center gap-2 text-white text-sm font-medium">
                                                 <Check className="w-3.5 h-3.5 text-white/80 shrink-0" />
@@ -166,9 +166,8 @@ export default function Medium() {
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="mb-12 text-center">
                             <h2 className="font-sans text-4xl tracking-tight text-slate-900 mb-3" style={{ fontWeight: '300' }}>
-                                What the Medium Series Offers
+                                Key Features & Benefits
                             </h2>
-                            <p className="text-center text-slate-500 font-light">Advanced features for everyday home water treatment</p>
                             <div className="mt-6 h-1 w-16 bg-primary mx-auto rounded-full" />
                         </div>
                         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -200,8 +199,8 @@ export default function Medium() {
                                 <div className="inline-flex items-center gap-2 bg-yellow-50 text-yellow-700 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-6">
                                     <Zap className="w-3.5 h-3.5" /> Zero Electricity
                                 </div>
-                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>Electricity-Free Operation</h3>
-                                <p className="text-lg text-slate-600 font-light leading-relaxed">Enjoy a continuous supply of treated water even during power cuts. The filter operates without electricity, which helps reduce energy bills and keeps running costs low. Reliable performance every day without power dependency.</p>
+                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>Zero Electricity Required</h3>
+                                <p className="text-lg text-slate-600 font-light leading-relaxed">Enjoy an uninterrupted supply of purified water even during power outages. This completely electricity-free operation slashes your energy bills and minimizes operational costs.</p>
                             </div>
                         </div>
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -209,8 +208,8 @@ export default function Medium() {
                                 <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-6">
                                     <ShieldCheck className="w-3.5 h-3.5" /> Chemical Free
                                 </div>
-                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>Naturally Filtered Water</h3>
-                                <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">Water is purified through advanced filtration without the use of chemicals or additives. This makes it safe for daily household use while protecting plumbing systems and appliances.</p>
+                                <h3 className="text-4xl font-sans mb-5 text-slate-900" style={{ fontWeight: '300' }}>100% Chemical-Free</h3>
+                                <p className="text-lg text-slate-600 font-light leading-relaxed mb-8">Water is purified purely through advanced physical filtration layers. No chemical additives, no synthetic residues—just safe, healthy water protecting your family and your home's plumbing.</p>
                                 <Button asChild className="h-14 px-10 bg-primary hover:bg-primary/90 font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20">
                                     <Link href={appBase + "/contact"}>Get Pricing</Link>
                                 </Button>

@@ -68,22 +68,22 @@ export default function DubheMerak() {
                                     </h2>
                                 </div>
                                 <p className="text-lg text-slate-200 font-light leading-relaxed max-w-xl text-left">
-                                    Advanced biological sewage treatment solutions designed to protect local environments. Reclaim wastewater safely for non-potable reuse and gardening with high efficiency and compliance.
+                                    An elite biological wastewater treatment solution engineered to satisfy strict environmental mandates. Reclaim up to 85% of your facility's black and greywater safely for non-potable reuse, commercial flushing and landscaping with maximum ecological efficiency.
                                 </p>
                                 
                                 {/* Quick Metrics */}
                                 <div className="grid grid-cols-3 gap-6 py-6 border-y border-slate-800/80">
                                     <div>
                                         <p className="text-2xl md:text-3xl font-bold text-white">100%</p>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Odour-Free</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">100% Odor-Free Execution</p>
                                     </div>
                                     <div>
                                         <p className="text-2xl md:text-3xl font-bold text-white">85%</p>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Water Recovery</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Up to 85% Water Recovery Rate</p>
                                     </div>
                                     <div>
                                         <p className="text-2xl md:text-3xl font-bold text-white">Eco</p>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Compliant</p>
+                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">100% Eco & Regulatory Compliant</p>
                                     </div>
                                 </div>
 
@@ -123,15 +123,15 @@ export default function DubheMerak() {
                         <div className="max-w-3xl mb-16">
                             <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Reclamation Process</h2>
                             <h3 className="text-4xl font-sans font-light text-slate-900 tracking-tight leading-tight">
-                                From Waste to Reclaimed Resource
+                                The Reclamation Process: Waste to Resource
                             </h3>
                         </div>
 
                         <div className="grid md:grid-cols-3 gap-8 relative">
                             {[
-                                { step: "01", title: "Primary Filtration", desc: "Removes physical solids, grease, and large suspended particles from incoming facility sewage.", icon: Box },
-                                { step: "02", title: "Biological Digestion", desc: "Aerobic biological digestion breaks down dissolved organic waste, converting it into harmless elements.", icon: Recycle },
-                                { step: "03", title: "Disinfection & Reuse", desc: "Post-clarification and micro-filtration ensure treated output water is completely pathogen-free and ready for use.", icon: Droplet },
+                                { step: "01", title: "Primary Separation & Clarification", desc: "Rapidly screens out physical solids, fats, oils, grease (FOG), and suspended macro-particles.", icon: Box },
+                                { step: "02", title: "Biological Digestion", desc: "High-efficiency aerobic microbes actively break down dissolved organic waste, converting complex contaminants into harmless natural elements.", icon: Recycle },
+                                { step: "03", title: "Disinfection & Micro-Filtration", desc: "Advanced tertiary polishing eliminates pathogens, rendering the final clear output completely safe, stable, and ready for deployment.", icon: Droplet },
                             ].map((item, i) => {
                                 const Icon = item.icon;
                                 return (
@@ -161,17 +161,17 @@ export default function DubheMerak() {
                             <div className="lg:col-span-5 space-y-6">
                                 <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-blue-400">Applications</h2>
                                 <h3 className="text-4xl font-sans font-light tracking-tight text-white leading-tight">
-                                     Wastewater Solutions Built for High Compliance
+                                     High-Compliance Infrastructure
                                  </h3>
                                 <p className="text-slate-300 font-light leading-relaxed">
-                                     Using advanced biological and mechanical treatment processes, the Dubhe Merak STP removes contaminants from sewage, producing treated water that can be used for landscaping, flushing, or other non-potable applications.
+                                     Our biological sewage treatment plants are engineered to provide maximum water recovery while satisfying strict environmental mandates.
                                  </p>
                                  <ul className="space-y-3 pt-4">
                                      {[
-                                         "Residential Villas & Complexes",
-                                         "Apartments & Housing Societies",
-                                         "Commercial & Retail Complexes",
-                                         "Industrial Parks & Manufacturing",
+                                         "Private Luxury Villas",
+                                         "Apartment Communities & Co-housing",
+                                         "Commercial Malls & Office Towers",
+                                         "Industrial Parks",
                                      ].map(item => (
                                          <li key={item} className="flex items-center gap-3 text-slate-300 text-sm font-medium">
                                              <div className="w-5 h-5 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
@@ -186,10 +186,10 @@ export default function DubheMerak() {
                             {/* Right side interactive grid */}
                             <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
                                 {[
-                                    { title: "Residential Villas", desc: "Compact, silent, and odour-free footprint fits easily into private properties.", stat: "Compact" },
-                                    { title: "Apartments", desc: "Meets high volume daily load demands with consistent water recovery.", stat: "High-Volume" },
-                                    { title: "Commercial Malls", desc: "Treated output supports large scale toilet flushing and HVAC systems.", stat: "Reclamation" },
-                                    { title: "Industrial Parks", desc: "Designed for high durability and strict regulatory standard compliance.", stat: "Compliant" },
+                                    { title: "Private Luxury Villas", desc: "Compact, silent, and entirely Odor-free systems that blend discreetly into high-end residential properties.", stat: "Compact" },
+                                    { title: "Apartment Communities & Co-housing", desc: "Reliably manages high-volume surging daily loads with exceptionally stable water recovery.", stat: "High-Volume" },
+                                    { title: "Commercial Malls & Office Towers", desc: "Generates massive volumes of high-grade reclaimed water to support massive cooling towers (HVAC) and toilet flushing networks.", stat: "Reclamation" },
+                                    { title: "Industrial Parks", desc: "Heavy-duty, corrosion-resistant builds designed to easily clear strict Pollution Control Board (PCB) compliance Audits.", stat: "Compliant" },
                                 ].map((item, i) => (
                                     <div key={i} className="bg-slate-800/50 p-8 rounded-3xl border border-slate-700/50 hover:border-blue-500/30 hover:bg-slate-800 transition-all duration-300">
                                         <span className="inline-block bg-blue-500/10 text-blue-300 border border-blue-500/20 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest mb-4">
@@ -242,10 +242,10 @@ export default function DubheMerak() {
                             </div>
                             <div className="space-y-8">
                                 <h3 className="text-4xl font-sans font-light text-slate-900 tracking-tight leading-tight text-left">
-                                    Protect Groundwater. Save Resources.
+                                    Protect Groundwater. Save Capital Resources
                                 </h3>
                                 <p className="text-slate-600 font-light leading-relaxed text-left">
-                                    DUBHE Merak STPs play a crucial role in protecting ground water and local water bodies from contamination. By treating sewage at the source, we help maintain a healthy ecosystem for the community while ensuring your property remains compliant with local environmental regulations.
+                                    Dubhe Merak STPs stop pollution at its source, protecting local aquifers and regional water bodies from contamination. By selecting our biological treatment setups, you enhance your property's value, drastically reduce municipal fresh-water dependency and maintain a pristine regulatory record.
                                 </p>
                                 <div className="grid grid-cols-2 gap-6 pt-4">
                                     <div className="space-y-2 text-left">

@@ -72,10 +72,10 @@ export default function Projects() {
                         </h1>
                         <div className="max-w-4xl mx-auto md:mx-0">
                             <p className="text-lg leading-relaxed text-slate-600 font-light mb-6">
-                                Dubhe Richus has been at the forefront of water purification since 1991, delivering thousands of successful projects across residential and commercial sectors. Our commitment to engineering excellence ensures that every installation meets the highest standards of purity, reliability, and sustainability.
+                                Dubhe Richus has been at the forefront of water purification engineering since 1991, delivering thousands of successful installations across the residential, commercial, and industrial sectors. Our unwavering commitment to engineering excellence ensures that every system we deploy meets the most stringent international standards for purity, reliability, and ecological sustainability.
                             </p>
                             <p className="text-lg leading-relaxed text-slate-600 font-light">
-                                From premium residential complexes to large-scale industrial plants, we provide custom-engineered solutions that handle the most challenging water conditions. Explore our diverse portfolio of projects that showcase our liquid legacy of innovation.
+                                From premium residential estates to large-scale industrial plants, we engineer bespoke solutions designed to conquer the most challenging water conditions. Explore our diverse portfolio of projects and discover our liquid legacy of innovation.
                             </p>
                         </div>
                     </div>
@@ -136,6 +136,12 @@ export default function Projects() {
                 {/* Project Categories */}
                 <section className="py-16 bg-slate-50">
                     <div className="mx-auto max-w-7xl px-6">
+                        <div className="mb-12 text-center md:text-left">
+                            <h2 className="text-3xl text-[#262626] tracking-tight" style={{ fontWeight: '300' }}>
+                                Core Capabilities
+                            </h2>
+                            <div className="mt-3 h-1 w-16 bg-primary/30 mx-auto md:mx-0" />
+                        </div>
                         <div className="grid md:grid-cols-2 gap-8">
                             {/* Home Projects Box */}
                             <div 
@@ -144,9 +150,9 @@ export default function Projects() {
                                 <div className="mb-10 w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
                                     <Home size={36} strokeWidth={1.5} />
                                 </div>
-                                <h4 className="text-4xl text-[#262626] font-light mb-6 tracking-tight">Home</h4>
+                                <h4 className="text-4xl text-[#262626] font-light mb-6 tracking-tight">Residential Purity</h4>
                                 <p className="text-lg text-slate-500 font-light mb-10 leading-relaxed max-w-sm">
-                                    Advanced water purification for residences, providing clean water for every tap in your home.
+                                    Advanced whole-house water purification systems engineered to deliver pristine, crystal-clear water to every single tap in your home.
                                 </p>
                                 <div className="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all cursor-pointer" />
                             </div>
@@ -158,9 +164,9 @@ export default function Projects() {
                                 <div className="mb-10 w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 transform group-hover:-rotate-6">
                                     <Building2 size={36} strokeWidth={1.5} />
                                 </div>
-                                <h4 className="text-4xl text-[#262626] font-light mb-6 tracking-tight">Commercial</h4>
+                                <h4 className="text-4xl text-[#262626] font-light mb-6 tracking-tight">Commercial Excellence</h4>
                                 <p className="text-lg text-slate-500 font-light mb-10 leading-relaxed max-w-sm">
-                                    Large-scale treatment solutions for industries, hospitals, and high-volume commercial complexes.
+                                    High-capacity, high-volume water treatment solutions precision-engineered for industries, hospitals and major commercial complexes.
                                 </p>
                                 <div className="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all" />
                             </div>
