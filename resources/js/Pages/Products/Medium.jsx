@@ -9,20 +9,16 @@ import { Check, Droplets, Ruler, Home, Zap, ShieldCheck, ArrowRight, Filter, Set
 
 const productFaqs = [
     {
-        question: "How often should the system be backwashed?",
-        answer: "Depending on your water usage and quality, manual backwashing is typically needed every few days to keep the media clean and hygienic. The process is simple and takes only a few minutes."
+        question: "How often should the residential system be backwashed",
+        answer: "Depending on your daily water usage and raw water parameters, a quick manual backwash is typically recommended every few days. The process is remarkably straightforward, requires no technical training and wraps up within minutes."
     },
     {
-        question: "Does this system remove iron and bad odour?",
-        answer: "Yes, our specialized filtration media and aeration technology are specifically designed to effectively remove iron content, color, and unpleasant odors from the water source."
+        question: "Does this system completely eradicate iron content and bad Odors?",
+        answer: "Yes. Our specialized multi-stratified filtration media combined with proprietary natural aeration technology is highly effective at stripping out heavy dissolved iron, visible discoloration and sulphurous or muddy Odors."
     },
     {
-        question: "Is the medium series suitable for typical Indian homes?",
-        answer: "Yes, the Medium series is ideal for typical Indian homes and single-storey villas (up to 1800 sq.ft.), providing 1250-1500 litres per day of purified water."
-    },
-    {
-        question: "How long does the filtration media last?",
-        answer: "With regular backwashing, our high-quality filtration media is designed for long-term durability and can last for several years before needing replacement, depending on the raw water quality."
+        question: "How long does the filtration media last before requiring replacement?",
+        answer: "When maintained via regular backwashing cycles, our premium-grade filtration media is incredibly durable. It routinely lasts for several years before requiring a professional media refresh, depending on the contamination levels of your raw inlet water."
     }
 ];
 

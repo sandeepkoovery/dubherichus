@@ -21,19 +21,15 @@ const logos = [
 const projectsFaqs = [
     {
         question: "What types of projects does Dubhe Richus specialize in?",
-        answer: "We handle a wide range of projects including premium residential complexes, large-scale commercial buildings like malls and hospitals, and industrial water/wastewater treatment plants."
+        answer: "We engineer and deploy a versatile matrix of water systems. This includes premium residential villa developments, high-density residential towers, massive commercial centres (such as malls and corporate headquarters), healthcare institutions and heavy industrial water/wastewater processing plants."
     },
     {
-        question: "Can you design systems for large-scale commercial use?",
-        answer: "Yes, our engineering team specializes in custom-designed systems for high-volume needs. We have many successful installations in commercial sectors across India, ensuring clean and safe water for thousands of people."
+        question: "Can you design bespoke systems for large-scale commercial use",
+        answer: "Absolutely. Our in-house engineering division specializes in custom-tailored, high-volume installations. With a robust track record of successful deployments across commercial sectors in India, we ensure a reliable flow of pristine water for thousands of daily end-users."
     },
     {
-        question: "Do you provide wastewater treatment solutions like STP and ETP?",
-        answer: "Absolutely. We have dedicated divisions for Sewage Treatment Plants (STP) and Effluent Treatment Plants (ETP), providing safe and efficient wastewater management for businesses and industries."
-    },
-    {
-        question: "How do you ensure the quality and reliability of your installations?",
-        answer: "Every project follows strict engineering standards. Since 1991, our installations have been known for their durability and performance, backed by our expertise and commitment to environmental sustainability."
+        question: "How do you ensure the long-term reliability of your installations",
+        answer: "Every project is executed under rigid industrial engineering protocols. Since 1991, Dubhe Richus systems have been recognized across the industry for their rugged structural durability, dependable output parameters and environmentally sustainable footprints."
     }
 ];
 
@@ -70,7 +66,7 @@ export default function Projects() {
                         >
                             Our Projects
                         </h1>
-                        <div className="max-w-4xl mx-auto md:mx-0">
+                        <div className="w-full">
                             <p className="text-lg leading-relaxed text-slate-600 font-light mb-6">
                                 Dubhe Richus has been at the forefront of water purification engineering since 1991, delivering thousands of successful installations across the residential, commercial, and industrial sectors. Our unwavering commitment to engineering excellence ensures that every system we deploy meets the most stringent international standards for purity, reliability, and ecological sustainability.
                             </p>
@@ -175,16 +171,16 @@ export default function Projects() {
                 </section>
 
                 <section className="py-32 bg-[#020617] text-center">
-                    <div className="mx-auto max-w-4xl px-6">
-                        <p className="text-sm font-bold uppercase tracking-[0.5em] text-blue-500/60 mb-8">Engineering Excellence</p>
+                    <div className="mx-auto max-w-6xl px-6">
+                        <p className="text-sm font-bold uppercase tracking-[0.5em] text-blue-500/60 mb-8 text-center">Engineering Excellence</p>
                         <h2 
-                            className="text-4xl md:text-5xl text-white mb-10 leading-tight"
+                            className="text-4xl md:text-5xl text-white mb-10 leading-tight text-center"
                             style={{ fontWeight: '300' }}
                         >
                             Over 32,000+ Units Installed Across India
                         </h2>
                         <div className="mx-auto h-1 w-20 bg-blue-500/30 mb-10" />
-                        <p className="text-xl text-white/50 font-light leading-relaxed">
+                        <p className="text-xl text-white/50 font-light leading-relaxed text-center">
                             Since 1991, Dubhe Richus has been the trusted partner for premium water filtration,
                             delivering natural purity to thousands of satisfied clients.
                         </p>

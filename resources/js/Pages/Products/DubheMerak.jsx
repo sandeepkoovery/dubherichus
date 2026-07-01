@@ -9,20 +9,12 @@ import { Check, Leaf, Wind, Box, PiggyBank, Shield, Recycle, ShieldCheck, Drople
 
 const productFaqs = [
     {
-        question: "How does the Dubhe Merak STP work?",
-        answer: "The Dubhe Merak STP uses advanced biological and mechanical processes to treat domestic and industrial sewage, removing contaminants and producing treated water safe for non-potable reuse."
+        question: "Is the Dubhe Merak STP truly Odor-free?",
+        answer: "Yes. Dubhe Merak systems are engineered with continuous fine-bubble aeration and advanced closed-loop Odor-mitigation systems. This guarantees a completely Odor-free, silent operation that safely coexists alongside dense residential neighbourhoods or private backyard landscapes."
     },
     {
-        question: "What can the treated water be used for?",
-        answer: "Treated water from our STPs is ideal for landscaping, gardening, toilet flushing, and other industrial non-potable applications, helping you significantly reduce fresh water consumption."
-    },
-    {
-        question: "Is the system odour-free?",
-        answer: "Yes, Dubhe Merak STPs are engineered with efficient aeration and odour control mechanisms to ensure a clean, odour-free operation even in residential environments."
-    },
-    {
-        question: "Do you offer compact units for individual homes?",
-        answer: "Absolutely. We provide modular and compact sewage treatment units specifically designed for individual villas and apartments, alongside large-scale systems for commercial complexes."
+        question: "What can the treated water from the STP safely be used for?",
+        answer: "The highly polished water output perfectly aligns with environmental safety criteria for non-potable uses. It is ideal for automated landscape irrigation, large-scale toilet flushing systems and industrial wash-downs, allowing facilities to cut fresh-water overheads by up to 85%."
     }
 ];
 

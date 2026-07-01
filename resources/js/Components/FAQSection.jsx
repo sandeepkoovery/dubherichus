@@ -86,7 +86,7 @@ export const FAQSection = ({
                                     openIndex === index ? "max-h-[500px] pb-4 opacity-100" : "max-h-0 opacity-0"
                                 )}
                             >
-                                <p className="text-gray-500 leading-relaxed text-[17px] font-light">
+                                <p className="text-gray-500 leading-relaxed text-[17px] font-light whitespace-pre-line">
                                     {item.answer}
                                 </p>
                             </div>

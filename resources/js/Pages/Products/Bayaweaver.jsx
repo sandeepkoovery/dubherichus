@@ -9,20 +9,12 @@ import { Cpu, Wrench, Activity, Network, Shield, Recycle, Eye, RefreshCw, BarCha
 
 const productFaqs = [
     {
-        question: "What makes Bayaweaver an intelligent water treatment system?",
-        answer: "Bayaweaver is an AI-powered automatic water treatment system that uses intelligent sensors and controls to monitor water quality and automate the filtration and cleaning processes, ensuring peak performance without manual effort."
+        question: "What sets Bayaweaver apart as an \"intelligent\" water system?",
+        answer: "Bayaweaver integrates a network of smart electronic sensors with automated control valves. By continuously assessing hydraulic changes and water quality, it dictates its own self-cleaning and filtration intervals, giving you peak performance with absolutely zero manual labour."
     },
     {
-        question: "Is Bayaweaver suitable for commercial and industrial use?",
-        answer: "Yes, Bayaweaver is designed for high-demand environments such as hospitals, schools, and industries. It can be customized to handle high volumes and diverse water treatment requirements effectively."
-    },
-    {
-        question: "How does the automatic backwashing work?",
-        answer: "The system automatically detects when cleaning is needed and initiates the backwashing process at scheduled intervals or based on pressure differentials, ensuring the filter media stays clear and efficient."
-    },
-    {
-        question: "What are the maintenance requirements for Bayaweaver?",
-        answer: "Due to its advanced automation, Bayaweaver requires minimal human intervention. We recommend periodic professional inspections to ensure all electronic and mechanical components are functioning perfectly."
+        question: "What are the direct maintenance obligations for a Bayaweaver system?",
+        answer: "Thanks to its advanced autonomous software architecture, manual intervention is reduced to zero. We simply recommend routine preventive inspections by our technicians to verify that the electronic arrays and mechanical valves are performing at factory specifications."
     }
 ];
 

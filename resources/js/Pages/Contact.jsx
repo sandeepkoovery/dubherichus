@@ -8,20 +8,8 @@ import { useAsset } from "@/hooks/useAsset";
 
 const contactFaqs = [
     {
-        question: "How can I contact Dubhe Richus for customer support?",
-        answer: "You can reach our dedicated support team via phone or WhatsApp at 099611 22777. We are also available through email at info@email.com for any inquiries regarding our water treatment systems."
-    },
-    {
-        question: "Which areas in India do you provide services to?",
-        answer: "Dubhe Richus provides comprehensive water and wastewater treatment services across Kerala and throughout major cities in India. We have experience handling both residential and large-scale industrial projects."
-    },
-    {
-        question: "How long does the installation process take?",
-        answer: "The installation time for our standard water treatment plants typically ranges from 1 to 3 days after order confirmation, depending on the site requirements and system complexity."
-    },
-    {
-        question: "Do you offer after-sales maintenance and service?",
-        answer: "Yes, we prioritize customer satisfaction and offer regular maintenance services, yearly checkups, and technical support to ensure your system continues to perform optimally for years."
+        question: "Ready for Intelligent, Eco-Compliant Water Management?",
+        answer: "Don't leave your water quality to chance. Contact the engineering team at Dubhe Richus today to schedule a professional on-site water analysis and custom-engineer a system suited to your structural layout.\n\nEmail: info@dubherichus.com\nCorporate Website: www.dubherichus.com"
     }
 ];
 
@@ -78,7 +66,7 @@ export default function Contact() {
                                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                         <Mail className="h-3 w-3" />
                                     </div>
-                                    <p className="text-lg text-slate-500 font-normal">info@email.com</p>
+                                    <p className="text-lg text-slate-500 font-normal">info@dubherichus.com</p>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +99,7 @@ export default function Contact() {
                                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                         <Mail className="h-3 w-3" />
                                     </div>
-                                    <p className="text-lg text-slate-500 font-normal">info@email.com</p>
+                                    <p className="text-lg text-slate-500 font-normal">info@dubherichus.com</p>
                                 </div>
                             </div>
                         </div>
@@ -150,7 +138,7 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
-                <FAQSection items={contactFaqs} title="SUPPORT & SERVICE FAQS" />
+                <FAQSection items={contactFaqs} title="CONTACT & CALL TO ACTION" />
             </main>
 
             <SiteFooter />
