@@ -1,17 +1,9 @@
 import { Head } from "@inertiajs/react";
 import { Navbar } from "@/Components/Navbar";
 import { SiteFooter } from "@/Components/SiteFooter";
-import { FAQSection } from "@/Components/FAQSection";
 import { ContactSection } from "@/Components/ContactSection";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { useAsset } from "@/hooks/useAsset";
-
-const contactFaqs = [
-    {
-        question: "Ready for Intelligent, Eco-Compliant Water Management?",
-        answer: "Don't leave your water quality to chance. Contact the engineering team at Dubhe Richus today to schedule a professional on-site water analysis and custom-engineer a system suited to your structural layout.\n\nEmail: info@dubherichus.com\nCorporate Website: www.dubherichus.com"
-    }
-];
 
 export default function Contact() {
     const asset = useAsset();
@@ -138,7 +130,6 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
-                <FAQSection items={contactFaqs} title="CONTACT & CALL TO ACTION" />
             </main>
 
             <SiteFooter />

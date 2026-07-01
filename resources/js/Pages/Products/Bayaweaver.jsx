@@ -18,14 +18,6 @@ const productFaqs = [
     }
 ];
 
-const features = [
-    { title: "Custom-Engineered System Design", desc: "Designed based on specific water source quality, consumption patterns, and site building layout.", icon: Wrench },
-    { title: "High-Volume Efficient Treatment", desc: "Built specifically to handle large water demand and continuous operation for facilities.", icon: Activity },
-    { title: "Advanced Automation & Controls", desc: "Fully-automated systems ensure consistent performance with minimal manual intervention.", icon: Cpu },
-    { title: "Centralised Treatment Mechanism", desc: "Supports centralized plants supplying across multiple departments and facility areas.", icon: Network },
-    { title: "Durable, Low Maintenance Build", desc: "Constructed with multi-year reliability and minimal upkeep for high-volume services.", icon: Shield },
-    { title: "Wastewater Treatment & Reuse", desc: "Includes integrated systems for wastewater treatment and reuse for flushing and landscaping.", icon: Recycle }
-];
 
 export default function Bayaweaver() {
     const asset = useAsset();
@@ -63,21 +55,6 @@ export default function Bayaweaver() {
                                     An AI-powered, autonomous water treatment ecosystem designed for intelligent, entirely hands-off filtration. Combining precision self-cleaning functionality with maintenance-free performance, Bayaweaver is engineered to dominate demanding industrial and commercial water profiles.
                                 </p>
                                 
-                                {/* Quick Dashboard Metrics */}
-                                <div className="grid grid-cols-3 gap-6 py-6 border-y border-slate-800/80">
-                                    <div>
-                                        <p className="text-2xl md:text-3xl font-bold text-white">0%</p>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Manual Effort (Fully Autonomous)</p>
-                                    </div>
-                                    <div>
-                                        <p className="text-2xl md:text-3xl font-bold text-white">24/7</p>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Continuous Flow Monitoring</p>
-                                    </div>
-                                    <div>
-                                        <p className="text-2xl md:text-3xl font-bold text-white">Auto</p>
-                                        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-300 mt-1">Predictive Auto Self-Cleaning Cycles</p>
-                                    </div>
-                                </div>
 
                                 <div className="flex flex-wrap gap-4">
                                     <Button asChild className="h-14 px-10 bg-primary hover:bg-primary/90 font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20 text-white">
@@ -113,8 +90,28 @@ export default function Bayaweaver() {
                 {/* ── THE INTELLIGENT CYCLE (Process Flow) ── */}
                 <section id="process" className="py-24 bg-white border-b border-slate-100">
                     <div className="mx-auto max-w-7xl px-6">
+                        
+                        {/* Performance Benchmarks */}
+                        <div className="mb-20">
+                            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-6">Performance Benchmarks:</h2>
+                            <ul className="space-y-4 max-w-2xl text-slate-600 text-lg font-light leading-relaxed">
+                                <li className="flex items-center gap-3">
+                                    <Check className="w-5 h-5 text-primary shrink-0" />
+                                    <span>0% Manual Effort (Fully Autonomous)</span>
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <Check className="w-5 h-5 text-primary shrink-0" />
+                                    <span>24/7 Continuous Flow Monitoring</span>
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <Check className="w-5 h-5 text-primary shrink-0" />
+                                    <span>Predictive Auto Self-Cleaning Cycles</span>
+                                </li>
+                            </ul>
+                        </div>
+
                         <div className="max-w-3xl mb-16">
-                            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Operating System</h2>
+                            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">System Architecture:</h2>
                             <h3 className="text-4xl font-sans font-light text-slate-900 tracking-tight leading-tight">
                                 The 3-Step Smart Treatment Cycle
                             </h3>
@@ -193,33 +190,6 @@ export default function Bayaweaver() {
                                     </div>
                                 ))}
                             </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ── ADVANTAGES ACCORDION/GRID (Tech-styled) ── */}
-                <section className="py-24 bg-white">
-                    <div className="mx-auto max-w-7xl px-6">
-                        <div className="mb-16 max-w-3xl">
-                            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">System Features</h2>
-                            <h3 className="text-4xl font-sans font-light text-slate-900 tracking-tight leading-tight">
-                                Engineered for Absolute Precision
-                            </h3>
-                        </div>
-
-                        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                            {features.map((item, i) => {
-                                const Icon = item.icon;
-                                return (
-                                    <div key={i} className="p-8 bg-slate-50/50 rounded-3xl border border-slate-100 hover:bg-white hover:shadow-xl hover:border-primary/10 transition-all duration-300">
-                                        <div className="w-12 h-12 bg-primary/5 rounded-2xl flex items-center justify-center mb-6">
-                                            <Icon className="w-6 h-6 text-primary" />
-                                        </div>
-                                        <h4 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h4>
-                                        <p className="text-slate-500 font-light leading-relaxed text-sm">{item.desc}</p>
-                                    </div>
-                                );
-                            })}
                         </div>
                     </div>
                 </section>

@@ -196,6 +196,12 @@ export default function Classic() {
                 {/* Pillars Sections (Refined and Compact) */}
                 <section className="py-20 bg-slate-50">
                     <div className="mx-auto max-w-7xl px-6 space-y-20">
+                        <div className="text-center">
+                            <h2 className="font-sans text-4xl tracking-tight text-slate-900 mb-3" style={{ fontWeight: '300' }}>
+                                The Sustainable Advantage
+                            </h2>
+                            <div className="mt-6 h-1 w-16 bg-primary mx-auto rounded-full" />
+                        </div>
                         {/* No Electricity */}
                         <div className="grid lg:grid-cols-2 gap-12 items-stretch">
                             <div className="flex flex-col justify-center bg-white p-12 rounded-[40px] border border-slate-100 shadow-sm">

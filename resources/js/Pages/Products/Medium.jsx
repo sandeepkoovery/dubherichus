@@ -25,7 +25,7 @@ const productFaqs = [
 const features = [
     { title: "Advanced Iron Removal", desc: "Eliminates heavy iron content and multi-level particulate impurities directly at the source.", icon: Filter },
     { title: "Maintenance-Free Engineering", desc: "Features a streamlined manual backwash process requiring negligible human intervention.", icon: Settings },
-    { title: "Natural Aeration Degasser", desc: "An integrated degassing system naturally eliminates foul Odors and sour smells without chemicals.", icon: Wind },
+    { title: "Natural Aeration Degasser for Odor Removal", desc: "An integrated degassing system naturally eliminates foul Odors and sour smells without chemicals.", icon: Wind },
     { title: "High-Precision Activated Carbon", desc: "Enhances taste, clarity and overall organic water quality with exceptional filtration accuracy.", icon: Layers },
     { title: "Compact Single-Unit Footprint", desc: "A space-saving, systematic design engineered for seamless residential integration.", icon: Box },
     { title: "Responsive After-Sales Care", desc: "Backed by a dedicated support network to guarantee lifetime system performance.", icon: HeartHandshake }
@@ -46,7 +46,7 @@ export default function Medium() {
                 {/* ── HERO ── */}
                 <section className="bg-white overflow-hidden">
                     <div className="mx-auto max-w-7xl px-6 py-12 lg:py-20">
-                        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
                             <div>
                                 <span className="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.3em]">
                                     Size M · Home Series
@@ -57,20 +57,29 @@ export default function Medium() {
                                 <p className="text-2xl md:text-3xl font-light text-slate-500 mb-8 tracking-tight">
                                     Water Treatment Plant
                                 </p>
-                                <p className="text-lg text-slate-600 font-light leading-relaxed mb-10 max-w-lg">
+                                <p className="text-lg text-primary font-light leading-relaxed mb-8 max-w-xl">
                                     Premium Whole-House Water Filtration for Uncompromising Purity. Supplies treated water to multiple taps, protecting plumbing and appliances from scaling and damage.
                                 </p>
-                                <div className="flex flex-wrap gap-3 mb-10">
-                                    {[
-                                        { icon: Droplets, label: "1,250–1,500 L/Day" },
-                                        { icon: Home, label: "Up to 1,800 sq. ft." },
-                                        { icon: Ruler, label: "H: 4.1 ft · Dia: 200 mm" },
-                                    ].map(({ icon: Icon, label }) => (
-                                        <div key={label} className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-full px-4 py-2">
-                                            <Icon className="w-4 h-4 text-primary" />
-                                            <span className="text-sm font-medium text-slate-700">{label}</span>
+                                <div className="mb-10 bg-slate-50/60 border border-slate-100 rounded-3xl p-6 max-w-xl">
+                                    <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">Quick Specs</h3>
+                                    <div className="space-y-3.5 text-sm text-slate-600">
+                                        <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                                            <span className="font-bold text-slate-900 min-w-[175px] shrink-0">Daily Capacity</span>
+                                            <span className="font-light">1,250–1,500 L/Day</span>
                                         </div>
-                                    ))}
+                                        <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 border-t border-slate-100 pt-3">
+                                            <span className="font-bold text-slate-900 min-w-[175px] shrink-0">Coverage</span>
+                                            <span className="font-light">Up to 1,800 sq. ft.</span>
+                                        </div>
+                                        <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 border-t border-slate-100 pt-3">
+                                            <span className="font-bold text-slate-900 min-w-[175px] shrink-0">Dimensions</span>
+                                            <span className="font-light">H: 4.1 ft | Dia: 200 mm | Outlet: 40 mm</span>
+                                        </div>
+                                        <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 border-t border-slate-100 pt-3">
+                                            <span className="font-bold text-slate-900 min-w-[175px] shrink-0">Simultaneous Performance</span>
+                                            <span className="font-light">Supplies up to 5 taps concurrently</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <Button asChild size="lg" className="h-14 px-10 bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">
                                     <Link href={appBase + "/contact"}>Order Now <ArrowRight className="ml-2 w-4 h-4" /></Link>
@@ -78,9 +87,9 @@ export default function Medium() {
                             </div>
 
                             {/* Square image */}
-                            <div className="relative">
+                            <div className="relative flex flex-col">
                                 <div className="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl" />
-                                <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl border border-primary/10">
+                                <div className="relative flex-1 min-h-[480px] rounded-3xl overflow-hidden shadow-2xl border border-primary/10">
                                     <img
                                         src={asset('/images/medium.jpeg')}
                                         alt="Medium Series Water Treatment Plant"
@@ -120,11 +129,8 @@ export default function Medium() {
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
                             <div>
-                                <h2 className="text-4xl font-sans tracking-tight mb-6 leading-snug text-slate-900" style={{ fontWeight: '300' }}>
-                                    Premium Whole-House Water Filtration for Uncompromising Purity
-                                </h2>
                                 <div className="space-y-5 text-lg text-slate-600 font-light leading-relaxed">
-                                    <p>Hard water, yellow staining, heavy iron Odors and disruptive scaling in bathrooms and kitchens are common challenges faced by households across India. The Dubhe Water Treatment System is purpose-built to address these real-world issues, delivering dependable, long-term performance.</p>
+                                    <p>Premium Whole-House Water Filtration for Uncompromising Purity. Hard water, yellow staining, heavy iron Odors and disruptive scaling in bathrooms and kitchens are common challenges faced by households across India. The Dubhe Water Treatment System is purpose-built to address these real-world issues, delivering dependable, long-term performance.</p>
                                     <p>Engineered specifically for typical Indian homes and single-storey villas, our Medium Home Series delivers treated water to multiple outlets simultaneously. Bathrooms, kitchens and utility zones receive a consistent supply of premium-quality water, effectively shielding your plumbing infrastructure, high-end fixtures and appliances from scaling and corrosion.</p>
                                     <p>Developed through over three decades of pioneering expertise, this system naturally eliminates iron, turbidity and unpleasant Odors—fundamentally elevating your water quality for drinking, cooking, bathing and daily use.</p>
                                 </div>
@@ -187,6 +193,12 @@ export default function Medium() {
                 {/* ── PILLARS ── */}
                 <section className="py-20 bg-white">
                     <div className="mx-auto max-w-7xl px-6 space-y-16">
+                        <div className="text-center">
+                            <h2 className="font-sans text-4xl tracking-tight text-slate-900 mb-3" style={{ fontWeight: '300' }}>
+                                The Sustainable Advantage
+                            </h2>
+                            <div className="mt-6 h-1 w-16 bg-primary mx-auto rounded-full" />
+                        </div>
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                                 <img src={asset('/images/no_electricity.jpeg')} alt="No Electricity" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />

@@ -60,20 +60,30 @@ export default function Commercial() {
                                 <p className="text-2xl md:text-3xl font-light text-slate-500 mb-8 tracking-tight">
                                     Water Treatment Plant
                                 </p>
-                                <p className="text-lg text-slate-600 font-light leading-relaxed mb-10 max-w-lg">
-                                    High-Volume Centralized Systems for Commercial & Industrial Infrastructure. Custom engineered and scalable to any demand.
-                                </p>
-                                <div className="flex flex-wrap gap-3 mb-10">
-                                    {[
-                                        { icon: Factory, label: "Custom Engineered" },
-                                        { icon: Building2, label: "Large-Scale Facilities" },
-                                        { icon: Settings, label: "End-to-End Execution" },
-                                    ].map(({ icon: Icon, label }) => (
-                                        <div key={label} className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-full px-4 py-2">
-                                            <Icon className="w-4 h-4 text-primary" />
-                                            <span className="text-sm font-medium text-slate-700">{label}</span>
+                                <div className="mb-10 bg-slate-50/60 border border-slate-100 rounded-3xl p-6 max-w-xl">
+                                    <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">Quick Specs</h3>
+                                    <div className="space-y-3.5 text-sm text-slate-600">
+                                        <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                                            <span className="font-bold text-slate-900 min-w-[100px] shrink-0">Capacity</span>
+                                            <span className="font-light">Custom Engineered / Scalable to Any Demand</span>
                                         </div>
-                                    ))}
+                                        <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 border-t border-slate-100 pt-3">
+                                            <span className="font-bold text-slate-900 min-w-[100px] shrink-0">Application</span>
+                                            <span className="font-light">Large-Scale Facilities & Industrial Infrastructure</span>
+                                        </div>
+                                        <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 border-t border-slate-100 pt-3">
+                                            <span className="font-bold text-slate-900 min-w-[100px] shrink-0">Service</span>
+                                            <span className="font-light">Comprehensive End-to-End Execution</span>
+                                        </div>
+                                        <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 border-t border-slate-100 pt-3">
+                                            <span className="font-bold text-slate-900 min-w-[100px] shrink-0">Pedigree</span>
+                                            <span className="font-light">33+ Years of Innovation | 100% Chemical-Free | Zero Grid Electricity</span>
+                                        </div>
+                                        <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 border-t border-slate-100 pt-3">
+                                            <span className="font-bold text-slate-900 min-w-[100px] shrink-0">Performance Benchmarks</span>
+                                            <span className="font-light">0% Manual Effort (Fully Autonomous) · 24/7 Continuous Flow Monitoring · Predictive Auto Self-Cleaning Cycles</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <Button asChild size="lg" className="h-14 px-10 bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-widest text-sm shadow-xl shadow-primary/20 transition-all hover:scale-105 active:scale-95">
                                     <Link href={appBase + "/contact"}>Get a Quote <ArrowRight className="ml-2 w-4 h-4" /></Link>
@@ -121,12 +131,10 @@ export default function Commercial() {
                 {/* ── DESCRIPTION ── */}
                 <section className="py-20 bg-white">
                     <div className="mx-auto max-w-7xl px-6">
-                        <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="grid lg:grid-cols-2 gap-16 items-start">
                             <div>
-                                <h2 className="text-4xl font-sans tracking-tight mb-6 leading-snug text-slate-900" style={{ fontWeight: '300' }}>
-                                    High-Volume Centralized Systems for Commercial & Industrial Infrastructure
-                                </h2>
                                 <div className="space-y-5 text-lg text-slate-600 font-light leading-relaxed">
+                                    <p>High-Volume Centralized Systems for Commercial &amp; Industrial Infrastructure.</p>
                                     <p>Our industrial-grade water treatment plants solve heavy-volume water challenges naturally. We design and deploy comprehensive centralized systems for luxury apartments, commercial hubs, hospitals, educational institutions and manufacturing facilities where clean water is critical to daily operations.</p>
                                     <p>Each plant is bespoke—custom-tailored to your precise raw water chemistry, spatial layout and daily consumption patterns. From concept and construction to ongoing lifecycle maintenance, we deliver high-performance water architecture across India.</p>
                                 </div>
@@ -186,9 +194,39 @@ export default function Commercial() {
                     </div>
                 </section>
 
+                {/* ── PERFORMANCE BENCHMARKS ── */}
+                <section className="py-20 bg-slate-50 border-t border-slate-100">
+                    <div className="mx-auto max-w-7xl px-6">
+                        <div className="text-center mb-12">
+                            <h2 className="font-sans text-4xl tracking-tight text-slate-900 mb-3" style={{ fontWeight: '300' }}>
+                                Performance Benchmarks
+                            </h2>
+                            <div className="mt-6 h-1 w-16 bg-primary mx-auto rounded-full" />
+                        </div>
+                        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                            {[
+                                { label: "0% Manual Effort", sub: "(Fully Autonomous)" },
+                                { label: "24/7 Continuous", sub: "Flow Monitoring" },
+                                { label: "Predictive Auto", sub: "Self-Cleaning Cycles" }
+                            ].map((item, i) => (
+                                <div key={i} className="bg-white p-8 rounded-3xl border border-slate-100/80 shadow-sm text-center hover:shadow-md transition-shadow">
+                                    <p className="text-3xl font-black text-primary mb-2">{item.label}</p>
+                                    <p className="text-slate-500 font-medium text-sm uppercase tracking-wider">{item.sub}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* ── PILLARS ── */}
                 <section className="py-20 bg-white">
                     <div className="mx-auto max-w-7xl px-6 space-y-16">
+                        <div className="text-center">
+                            <h2 className="font-sans text-4xl tracking-tight text-slate-900 mb-3" style={{ fontWeight: '300' }}>
+                                The Sustainable Advantage
+                            </h2>
+                            <div className="mt-6 h-1 w-16 bg-primary mx-auto rounded-full" />
+                        </div>
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                                 <img src={asset('/images/commercial2.jpeg')} alt="Electricity-Free Operation" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />

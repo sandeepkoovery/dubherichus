@@ -35,18 +35,26 @@ export function ContactSection() {
                     {/* Left Column */}
                     <div className="flex flex-col" style={{ animation: 'fade-in-left 1s ease-out both' }}>
                         <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
-                            CONTACT US
+                            Contact & Call to Action
                         </span>
                         <h2
                             className="mt-6 font-sans text-4xl leading-[1.1] tracking-tight text-foreground md:text-5xl lg:text-6xl"
                             style={{ fontWeight: '300' }}
                         >
-                            Have questions?<br />
-                            Get in touch!
+                            Ready for Intelligent, Eco-Compliant Water Management?
                         </h2>
-                        <div className="mt-10 max-w-md text-lg leading-relaxed text-muted-foreground/80">
-                            Have questions or need assistance? Reach out to us today,
-                            and let our team help you find the perfect water solution!
+                        <div className="mt-10 max-w-md text-lg leading-relaxed text-muted-foreground/80 space-y-4">
+                            <p className="font-light">
+                                Don't leave your water quality to chance. Contact the engineering team at Dubhe Richus today to schedule a professional on-site water analysis and custom-engineer a system suited to your structural layout.
+                            </p>
+                            <div className="pt-2 space-y-1 text-base">
+                                <p className="font-medium text-foreground">
+                                    <span className="text-muted-foreground">Email:</span> <a href="mailto:info@dubherichus.com" className="text-primary hover:underline font-semibold">info@dubherichus.com</a>
+                                </p>
+                                <p className="font-medium text-foreground">
+                                    <span className="text-muted-foreground">Corporate Website:</span> <a href="https://www.dubherichus.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">www.dubherichus.com</a>
+                                </p>
+                            </div>
                         </div>
 
                         {/* Contact Details */}

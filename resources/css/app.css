@@ -102,7 +102,6 @@ Primary: Public Sans (Geometric)
   }
 
   p {
-    text-align: justify;
     font-size: var(--text-lg);
   }
 
