@@ -103,6 +103,7 @@ Primary: Public Sans (Geometric)
 
   p {
     font-size: var(--text-lg);
+    text-align: justify;
   }
 
   html {

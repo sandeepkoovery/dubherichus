@@ -135,7 +135,7 @@ export function ProductsSection() {
                         Explore Our Products
                     </h2>
                     <div className="h-1 w-20 bg-primary/20 mb-8 mx-auto md:mx-0" />
-                    <p className="text-muted-foreground/80 max-w-2xl text-lg font-light leading-relaxed">
+                    <p className="text-muted-foreground/80 w-full text-justify text-lg font-light leading-relaxed">
                         Take a closer look at our products crafted to deliver pure, safe, and reliable water every day. Each system reflects our commitment to quality, innovation, and long-lasting performance.
                     </p>
                 </div>

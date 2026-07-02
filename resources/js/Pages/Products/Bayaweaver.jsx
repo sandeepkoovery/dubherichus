@@ -51,7 +51,7 @@ export default function Bayaweaver() {
                                         Intelligent Automatic Treatment Plant
                                     </h2>
                                 </div>
-                                <p className="text-lg text-slate-200 font-light leading-relaxed max-w-xl text-left">
+                                <p className="text-lg text-slate-200 font-light leading-relaxed max-w-xl text-justify">
                                     An AI-powered, autonomous water treatment ecosystem designed for intelligent, entirely hands-off filtration. Combining precision self-cleaning functionality with maintenance-free performance, Bayaweaver is engineered to dominate demanding industrial and commercial water profiles.
                                 </p>
                                 
@@ -133,7 +133,7 @@ export default function Bayaweaver() {
                                             </div>
                                         </div>
                                         <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
-                                        <p className="text-slate-500 font-light leading-relaxed text-sm">{item.desc}</p>
+                                        <p className="text-slate-500 font-light leading-relaxed text-sm text-justify">{item.desc}</p>
                                     </div>
                                 );
                             })}
@@ -153,7 +153,7 @@ export default function Bayaweaver() {
                                 <h3 className="text-4xl font-sans font-light tracking-tight text-white leading-tight">
                                     Modern High-Volume Infrastructure
                                 </h3>
-                                <p className="text-slate-400 font-light leading-relaxed">
+                                <p className="text-slate-400 font-light leading-relaxed text-justify">
                                     Our Bayaweaver automatic water treatment plants are designed for high-performance and reliable operations across modern commercial and industrial infrastructure.
                                 </p>
                                 <ul className="space-y-3 pt-4">
@@ -186,7 +186,7 @@ export default function Bayaweaver() {
                                             {item.stat}
                                         </span>
                                         <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
-                                        <p className="text-slate-400 font-light leading-relaxed text-xs">{item.desc}</p>
+                                        <p className="text-slate-400 font-light leading-relaxed text-xs text-justify">{item.desc}</p>
                                     </div>
                                 ))}
                             </div>
@@ -207,7 +207,7 @@ export default function Bayaweaver() {
                                 <h3 className="text-4xl font-sans font-light text-slate-900 tracking-tight leading-tight text-left">
                                     Why Natural Filtration Media Wins
                                 </h3>
-                                <p className="text-slate-600 font-light leading-relaxed text-left">
+                                <p className="text-slate-600 font-light leading-relaxed text-justify">
                                     Traditional systems inject synthetic chemicals that require complex balancing acts and leave trace chemical residues. Bayaweaver replaces this with proprietary, eco-compliant natural filtration strata. The result is safer, chemical-residue-free water, zero environmental pollution upon discharge and a radically reduced carbon footprint.
                                 </p>
                                 <div className="grid grid-cols-2 gap-6 pt-4">
@@ -238,7 +238,7 @@ export default function Bayaweaver() {
                         <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight text-white">
                             Intelligent Water Filtration Starts Here
                         </h2>
-                        <p className="text-white/80 max-w-xl mx-auto font-light leading-relaxed text-sm">
+                        <p className="text-white/80 max-w-xl mx-auto font-light leading-relaxed text-sm text-justify">
                             Contact Dubhe Richus to request a professional site survey and customize the Bayaweaver automatic treatment plant for your building layout.
                         </p>
                         <div className="flex justify-center gap-4 pt-4">

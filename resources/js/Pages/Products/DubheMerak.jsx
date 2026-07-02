@@ -51,7 +51,7 @@ export default function DubheMerak() {
                                         Sewage Treatment Plant (STP)
                                     </h2>
                                 </div>
-                                <p className="text-lg text-slate-200 font-light leading-relaxed max-w-xl text-left">
+                                <p className="text-lg text-slate-200 font-light leading-relaxed max-w-xl text-justify">
                                     An elite biological wastewater treatment solution engineered to satisfy strict environmental mandates. Reclaim up to 85% of your facility's black and greywater safely for non-potable reuse, commercial flushing and landscaping with maximum ecological efficiency.
                                 </p>
                                 
@@ -127,7 +127,7 @@ export default function DubheMerak() {
                                             </div>
                                         </div>
                                         <h4 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h4>
-                                        <p className="text-slate-500 font-light leading-relaxed text-sm">{item.desc}</p>
+                                        <p className="text-slate-500 font-light leading-relaxed text-sm text-justify">{item.desc}</p>
                                     </div>
                                 );
                             })}
@@ -147,7 +147,7 @@ export default function DubheMerak() {
                                 <h3 className="text-4xl font-sans font-light tracking-tight text-white leading-tight">
                                      High-Compliance Infrastructure
                                  </h3>
-                                <p className="text-slate-300 font-light leading-relaxed">
+                                <p className="text-slate-300 font-light leading-relaxed text-justify">
                                      Our biological sewage treatment plants are engineered to provide maximum water recovery while satisfying strict environmental mandates.
                                  </p>
                                  <ul className="space-y-3 pt-4">
@@ -180,7 +180,7 @@ export default function DubheMerak() {
                                             {item.stat}
                                         </span>
                                         <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
-                                        <p className="text-slate-400 font-light leading-relaxed text-xs">{item.desc}</p>
+                                        <p className="text-slate-400 font-light leading-relaxed text-xs text-justify">{item.desc}</p>
                                     </div>
                                 ))}
                             </div>
@@ -202,7 +202,7 @@ export default function DubheMerak() {
                                 <h3 className="text-4xl font-sans font-light text-slate-900 tracking-tight leading-tight text-left">
                                     Protect Groundwater. Save Capital Resources
                                 </h3>
-                                <p className="text-slate-600 font-light leading-relaxed text-left">
+                                <p className="text-slate-600 font-light leading-relaxed text-justify">
                                     Dubhe Merak STPs stop pollution at its source, protecting local aquifers and regional water bodies from contamination. By selecting our biological treatment setups, you enhance your property's value, drastically reduce municipal fresh-water dependency and maintain a pristine regulatory record.
                                 </p>
                                 <div className="grid grid-cols-2 gap-6 pt-4">
@@ -233,7 +233,7 @@ export default function DubheMerak() {
                         <h2 className="text-4xl md:text-5xl font-sans font-light leading-tight text-white">
                             Invest in Sustainable Wastewater Management
                         </h2>
-                        <p className="text-white/80 max-w-xl mx-auto font-light leading-relaxed text-sm">
+                        <p className="text-white/80 max-w-xl mx-auto font-light leading-relaxed text-sm text-justify">
                             Contact Dubhe Richus to request a consultation and customize the Dubhe Merak sewage treatment plant for your building capacity requirements.
                         </p>
                         <div className="flex justify-center gap-4 pt-4">
