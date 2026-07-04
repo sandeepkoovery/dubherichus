@@ -257,18 +257,47 @@ export default function About() {
                 <section className="pt-24 pb-16 bg-white">
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="mb-16 text-center md:text-left">
-                            <h2
-                                className="font-sans text-4xl tracking-tight text-foreground md:text-5xl lg:text-6xl mb-8"
-                                style={{ fontWeight: '300' }}
-                            >
-                                Dubhe Richu : Elevating Water Quality with Advanced Filtration
+                            <h2 className="font-sans text-4xl tracking-tight text-foreground md:text-5xl font-bold mb-4">
+                                Dubhe Richus
                             </h2>
+                            <p className="mb-6 text-sm font-bold uppercase tracking-widest text-slate-800">
+                                ELEVATING WATER QUALITY THROUGH ADVANCED ENGINEERING
+                            </p>
+                            <div className="h-px w-full bg-slate-200 mb-8" />
                             <div className="space-y-6">
-                                <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
-                                    Dubhe Richus began its journey in 1991 under the brand name Richus, establishing water filtration and treatment services with a strong focus on quality, innovation and reliability. Guided by a long-term vision for sustainability and growth, the brand later evolved into Dubhe Richus. Today, we are one of India’s leading water treatment companies and the largest manufacturer of iron removal water treatment systems in Kerala. Our high-performance water filtration systems are designed to purify water from all sources using efficient, low-maintenance technology with no electricity requirement and no chemical usage, while our dedicated research and development team continuously drives innovation to deliver advanced, reliable and future-ready water treatment technology.
+                                <p className="text-lg leading-relaxed text-muted-foreground/90 font-light text-justify">
+                                    Dubhe Richus commenced its journey in 1991 under the brand name Richus, establishing a benchmark in water filtration and treatment services anchored on quality, innovation and reliability. Guided by a long-term vision for sustainability and scalable growth, the brand later evolved into Dubhe Richus. Today, we stand as one of India's premier water treatment enterprises and the largest manufacturer of iron-removal water treatment systems in Kerala. Our high-performance water filtration systems are engineered to purify water from diverse sources using efficient, low-maintenance technology that requires zero electricity and zero chemical intervention. This is supported by a dedicated Research and Development division that continuously drives innovation to deliver advanced, reliable and future-ready water treatment Technology.
                                 </p>
-                                <p className="text-lg leading-relaxed text-muted-foreground/90 font-light">
-                                    Along with manufacturing water treatment systems, Dubhe Richus provides complete solutions for diverse water and wastewater needs, including effective wastewater treatment for safe and responsible handling. We also operate dedicated divisions for Sewage Treatment Plants (STP) and Effluent Treatment Plants (ETP), ensuring safe, efficient and sustainable wastewater management for residential, commercial and industrial applications. Based in Kochi, Kerala, we are a trusted company with long-standing customers who rely on our systems for years of consistent performance. Our product range includes Water Filtration Plants, Iron Removal Filters, Pressure Sand Filters, Activated Carbon Filters, Softener Systems, Sewage Treatment Plants, Effluent Treatment Plants, along with advanced automatic and AI-enabled water treatment systems for commercial and industrial applications. All our systems are built for consistent performance, easy operation and long-term durability, supported by strong engineering expertise, practical field experience and custom-designed solutions that deliver clean, safe and high-quality water systems for real-world water challenges.
+                                <p className="text-lg leading-relaxed text-muted-foreground/90 font-light text-justify">
+                                    Beyond manufacturing, Dubhe Richus provides complete solutions for complex water and wastewater requirements, ensuring safe, compliant and responsible ecological handling. We operate specialized divisions for Sewage Treatment Plants (STP) and Effluent Treatment Plants (ETP), delivering efficient and sustainable wastewater management across residential, commercial and industrial sectors. Headquartered in Kochi, Kerala, our reputation as a trusted industry leader is validated by a loyal, long-standing clientele who rely on our systems for years of consistent performance.
+                                </p>
+                                <div className="pt-4 text-left">
+                                    <h4 className="font-bold text-slate-900 mb-4 uppercase text-sm">OUR COMPREHENSIVE PORTFOLIO INCLUDES:</h4>
+                                    <ul className="space-y-3 text-lg leading-relaxed text-muted-foreground/90 font-light ml-4">
+                                        <li className="flex items-start gap-3">
+                                            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
+                                            <span>Water Filtration Plants & Iron Removal Filters</span>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
+                                            <span>Pressure Sand & Activated Carbon Filters</span>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
+                                            <span>Water Softener Systems</span>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
+                                            <span>Sewage (STP) & Effluent (ETP) Treatment Plants</span>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-slate-400 shrink-0"></span>
+                                            <span>Advanced Automatic and AI-Enabled Water Treatment Systems for commercial and industrial applications</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p className="text-lg leading-relaxed text-muted-foreground/90 font-light pt-2 text-justify">
+                                    All our systems are Engineered for seamless operation and long-term durability, all Dubhe Richus systems leverage deep engineering expertise, extensive field experience and bespoke designs to resolve real-world water challenges.
                                 </p>
                             </div>
                         </div>
@@ -314,26 +343,26 @@ export default function About() {
                             {
                                 id: "vision",
                                 label: "Our Vision",
-                                title: "Trusted Water Filtration for Clean and Safe Living",
-                                desc: "Dubhe Richus is committed to making clean and safe water accessible for everyone. We provide advanced water treatment filters designed for both homes and commercial spaces, helping families and businesses enjoy better water quality daily. We improve borewell and tap water by removing iron, hardness, bad smell and dirt, and we also treat wastewater so it can be safely handled. We have a strong vision to expand further and make reliable water filters accessible everywhere, from Kerala to the whole of India. With an experienced team handling water testing, installation, and ongoing service support, we ensure every customer receives the right solution for long-term performance and lasting trust.",
+                                title: "Engineered Water Filtration for a Cleaner, Safer Tomorrow",
+                                desc: "Dubhe Richus is committed to democratizing access to clean and safe water. We engineer advanced filtration systems tailored for both residential and commercial ecosystems, empowering families and businesses to experience superior water quality daily. By effectively eliminating iron, hardness, odor, and particulate matter from borewell and municipal supplies—while simultaneously treating wastewater for eco-friendly discharge—we elevate daily living standards. Driven by a strategic vision to scale our footprint, we aim to expand the accessibility of our reliable filtration technologies from Kerala to the entirety of India. Backed by an expert team overseeing water analysis, precision installation, and dedicated lifecycle support, we ensure every client receives a tailored solution built on performance and enduring trust.",
                                 img: "/images/vision-img.jpg"
                             },
                             {
                                 id: "rd",
                                 label: "R&D FOCUS",
-                                title: "Research & Development for Environmental Progress",
-                                desc: "Dubhe Richus uses advanced design and technology to deliver a smooth and reliable water purification experience. Our cylindrical vertical-type water treatment filters are engineered with precision, strong structural design, superior quality, and high performance. The smart custom design supports steady water flow, efficient iron removal using active oxygen, and helps retain natural minerals. With a manual backwashing system, they are easy to operate and maintain even in different water conditions. Our systems also include wastewater. Every model is designed with a strong focus on both design and technology, combining efficiency, sustainability, and a modern premium finish for long-term use.",
+                                title: "Pioneering Research for Environmental Stewardship",
+                                desc: "Dubhe Richus integrates sophisticated design philosophy with cutting-edge technology to deliver a seamless, high-fidelity water purification experience. Our signature cylindrical vertical-type filters are precision-engineered, boasting superior structural integrity and high-capacity performance. The intelligent, custom architecture ensures optimal hydraulic flow, efficient iron removal via active oxygen matrices, and the preservation of essential natural minerals. Equipped with ergonomic manual backwashing mechanisms, our systems offer effortless operation and simplified maintenance across diverse water chemistries. Every model reflects a harmonious blend of form and function—combining operational efficiency, environmental sustainability, and a premium, modern finish built for longevity.",
                                 img: "/images/research.jpeg"
                             },
                             {
                                 id: "tech",
                                 label: "INNOVATION",
-                                title: "Design and Technology",
-                                desc: "Our R&D team continuously works on improving water treatment technologies through detailed research, field experience, and continuous innovation. We focus on developing systems that deliver higher efficiency, better performance, and long-term reliability in real water conditions. Along with improving product quality, we also work on making our solutions more sustainable by reducing environmental impact and supporting the responsible use of natural water resources. Our aim is to design advanced water treatment systems that not only solve real water problems in homes and commercial spaces but also promote environmentally responsible water management practices for a better and healthier future.",
+                                title: "The Intersection of Design and Technology",
+                                desc: "Our R&D division continuously advances the frontiers of water purification through rigorous scientific research, empirical field data, and iterative innovation. We are focused on developing next-generation systems that offer heightened efficiency, enhanced performance, and unyielding reliability under demanding real-world conditions. Parallel to elevating product benchmarks, we actively minimize ecological footprints by designing solutions that champion the responsible stewardship of natural water resources. Our ultimate objective is to architect sophisticated water treatment infrastructures that not only resolve immediate residential and commercial water crises but also champion sustainable, environmentally responsible management practices for a healthier future.",
                                 img: "/images/products-tech.png"
                             }
                         ].map((item, idx) => (
-                            <div key={item.id} className={`grid gap-16 lg:grid-cols-2 items-center py-8 ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                            <div key={item.id} className={`grid gap-16 lg:grid-cols-2 items-stretch py-8 ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                                 <div className={idx % 2 === 1 ? 'lg:order-2' : ''}>
                                     <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary">
                                         {item.label}
@@ -344,10 +373,10 @@ export default function About() {
                                     >
                                         {item.title}
                                     </h2>
-                                    <p className="text-lg font-light leading-relaxed text-muted-foreground/80">{item.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-muted-foreground/80 text-justify">{item.desc}</p>
                                 </div>
-                                <div className={`relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
-                                    <img src={asset(item.img)} alt={item.title} className="w-full h-full object-cover" />
+                                <div className={`relative rounded-[3rem] overflow-hidden shadow-2xl min-h-[400px] ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
+                                    <img src={asset(item.img)} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
                                 </div>
                             </div>
                         ))}
