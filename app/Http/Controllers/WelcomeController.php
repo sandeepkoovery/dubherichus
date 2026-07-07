@@ -12,8 +12,8 @@ class WelcomeController extends Controller
         return Inertia::render('Welcome', [
             'appName' => config('app.name'),
         ])->withViewData([
-                    'meta_title' => 'Advanced Water Filters for Home & Industry | Dubhe Richus',
-                    'meta_description' => 'Dubhe Richus provides STP, ETP and water treatment systems in Kerala for homes and industries. Get clean, safe, long-lasting water with expert installation and support.'
+                    'meta_title' => 'Water Treatment Company in Kochi, Kerala | Home & Commercial Water Filters',
+                    'meta_description' => 'Dubhe Richus is a trusted water treatment company in Kochi, Kerala, offering home, commercial, and industrial water treatment solutions across Kerala and India.'
                 ]);
     }
 }
