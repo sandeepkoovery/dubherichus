@@ -40,8 +40,8 @@ export default function Commercial() {
 
     return (
         <>
-            <Head title="Commercial & Industrial Water Treatment Plants in Kerala, India">
-                <meta name="description" content="Commercial water treatment plants in India by Dubhe Richus, offering customized water filtration for borewell and hard water using sustainable, chemical-free, low-maintenance technology." />
+            <Head title="Commercial Water Treatment Filters in Kerala | Dubhe Richus">
+                <meta name="description" content="Customised commercial water treatment plants in Kerala for industries, hospitals, hotels, and large facilities. High-capacity, chemical-free solutions available across India." />
             </Head>
             <Navbar />
             <main className="pt-20">

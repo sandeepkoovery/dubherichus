@@ -40,8 +40,8 @@ export default function Standard() {
 
     return (
         <>
-            <Head title="Whole House Water Filters in Kerala | Dubhe Richus">
-                <meta name="description" content="High-capacity whole house water filtration system for large homes and commercial spaces. Advanced iron removal and hard water treatment with long-lasting, eco-friendly performance." />
+            <Head title="Home Water Filters | Whole House Water Filtration Systems | Dubhe Richus">
+                <meta name="description" content="Experience the Standard Water Filter from Dubhe Richus, proudly from Kochi, Kerala. Advanced water filtration helps improve everyday home water quality for homes across Kerala and India." />
             </Head>
             <Navbar />
             <main className="pt-20">

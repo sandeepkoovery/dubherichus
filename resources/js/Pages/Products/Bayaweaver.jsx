@@ -25,8 +25,8 @@ export default function Bayaweaver() {
 
     return (
         <>
-            <Head title="Automatic Commercial Water Treatment Plant - Bayaweaver">
-                <meta name="description" content="Bayaweaver is an AI-powered automatic water filtration system from Dubhe Richus. Complete water treatment with chemical-free, low-maintenance performance for industries." />
+            <Head title="Automatic Water Treatment Plant in Kerala - Bayaweaver | Dubhe Richus">
+                <meta name="description" content="Automatic water treatment plant with AI-powered automation, self-cleaning technology, and chemical-free filtration for hospitals, industries, hotels, and commercial facilities across India." />
             </Head>
             <Navbar />
             <main className="pt-20 bg-slate-50/50">

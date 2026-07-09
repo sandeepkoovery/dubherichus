@@ -25,8 +25,8 @@ export default function DubheMerak() {
 
     return (
         <>
-            <Head title=" Branded Water Filtration Plant - Dubhe Merak | Dubhe Richus">
-                <meta name="description" content="Choose the Dubhe Merak water treatment plant from Dubhe Richus for dependable iron removal, turbidity reduction, and clean water treatment across Kerala and India." />
+            <Head title="Sewage & Wastewater Treatment Plant in Kerala - Dubhe Merak | Dubhe Richus">
+                <meta name="description" content="Advanced biological wastewater treatment solution in Kerala for villas, apartments, commercial buildings, and industries. Eco-friendly STP systems available across India." />
             </Head>
             <Navbar />
             <main className="pt-20 bg-slate-50/50">

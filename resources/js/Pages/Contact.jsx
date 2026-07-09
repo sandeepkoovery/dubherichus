@@ -9,7 +9,9 @@ export default function Contact() {
     const asset = useAsset();
     return (
         <div className="min-h-screen bg-white">
-            <Head title="Contact Us - Dubhe Richus" />
+            <Head title="Contact Dubhe Richus | Water Treatment Solutions in Kochi, Kerala">
+                <meta name="description" content="Get in touch with Dubhe Richus in Kochi, Kerala, for expert consultation, installation, and customer support for all your water treatment requirements across Kerala and India." />
+            </Head>
             <Navbar />
 
             <main className="pt-20 pb-20">

@@ -37,8 +37,8 @@ export default function Medium() {
 
     return (
         <>
-            <Head title="Water Purification Filters for Medium Homes (M) | Dubhe Richus">
-                <meta name="description" content="Reliable home water purification system designed for family houses and villas. Treat borewell and hard water with eco-friendly filtration for clean water from every tap." />
+            <Head title="Whole House Water Filter | Home Water Treatment in Kerala | Dubhe Richus">
+                <meta name="description" content="Medium Whole House Water Filters from Kerala for homes across India. Chemical free water filtration helps reduce various water impurities with no electricity and minimal maintenance." />
             </Head>
             <Navbar />
             <main className="pt-20">

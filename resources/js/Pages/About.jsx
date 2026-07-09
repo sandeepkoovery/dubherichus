@@ -241,7 +241,9 @@ export default function About() {
 
     return (
         <>
-            <Head title="About Us - Dubhe Richus" />
+            <Head title="About Dubhe Richus | Water Filter Manufacturer in Kochi, Kerala">
+                <meta name="description" content="Learn about Dubhe Richus, a trusted water treatment manufacturer in Kochi, Kerala, delivering reliable and sustainable water treatment solutions since 1991." />
+            </Head>
             <Navbar />
             <main className="pt-16">
                 {/* Hero Section */}

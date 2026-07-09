@@ -37,8 +37,8 @@ const homeFaqs = [
 export default function Welcome({ appName }) {
     return (
         <>
-            <Head title="Advanced Water Filters for Home & Industry | Dubhe Richus">
-                <meta name="description" content="Dubhe Richus provides STP, ETP and water treatment systems in Kerala for homes and industries. Get clean, safe, long-lasting water with expert installation and support." />
+            <Head title="Water Treatment Company in Kochi, Kerala | Home & Commercial Water Filters">
+                <meta name="description" content="Dubhe Richus is a trusted water treatment company in Kochi, Kerala, offering home, commercial, and industrial water treatment solutions across Kerala and India." />
             </Head>
             <Navbar />
             <main>
