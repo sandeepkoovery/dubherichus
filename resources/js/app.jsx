@@ -10,7 +10,7 @@ import { FloatingContact } from '@/Components/FloatingContact';
 const appName = import.meta.env.VITE_APP_NAME || 'Dubhe Richus';
 
 createInertiaApp({
-    title: (title) => `${title} | ${appName}`,
+    title: (title) => title,
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.jsx`,
