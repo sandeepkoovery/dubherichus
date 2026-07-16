@@ -39,6 +39,49 @@ export default function Welcome({ appName }) {
         <>
             <Head title="Water Treatment Company in Kochi, Kerala | Home & Commercial Water Filters">
                 <meta name="description" content="Dubhe Richus is a trusted water treatment company in Kochi, Kerala, offering home, commercial, and industrial water treatment solutions across Kerala and India." />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "@id": "https://dubherichus.com/#organization",
+                        "name": "Dubhe Richus",
+                        "alternateName": "Richus",
+                        "url": "https://dubherichus.com/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://dubherichus.com/images/dubhe-logo.png"
+                        },
+                        "image": "https://dubherichus.com/images/dubhe-logo.png",
+                        "description": "Dubhe Richus manufactures and supplies residential, commercial, and industrial water treatment systems across India. Our expertise includes whole-house water treatment, iron removal, hard water treatment, rainwater filtration, sewage treatment plants (STP), and effluent treatment plants (ETP).",
+                        "foundingDate": "1991",
+                        "email": "mailto:info@dubherichus.com",
+                        "telephone": "+91-9961122777",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "282/20, August Nursing Home Road, Changampuzha Nagar, South Kalamassery, Edappally",
+                            "addressLocality": "Kochi",
+                            "addressRegion": "Kerala",
+                            "postalCode": "682033",
+                            "addressCountry": "IN"
+                        },
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "telephone": "+91-9961122777",
+                            "email": "info@dubherichus.com",
+                            "contactType": "customer service",
+                            "areaServed": "IN",
+                            "availableLanguage": [
+                                "en",
+                                "ml"
+                            ]
+                        },
+                        "sameAs": [
+                            "https://www.facebook.com/dubherichus",
+                            "https://www.instagram.com/dubherichus",
+                            "https://www.youtube.com/@dubherichus1991"
+                        ]
+                    })}
+                </script>
             </Head>
             <Navbar />
             <main>
