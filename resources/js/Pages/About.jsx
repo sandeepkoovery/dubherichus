@@ -259,9 +259,9 @@ export default function About() {
                 <section className="pt-24 pb-16 bg-white">
                     <div className="mx-auto max-w-7xl px-6">
                         <div className="mb-16 text-center md:text-left">
-                            <h2 className="font-sans text-4xl tracking-tight text-foreground md:text-5xl font-bold mb-4">
+                            <h1 className="font-sans text-4xl tracking-tight text-foreground md:text-5xl font-bold mb-4">
                                 Dubhe Richus
-                            </h2>
+                            </h1>
                             <p className="mb-6 text-sm font-bold uppercase tracking-widest text-slate-800">
                                 ELEVATING WATER QUALITY THROUGH ADVANCED ENGINEERING
                             </p>

@@ -20,12 +20,12 @@ export function AboutSection() {
                         >
                             Ensuring Complete Water Purity for Every Space
                         </p>
-                        <h2 
+                        <h1 
                             className="mb-8 font-sans text-3xl tracking-tight leading-tight md:text-4xl lg:text-[2.75rem]"
                             style={{ color: '#262626', fontFamily: "'Public Sans', sans-serif", fontWeight: '300' }}
                         >
                             Advanced Water Treatment <br className="hidden lg:block" /> Company in India
-                        </h2>
+                        </h1>
                         <p className="text-lg font-light leading-relaxed text-muted-foreground/80">
                             Clean and safe water is important for every home and business, and Dubhe Richus provides advanced whole-water filters designed for reliable, long-term use. Using Super Jet Technology. Our systems effectively filter and purify water for houses, apartments, and large commercial spaces. We continuously improve our water purifier systems to deliver better water quality, low maintenance, and long-lasting performance, ensuring consistent chemical-free water treatment for daily use. Our customized water purifiers are suitable for homes, hospitals, hotels, and institutions, making it easy to choose the right whole-house water filtration system for any need while supporting sustainable and eco-friendly water purification for a healthier future.
                         </p>
