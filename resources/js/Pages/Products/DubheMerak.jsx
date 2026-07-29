@@ -26,6 +26,7 @@ export default function DubheMerak() {
     return (
         <>
             <Head title="Sewage & Wastewater Treatment Plant in Kerala - Dubhe Merak | Dubhe Richus">
+                <link rel="canonical" href="https://dubherichus.com/products/dubhemerak" />
                 <meta name="description" content="Advanced biological wastewater treatment solution in Kerala for villas, apartments, commercial buildings, and industries. Eco-friendly STP systems available across India." />
             </Head>
             <Navbar />
@@ -43,14 +44,14 @@ export default function DubheMerak() {
                                 <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-white">
                                     <Leaf className="w-3.5 h-3.5" /> Sustainable Wastewater
                                 </div>
-                                <div className="space-y-4">
-                                    <h1 className="text-5xl md:text-7xl font-sans font-black tracking-tight leading-none uppercase bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
+                                <h1 className="font-sans space-y-4">
+                                    <span className="block text-5xl md:text-7xl font-black tracking-tight leading-none uppercase bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
                                         DUBHE MERAK
-                                    </h1>
-                                    <h2 className="text-2xl md:text-3xl text-blue-300 font-light tracking-wide uppercase">
+                                    </span>
+                                    <span className="block text-2xl md:text-3xl text-blue-300 font-light tracking-wide uppercase">
                                         Sewage Treatment Plant (STP)
-                                    </h2>
-                                </div>
+                                    </span>
+                                </h1>
                                 <p className="text-lg text-slate-200 font-light leading-relaxed max-w-xl text-justify">
                                     An elite biological wastewater treatment solution engineered to satisfy strict environmental mandates. Reclaim up to 85% of your facility's black and greywater safely for non-potable reuse, commercial flushing and landscaping with maximum ecological efficiency.
                                 </p>

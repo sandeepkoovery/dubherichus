@@ -10,6 +10,7 @@ export default function Contact() {
     return (
         <div className="min-h-screen bg-white">
             <Head title="Contact Dubhe Richus | Water Treatment Solutions in Kochi, Kerala">
+                <link rel="canonical" href="https://dubherichus.com/contact" />
                 <meta name="description" content="Get in touch with Dubhe Richus in Kochi, Kerala, for expert consultation, installation, and customer support for all your water treatment requirements across Kerala and India." />
             </Head>
             <Navbar />

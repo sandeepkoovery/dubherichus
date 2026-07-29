@@ -26,6 +26,7 @@ export default function Bayaweaver() {
     return (
         <>
             <Head title="Automatic Water Treatment Plant in Kerala - Bayaweaver | Dubhe Richus">
+                <link rel="canonical" href="https://dubherichus.com/products/bayaweaver" />
                 <meta name="description" content="Automatic water treatment plant with AI-powered automation, self-cleaning technology, and chemical-free filtration for hospitals, industries, hotels, and commercial facilities across India." />
             </Head>
             <Navbar />
@@ -43,14 +44,14 @@ export default function Bayaweaver() {
                                 <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-white">
                                     <Cpu className="w-3.5 h-3.5" /> Next-Gen Automation
                                 </div>
-                                <div className="space-y-4">
-                                    <h1 className="text-5xl md:text-7xl font-sans font-black tracking-tight leading-none uppercase bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
+                                <h1 className="font-sans space-y-4">
+                                    <span className="block text-5xl md:text-7xl font-black tracking-tight leading-none uppercase bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
                                         BAYAWEAVER
-                                    </h1>
-                                    <h2 className="text-2xl md:text-3xl text-blue-300 font-light tracking-wide uppercase">
+                                    </span>
+                                    <span className="block text-2xl md:text-3xl text-blue-300 font-light tracking-wide uppercase">
                                         Intelligent Automatic Treatment Plant
-                                    </h2>
-                                </div>
+                                    </span>
+                                </h1>
                                 <p className="text-lg text-slate-200 font-light leading-relaxed max-w-xl text-justify">
                                     An AI-powered, autonomous water treatment ecosystem designed for intelligent, entirely hands-off filtration. Combining precision self-cleaning functionality with maintenance-free performance, Bayaweaver is engineered to dominate demanding industrial and commercial water profiles.
                                 </p>

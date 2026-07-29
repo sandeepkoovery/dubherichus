@@ -41,6 +41,7 @@ export default function Commercial() {
     return (
         <>
             <Head title="Commercial Water Treatment Filters in Kerala | Dubhe Richus">
+                <link rel="canonical" href="https://dubherichus.com/products/commercial" />
                 <meta name="description" content="Customised commercial water treatment plants in Kerala for industries, hospitals, hotels, and large facilities. High-capacity, chemical-free solutions available across India." />
             </Head>
             <Navbar />
@@ -54,12 +55,14 @@ export default function Commercial() {
                                 <span className="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.3em]">
                                     Size XL · Commercial Series
                                 </span>
-                                <h1 className="font-sans text-6xl md:text-7xl font-black tracking-tight text-slate-900 uppercase mb-2">
-                                    Commercial
+                                <h1 className="font-sans mb-8">
+                                    <span className="block text-6xl md:text-7xl font-black tracking-tight text-slate-900 uppercase mb-2">
+                                        Commercial
+                                    </span>
+                                    <span className="block text-2xl md:text-3xl font-light text-slate-500 tracking-tight">
+                                        Water Treatment Plant
+                                    </span>
                                 </h1>
-                                <p className="text-2xl md:text-3xl font-light text-slate-500 mb-8 tracking-tight">
-                                    Water Treatment Plant
-                                </p>
                                 <div className="mb-10 bg-slate-50/60 border border-slate-100 rounded-3xl p-6 max-w-xl">
                                     <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">Quick Specs</h3>
                                     <div className="space-y-3.5 text-sm text-slate-600">

@@ -33,6 +33,7 @@ export default function Classic() {
     return (
         <>
             <Head title="Classic Whole House Water Filters for Small Homes & Apartments">
+                <link rel="canonical" href="https://dubherichus.com/products/classic" />
                 <meta name="description" content="Compact water filter system for apartments and small homes in Kerala. Removes iron, odor and hardness with chemical-free, low-maintenance filtration for safe everyday water use." />
             </Head>
             <Navbar />

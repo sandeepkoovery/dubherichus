@@ -38,6 +38,7 @@ export default function Medium() {
     return (
         <>
             <Head title="Whole House Water Filter | Home Water Treatment in Kerala | Dubhe Richus">
+                <link rel="canonical" href="https://dubherichus.com/products/medium" />
                 <meta name="description" content="Medium Whole House Water Filters from Kerala for homes across India. Chemical free water filtration helps reduce various water impurities with no electricity and minimal maintenance." />
             </Head>
             <Navbar />
@@ -51,12 +52,14 @@ export default function Medium() {
                                 <span className="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.3em]">
                                     Size M · Home Series
                                 </span>
-                                <h1 className="font-sans text-6xl md:text-7xl font-black tracking-tight text-slate-900 uppercase mb-2">
-                                    Medium
+                                <h1 className="font-sans mb-8">
+                                    <span className="block text-6xl md:text-7xl font-black tracking-tight text-slate-900 uppercase mb-2">
+                                        Medium
+                                    </span>
+                                    <span className="block text-2xl md:text-3xl font-light text-slate-500 tracking-tight">
+                                        Water Treatment Plant
+                                    </span>
                                 </h1>
-                                <p className="text-2xl md:text-3xl font-light text-slate-500 mb-8 tracking-tight">
-                                    Water Treatment Plant
-                                </p>
                                 <p className="text-lg text-primary font-light leading-relaxed mb-8 max-w-xl">
                                     Premium Whole-House Water Filtration for Uncompromising Purity. Supplies treated water to multiple taps, protecting plumbing and appliances from scaling and damage.
                                 </p>

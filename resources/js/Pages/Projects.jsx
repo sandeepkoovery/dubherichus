@@ -41,6 +41,7 @@ export default function Projects() {
     return (
         <>
             <Head title="Our Projects - Global Water Treatment Excellence | Dubhe Richus">
+                <link rel="canonical" href="https://dubherichus.com/projects" />
                 <meta name="description" content="Explore our portfolio of successful water treatment projects across India. From premium residential installations to large-scale commercial plants for industry leaders." />
             </Head>
             <Navbar />

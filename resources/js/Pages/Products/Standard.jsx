@@ -41,6 +41,7 @@ export default function Standard() {
     return (
         <>
             <Head title="Home Water Filters | Whole House Water Filtration Systems | Dubhe Richus">
+                <link rel="canonical" href="https://dubherichus.com/products/standard" />
                 <meta name="description" content="Experience the Standard Water Filter from Dubhe Richus, proudly from Kochi, Kerala. Advanced water filtration helps improve everyday home water quality for homes across Kerala and India." />
             </Head>
             <Navbar />
@@ -72,12 +73,14 @@ export default function Standard() {
                                 <span className="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.3em]">
                                     Size L · Home Series
                                 </span>
-                                <h1 className="font-sans text-6xl md:text-7xl font-black tracking-tight text-slate-900 uppercase mb-2">
-                                    Standard
+                                <h1 className="font-sans mb-8">
+                                    <span className="block text-6xl md:text-7xl font-black tracking-tight text-slate-900 uppercase mb-2">
+                                        Standard
+                                    </span>
+                                    <span className="block text-2xl md:text-3xl font-light text-slate-500 tracking-tight">
+                                        Water Treatment Plant
+                                    </span>
                                 </h1>
-                                <p className="text-2xl md:text-3xl font-light text-slate-500 mb-8 tracking-tight">
-                                    Water Treatment Plant
-                                </p>
                                 <p className="text-lg text-primary font-light leading-relaxed mb-8 max-w-xl">
                                     High-Capacity Whole-House Treatment for Larger Homes. Equip your home with the absolute confidence of pure, healthy water from every faucet.
                                 </p>

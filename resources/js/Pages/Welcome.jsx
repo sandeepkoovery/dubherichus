@@ -38,6 +38,7 @@ export default function Welcome({ appName }) {
     return (
         <>
             <Head title="Water Treatment Company in Kochi, Kerala | Home & Commercial Water Filters">
+                <link rel="canonical" href="https://dubherichus.com/" />
                 <meta name="description" content="Dubhe Richus is a trusted water treatment company in Kochi, Kerala, offering home, commercial, and industrial water treatment solutions across Kerala and India." />
                 <script type="application/ld+json">
                     {JSON.stringify({

@@ -23,6 +23,7 @@
     <meta name="title" content="{{ $meta_title ?? 'Advanced Water Filters for Home & Industry | Dubhe Richus' }}">
 
     <!-- SEO Meta Tags -->
+    <link rel="canonical" href="{{ url()->current() }}">
     <meta name="description"
         content="{{ $meta_description ?? 'Dubhe Richus provides STP, ETP and water treatment systems in Kerala for homes and industries. Get clean, safe, long-lasting water with expert installation and support.' }}">
     <meta name="keywords" content="luxury, premium, performance, dubhe richus">
